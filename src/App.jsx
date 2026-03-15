@@ -19,21 +19,17 @@ import BandEstimator from './pages/BandEstimator'
 import NotificationToast from './components/NotificationToast'
 import './index.css'
 
-function LoadingScreen() {
+function Splash() {
   return (
-    <div className="min-h-screen bg-lime-50 flex items-center justify-center dot-pattern">
+    <div className="min-h-screen bg-lime-50 flex flex-col items-center justify-center dot-pattern">
       <div className="text-center animate-fade-in">
         <div className="text-7xl animate-bounce-slow mb-4">🌿</div>
-        <p className="font-display text-2xl text-green-600 mb-2">IELTS Master</p>
-        <p className="font-body text-green-400 font-semibold text-sm">Loading your progress...</p>
-        {/* Animated dots */}
-        <div className="flex items-center justify-center gap-1.5 mt-4">
+        <p className="font-display text-3xl text-green-700 mb-2">IELTS Master</p>
+        <p className="font-body text-green-400 font-semibold text-sm mb-6">Loading your progress…</p>
+        <div className="flex items-center justify-center gap-2">
           {[0, 1, 2].map(i => (
-            <div
-              key={i}
-              className="w-2.5 h-2.5 bg-lime-400 rounded-full animate-bounce"
-              style={{ animationDelay: `${i * 0.15}s` }}
-            />
+            <div key={i} className="w-2.5 h-2.5 bg-lime-400 rounded-full animate-bounce"
+              style={{ animationDelay: `${i * 0.15}s` }} />
           ))}
         </div>
       </div>
@@ -41,48 +37,35 @@ function LoadingScreen() {
   )
 }
 
-function ProtectedRoute({ children }) {
-  const { user, loading } = useAuth()
-
-  if (loading) return <LoadingScreen />
-
-  // Not logged in → go to login
-  if (!user) return <Navigate to="/login" replace />
-
-  return children
-}
-
 function AppRoutes() {
   const { user, loading } = useAuth()
 
-  // Show loading only on initial boot, not on every render
-  if (loading) return <LoadingScreen />
+  if (loading) return <Splash />
 
   return (
     <>
       <NotificationToast />
       <Routes>
-        {/* Public */}
+        {/* Public routes */}
         <Route path="/login"    element={user ? <Navigate to="/" replace /> : <Login />} />
-        <Route path="/register" element={user ? <Navigate to="/" replace /> : <Register />} />
+        <Route path="/register" element={<Navigate to="/login" replace />} />
 
-        {/* Protected */}
-        <Route path="/"               element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-        <Route path="/learn"          element={<ProtectedRoute><Learn /></ProtectedRoute>} />
-        <Route path="/lesson/:lessonId" element={<ProtectedRoute><Lesson /></ProtectedRoute>} />
-        <Route path="/profile"        element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-        <Route path="/leaderboard"    element={<ProtectedRoute><Leaderboard /></ProtectedRoute>} />
-        <Route path="/achievements"   element={<ProtectedRoute><Achievements /></ProtectedRoute>} />
-        <Route path="/mock-test"      element={<ProtectedRoute><MockTest /></ProtectedRoute>} />
-        <Route path="/vocabulary"     element={<ProtectedRoute><Vocabulary /></ProtectedRoute>} />
-        <Route path="/writing"        element={<ProtectedRoute><WritingPractice /></ProtectedRoute>} />
-        <Route path="/speaking"       element={<ProtectedRoute><SpeakingPractice /></ProtectedRoute>} />
-        <Route path="/grammar"        element={<ProtectedRoute><GrammarDrills /></ProtectedRoute>} />
-        <Route path="/reading"        element={<ProtectedRoute><ReadingPractice /></ProtectedRoute>} />
-        <Route path="/band-estimator" element={<ProtectedRoute><BandEstimator /></ProtectedRoute>} />
+        {/* Protected — redirect to /login if not signed in */}
+        <Route path="/"               element={user ? <Dashboard />      : <Navigate to="/login" replace />} />
+        <Route path="/learn"          element={user ? <Learn />          : <Navigate to="/login" replace />} />
+        <Route path="/lesson/:lessonId"     element={user ? <Lesson />         : <Navigate to="/login" replace />} />
+        <Route path="/profile"        element={user ? <Profile />        : <Navigate to="/login" replace />} />
+        <Route path="/leaderboard"    element={user ? <Leaderboard />    : <Navigate to="/login" replace />} />
+        <Route path="/achievements"   element={user ? <Achievements />   : <Navigate to="/login" replace />} />
+        <Route path="/mock-test"      element={user ? <MockTest />       : <Navigate to="/login" replace />} />
+        <Route path="/vocabulary"     element={user ? <Vocabulary />     : <Navigate to="/login" replace />} />
+        <Route path="/writing"        element={user ? <WritingPractice />: <Navigate to="/login" replace />} />
+        <Route path="/speaking"       element={user ? <SpeakingPractice />: <Navigate to="/login" replace />} />
+        <Route path="/grammar"        element={user ? <GrammarDrills />  : <Navigate to="/login" replace />} />
+        <Route path="/reading"        element={user ? <ReadingPractice />: <Navigate to="/login" replace />} />
+        <Route path="/band-estimator" element={user ? <BandEstimator />  : <Navigate to="/login" replace />} />
 
-        {/* Fallback */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to={user ? '/' : '/login'} replace />} />
       </Routes>
     </>
   )

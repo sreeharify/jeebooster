@@ -96,7 +96,7 @@ export default function Profile() {
             <div className="flex-1 min-w-0">
               {editing ? (
                 <div className="mb-1">
-                  <input
+                  <input id="display-name" name="display-name"
                     value={newName}
                     onChange={e => setNewName(e.target.value)}
                     onKeyDown={e => e.key === 'Enter' && handleSave()}
