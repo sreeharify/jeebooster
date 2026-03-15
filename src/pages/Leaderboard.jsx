@@ -2,41 +2,60 @@ import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import { supabase } from '../lib/supabase'
 import { useAuth } from '../contexts/AuthContext'
-import { Trophy, Zap, Flame } from 'lucide-react'
 
 const TABS = ['XP', 'Streak', 'Lessons']
+const MEDALS = ['🥇', '🥈', '🥉']
+
+function LeaderAvatar({ player, size = 'md' }) {
+  const sz = size === 'sm' ? 'w-8 h-8 text-xs' : size === 'lg' ? 'w-12 h-12 text-lg' : 'w-10 h-10 text-sm'
+  const src = player?.google_avatar
+  if (src) {
+    return (
+      <img src={src} alt={player?.username} referrerPolicy="no-referrer"
+        className={`${sz} rounded-full object-cover border-2 border-lime-200 shrink-0`} />
+    )
+  }
+  const initial = (player?.username || '?')[0].toUpperCase()
+  return (
+    <div className={`${sz} rounded-full bg-lime-400 border-2 border-lime-500 flex items-center justify-center font-bold text-green-900 shrink-0`}>
+      {initial}
+    </div>
+  )
+}
 
 export default function Leaderboard() {
-  const [tab, setTab] = useState('XP')
+  const [tab,     setTab]     = useState('XP')
   const [leaders, setLeaders] = useState([])
   const [loading, setLoading] = useState(true)
-  const { user, profile } = useAuth()
+  const { user, profile }     = useAuth()
 
-  useEffect(() => {
-    fetchLeaders()
-  }, [tab])
+  useEffect(() => { fetchLeaders() }, [tab])
 
   async function fetchLeaders() {
     setLoading(true)
     const col = tab === 'XP' ? 'xp' : tab === 'Streak' ? 'streak' : 'xp'
     const { data } = await supabase
       .from('profiles')
-      .select('id, username, xp, streak, level, avatar, completed_lessons')
+      .select('id, username, xp, streak, level, google_avatar, completed_lessons')
       .order(col, { ascending: false })
       .limit(20)
     setLeaders(data || [])
     setLoading(false)
   }
 
-  const sorted = leaders.slice().sort((a, b) => {
-    if (tab === 'XP') return b.xp - a.xp
-    if (tab === 'Streak') return b.streak - a.streak
+  const sorted = [...leaders].sort((a, b) => {
+    if (tab === 'XP')     return (b.xp     || 0) - (a.xp     || 0)
+    if (tab === 'Streak') return (b.streak || 0) - (a.streak || 0)
     return (b.completed_lessons?.length || 0) - (a.completed_lessons?.length || 0)
   })
 
   const myRank = sorted.findIndex(l => l.id === user?.id) + 1
 
-  const MEDALS = ['🥇', '🥈', '🥉']
+  function getValue(p) {
+    if (tab === 'XP')     return `${p.xp || 0} XP`
+    if (tab === 'Streak') return `${p.streak || 0} days`
+    return `${p.completed_lessons?.length || 0} lessons`
+  }
 
   return (
     <div className="min-h-screen bg-lime-50 pb-24 pt-16">
@@ -52,32 +71,35 @@ export default function Leaderboard() {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-2 bg-white rounded-2xl p-1.5 border-2 border-lime-200 mb-4">
+        <div className="flex gap-2 bg-white rounded-2xl p-1.5 border-2 border-lime-200 mb-5">
           {TABS.map(t => (
-            <button
-              key={t}
-              onClick={() => setTab(t)}
-              className={`flex-1 py-2 rounded-xl font-bold text-sm transition-all ${tab === t ? 'bg-lime-400 text-green-900 shadow' : 'text-green-600 hover:bg-lime-50'}`}
-            >
+            <button key={t} onClick={() => setTab(t)}
+              className={`flex-1 py-2 rounded-xl font-bold text-sm transition-all
+                ${tab === t ? 'bg-lime-400 text-green-900 shadow' : 'text-green-600 hover:bg-lime-50'}`}>
               {t === 'XP' ? '⚡ XP' : t === 'Streak' ? '🔥 Streak' : '📚 Lessons'}
             </button>
           ))}
         </div>
 
-        {/* Top 3 Podium */}
+        {/* Podium */}
         {sorted.length >= 3 && (
           <div className="flex items-end justify-center gap-3 mb-6">
             {[sorted[1], sorted[0], sorted[2]].map((p, i) => {
-              const positions = [2, 1, 3]
+              const ranks  = [2, 1, 3]
               const heights = ['h-24', 'h-32', 'h-20']
-              const pos = positions[i]
+              const podColors = ['bg-gray-300', 'bg-yellow-300', 'bg-orange-300']
+              const rank = ranks[i]
               return (
                 <div key={p?.id} className="flex flex-col items-center flex-1">
-                  <div className="text-3xl mb-1">{p?.google_avatar ? <img src={p.google_avatar} className="w-8 h-8 rounded-full object-cover" alt="" /> : (p?.avatar || "🦁")}</div>
-                  <div className="text-xs font-bold text-green-700 mb-1 truncate max-w-[80px] text-center">{p?.username}</div>
-                  <div className={`${heights[i]} bg-gradient-to-t ${pos === 1 ? 'from-yellow-400 to-yellow-300' : pos === 2 ? 'from-gray-400 to-gray-300' : 'from-orange-400 to-orange-300'} rounded-t-2xl w-full flex flex-col items-center justify-start pt-2`}>
-                    <div className="text-xl">{MEDALS[pos - 1]}</div>
-                    <div className="text-xs font-bold text-white">{tab === 'XP' ? p?.xp : tab === 'Streak' ? p?.streak : p?.completed_lessons?.length || 0}</div>
+                  <LeaderAvatar player={p} size="lg" />
+                  <div className="text-xs font-bold text-green-700 mt-1 mb-1 truncate max-w-[70px] text-center">
+                    {p?.username}
+                  </div>
+                  <div className={`${heights[i]} ${podColors[i]} rounded-t-2xl w-full flex flex-col items-center justify-start pt-2`}>
+                    <div className="text-xl">{MEDALS[rank - 1]}</div>
+                    <div className="text-xs font-bold text-gray-700 mt-1">
+                      {tab === 'XP' ? p?.xp : tab === 'Streak' ? p?.streak : p?.completed_lessons?.length || 0}
+                    </div>
                   </div>
                 </div>
               )
@@ -85,31 +107,33 @@ export default function Leaderboard() {
           </div>
         )}
 
-        {/* Full List */}
+        {/* List */}
         {loading ? (
-          <div className="text-center py-10">
-            <div className="text-4xl animate-bounce-slow mb-2">🌿</div>
+          <div className="text-center py-12">
+            <div className="text-4xl animate-bounce-slow mb-3">🌿</div>
             <p className="font-semibold text-green-500">Loading rankings...</p>
           </div>
         ) : (
           <div className="space-y-2">
             {sorted.map((p, i) => {
               const isMe = p.id === user?.id
-              const value = tab === 'XP' ? `${p.xp} XP` : tab === 'Streak' ? `${p.streak} days` : `${p.completed_lessons?.length || 0} lessons`
               return (
-                <div key={p.id} className={`flex items-center gap-3 p-3 rounded-2xl border-2 transition-all
-                  ${isMe ? 'border-lime-400 bg-lime-50' : 'border-gray-100 bg-white'}`}>
-                  <div className={`w-8 text-center font-display text-lg ${i < 3 ? '' : 'text-gray-400'}`}>
-                    {i < 3 ? MEDALS[i] : `#${i + 1}`}
+                <div key={p.id}
+                  className={`flex items-center gap-3 p-3 rounded-2xl border-2 transition-all
+                    ${isMe ? 'border-lime-400 bg-lime-50' : 'border-gray-100 bg-white'}`}>
+                  <div className="w-8 text-center font-display text-lg shrink-0">
+                    {i < 3 ? MEDALS[i] : <span className="text-gray-400 text-sm font-bold">#{i + 1}</span>}
                   </div>
-                  <div className="text-2xl">{p.avatar || '🦁'}</div>
+                  <LeaderAvatar player={p} size="sm" />
                   <div className="flex-1 min-w-0">
                     <div className={`font-bold text-sm truncate ${isMe ? 'text-lime-700' : 'text-green-800'}`}>
-                      {p.username} {isMe && '(You)'}
+                      {p.username} {isMe && <span className="text-xs">(You)</span>}
                     </div>
                     <div className="text-xs text-green-500 font-semibold">Level {p.level || 1}</div>
                   </div>
-                  <div className={`font-bold text-sm ${isMe ? 'text-lime-600' : 'text-green-600'}`}>{value}</div>
+                  <div className={`font-bold text-sm shrink-0 ${isMe ? 'text-lime-600' : 'text-green-600'}`}>
+                    {getValue(p)}
+                  </div>
                 </div>
               )
             })}
@@ -117,10 +141,10 @@ export default function Leaderboard() {
         )}
 
         {sorted.length === 0 && !loading && (
-          <div className="text-center py-10">
+          <div className="text-center py-12">
             <div className="text-5xl mb-3">🏆</div>
-            <p className="font-display text-xl text-green-700">No data yet!</p>
-            <p className="text-green-500 font-semibold">Be the first to earn XP</p>
+            <p className="font-display text-xl text-green-700">No data yet</p>
+            <p className="text-green-500 font-semibold text-sm">Complete lessons to appear here</p>
           </div>
         )}
       </div>

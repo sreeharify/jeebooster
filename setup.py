@@ -42,6 +42,7 @@ FILE_MAP = {
     "supabase.js":         "src/lib/supabase.js",
     # data
     "courseData.js":       "src/data/courseData.js",
+    "mockTestData.js":   "src/data/mockTestData.js",
     # contexts
     "AuthContext.jsx":     "src/contexts/AuthContext.jsx",
     "ProgressContext.jsx": "src/contexts/ProgressContext.jsx",

@@ -19,27 +19,54 @@ import BandEstimator from './pages/BandEstimator'
 import NotificationToast from './components/NotificationToast'
 import './index.css'
 
-function ProtectedRoute({ children }) {
-  const { user, loading } = useAuth()
-  if (loading) return (
-    <div className="min-h-screen bg-lime-50 flex items-center justify-center">
-      <div className="text-center">
-        <div className="text-6xl animate-bounce-slow mb-4">🌿</div>
-        <p className="font-display text-2xl text-green-600">Loading...</p>
+function LoadingScreen() {
+  return (
+    <div className="min-h-screen bg-lime-50 flex items-center justify-center dot-pattern">
+      <div className="text-center animate-fade-in">
+        <div className="text-7xl animate-bounce-slow mb-4">🌿</div>
+        <p className="font-display text-2xl text-green-600 mb-2">IELTS Master</p>
+        <p className="font-body text-green-400 font-semibold text-sm">Loading your progress...</p>
+        {/* Animated dots */}
+        <div className="flex items-center justify-center gap-1.5 mt-4">
+          {[0, 1, 2].map(i => (
+            <div
+              key={i}
+              className="w-2.5 h-2.5 bg-lime-400 rounded-full animate-bounce"
+              style={{ animationDelay: `${i * 0.15}s` }}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
-  return user ? children : <Navigate to="/login" replace />
+}
+
+function ProtectedRoute({ children }) {
+  const { user, loading } = useAuth()
+
+  if (loading) return <LoadingScreen />
+
+  // Not logged in → go to login
+  if (!user) return <Navigate to="/login" replace />
+
+  return children
 }
 
 function AppRoutes() {
-  const { user } = useAuth()
+  const { user, loading } = useAuth()
+
+  // Show loading only on initial boot, not on every render
+  if (loading) return <LoadingScreen />
+
   return (
     <>
       <NotificationToast />
       <Routes>
-        <Route path="/login"    element={user ? <Navigate to="/" /> : <Login />} />
-        <Route path="/register" element={user ? <Navigate to="/" /> : <Register />} />
+        {/* Public */}
+        <Route path="/login"    element={user ? <Navigate to="/" replace /> : <Login />} />
+        <Route path="/register" element={user ? <Navigate to="/" replace /> : <Register />} />
+
+        {/* Protected */}
         <Route path="/"               element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/learn"          element={<ProtectedRoute><Learn /></ProtectedRoute>} />
         <Route path="/lesson/:lessonId" element={<ProtectedRoute><Lesson /></ProtectedRoute>} />
@@ -53,7 +80,9 @@ function AppRoutes() {
         <Route path="/grammar"        element={<ProtectedRoute><GrammarDrills /></ProtectedRoute>} />
         <Route path="/reading"        element={<ProtectedRoute><ReadingPractice /></ProtectedRoute>} />
         <Route path="/band-estimator" element={<ProtectedRoute><BandEstimator /></ProtectedRoute>} />
-        <Route path="*" element={<Navigate to="/" />} />
+
+        {/* Fallback */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   )

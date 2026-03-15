@@ -133,3 +133,10 @@ create trigger on_auth_user_created
 create index if not exists profiles_xp_idx     on public.profiles(xp desc);
 create index if not exists profiles_streak_idx  on public.profiles(streak desc);
 create index if not exists attempts_user_idx    on public.lesson_attempts(user_id);
+
+-- ============================================================
+-- V4 MIGRATION: remove gems & hearts columns if they exist
+-- Run this AFTER the main schema if upgrading an existing DB
+-- ============================================================
+ALTER TABLE public.profiles DROP COLUMN IF EXISTS gems;
+ALTER TABLE public.profiles DROP COLUMN IF EXISTS hearts;
