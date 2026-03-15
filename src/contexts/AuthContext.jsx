@@ -3,6 +3,9 @@ import { supabase } from '../lib/supabase'
 
 const AuthContext = createContext(null)
 
+// Columns that actually exist in the DB (no gems, no hearts, no avatar)
+const PROFILE_COLS = 'id,username,email,google_avatar,xp,xp_today,level,streak,daily_goal,last_activity,completed_lessons,achievements,created_at'
+
 export function AuthProvider({ children }) {
   const [user,    setUser]    = useState(null)
   const [profile, setProfile] = useState(null)
@@ -10,20 +13,22 @@ export function AuthProvider({ children }) {
   const initialised = useRef(false)
 
   useEffect(() => {
-    // Safety net: never stay on loading screen longer than 8 seconds
-    const safetyTimer = setTimeout(() => setLoading(false), 8000)
+    // Hard safety net — never stuck longer than 10s
+    const safetyTimer = setTimeout(() => {
+      console.warn('Auth safety timeout fired')
+      setLoading(false)
+    }, 10000)
 
     async function bootstrap() {
       try {
-        const { data: { session } } = await supabase.auth.getSession()
+        const { data: { session }, error } = await supabase.auth.getSession()
+        if (error) console.error('getSession error:', error.message)
+
         const u = session?.user ?? null
         setUser(u)
-
-        if (u) {
-          await initProfile(u)
-        }
+        if (u) await initProfile(u)
       } catch (err) {
-        console.error('Auth bootstrap error:', err)
+        console.error('Bootstrap error:', err)
       } finally {
         clearTimeout(safetyTimer)
         setLoading(false)
@@ -33,119 +38,118 @@ export function AuthProvider({ children }) {
 
     bootstrap()
 
-    // Listen for auth changes AFTER initial load (sign in / sign out)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        // Skip the INITIAL_SESSION event — bootstrap() already handled it
-        if (!initialised.current && event === 'INITIAL_SESSION') return
+        // Skip INITIAL_SESSION — bootstrap handles it
+        if (event === 'INITIAL_SESSION') return
 
         const u = session?.user ?? null
         setUser(u)
-
-        if (u) {
-          await initProfile(u)
-        } else {
-          setProfile(null)
-        }
+        if (u) await initProfile(u)
+        else    setProfile(null)
       }
     )
 
-    return () => {
-      clearTimeout(safetyTimer)
-      subscription.unsubscribe()
-    }
+    return () => { clearTimeout(safetyTimer); subscription.unsubscribe() }
   }, [])
 
   async function initProfile(u) {
-    try {
-      // Try to load existing profile
-      const { data: existing, error: fetchErr } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', u.id)
-        .maybeSingle()
+    // 1. Try to load existing row
+    const { data: existing, error: fetchErr } = await supabase
+      .from('profiles')
+      .select(PROFILE_COLS)
+      .eq('id', u.id)
+      .maybeSingle()
 
-      if (fetchErr) {
-        console.error('Profile fetch error:', fetchErr.message)
-        // Still set a minimal profile so app doesn't break
-        setProfile({ id: u.id, username: u.user_metadata?.full_name || 'Learner', google_avatar: u.user_metadata?.avatar_url || null })
-        return
-      }
+    if (fetchErr) {
+      console.error('initProfile fetch error:', fetchErr.message, fetchErr.details)
+    }
 
-      if (existing) {
-        setProfile(existing)
-        return
-      }
+    if (existing) {
+      setProfile(existing)
+      return
+    }
 
-      // New user — create profile row
-      const displayName =
-        u.user_metadata?.full_name ||
-        u.user_metadata?.name      ||
-        u.email?.split('@')[0]     ||
-        'Learner'
+    // 2. No row yet — insert one
+    const displayName =
+      u.user_metadata?.full_name ||
+      u.user_metadata?.name      ||
+      u.email?.split('@')[0]     ||
+      'Learner'
 
-      const googleAvatar =
-        u.user_metadata?.avatar_url ||
-        u.user_metadata?.picture    ||
-        null
+    const googleAvatar =
+      u.user_metadata?.avatar_url ||
+      u.user_metadata?.picture    ||
+      null
 
-      const { data: created, error: insertErr } = await supabase
-        .from('profiles')
-        .insert({
-          id:                u.id,
-          email:             u.email,
-          username:          displayName,
-          google_avatar:     googleAvatar,
-          xp:                0,
-          xp_today:          0,
-          streak:            0,
-          gems:              50,
-          hearts:            5,
-          level:             1,
-          daily_goal:        100,
-          completed_lessons: [],
-          achievements:      [],
-          last_activity:     new Date().toISOString(),
-        })
-        .select()
-        .single()
+    const { data: created, error: insertErr } = await supabase
+      .from('profiles')
+      .insert({
+        id:                u.id,
+        email:             u.email,
+        username:          displayName,
+        google_avatar:     googleAvatar,
+        xp:                0,
+        xp_today:          0,
+        streak:            0,
+        level:             1,
+        daily_goal:        100,
+        completed_lessons: [],
+        achievements:      [],
+        last_activity:     new Date().toISOString(),
+      })
+      .select(PROFILE_COLS)
+      .single()
 
-      if (insertErr) {
-        console.error('Profile insert error:', insertErr.message)
-        // Fallback: set minimal profile from Google data
-        setProfile({
-          id: u.id,
-          username: displayName,
-          google_avatar: googleAvatar,
-          email: u.email,
-          xp: 0, streak: 0, gems: 50, hearts: 5, level: 1,
-          completed_lessons: [], achievements: [], daily_goal: 100,
-        })
-      } else {
-        setProfile(created)
-      }
-    } catch (err) {
-      console.error('initProfile unexpected error:', err)
+    if (insertErr) {
+      console.error('initProfile insert error:', insertErr.message, insertErr.details)
+      // Still give the app something to work with
       setProfile({
         id: u.id,
-        username: u.user_metadata?.full_name || 'Learner',
-        google_avatar: u.user_metadata?.avatar_url || null,
+        username: displayName,
+        google_avatar: googleAvatar,
+        email: u.email,
+        xp: 0, xp_today: 0, streak: 0, level: 1,
+        daily_goal: 100, completed_lessons: [], achievements: [],
       })
+    } else {
+      setProfile(created)
     }
   }
 
-  async function fetchProfile(userId) {
-    if (!userId) return
-    try {
-      const { data } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', userId)
-        .maybeSingle()
-      if (data) setProfile(data)
-    } catch (err) {
-      console.error('fetchProfile error:', err)
+  async function fetchProfile() {
+    if (!user) return
+    const { data, error } = await supabase
+      .from('profiles')
+      .select(PROFILE_COLS)
+      .eq('id', user.id)
+      .maybeSingle()
+    if (error) console.error('fetchProfile error:', error.message)
+    if (data)  setProfile(data)
+  }
+
+  async function updateProfile(updates) {
+    if (!user) return { error: 'not authenticated' }
+
+    // Remove any fields that don't exist in the DB schema
+    const safe = { ...updates }
+    delete safe.gems
+    delete safe.hearts
+    delete safe.avatar
+
+    const { data, error } = await supabase
+      .from('profiles')
+      .update(safe)
+      .eq('id', user.id)
+      .select(PROFILE_COLS)
+      .single()
+
+    if (error) {
+      console.error('updateProfile error:', error.message, error.details)
+    } else if (data) {
+      setProfile(data)
     }
+    return { data, error }
   }
 
   async function signInWithGoogle() {
@@ -162,32 +166,11 @@ export function AuthProvider({ children }) {
     await supabase.auth.signOut()
   }
 
-  async function updateProfile(updates) {
-    if (!user) return { error: 'not authenticated' }
-    try {
-      const { data, error } = await supabase
-        .from('profiles')
-        .update(updates)
-        .eq('id', user.id)
-        .select()
-        .single()
-      if (!error && data) setProfile(data)
-      return { data, error }
-    } catch (err) {
-      console.error('updateProfile error:', err)
-      return { error: err }
-    }
-  }
-
   return (
     <AuthContext.Provider value={{
-      user,
-      profile,
-      loading,
-      signInWithGoogle,
-      signOut,
-      updateProfile,
-      fetchProfile: () => fetchProfile(user?.id),
+      user, profile, loading,
+      signInWithGoogle, signOut,
+      updateProfile, fetchProfile,
     }}>
       {children}
     </AuthContext.Provider>

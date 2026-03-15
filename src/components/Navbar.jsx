@@ -1,9 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import { Home, BookOpen, Trophy, ClipboardList, Flame, Zap, Heart } from 'lucide-react'
+import { Home, BookOpen, Trophy, ClipboardList, Flame, Zap } from 'lucide-react'
 
-function GoogleAvatar({ profile, size = 'sm' }) {
-  const sz = size === 'sm' ? 'w-8 h-8 text-sm' : 'w-10 h-10 text-base'
+export function GoogleAvatar({ profile, size = 'sm', className = '' }) {
+  const sz = size === 'sm' ? 'w-8 h-8' : size === 'lg' ? 'w-20 h-20' : 'w-12 h-12'
   const src = profile?.google_avatar
 
   if (src) {
@@ -12,14 +12,15 @@ function GoogleAvatar({ profile, size = 'sm' }) {
         src={src}
         alt={profile?.username || 'Me'}
         referrerPolicy="no-referrer"
-        className={`${sz} rounded-full object-cover border-2 border-lime-300`}
+        className={`${sz} rounded-full object-cover border-2 border-lime-300 shrink-0 ${className}`}
       />
     )
   }
-  // Fallback: coloured circle with initial
+
+  // Coloured initial circle fallback
   const initial = (profile?.username || 'U')[0].toUpperCase()
   return (
-    <div className={`${sz} rounded-full bg-lime-400 border-2 border-lime-500 flex items-center justify-center font-bold text-green-900`}>
+    <div className={`${sz} rounded-full bg-lime-400 border-2 border-lime-500 flex items-center justify-center font-bold text-green-900 shrink-0 text-sm ${className}`}>
       {initial}
     </div>
   )
@@ -39,7 +40,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Top stats bar ── */}
+      {/* ── Top bar — streak + XP only (no gems, no hearts) ── */}
       <div className="fixed top-0 left-0 right-0 z-40 bg-white border-b-2 border-lime-200 shadow-sm">
         <div className="max-w-lg mx-auto flex items-center justify-between px-4 py-2">
           <Link to="/" className="flex items-center gap-1.5">
@@ -53,15 +54,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-1 bg-lime-50 rounded-full px-2.5 py-1">
               <Zap className="w-3.5 h-3.5 text-lime-600" />
-              <span className="font-bold text-lime-700 text-sm">{profile?.xp || 0}</span>
-            </div>
-            <div className="flex items-center gap-1 bg-cyan-50 rounded-full px-2.5 py-1">
-              <span className="text-sm">💎</span>
-              <span className="font-bold text-cyan-700 text-sm">{profile?.gems || 0}</span>
-            </div>
-            <div className="flex items-center gap-1 bg-red-50 rounded-full px-2.5 py-1">
-              <Heart className="w-3.5 h-3.5 text-red-500" fill="currentColor" />
-              <span className="font-bold text-red-600 text-sm">{profile?.hearts || 5}</span>
+              <span className="font-bold text-lime-700 text-sm">{profile?.xp || 0} XP</span>
             </div>
           </div>
         </div>
@@ -71,8 +64,7 @@ export default function Navbar() {
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t-2 border-lime-200 shadow-lg">
         <div className="max-w-lg mx-auto flex items-center justify-around px-2 py-2">
           {navItems.map(({ path, icon: Icon, label, isAvatar }) => {
-            const active = location.pathname === path ||
-              (path === '/profile' && location.pathname === '/profile')
+            const active = location.pathname === path
             return (
               <Link key={path} to={path} className="flex flex-col items-center gap-0.5 group">
                 <div className={`p-1.5 rounded-2xl transition-all duration-200 ${active ? 'bg-lime-400' : 'hover:bg-lime-100'}`}>
@@ -90,5 +82,3 @@ export default function Navbar() {
     </>
   )
 }
-
-export { GoogleAvatar }

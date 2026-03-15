@@ -4,6 +4,8 @@ import { useAuth } from './AuthContext'
 
 const ProgressContext = createContext(null)
 
+const PROFILE_COLS = 'id,username,email,google_avatar,xp,xp_today,level,streak,daily_goal,last_activity,completed_lessons,achievements,created_at'
+
 export function ProgressProvider({ children }) {
   const { user, profile, fetchProfile } = useAuth()
   const [notifications, setNotifications] = useState([])
@@ -14,32 +16,40 @@ export function ProgressProvider({ children }) {
     setTimeout(() => setNotifications(prev => prev.filter(n => n.id !== id)), 3000)
   }, [])
 
-  async function safeUpdate(updates) {
+  async function dbUpdate(updates) {
     if (!user) return
     const { error } = await supabase
       .from('profiles')
       .update(updates)
       .eq('id', user.id)
-    if (error) console.error('safeUpdate error:', error.message)
+    if (error) console.error('dbUpdate error:', error.message, updates)
     await fetchProfile()
   }
 
   async function awardXP(amount, reason) {
     if (!user || !profile) return
-    const newXP    = (profile.xp || 0) + amount
+    const newXP    = (profile.xp     || 0) + amount
     const newToday = (profile.xp_today || 0) + amount
     const newLevel = Math.floor(newXP / 500) + 1
-    await safeUpdate({ xp: newXP, xp_today: newToday, level: newLevel })
+    await dbUpdate({ xp: newXP, xp_today: newToday, level: newLevel })
     addNotification(`+${amount} XP — ${reason}!`, 'xp')
   }
 
-  // Only marks lesson complete if score >= 60%
   async function completeLesson(lessonId, score) {
-    if (!user || !profile) return
+    if (!user) return
 
-    const passed = score >= 60
+    // Re-fetch fresh to avoid stale array overwrite
+    const { data: fresh } = await supabase
+      .from('profiles')
+      .select('completed_lessons')
+      .eq('id', user.id)
+      .single()
 
-    // Record the attempt regardless
+    const existing = fresh?.completed_lessons || []
+    const updated  = existing.includes(lessonId) ? existing : [...existing, lessonId]
+
+    await supabase.from('profiles').update({ completed_lessons: updated }).eq('id', user.id)
+
     await supabase.from('lesson_attempts').insert({
       user_id:      user.id,
       lesson_id:    lessonId,
@@ -47,29 +57,10 @@ export function ProgressProvider({ children }) {
       completed_at: new Date().toISOString(),
     })
 
-    if (passed) {
-      // Fetch fresh completed_lessons before updating to avoid stale overwrites
-      const { data: fresh } = await supabase
-        .from('profiles')
-        .select('completed_lessons')
-        .eq('id', user.id)
-        .single()
-
-      const already  = fresh?.completed_lessons || []
-      const updated  = already.includes(lessonId) ? already : [...already, lessonId]
-
-      await supabase
-        .from('profiles')
-        .update({ completed_lessons: updated })
-        .eq('id', user.id)
-
-      const xpEarned = Math.round((score / 100) * 30) + 10
-      await awardXP(xpEarned, 'Lesson complete')
-      await updateStreak()
-    }
-
+    const xpEarned = Math.round((score / 100) * 30) + 10
+    await awardXP(xpEarned, 'Lesson complete')
+    await updateStreak()
     await fetchProfile()
-    return passed
   }
 
   async function updateStreak() {
@@ -79,7 +70,7 @@ export function ProgressProvider({ children }) {
     const yesterday = new Date(Date.now() - 86400000).toDateString()
     if (last === today) return
     const newStreak = last === yesterday ? (profile.streak || 0) + 1 : 1
-    await safeUpdate({ streak: newStreak, last_activity: new Date().toISOString() })
+    await dbUpdate({ streak: newStreak, last_activity: new Date().toISOString() })
     if (newStreak % 7 === 0) addNotification(`🔥 ${newStreak} day streak! Amazing!`, 'streak')
   }
 
@@ -87,7 +78,7 @@ export function ProgressProvider({ children }) {
     if (!user || !profile) return
     const list = profile.achievements || []
     if (list.includes(achievementId)) return
-    await safeUpdate({ achievements: [...list, achievementId] })
+    await dbUpdate({ achievements: [...list, achievementId] })
     addNotification('🏆 Achievement unlocked!', 'achievement')
   }
 

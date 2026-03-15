@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import Navbar from '../components/Navbar'
 import XPBar from '../components/XPBar'
-import Hearts from '../components/Hearts'
 import { COURSE_DATA, ACHIEVEMENTS } from '../data/courseData'
 import { LogOut, Edit2, Check, X } from 'lucide-react'
 
 function GooglePFP({ profile, size = 'lg' }) {
-  const sz = size === 'lg' ? 'w-20 h-20 text-3xl' : 'w-12 h-12 text-xl'
+  const sz = size === 'lg' ? 'w-20 h-20' : 'w-12 h-12'
   const src = profile?.google_avatar
 
   if (src) {
@@ -17,13 +16,13 @@ function GooglePFP({ profile, size = 'lg' }) {
         src={src}
         alt={profile?.username || 'Profile'}
         referrerPolicy="no-referrer"
-        className={`${sz} rounded-3xl object-cover border-2 border-white/40 shadow-md`}
+        className={`${sz} rounded-3xl object-cover border-2 border-white/40 shadow-md shrink-0`}
       />
     )
   }
   const initial = (profile?.username || 'U')[0].toUpperCase()
   return (
-    <div className={`${sz} rounded-3xl bg-white/20 border-2 border-white/30 flex items-center justify-center font-display text-white`}>
+    <div className={`${sz} rounded-3xl bg-white/20 border-2 border-white/30 flex items-center justify-center font-display text-3xl text-white shrink-0`}>
       {initial}
     </div>
   )
@@ -33,17 +32,29 @@ export default function Profile() {
   const { profile, signOut, updateProfile } = useAuth()
   const navigate = useNavigate()
   const [editing, setEditing] = useState(false)
-  const [newName, setNewName] = useState(profile?.username || '')
+  const [newName, setNewName] = useState('')
   const [saving,  setSaving]  = useState(false)
+  const [saveError, setSaveError] = useState('')
+
+  // Sync name field whenever profile loads/changes
+  useEffect(() => {
+    if (profile?.username) setNewName(profile.username)
+  }, [profile?.username])
 
   const completed    = profile?.completed_lessons || []
   const achievements = profile?.achievements || []
 
   async function handleSave() {
+    if (!newName.trim()) return
     setSaving(true)
-    await updateProfile({ username: newName })
-    setEditing(false)
+    setSaveError('')
+    const { error } = await updateProfile({ username: newName.trim() })
     setSaving(false)
+    if (error) {
+      setSaveError(error.message || 'Could not save. Try again.')
+    } else {
+      setEditing(false)
+    }
   }
 
   async function handleSignOut() {
@@ -52,12 +63,22 @@ export default function Profile() {
   }
 
   const STATS = [
-    { label: 'Level',     value: profile?.level  || 1, icon: '⭐' },
-    { label: 'Total XP',  value: profile?.xp     || 0, icon: '⚡' },
-    { label: 'Streak',    value: profile?.streak || 0, icon: '🔥' },
-    { label: 'Gems',      value: profile?.gems   || 0, icon: '💎' },
-    { label: 'Lessons',   value: completed.length,     icon: '📚' },
-    { label: 'Awards',    value: achievements.length,  icon: '🏆' },
+    { label: 'Level',    value: profile?.level  || 1, icon: '⭐' },
+    { label: 'Total XP', value: profile?.xp     || 0, icon: '⚡' },
+    { label: 'Streak',   value: profile?.streak || 0, icon: '🔥' },
+    { label: 'Lessons',  value: completed.length,     icon: '📚' },
+    { label: 'Awards',   value: achievements.length,  icon: '🏆' },
+    { label: 'Level',    value: profile?.level  || 1, icon: '🎯' },
+  ]
+
+  // Unique stats (remove duplicate level)
+  const STATS_CLEAN = [
+    { label: 'Level',    value: profile?.level  || 1,  icon: '⭐' },
+    { label: 'Total XP', value: profile?.xp     || 0,  icon: '⚡' },
+    { label: 'Streak',   value: profile?.streak || 0,  icon: '🔥' },
+    { label: 'Lessons',  value: completed.length,      icon: '📚' },
+    { label: 'Awards',   value: achievements.length,   icon: '🏆' },
+    { label: 'Daily XP', value: profile?.daily_goal || 100, icon: '🎯' },
   ]
 
   return (
@@ -65,22 +86,28 @@ export default function Profile() {
       <Navbar />
       <div className="max-w-lg mx-auto px-4 pt-4 space-y-4">
 
-        {/* ── Hero ── */}
+        {/* ── Hero card ── */}
         <div className="bg-gradient-to-br from-lime-400 to-green-600 rounded-3xl p-5 text-white relative overflow-hidden">
           <div className="absolute -right-6 -top-6 text-9xl opacity-10 pointer-events-none select-none">🌿</div>
 
-          <div className="flex items-center gap-4">
-            {/* Always-real Google photo */}
+          <div className="flex items-start gap-4">
             <GooglePFP profile={profile} size="lg" />
 
             <div className="flex-1 min-w-0">
               {editing ? (
-                <input
-                  value={newName}
-                  onChange={e => setNewName(e.target.value)}
-                  className="bg-white/20 text-white placeholder-white/50 rounded-xl px-3 py-1.5 font-bold text-lg w-full outline-none border-2 border-white/40 mb-1"
-                  placeholder="Your name"
-                />
+                <div className="mb-1">
+                  <input
+                    value={newName}
+                    onChange={e => setNewName(e.target.value)}
+                    onKeyDown={e => e.key === 'Enter' && handleSave()}
+                    className="bg-white/20 text-white placeholder-white/50 rounded-xl px-3 py-2 font-bold text-lg w-full outline-none border-2 border-white/50 focus:border-white"
+                    placeholder="Your display name"
+                    autoFocus
+                  />
+                  {saveError && (
+                    <p className="text-red-200 text-xs font-semibold mt-1">{saveError}</p>
+                  )}
+                </div>
               ) : (
                 <h2 className="font-display text-2xl truncate">{profile?.username || 'Learner'}</h2>
               )}
@@ -92,34 +119,32 @@ export default function Profile() {
                 <span className="bg-white/20 rounded-full px-2.5 py-0.5 text-xs font-bold">
                   🔥 {profile?.streak || 0} day streak
                 </span>
-                <span className="bg-white/20 rounded-full px-2.5 py-0.5 text-xs font-bold flex items-center gap-1">
-                  {/* Google G icon */}
-                  <svg className="w-3 h-3" viewBox="0 0 24 24">
-                    <path fill="white" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                    <path fill="white" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                    <path fill="white" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
-                    <path fill="white" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                  </svg>
-                  Google
-                </span>
               </div>
             </div>
 
             <button
-              onClick={() => editing ? setEditing(false) : setEditing(true)}
-              className="bg-white/20 hover:bg-white/30 p-2 rounded-xl transition-colors shrink-0 self-start"
+              onClick={() => { setEditing(e => !e); setSaveError('') }}
+              className="bg-white/20 hover:bg-white/30 p-2 rounded-xl transition-colors shrink-0"
             >
               {editing ? <X className="w-5 h-5" /> : <Edit2 className="w-5 h-5" />}
             </button>
           </div>
 
           {editing && (
-            <div className="mt-3">
-              <p className="text-white/70 text-xs mb-2">You can edit your display name. Your Google photo is used automatically.</p>
-              <button onClick={handleSave} disabled={saving}
-                className="bg-white text-green-700 font-bold py-2 px-5 rounded-xl hover:bg-lime-50 transition-colors flex items-center gap-2 text-sm">
+            <div className="mt-3 flex gap-2">
+              <button
+                onClick={handleSave}
+                disabled={saving || !newName.trim()}
+                className="flex-1 bg-white text-green-700 font-bold py-2.5 px-4 rounded-xl hover:bg-lime-50 transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+              >
                 <Check className="w-4 h-4" />
-                {saving ? 'Saving...' : 'Save Name'}
+                {saving ? 'Saving…' : 'Save Name'}
+              </button>
+              <button
+                onClick={() => { setEditing(false); setNewName(profile?.username || ''); setSaveError('') }}
+                className="bg-white/20 hover:bg-white/30 text-white font-bold py-2.5 px-4 rounded-xl transition-colors"
+              >
+                Cancel
               </button>
             </div>
           )}
@@ -127,22 +152,11 @@ export default function Profile() {
           <XPBar className="mt-4" />
         </div>
 
-        {/* ── Hearts ── */}
-        <div className="card">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-bold text-green-800">Hearts ❤️</h3>
-              <p className="text-xs text-green-500 font-semibold">Refills over time · spend 💎50 to restore now</p>
-            </div>
-            <Hearts size="md" />
-          </div>
-        </div>
-
         {/* ── Stats ── */}
         <div>
           <h3 className="font-display text-xl text-green-800 mb-3">Your Stats</h3>
           <div className="grid grid-cols-3 gap-3">
-            {STATS.map(s => (
+            {STATS_CLEAN.map(s => (
               <div key={s.label} className="card text-center py-4">
                 <div className="text-2xl mb-1">{s.icon}</div>
                 <div className="font-display text-2xl text-green-700">{s.value}</div>
@@ -159,7 +173,7 @@ export default function Profile() {
             {COURSE_DATA.map(sec => {
               const total = sec.units.reduce((s, u) => s + u.lessons.length, 0)
               const done  = sec.units.reduce((s, u) => s + u.lessons.filter(l => completed.includes(l.id)).length, 0)
-              const pct   = Math.round((done / total) * 100)
+              const pct   = total > 0 ? Math.round((done / total) * 100) : 0
               return (
                 <div key={sec.id}>
                   <div className="flex items-center gap-2 mb-1">
@@ -168,7 +182,8 @@ export default function Profile() {
                     <span className="text-xs font-bold text-lime-600">{done}/{total}</span>
                   </div>
                   <div className="h-3 bg-lime-100 rounded-full overflow-hidden">
-                    <div className={`h-full bg-gradient-to-r ${sec.color} rounded-full progress-fill`} style={{ width: `${pct}%` }} />
+                    <div className={`h-full bg-gradient-to-r ${sec.color} rounded-full progress-fill`}
+                      style={{ width: `${pct}%` }} />
                   </div>
                 </div>
               )
@@ -178,7 +193,9 @@ export default function Profile() {
 
         {/* ── Achievements ── */}
         <div className="card">
-          <h3 className="font-display text-xl text-green-800 mb-3">🏆 Achievements ({achievements.length}/{ACHIEVEMENTS.length})</h3>
+          <h3 className="font-display text-xl text-green-800 mb-3">
+            🏆 Achievements ({achievements.length}/{ACHIEVEMENTS.length})
+          </h3>
           <div className="grid grid-cols-2 gap-2">
             {ACHIEVEMENTS.slice(0, 6).map(ach => {
               const unlocked = achievements.includes(ach.id)
@@ -198,9 +215,14 @@ export default function Profile() {
           <h3 className="font-display text-xl text-green-800 mb-3">🎯 Daily Goal</h3>
           <div className="grid grid-cols-3 gap-2">
             {[50, 100, 200].map(goal => (
-              <button key={goal} onClick={() => updateProfile({ daily_goal: goal })}
+              <button
+                key={goal}
+                onClick={() => updateProfile({ daily_goal: goal })}
                 className={`p-3 rounded-2xl border-2 font-bold text-center transition-all
-                  ${profile?.daily_goal === goal ? 'border-lime-400 bg-lime-50 text-lime-700' : 'border-gray-200 text-gray-600 hover:border-lime-200'}`}>
+                  ${profile?.daily_goal === goal
+                    ? 'border-lime-400 bg-lime-50 text-lime-700'
+                    : 'border-gray-200 text-gray-600 hover:border-lime-200'}`}
+              >
                 <div className="text-lg">{goal === 50 ? '🌱' : goal === 100 ? '🌿' : '🌳'}</div>
                 <div className="text-sm">{goal} XP</div>
               </button>
