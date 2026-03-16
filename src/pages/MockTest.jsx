@@ -5,6 +5,7 @@ import { useProgress } from '../contexts/ProgressContext'
 import { Clock, ChevronRight, RotateCcw, Volume2, VolumeX, Play } from 'lucide-react'
 import { LISTENING_SETS, READING_SETS, WRITING_SETS, SPEAKING_SETS } from '../data/mockTestData'
 import Confetti from 'react-confetti'
+import SpeakingEvaluator from '../components/SpeakingEvaluator'
 
 function pickRandom(arr) { return arr[Math.floor(Math.random() * arr.length)] }
 
@@ -212,7 +213,7 @@ function ListeningTest({ set, onComplete }) {
       </div>
 
       {/* Scrollable content */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4 pb-24">
+      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
         {/* Audio player — shown once per section (on the first question of that section) */}
         {isFirst && sec && (
           <AudioPlayer
@@ -339,7 +340,7 @@ function ReadingTest({ set, onComplete }) {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4 pb-24">
+      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
         {/* Passage — collapsible */}
         {passage && (
           <div className="card bg-purple-50 border-2 border-purple-200">
@@ -474,7 +475,7 @@ function WritingTest({ set, onComplete }) {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4 pb-24">
+      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
         <div className="card bg-yellow-50 border-2 border-yellow-200">
           <div className="text-xs font-bold text-yellow-600 mb-2">📋 Task Prompt</div>
           <p className="text-sm font-semibold text-yellow-900 leading-relaxed">{task.prompt}</p>
@@ -602,7 +603,7 @@ function SpeakingTest({ set, onComplete }) {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 py-5 space-y-4 pb-24">
+      <div className="flex-1 overflow-y-auto px-4 py-5 space-y-4 pb-6">
         {part === 1 && (
           <>
             <div className="text-center">
@@ -698,7 +699,19 @@ function SpeakingTest({ set, onComplete }) {
                 </div>
               </div>
             ))}
-            <button onClick={() => onComplete()} className="btn-primary w-full">
+            {/* AI Speaking Evaluator for Part 3 */}
+            <div className="bg-pink-50 border-2 border-pink-200 rounded-2xl p-4">
+              <h3 className="font-bold text-pink-800 mb-2 text-sm">🤖 Optional: AI Feedback</h3>
+              <p className="text-xs text-pink-700 font-semibold mb-3">
+                Record your answer to a Part 3 question for AI examiner feedback before finishing.
+              </p>
+              <SpeakingEvaluator
+                question={set.part3.questions[0]?.q || 'Discuss the topic from your cue card in more depth.'}
+                part={3}
+              />
+            </div>
+
+            <button onClick={() => onComplete()} className="btn-primary w-full mt-2">
               ✅ Finish Speaking
             </button>
           </>
@@ -948,7 +961,7 @@ export default function MockTest() {
   // ── ACTIVE TEST ──
   if (phase === 'test') {
     return (
-      <div className="min-h-screen bg-lime-50 flex flex-col pt-16">
+      <div className="h-screen bg-lime-50 flex flex-col" style={{paddingTop:'64px', paddingBottom:'64px'}}>
         <Navbar />
         {currentSec === 'listening' && <ListeningTest set={sets.listening} onComplete={handleListeningDone} />}
         {currentSec === 'reading'   && <ReadingTest   set={sets.reading}   onComplete={handleReadingDone}   />}
