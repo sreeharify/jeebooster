@@ -1,0 +1,99 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "🔄 Synonyms & Paraphrasing",
+    "sections": [
+      {
+        "heading": "Why paraphrasing matters",
+        "body": "Paraphrasing is the single most important writing skill for IELTS:\n• Introduction: You MUST paraphrase the question — never copy\n• Task 1: Paraphrase the task description\n• Academic Writing: Avoids repetition, shows Lexical Resource\n• Reading: Questions paraphrase the passage — you must recognise it\n\nCopying the question word-for-word = ZERO marks for that part."
+      },
+      {
+        "heading": "How to paraphrase",
+        "body": "Three techniques:\n1. Synonyms: \"important\" → \"significant / crucial / vital\"\n2. Change word class: \"improve\" (verb) → \"improvement\" (noun)\n3. Restructure: \"Technology has changed society\" → \"Society has been transformed by technology\"\n\nBest paraphrasing uses ALL THREE techniques together."
+      }
+    ],
+    "highlight": "A paraphrase should convey the SAME meaning in DIFFERENT words. Changing just one word is not enough — change the structure AND the vocabulary.",
+    "example": {
+      "wrong": "\"Some people think that technology is beneficial for education.\" → \"Some people believe that technology is good for education.\"",
+      "right": "\"Some people think that technology is beneficial for education.\" → \"There is a widely held view that digital tools have the potential to significantly enhance the learning experience.\""
+    }
+  },
+  {
+    "kind": "fill_blank",
+    "band": 6,
+    "sentence": "The task prompt says \"important.\" Which word is the BEST academic synonym to use instead?",
+    "blanks": [
+      {
+        "correct": "significant",
+        "distractors": [
+          "big",
+          "great",
+          "nice"
+        ]
+      }
+    ],
+    "explanation": "\"Significant\" is the most versatile academic synonym for \"important\":\n• \"a significant impact\"\n• \"a significant increase\"\n• \"significant implications\"\n\nOther options:\n\"Crucial\" = absolutely essential\n\"Vital\" = critical for survival\n\"Paramount\" = most important of all (strongest)\n\n\"Big\", \"great\", \"nice\" are informal — avoid in academic writing."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "IELTS question: \"The graph shows how many people use public transport.\" Your introduction should say: \"The _______ illustrates the _______ of public transport users.\"",
+    "blanks": [
+      {
+        "correct": "chart",
+        "distractors": [
+          "picture",
+          "drawing",
+          "image"
+        ]
+      },
+      {
+        "correct": "number",
+        "distractors": [
+          "amount",
+          "count",
+          "sum"
+        ]
+      }
+    ],
+    "explanation": "Paraphrase:\n• \"graph\" → \"chart\" (same type of visual, different word)\n• \"how many people use\" → \"the number of users\" (change structure)\n\n\"Amount\" is for uncountable nouns (an amount of water). \"Number\" is for countable (a number of people). This is a very common error in Task 1."
+  },
+  {
+    "kind": "match_pairs",
+    "band": 7,
+    "instruction": "Match each common word to its best academic paraphrase:",
+    "pairs": [
+      {
+        "word": "increase",
+        "meaning": "rise / grow / escalate / surge"
+      },
+      {
+        "word": "problem",
+        "meaning": "challenge / issue / concern / difficulty"
+      },
+      {
+        "word": "show",
+        "meaning": "illustrate / demonstrate / indicate / reveal"
+      },
+      {
+        "word": "important",
+        "meaning": "significant / crucial / vital / paramount"
+      }
+    ],
+    "explanation": "These four word families cover a huge proportion of IELTS tasks. Having 3–4 options for each means you never repeat yourself."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which introduction best paraphrases: \"Some people believe that governments should spend more money on the arts.\"?",
+    "options": [
+      "Some people think governments should spend more on arts.",
+      "There are people who say governments need to give more money to art.",
+      "There exists a school of thought that national governments have an obligation to substantially increase public funding allocated to artistic and cultural endeavours.",
+      "Some people believe that governments should invest more money in the arts."
+    ],
+    "correct": "There exists a school of thought that national governments have an obligation to substantially increase public funding allocated to artistic and cultural endeavours.",
+    "explanation": "✅ Best paraphrase analysis:\n• \"Some people believe\" → \"There exists a school of thought\"\n• \"governments\" → \"national governments\"\n• \"spend more money on\" → \"substantially increase public funding allocated to\"\n• \"the arts\" → \"artistic and cultural endeavours\"\n\nEvery element is changed using synonyms, class-changes, and restructuring."
+  }
+]

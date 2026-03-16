@@ -1,0 +1,81 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "🗺️ Map & Diagram Labelling",
+    "sections": [
+      {
+        "heading": "What it tests",
+        "body": "Map labelling: you see a map with some labelled features and empty spaces. You hear a description of the location and must label the empty features.\n\nDiagram labelling: you see a diagram of a process, machine, or object. You hear an explanation and label the parts."
+      },
+      {
+        "heading": "Map strategy",
+        "body": "Before listening:\n• Study the map carefully\n• Note what's already labelled (these give you reference points)\n• Identify the compass directions if shown\n\nWhile listening:\n• Follow the speaker's route mentally\n• Listen for directional language: opposite, next to, adjacent to, to the north of, facing, between, past\n• Match what you hear to what you see on the map"
+      }
+    ],
+    "highlight": "The speaker will describe locations relative to already-labelled features. Use those landmarks as anchors. If lost, skip and return — questions are in order."
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "Which phrase means \"directly across from\"?",
+    "options": [
+      "Adjacent to",
+      "Opposite",
+      "Next to",
+      "Beside"
+    ],
+    "correct": "Opposite",
+    "explanation": "\"Opposite\" = directly across from, facing.\n\n\"Adjacent to\", \"next to\", and \"beside\" all mean BESIDE/NEXT TO (touching or very close).\n\nIn map questions, this distinction is crucial. \"The library is opposite the bank\" = they face each other across a road/space."
+  },
+  {
+    "kind": "match_pairs",
+    "band": 7,
+    "instruction": "Match each direction phrase to its meaning:",
+    "pairs": [
+      {
+        "word": "to the north of",
+        "meaning": "above (on a standard map)"
+      },
+      {
+        "word": "adjacent to",
+        "meaning": "next to / touching"
+      },
+      {
+        "word": "at the intersection",
+        "meaning": "at the point where two roads cross"
+      },
+      {
+        "word": "facing",
+        "meaning": "with its front towards"
+      }
+    ],
+    "explanation": "Map labelling questions use precise spatial language. Recognising these instantly — without needing to translate — is the difference between Band 6 and Band 8 in listening."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "On a map, a building is described as \"past the café, on the left, before you reach the roundabout.\" If you're walking north, where is it?",
+    "options": [
+      "North-east of the café, west of the roundabout",
+      "South of the café",
+      "East of the roundabout",
+      "West of the café, south of the roundabout"
+    ],
+    "correct": "North-east of the café, west of the roundabout",
+    "explanation": "Walking NORTH → left = WEST, right = EAST\nPast the café (further north)\nBefore the roundabout (south of it)\n\nSo: north of café + west side + before roundabout = north-west of café area, west of roundabout.\n\nAlways mentally orient yourself in the direction the speaker is describing."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "You need to label a building on a map. You've missed the description. What should you do?",
+    "options": [
+      "Leave it blank and move on",
+      "Go back and re-listen to the whole section",
+      "Make your best guess from context then move on",
+      "Write \"unknown\""
+    ],
+    "correct": "Make your best guess from context then move on",
+    "explanation": "In the real test, you CANNOT re-listen. So:\n1. Make a reasonable guess based on what you've heard\n2. Move on immediately — don't freeze\n3. Use the 10-minute transfer time to revisit and confirm\n\nBlank answers score 0. A guess has a chance of being right. There's no penalty for wrong answers in IELTS."
+  }
+]

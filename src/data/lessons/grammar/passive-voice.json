@@ -1,0 +1,89 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "🔄 Passive Voice",
+    "sections": [
+      {
+        "heading": "When to use passive",
+        "body": "Use passive voice in academic writing when:\n• The doer is unknown or irrelevant\n• You want to emphasise the result, not the agent\n• You want a more objective, formal tone\n\n\"The data was analysed\" (passive) → more academic than \"We analysed the data\""
+      },
+      {
+        "heading": "Structure",
+        "body": "Present: is/are + past participle → \"Results are recorded daily\"\nPast: was/were + pp → \"The study was conducted in 2022\"\nPerfect: has/have been + pp → \"The policy has been implemented\"\nFuture: will be + pp → \"The findings will be published\"\nModal: can/should/must be + pp → \"The issue must be addressed\""
+      }
+    ],
+    "highlight": "In Task 1 (describing graphs), passive is very natural: \"A sharp increase was recorded\" or \"The data shows that X was exceeded by Y.\"",
+    "example": {
+      "wrong": "We can see from the graph that researchers found interesting results.",
+      "right": "The graph illustrates that a significant increase was recorded between 2010 and 2020."
+    }
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "Convert to passive: \"Scientists discovered a new vaccine in 2023.\"",
+    "options": [
+      "A new vaccine discovered by scientists in 2023.",
+      "A new vaccine was discovered by scientists in 2023.",
+      "A new vaccine were discovered by scientists in 2023.",
+      "A new vaccine has discovered by scientists in 2023."
+    ],
+    "correct": "A new vaccine was discovered by scientists in 2023.",
+    "explanation": "Past simple passive = was/were + past participle.\n\n✅ \"A new vaccine WAS DISCOVERED by scientists in 2023\"\n\nCommon errors:\n❌ Missing \"was\": \"A new vaccine discovered by...\"\n❌ \"were\" is wrong because \"vaccine\" is singular\n❌ \"has discovered\" = present perfect ACTIVE, not passive",
+    "hint": "Past passive = was/were + past participle."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "The experiment _______ under controlled conditions last year.",
+    "blanks": [
+      {
+        "correct": "was conducted",
+        "distractors": [
+          "conducted",
+          "has conducted",
+          "is conducted"
+        ]
+      }
+    ],
+    "explanation": "\"Was conducted\" is correct — past simple passive for a completed action.\n\n\"Conducted\" alone = active past tense (missing subject)\n\"Has conducted\" = present perfect ACTIVE\n\"Is conducted\" = present simple passive (wrong tense — \"last year\" needs past)",
+    "hint": "Last year = past tense. Passive = was/were + past participle."
+  },
+  {
+    "kind": "reorder_sentence",
+    "band": 7,
+    "instruction": "Build the correct passive sentence:",
+    "words": [
+      "been",
+      "has",
+      "extensively",
+      "The",
+      "studied",
+      "topic"
+    ],
+    "correct": "The topic has been extensively studied.",
+    "explanation": "Present perfect passive: Subject + HAS BEEN + adverb + past participle.\n\nNote the adverb \"extensively\" goes BETWEEN \"been\" and the past participle — a common point of error for learners."
+  },
+  {
+    "kind": "error_correction",
+    "band": 8,
+    "title": "Find the Passive Voice Error",
+    "instruction": "One sentence uses the passive voice incorrectly:",
+    "sentences": [
+      {
+        "text": "The results were published in a peer-reviewed journal.",
+        "correct": true
+      },
+      {
+        "text": "The data has been careful analysed by the research team.",
+        "correct": false,
+        "explanation": "\"Careful\" is an adjective — it cannot modify a verb. The adverb \"carefully\" is needed.\n\n✅ Correct: \"The data has been carefully analysed by the research team.\"\n\nIn passive voice, adverbs go BETWEEN \"been\" and the past participle."
+      },
+      {
+        "text": "The policy will be reviewed by the committee next month.",
+        "correct": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "🔗 Discourse Markers",
+    "sections": [
+      {
+        "heading": "What they do",
+        "body": "Discourse markers are words and phrases that organise your writing and signal the relationship between ideas. They are essential for Coherence & Cohesion (25% of your Writing score).\n\nThey help the reader follow your argument by showing:\n• When you're adding information\n• When you're contrasting ideas\n• When you're drawing a conclusion\n• When you're giving an example"
+      },
+      {
+        "heading": "Categories",
+        "body": "➕ Adding: Furthermore, Moreover, In addition, Additionally, Not only...but also\n\n↔️ Contrasting: However, Nevertheless, On the other hand, Conversely, Despite this, Notwithstanding\n\n➡️ Result: Consequently, Therefore, As a result, Hence, Thus\n\n💡 Example: For instance, For example, To illustrate, A case in point, Specifically\n\n🔚 Concluding: In conclusion, To summarise, Overall, In sum, Ultimately"
+      }
+    ],
+    "highlight": "DO NOT overuse discourse markers. Band 6 essays start every sentence with \"Furthermore\" or \"However\". Band 9 essays vary their cohesive devices and sometimes embed them mid-sentence.",
+    "example": {
+      "wrong": "Furthermore, technology is useful. Furthermore, it helps students. Furthermore, it saves time. However, it has problems. However, these can be managed.",
+      "right": "Technology offers considerable educational benefits; however, its unrestricted use presents genuine risks that educators must thoughtfully manage."
+    }
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "Which discourse marker shows RESULT or CONSEQUENCE?",
+    "options": [
+      "Furthermore",
+      "Nevertheless",
+      "Consequently",
+      "Moreover"
+    ],
+    "correct": "Consequently",
+    "explanation": "\"Consequently\" introduces the result of what was previously stated.\n\nFurthermore/Moreover = add more information\nNevertheless = contrast (something is true despite difficulty)\n\nResult markers: Consequently, Therefore, Hence, Thus, As a result, For this reason\n\nExample: \"Air quality has deteriorated significantly. Consequently, respiratory diseases have become more prevalent.\"",
+    "hint": "Think: \"as a result of what was just said...\" Which word fits?"
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "Urban farming requires significant investment. _______, the long-term environmental benefits may well outweigh the initial costs.",
+    "blanks": [
+      {
+        "correct": "Nevertheless",
+        "distractors": [
+          "Therefore",
+          "Furthermore",
+          "Similarly"
+        ]
+      }
+    ],
+    "explanation": "\"Nevertheless\" acknowledges the problem (high cost) while maintaining the argument (benefits are still worth it).\n\nIt means: \"even though this is true, the main point still stands.\"\n\n\"Therefore\" would suggest the investment LEADS to the benefits being worth it — illogical here\n\"Furthermore\" just adds more — doesn't create the contrast needed",
+    "hint": "The sentence first raises a problem, then argues the benefits still win — that's a concession+contrast."
+  },
+  {
+    "kind": "match_pairs",
+    "band": 7,
+    "instruction": "Match each discourse marker to its function:",
+    "pairs": [
+      {
+        "word": "To illustrate",
+        "meaning": "Introducing a specific example"
+      },
+      {
+        "word": "Notwithstanding",
+        "meaning": "Despite something — formal contrast"
+      },
+      {
+        "word": "In sum",
+        "meaning": "Concluding and summarising"
+      },
+      {
+        "word": "Accordingly",
+        "meaning": "As a result — showing consequence"
+      }
+    ],
+    "explanation": "\"Notwithstanding\" and \"Accordingly\" are Band 8+ formal alternatives to \"Despite\" and \"Therefore\". Using them appropriately impresses examiners."
+  },
+  {
+    "kind": "error_correction",
+    "band": 7,
+    "title": "Discourse Marker Error",
+    "instruction": "Find the incorrectly used discourse marker:",
+    "sentences": [
+      {
+        "text": "The population is ageing rapidly. Consequently, healthcare costs are rising.",
+        "correct": true
+      },
+      {
+        "text": "Technology has many benefits. Despite this, it has some advantages too.",
+        "correct": false,
+        "explanation": "\"Despite this\" signals CONTRAST — it introduces something that goes AGAINST the previous point.\n\nBut \"it has advantages\" AGREES with \"technology has benefits\" — you can't contrast them.\n\n✅ Correct: \"Technology has many benefits. Furthermore/Moreover, it has some advantages too.\"\n✅ Or: \"Technology has many drawbacks. Despite this, it remains widely adopted.\""
+      },
+      {
+        "text": "Social media has increased connectivity. Nevertheless, feelings of isolation persist.",
+        "correct": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "setId": "W1",
+    "title": "Writing Test — Set A",
+    "tasks": [
+      {
+        "taskNum": 1,
+        "type": "Academic Task 1",
+        "prompt": "The graph below shows the percentage of households in the UK owning various electronic devices from 2005 to 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+        "data": {
+          "description": "Imagined data for practice:",
+          "points": [
+            "Smartphones: rose from 5% in 2005 to 89% in 2020",
+            "Laptops: rose from 30% to 72%",
+            "Desktop computers: fell from 65% to 31%",
+            "Tablets: grew from 0% (introduced 2010) to 54% in 2020"
+          ]
+        },
+        "minWords": 150,
+        "bandGuide": [
+          {
+            "band": 6,
+            "desc": "Describes some data but misses key trends. Basic vocabulary."
+          },
+          {
+            "band": 7,
+            "desc": "Covers main trends with accurate data. Clear overview. Minor vocabulary errors."
+          },
+          {
+            "band": 8,
+            "desc": "Well-structured, accurate data, clear comparisons, varied language."
+          },
+          {
+            "band": 9,
+            "desc": "Precise, sophisticated language. Perfect structure: overview → key trends → details."
+          }
+        ],
+        "modelParagraph": "Overall, smartphones experienced the most dramatic growth, rising from just 5% in 2005 to 89% by 2020, while desktop computer ownership declined significantly over the same period. Tablet ownership, though non-existent before 2010, grew rapidly to reach 54% by the end of the period."
+      },
+      {
+        "taskNum": 2,
+        "type": "Academic Task 2",
+        "prompt": "Some people believe that universities should focus solely on providing academic knowledge and skills. Others believe that universities have a broader responsibility to prepare students for life and work. Discuss both views and give your own opinion. Write at least 250 words.",
+        "minWords": 250,
+        "bandGuide": [
+          {
+            "band": 6,
+            "desc": "Basic argument with some supporting points. Simple linking. Some errors."
+          },
+          {
+            "band": 7,
+            "desc": "Clear position, well-structured, both views addressed. Mostly accurate."
+          },
+          {
+            "band": 8,
+            "desc": "Sophisticated argument, cohesive, wide vocabulary, minimal errors."
+          },
+          {
+            "band": 9,
+            "desc": "Fully developed, nuanced, natural vocabulary and grammar throughout."
+          }
+        ],
+        "modelParagraph": "Those who advocate for a purely academic focus argue that universities possess a unique mandate to advance knowledge through rigorous intellectual enquiry. Diluting this mission with vocational or life skills training, they contend, risks reducing higher education to a form of expensive job preparation, undermining the intrinsic value of learning. Conversely, proponents of a broader university role highlight the considerable disconnect that frequently exists between academic programmes and workplace demands, arguing that institutions have a moral obligation to equip graduates for the realities of adult life."
+      }
+    ]
+  },
+  {
+    "setId": "W2",
+    "title": "Writing Test — Set B",
+    "tasks": [
+      {
+        "taskNum": 1,
+        "type": "Academic Task 1",
+        "prompt": "The chart below shows the proportion of people using different modes of transport to commute to work in a major city in 2000 and 2023. Summarise the information, selecting and reporting the main features. Write at least 150 words.",
+        "data": {
+          "description": "Imagined data for practice:",
+          "points": [
+            "Car: fell from 58% in 2000 to 38% in 2023",
+            "Public transport: rose from 22% to 41%",
+            "Cycling: increased from 5% to 13%",
+            "Walking: remained stable at around 8%"
+          ]
+        },
+        "minWords": 150,
+        "bandGuide": [
+          {
+            "band": 6,
+            "desc": "Reports some figures but no clear overview. Limited range of vocabulary."
+          },
+          {
+            "band": 7,
+            "desc": "Main trends identified. Overview present. Mostly accurate comparisons."
+          },
+          {
+            "band": 8,
+            "desc": "All key trends covered accurately. Varied linking and vocabulary."
+          },
+          {
+            "band": 9,
+            "desc": "Concise overview, precise data, sophisticated paraphrasing, natural flow."
+          }
+        ],
+        "modelParagraph": "The most striking change was in car usage, which fell considerably from over half of all commuters in 2000 to just over a third by 2023. This decline was mirrored by a corresponding rise in public transport, which overtook car use to become the most popular commuting method by 2023."
+      },
+      {
+        "taskNum": 2,
+        "type": "Academic Task 2",
+        "prompt": "In many countries, people are living longer than ever before. Some argue this creates serious problems for society, while others see it as a positive development. Discuss both views and give your own opinion. Write at least 250 words.",
+        "minWords": 250,
+        "bandGuide": [
+          {
+            "band": 6,
+            "desc": "Discusses the topic but limited development. Some errors in complex structures."
+          },
+          {
+            "band": 7,
+            "desc": "Both sides addressed with supporting examples. Clear conclusion."
+          },
+          {
+            "band": 8,
+            "desc": "Nuanced argument, sophisticated vocabulary, varied grammar, minor errors."
+          },
+          {
+            "band": 9,
+            "desc": "Insightful, fully developed, precise language, virtually no errors."
+          }
+        ],
+        "modelParagraph": "From a pessimistic standpoint, extended lifespans place considerable pressure on public healthcare systems and pension funds, as a growing proportion of elderly citizens must be supported by a proportionally smaller working-age population. This demographic shift, commonly referred to as the \"ageing crisis\", threatens the fiscal sustainability of welfare states across the developed world. On the other hand, optimists note that older populations bring substantial contributions in the form of accumulated experience, voluntary work, and childcare provision, and that technological advances in medicine may ultimately extend not just lifespan but healthspan — the period of active, productive life."
+      }
+    ]
+  }
+]

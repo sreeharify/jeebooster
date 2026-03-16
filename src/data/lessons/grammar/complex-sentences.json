@@ -1,0 +1,213 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "⚡ Grammar Range & Accuracy",
+    "sections": [
+      {
+        "heading": "What examiners look for",
+        "body": "The GRA (Grammatical Range and Accuracy) criterion is 25% of your Writing and Speaking score. It's not just about being error-free — it's about using a VARIETY of structures."
+      },
+      {
+        "heading": "The progression",
+        "body": "Band 6: Uses mostly simple sentences with some complex ones. Errors are common.\nBand 7: Uses complex sentences with some errors in complex structures.\nBand 8: Uses a wide range of structures. Errors are rare.\nBand 9: Full range of structures with natural, consistent accuracy."
+      }
+    ],
+    "highlight": "You don't need perfect grammar. You need RANGE. Show the examiner you CAN use complex structures.",
+    "example": {
+      "wrong": "Technology is good. It helps people. But it has problems too. These problems are many.",
+      "right": "Although technology has undeniably improved quality of life, the challenges it introduces — particularly regarding privacy and social isolation — demand equally thoughtful solutions."
+    }
+  },
+  {
+    "kind": "mini_explainer",
+    "band": 6,
+    "title": "🔗 Complex Sentences: The Foundation",
+    "body": "A complex sentence has a MAIN clause + a SUBORDINATE clause connected by a subordinating conjunction.\n\nThink of it like this:\nMain clause = can stand alone ✅\nSubordinate clause = cannot stand alone ❌\n\nExample:\n\"Although technology is useful (sub.) ← , it creates problems.\" (main) ✅\n\"Although technology is useful.\" ← WRONG — incomplete thought ❌",
+    "quick": [
+      {
+        "label": "Contrast: although, whereas, even though",
+        "icon": "↔️"
+      },
+      {
+        "label": "Cause: because, since, as, given that",
+        "icon": "➡️"
+      },
+      {
+        "label": "Condition: if, unless, provided that",
+        "icon": "❓"
+      },
+      {
+        "label": "Time: when, after, before, once, until",
+        "icon": "⏰"
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "Which is a correctly formed complex sentence?",
+    "options": [
+      "Although technology is useful, it creates challenges.",
+      "Although, technology is useful. It creates challenges.",
+      "Technology is useful although, it creates challenges.",
+      "Although technology. It is useful and creates challenges."
+    ],
+    "correct": "Although technology is useful, it creates challenges.",
+    "explanation": "✅ Correct structure: Subordinate clause (Although + S + V) + comma + Main clause\n\n❌ Option B: Never put a comma directly after \"Although\"\n❌ Option C: The comma belongs BEFORE \"although\" only when the main clause comes FIRST\n❌ Option D: \"Although technology\" has no verb — it's not a clause\n\nRule: When the subordinate clause comes FIRST, put a comma after it. When it comes SECOND, no comma needed.",
+    "hint": "The subordinate clause with \"Although\" must have a subject and verb."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 6,
+    "sentence": "_____ the government invested in education, literacy rates would improve significantly.",
+    "blanks": [
+      {
+        "correct": "If",
+        "distractors": [
+          "Although",
+          "Because",
+          "Whereas"
+        ]
+      }
+    ],
+    "explanation": "\"If\" introduces a condition (first or second conditional).\n\n\"Although\" = contrast, \"Because\" = cause/reason, \"Whereas\" = comparison.\n\nThis sentence structure is: If + [condition], [result] — a basic first/second conditional.",
+    "hint": "This sentence shows a condition and a result — which word introduces conditions?"
+  },
+  {
+    "kind": "explainer",
+    "band": 7,
+    "title": "🔄 Passive Voice in Academic Writing",
+    "sections": [
+      {
+        "heading": "When to use it",
+        "body": "Passive voice makes academic writing more objective and formal. Use it when:\n• The doer is unknown or unimportant\n• You want to emphasise the action/result\n• Standard academic convention requires it"
+      },
+      {
+        "heading": "Structure",
+        "body": "Active:  Subject + verb + object\n\"Researchers conducted the study.\"\n\nPassive: Object + be + past participle [+ by + agent]\n\"The study was conducted [by researchers].\""
+      },
+      {
+        "heading": "Tense forms",
+        "body": "Present: is/are + pp → \"Data is collected daily\"\nPast: was/were + pp → \"The experiment was conducted\"\nPerfect: has/have been + pp → \"Results have been published\""
+      }
+    ],
+    "highlight": "In IELTS Task 1 (describing graphs), passive voice is very natural: \"A sharp increase was recorded in 2020.\"",
+    "example": {
+      "wrong": "We can see that the researchers found interesting results in the data.",
+      "right": "Notably, the findings reveal a statistically significant correlation — a result that has since been substantiated by three independent studies."
+    }
+  },
+  {
+    "kind": "reorder_sentence",
+    "band": 7,
+    "instruction": "Rearrange to form a correct passive sentence:",
+    "words": [
+      "been",
+      "has",
+      "significantly",
+      "The",
+      "environment",
+      "damaged",
+      "human",
+      "by",
+      "activity"
+    ],
+    "correct": "The environment has been significantly damaged by human activity.",
+    "explanation": "Structure: The environment (subject) + has been (present perfect passive) + significantly (adverb) + damaged (past participle) + by human activity (agent phrase).\n\nNote: \"significantly\" goes AFTER \"been\" and BEFORE \"damaged\" — adverbs in passive sentences go between the auxiliary and the past participle.",
+    "hint": "Start with \"The environment has been...\""
+  },
+  {
+    "kind": "mini_explainer",
+    "band": 7,
+    "title": "🎯 Conditionals: The Four Types",
+    "body": "Type 0 — Always true: \"If you heat water to 100°C, it boils.\"\nType 1 — Real future: \"If temperatures rise, sea levels will increase.\"\nType 2 — Hypothetical present: \"If governments invested more, outcomes would improve.\"\nType 3 — Hypothetical past: \"If action had been taken sooner, the crisis could have been avoided.\"",
+    "quick": [
+      {
+        "label": "Type 2: If + past → would + infinitive",
+        "icon": "💡"
+      },
+      {
+        "label": "Type 3: If + past perfect → would have + pp",
+        "icon": "💡"
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "Which sentence is a correctly formed SECOND conditional?",
+    "options": [
+      "If the government will invest in renewables, emissions will fall.",
+      "If the government invested in renewables, emissions would fall.",
+      "If the government had invested in renewables, emissions would fall.",
+      "If the government invests in renewables, emissions fall."
+    ],
+    "correct": "If the government invested in renewables, emissions would fall.",
+    "explanation": "✅ Second conditional: If + PAST SIMPLE (invested) + comma + would + INFINITIVE (fall)\n\nThis expresses a hypothetical or unlikely present/future situation.\n\n❌ Option A uses \"will\" in both clauses — this would be first conditional but is grammatically wrong\n❌ Option C uses \"had invested\" — this is third conditional (hypothetical past)\n❌ Option D is zero conditional (always true facts)",
+    "hint": "Second conditional: If + past simple... would + bare infinitive."
+  },
+  {
+    "kind": "error_correction",
+    "band": 8,
+    "title": "✏️ Find the Grammar Error",
+    "instruction": "Identify the sentence that contains a grammatical mistake:",
+    "sentences": [
+      {
+        "text": "Despite the challenges, the project was completed on time.",
+        "correct": true
+      },
+      {
+        "text": "Despite of the challenges, the project was completed on time.",
+        "correct": false,
+        "explanation": "\"Despite\" NEVER takes \"of\".\n\n✅ Correct: \"Despite the challenges...\"\n✅ Or: \"In spite of the challenges...\"\n\n\"Despite of\" is one of the most common errors in IELTS Band 6–7 essays. Memorise: DESPITE + noun/noun phrase. IN SPITE OF + noun/noun phrase."
+      },
+      {
+        "text": "Although the project faced setbacks, it was completed successfully.",
+        "correct": true
+      },
+      {
+        "text": "Provided that funding is secured, the project will proceed.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "kind": "match_pairs",
+    "band": 8,
+    "instruction": "Match each sentence beginning to the correct ending:",
+    "pairs": [
+      {
+        "word": "Although technology has many benefits,",
+        "meaning": "it also presents significant challenges."
+      },
+      {
+        "word": "Were the government to invest more,",
+        "meaning": "outcomes would improve considerably."
+      },
+      {
+        "word": "Not only does social media connect people,",
+        "meaning": "but it also spreads misinformation."
+      },
+      {
+        "word": "Having considered all the evidence,",
+        "meaning": "I firmly believe action must be taken."
+      }
+    ],
+    "explanation": "These are all sophisticated sentence starters:\n• \"Although...\" = concessive clause (contrast)\n• \"Were the government to...\" = formal conditional inversion (Band 8+)\n• \"Not only does...\" = negative inversion (Band 8+)\n• \"Having considered...\" = perfect participle clause (Band 8+)"
+  },
+  {
+    "kind": "mcq",
+    "band": 9,
+    "question": "Which sentence uses INVERSION correctly for emphasis?",
+    "options": [
+      "I have never seen such remarkable progress.",
+      "Never I have seen such remarkable progress.",
+      "Never have I seen such remarkable progress.",
+      "Have never I seen such remarkable progress."
+    ],
+    "correct": "Never have I seen such remarkable progress.",
+    "explanation": "✅ Inversion after negative adverbs: NEVER + AUXILIARY (have) + SUBJECT (I) + MAIN VERB (seen)\n\nInversion is triggered by negative adverbs at the START of a sentence: Never, Rarely, Seldom, Hardly, No sooner, Not only, Under no circumstances.\n\nThis is a Band 8–9 structure — using it correctly shows the examiner your grammatical range.",
+    "hint": "After \"Never\" at the start of a sentence, flip the auxiliary and subject."
+  }
+]

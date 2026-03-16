@@ -1,0 +1,64 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "🗣️ Speaking Mini-Test",
+    "sections": [
+      {
+        "heading": "Instructions",
+        "body": "These questions test your understanding of Speaking strategies from this unit. For the real test, record yourself answering each question and listen back critically."
+      }
+    ],
+    "highlight": "The examiner scores your LANGUAGE, not your opinions. There are no right or wrong views — only better or worse ways to express them."
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "The examiner asks: \"Do you prefer reading books or watching films?\" You say: \"Films.\" What is wrong with this answer?",
+    "options": [
+      "Nothing — it's honest",
+      "It's too short — no reason, example or extension",
+      "It's too informal",
+      "It gives the wrong opinion"
+    ],
+    "correct": "It's too short — no reason, example or extension",
+    "explanation": "One-word answers give the examiner nothing to assess for:\n• Fluency\n• Vocabulary range\n• Grammar range\n• Pronunciation\n\nMinimum for Part 1: 3 complete sentences using PREL (Point + Reason + Example + Link)."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "In Part 3, the examiner asks you a question you find very difficult. What should you do?",
+    "options": [
+      "Say \"I don't know\" and wait",
+      "Ask the examiner to answer it for you",
+      "Use a thinking-time phrase, then attempt the question with hedging",
+      "Change the subject to something easier"
+    ],
+    "correct": "Use a thinking-time phrase, then attempt the question with hedging",
+    "explanation": "Use: \"That's a thought-provoking question — I'd have to think about that carefully. I suppose...\"\n\nThen attempt: Even an uncertain answer with hedging shows language range:\n\"It would appear that... though I'm not entirely certain...\"\n\nSaying \"I don't know\" gives the examiner nothing to score. Changing topic is penalised for coherence."
+  },
+  {
+    "kind": "match_pairs",
+    "band": 7,
+    "instruction": "Match each speaking error to the correct fix:",
+    "pairs": [
+      {
+        "word": "Starting every sentence with \"I think\"",
+        "meaning": "Vary openers: \"From my perspective...\", \"I'd argue...\", \"It strikes me that...\""
+      },
+      {
+        "word": "Answering Part 1 in one sentence",
+        "meaning": "Use PREL: Point + Reason + Example + Link"
+      },
+      {
+        "word": "Saying \"um\" every 3 words",
+        "meaning": "Replace with thinking phrases: \"How can I put this...\""
+      },
+      {
+        "word": "Using only simple vocabulary",
+        "meaning": "Upgrade keywords: \"good\" → \"beneficial / rewarding / invaluable\""
+      }
+    ],
+    "explanation": "These are the four most common Band 6 speaking patterns. Each has a direct, practisable fix. Address all four and you're looking at a Band 7–8 score."
+  }
+]

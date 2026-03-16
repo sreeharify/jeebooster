@@ -1,0 +1,44 @@
+[
+  {
+    "kind": "explainer",
+    "band": 7,
+    "title": "🎓 Section 3 — Academic Discussions",
+    "sections": [
+      {
+        "heading": "What to expect",
+        "body": "Section 3 has 2–3 speakers in an educational context:\n• Two students discussing an assignment\n• A tutor giving feedback to a student\n• A group of students planning a project\n• A student and supervisor discussing research\n\nThis section is noticeably harder than Sections 1–2. The speakers express opinions, speculate, and agree/disagree with each other."
+      },
+      {
+        "heading": "What makes it hard",
+        "body": "• Speakers CHANGE THEIR MINDS — \"Actually, I think you're right...\" → follow who changes opinion\n• Speakers CONTRADICT each other — the question tests who holds which view\n• Questions test ATTITUDE and OPINION — not just facts\n• Answer options often paraphrase what was said very differently"
+      }
+    ],
+    "highlight": "Section 3 multiple choice often has options that are \"almost right.\" The difference is usually one key word — \"always\" vs \"sometimes\", \"main\" vs \"only\"."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "In Section 3, you hear: Student A: \"I think we should focus mainly on the economic impact.\" Student B: \"I agree — and actually, the social impact is just as important.\" What is Student B's view?",
+    "options": [
+      "Only economic impact matters",
+      "Only social impact matters",
+      "Both economic and social impacts are important",
+      "Neither impact is relevant"
+    ],
+    "correct": "Both economic and social impacts are important",
+    "explanation": "Student B AGREES with A about economic impact (\"I agree\") and then ADDS social impact (\"just as important\").\n\nThis type of opinion-tracking is the core skill for Section 3. You must follow:\n• Who says what\n• Whether they agree, disagree, or add nuance\n• Whether they change their mind"
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which strategy is most important for Section 3 multiple choice?",
+    "options": [
+      "Write every word the speakers say",
+      "Focus only on what the first speaker says",
+      "Listen for agreements, disagreements, and opinion changes",
+      "Skip difficult questions and guess later"
+    ],
+    "correct": "Listen for agreements, disagreements, and opinion changes",
+    "explanation": "Section 3 tests social/academic interaction — not just factual recall.\n\nKey phrases to track:\n• Agreement: \"Exactly\", \"I think you're right\", \"That's a good point\"\n• Disagreement: \"Actually, I'm not sure about that\", \"I'd push back on that\"\n• Opinion change: \"Having thought about it...\", \"You've changed my mind\""
+  }
+]

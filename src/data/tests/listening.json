@@ -1,0 +1,306 @@
+[
+  {
+    "setId": "L1",
+    "title": "Listening Test — Set A",
+    "sections": [
+      {
+        "section": 1,
+        "label": "Section 1 — Everyday Conversation",
+        "context": "Listen to a conversation between a student (Maya) and a university accommodation office officer.",
+        "transcript": "Officer: Good morning, Riverside University Accommodation Office. How can I help?\nMaya: Hi, I'm calling about student housing for next year. My name is Maya Chen.\nOfficer: Of course, Maya. Are you a new or returning student?\nMaya: I'm a returning student. I'm in my second year, studying Biology.\nOfficer: Great. We have two main options — the North Campus dormitories at £95 per week, or the South Campus apartments at £130 per week. The apartments are en-suite.\nMaya: I'd prefer the South Campus if possible. Could I also ask about parking?\nOfficer: South Campus has a paid parking permit — it's £180 per academic year. The North Campus parking is free, but spaces are limited.\nMaya: And what's the deadline for applications?\nOfficer: The deadline is the 15th of March. After that, you join a waiting list.\nMaya: Perfect. One more question — is there a laundry facility?\nOfficer: Both campuses have laundry rooms. South Campus has card-operated machines on every floor.",
+        "questions": [
+          {
+            "id": "L1_1",
+            "type": "mcq",
+            "question": "What year of study is Maya in?",
+            "options": [
+              "First",
+              "Second",
+              "Third",
+              "Fourth"
+            ],
+            "correct": "Second",
+            "explanation": "Maya says \"I'm in my second year\"."
+          },
+          {
+            "id": "L1_2",
+            "type": "mcq",
+            "question": "What is the weekly cost of South Campus apartments?",
+            "options": [
+              "£95",
+              "£110",
+              "£130",
+              "£150"
+            ],
+            "correct": "£130",
+            "explanation": "The officer says \"South Campus apartments at £130 per week\"."
+          },
+          {
+            "id": "L1_3",
+            "type": "mcq",
+            "question": "What is special about the South Campus apartments?",
+            "options": [
+              "They are free",
+              "They are en-suite",
+              "They include free parking",
+              "They are newer"
+            ],
+            "correct": "They are en-suite",
+            "explanation": "\"The apartments are en-suite\" — the officer states this directly."
+          },
+          {
+            "id": "L1_4",
+            "type": "mcq",
+            "question": "How much does a South Campus parking permit cost per year?",
+            "options": [
+              "£95",
+              "£130",
+              "£150",
+              "£180"
+            ],
+            "correct": "£180",
+            "explanation": "\"paid parking permit — it's £180 per academic year\"."
+          },
+          {
+            "id": "L1_5",
+            "type": "mcq",
+            "question": "What is the application deadline?",
+            "options": [
+              "5th March",
+              "15th March",
+              "25th March",
+              "5th April"
+            ],
+            "correct": "15th March",
+            "explanation": "\"The deadline is the 15th of March.\""
+          }
+        ]
+      },
+      {
+        "section": 2,
+        "label": "Section 2 — Campus Tour Announcement",
+        "context": "Listen to a student union representative giving a campus orientation talk.",
+        "transcript": "Welcome everyone to Westfield University! My name is James and I'll be your orientation guide today. Let me tell you about some key facilities on campus.\n\nThe Main Library is open Monday to Friday, 8am to 10pm, and weekends 9am to 6pm. You'll need your student card to access the upper floors, where the silent study zones are located.\n\nThe Sports Centre is on the east side of campus, a five-minute walk from the main entrance. Membership costs £40 per semester and includes access to the gym, swimming pool, and all group fitness classes.\n\nFor food, the Central Canteen serves hot meals between 11:30am and 2:30pm. There's also the Coffee Hub near the library, which is open until 9pm on weekdays.\n\nOne important thing — the IT Help Desk is on the ground floor of the Computing Building. If you have any problems with your university login or email, that's where you go. They're open 9am to 5pm, Monday to Friday.",
+        "questions": [
+          {
+            "id": "L1_6",
+            "type": "mcq",
+            "question": "What do students need to access the upper library floors?",
+            "options": [
+              "A password",
+              "A student card",
+              "Staff permission",
+              "A library card"
+            ],
+            "correct": "A student card",
+            "explanation": "\"You'll need your student card to access the upper floors\"."
+          },
+          {
+            "id": "L1_7",
+            "type": "mcq",
+            "question": "Where is the Sports Centre located?",
+            "options": [
+              "North side",
+              "West side",
+              "East side",
+              "South side"
+            ],
+            "correct": "East side",
+            "explanation": "\"The Sports Centre is on the east side of campus\"."
+          },
+          {
+            "id": "L1_8",
+            "type": "mcq",
+            "question": "What is the Sports Centre membership cost per semester?",
+            "options": [
+              "£20",
+              "£30",
+              "£40",
+              "£50"
+            ],
+            "correct": "£40",
+            "explanation": "\"Membership costs £40 per semester\"."
+          },
+          {
+            "id": "L1_9",
+            "type": "mcq",
+            "question": "Until what time is the Coffee Hub open on weekdays?",
+            "options": [
+              "7pm",
+              "8pm",
+              "9pm",
+              "10pm"
+            ],
+            "correct": "9pm",
+            "explanation": "\"open until 9pm on weekdays\"."
+          },
+          {
+            "id": "L1_10",
+            "type": "mcq",
+            "question": "Where should students go for login or email problems?",
+            "options": [
+              "The library",
+              "The student union",
+              "The IT Help Desk",
+              "The main office"
+            ],
+            "correct": "The IT Help Desk",
+            "explanation": "\"If you have any problems with your university login or email, that's where you go\"."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "setId": "L2",
+    "title": "Listening Test — Set B",
+    "sections": [
+      {
+        "section": 1,
+        "label": "Section 1 — Booking a Service",
+        "context": "Listen to a phone conversation between a customer and a bicycle repair shop.",
+        "transcript": "Staff: Hello, CycleWorks repair shop. Tom speaking.\nCustomer: Hi, I'd like to book my bike in for a service. My name is Sarah Patel.\nStaff: Of course, Sarah. What type of bike is it?\nCustomer: It's a mountain bike. It's making a clicking noise when I change gears, and the front brake feels soft.\nStaff: Right, sounds like it could be a gear cable issue and the brake pads might need replacing. Our standard service is £45 and includes a full inspection. Brake pad replacement is an extra £15.\nCustomer: That sounds fine. How long will it take?\nStaff: We're quite busy at the moment. I can book you in for Thursday the 22nd — it would be ready by end of day Friday the 23rd.\nCustomer: That works for me. What's the address?\nStaff: We're at 14 Bridge Street, just opposite the post office. Bring the bike any time after 9am on Thursday.\nCustomer: And do I need to bring anything else?\nStaff: Just the bike! If you have your original receipt that's helpful for warranty checks, but not essential.",
+        "questions": [
+          {
+            "id": "L2_1",
+            "type": "mcq",
+            "question": "What problem does Sarah's bike have with braking?",
+            "options": [
+              "Clicking noise",
+              "Soft front brake",
+              "Broken gear cable",
+              "Flat tyre"
+            ],
+            "correct": "Soft front brake",
+            "explanation": "\"the front brake feels soft\" — Sarah describes two problems; this is the brake issue."
+          },
+          {
+            "id": "L2_2",
+            "type": "mcq",
+            "question": "How much does a standard service cost?",
+            "options": [
+              "£30",
+              "£45",
+              "£55",
+              "£60"
+            ],
+            "correct": "£45",
+            "explanation": "\"Our standard service is £45\"."
+          },
+          {
+            "id": "L2_3",
+            "type": "mcq",
+            "question": "What is the total cost if brake pads are also replaced?",
+            "options": [
+              "£45",
+              "£55",
+              "£60",
+              "£65"
+            ],
+            "correct": "£60",
+            "explanation": "£45 standard + £15 brake pads = £60."
+          },
+          {
+            "id": "L2_4",
+            "type": "mcq",
+            "question": "When will the bike be ready for collection?",
+            "options": [
+              "Thursday evening",
+              "Friday morning",
+              "End of day Friday",
+              "Saturday morning"
+            ],
+            "correct": "End of day Friday",
+            "explanation": "\"ready by end of day Friday the 23rd\"."
+          },
+          {
+            "id": "L2_5",
+            "type": "mcq",
+            "question": "Where is CycleWorks located?",
+            "options": [
+              "14 Bridge Road",
+              "14 Bridge Street",
+              "41 Bridge Street",
+              "14 Mill Street"
+            ],
+            "correct": "14 Bridge Street",
+            "explanation": "\"We're at 14 Bridge Street, just opposite the post office\"."
+          }
+        ]
+      },
+      {
+        "section": 2,
+        "label": "Section 2 — Community Centre Announcement",
+        "context": "Listen to a manager describing new classes at a community centre.",
+        "transcript": "Good evening and welcome to the Greenfield Community Centre monthly information session. I'm delighted to announce several new classes starting next month.\n\nFirst, we're launching a Digital Skills for Seniors class every Tuesday morning from 10am to 12pm. This course is completely free and covers topics like internet safety, video calling, and using smartphones. Places are limited to 12 per session, so early registration is recommended.\n\nWe're also adding a new Creative Writing workshop on Thursday evenings from 7 to 9pm. The fee is £8 per session or £60 for the full 10-week programme — a saving of £20 if you pay upfront.\n\nFor families, our Saturday Morning Cooking class for children aged 7 to 12 starts on the 4th of next month. The cost is £6 per child per session, and parents are welcome to observe.\n\nFinally, a reminder that our fitness classes — yoga, Pilates, and circuit training — are now bookable online through our website. You'll find the link on the noticeboard near reception.",
+        "questions": [
+          {
+            "id": "L2_6",
+            "type": "mcq",
+            "question": "How much does the Digital Skills for Seniors class cost?",
+            "options": [
+              "£5",
+              "£10",
+              "Free",
+              "£8"
+            ],
+            "correct": "Free",
+            "explanation": "\"This course is completely free\"."
+          },
+          {
+            "id": "L2_7",
+            "type": "mcq",
+            "question": "How many people can attend each Digital Skills session?",
+            "options": [
+              "8",
+              "10",
+              "12",
+              "15"
+            ],
+            "correct": "12",
+            "explanation": "\"Places are limited to 12 per session\"."
+          },
+          {
+            "id": "L2_8",
+            "type": "mcq",
+            "question": "What is the saving if you pay upfront for the Creative Writing course?",
+            "options": [
+              "£10",
+              "£15",
+              "£20",
+              "£25"
+            ],
+            "correct": "£20",
+            "explanation": "10 sessions × £8 = £80, upfront = £60, saving = £20."
+          },
+          {
+            "id": "L2_9",
+            "type": "mcq",
+            "question": "What ages is the Saturday Cooking class for?",
+            "options": [
+              "5–10",
+              "7–12",
+              "8–14",
+              "10–16"
+            ],
+            "correct": "7–12",
+            "explanation": "\"children aged 7 to 12\"."
+          },
+          {
+            "id": "L2_10",
+            "type": "mcq",
+            "question": "How can people now book fitness classes?",
+            "options": [
+              "By phone",
+              "In person at reception",
+              "Through the website",
+              "By email"
+            ],
+            "correct": "Through the website",
+            "explanation": "\"now bookable online through our website\"."
+          }
+        ]
+      }
+    ]
+  }
+]

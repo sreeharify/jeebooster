@@ -1,0 +1,89 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "🎧 Listening Section 1 — Everyday Conversations",
+    "sections": [
+      {
+        "heading": "What to expect",
+        "body": "Section 1 is a conversation between two people in an everyday social context:\n• Booking a service (hotel, repair shop)\n• Registering for a course\n• Arranging accommodation\n• Making an enquiry\n\nThe questions follow the order of the conversation. You'll answer multiple choice, form completion, or short answer questions."
+      },
+      {
+        "heading": "Key listening skills",
+        "body": "• Listen for NUMBERS carefully — prices, dates, times, phone numbers\n• Spell-check names — the answer may be spelled out\n• Predict answer types BEFORE listening: \"Q1 asks for a price → listen for £ or a number\"\n• Watch for CORRECTIONS: \"No, it's Thursday, not Tuesday\" — the CORRECTION is the answer"
+      }
+    ],
+    "highlight": "Section 1 is the easiest section. Most students can score 9/10 here with good technique. Don't rush — the gaps between questions give you reading time."
+  },
+  {
+    "kind": "mini_explainer",
+    "band": 6,
+    "title": "🔢 Number & Date Traps",
+    "body": "Numbers are the most commonly missed answers in Section 1.\n\nTraps to watch:\n• \"It's £45... no wait, £54\" → 54 is the answer\n• \"Monday the 15th\" → might need just \"15th\" or \"Monday\"\n• Phone numbers: write every digit as you hear it\n• Addresses: \"14 Bridge Street\" → don't write \"14th\"\n\nAlways check: does your answer fit the space grammatically?",
+    "quick": [
+      {
+        "label": "Write while listening — don't rely on memory",
+        "icon": "✏️"
+      },
+      {
+        "label": "Correct answers after transfer time",
+        "icon": "✅"
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "In Listening Section 1, when should you read the questions?",
+    "options": [
+      "While listening to the audio",
+      "During the 10 minutes before the section begins",
+      "Before the recording starts, during the reading time",
+      "After the recording finishes"
+    ],
+    "correct": "Before the recording starts, during the reading time",
+    "explanation": "You get 30 seconds of reading time before each section. Use every second to:\n• Read ALL questions carefully\n• Underline keywords\n• Predict the type of answer (name, number, day, etc.)\n\nThis preparation is what separates Band 7 from Band 9 in listening."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "You hear: \"The fee is £120... actually, let me check — it's £102.\" What should you write?",
+    "options": [
+      "£120",
+      "£102",
+      "Both amounts",
+      "Either amount"
+    ],
+    "correct": "£102",
+    "explanation": "Always write the FINAL/CORRECTED figure.\n\nSpeakers often self-correct in natural conversation: \"No, wait...\", \"Actually...\", \"I mean...\"\n\nThe correction is ALWAYS the intended answer. This is a deliberate trap in IELTS listening tests."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 6,
+    "sentence": "In the listening test, you have _______ minutes at the end to transfer your answers to the answer sheet.",
+    "blanks": [
+      {
+        "correct": "10",
+        "distractors": [
+          "5",
+          "15",
+          "30"
+        ]
+      }
+    ],
+    "explanation": "You get 10 minutes at the end of the entire Listening test to copy your answers to the answer sheet. Use this time to:\n• Transfer carefully (don't rush)\n• Check spelling\n• Check grammar (singular/plural, correct tense)\n• Fill in any blanks you missed"
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "Which strategy is MOST effective for Section 1 multiple choice?",
+    "options": [
+      "Listen for the exact words in the options",
+      "Listen for the meaning and eliminate wrong options",
+      "Write nothing until you're sure",
+      "Only focus on Option A and B"
+    ],
+    "correct": "Listen for the meaning and eliminate wrong options",
+    "explanation": "The recording almost never uses the exact words from the options — it paraphrases.\n\nBest approach:\n1. Read all options before listening\n2. Cross out options that are clearly contradicted\n3. Mark the one that matches the meaning\n\nOption A and B are deliberately designed to seem correct at first."
+  }
+]

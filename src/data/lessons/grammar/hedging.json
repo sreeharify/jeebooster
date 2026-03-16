@@ -1,0 +1,86 @@
+[
+  {
+    "kind": "explainer",
+    "band": 7,
+    "title": "🎯 Hedging Language",
+    "sections": [
+      {
+        "heading": "What is hedging?",
+        "body": "Hedging = softening claims to show appropriate academic caution. It reflects how real research works — conclusions are tentative, not absolute.\n\nOverclaiming (Band 5): \"This proves that technology causes depression.\"\nHedged (Band 8): \"The findings suggest a possible correlation between excessive technology use and depressive symptoms in adolescents.\""
+      },
+      {
+        "heading": "Hedging tools",
+        "body": "Modal verbs: may, might, could, should\n\"This could indicate...\"\n\nHedging adverbs: possibly, apparently, seemingly, presumably\n\"This is possibly attributable to...\"\n\nHedging verbs: suggest, indicate, appear, seem, tend\n\"The evidence suggests that...\"\n\nHedging phrases:\n\"It would appear that...\"\n\"There is some evidence to suggest...\"\n\"It seems reasonable to conclude...\""
+      }
+    ],
+    "highlight": "Band 9 uses hedging not just to avoid sounding wrong — but to sound precisely right. \"May indicate\" is more accurate than \"proves\" when discussing research."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "Which sentence uses hedging most appropriately for academic writing?",
+    "options": [
+      "Exercise definitely cures depression.",
+      "Exercise might be associated with reduced symptoms of depression.",
+      "Exercise maybe helps with depression sometimes perhaps.",
+      "Exercise is absolutely proven to treat depression completely."
+    ],
+    "correct": "Exercise might be associated with reduced symptoms of depression.",
+    "explanation": "✅ \"Might be associated with reduced symptoms\" = appropriate hedging\n• \"might\" (modal verb) + \"associated with\" (cautious relationship) + \"reduced symptoms\" (not \"cures\")\n\n❌ \"definitely cures\" = overclaiming\n❌ \"maybe...sometimes perhaps\" = too informal and stacks hedges weakly\n❌ \"absolutely proven...completely\" = overclaiming and informal",
+    "hint": "Academic writing avoids absolute certainty. Which option is confident but careful?"
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "The data _______ that urban populations are growing faster than rural areas.",
+    "blanks": [
+      {
+        "correct": "suggests",
+        "distractors": [
+          "proves",
+          "confirms",
+          "guarantees"
+        ]
+      }
+    ],
+    "explanation": "\"Suggests\" is the correct hedging verb — it presents a finding cautiously without claiming absolute certainty.\n\nHedging verbs (weaker → stronger):\nsuggest → indicate → demonstrate → establish → prove\n\nIn academic writing, use the weakest verb that is accurate for your level of evidence.",
+    "hint": "\"Proves\" is too strong for data. Which verb shows uncertainty?"
+  },
+  {
+    "kind": "match_pairs",
+    "band": 8,
+    "instruction": "Match each hedging phrase to its strength:",
+    "pairs": [
+      {
+        "word": "\"This suggests that...\"",
+        "meaning": "Weak claim — possible but uncertain"
+      },
+      {
+        "word": "\"This appears to indicate...\"",
+        "meaning": "Moderate claim — probable but not certain"
+      },
+      {
+        "word": "\"This clearly demonstrates...\"",
+        "meaning": "Strong claim — high confidence"
+      },
+      {
+        "word": "\"It would seem that...\"",
+        "meaning": "Very cautious — distancing from the claim"
+      }
+    ],
+    "explanation": "Choosing the right hedging strength is a Band 8–9 skill. Match the hedge to your actual level of certainty — mismatching weakens your argument."
+  },
+  {
+    "kind": "mcq",
+    "band": 9,
+    "question": "Which opening phrase is the most academically sophisticated hedge?",
+    "options": [
+      "It is possible that...",
+      "There would appear to be mounting evidence suggesting that...",
+      "Maybe there is evidence...",
+      "We think that possibly..."
+    ],
+    "correct": "There would appear to be mounting evidence suggesting that...",
+    "explanation": "✅ This uses multiple, layered hedging techniques:\n• \"would appear\" = distancing modal phrase\n• \"mounting evidence\" = acknowledges there's evidence but implies it's still accumulating\n• \"suggesting\" = hedging verb at the end\n\nThis is the kind of phrasing found in high-quality academic journals and in Band 9 IELTS Writing responses."
+  }
+]

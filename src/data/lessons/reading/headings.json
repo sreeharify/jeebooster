@@ -1,0 +1,103 @@
+[
+  {
+    "kind": "explainer",
+    "band": 7,
+    "title": "🏷️ Matching Headings Strategy",
+    "sections": [
+      {
+        "heading": "The strategy",
+        "body": "Matching headings tests whether you understand the MAIN IDEA of each paragraph — not details.\n\n1. Read the list of headings first\n2. Read the first and last sentence of the paragraph\n3. Match to the heading that captures the paragraph's central point\n4. Cross out headings you've used (usually one spare heading per question)"
+      },
+      {
+        "heading": "Common traps",
+        "body": "TRAP 1: A word from the heading appears in the paragraph → doesn't mean it's correct\nTRAPP 2: The heading is a detail from the paragraph, not the main idea\nTRAP 3: Two headings seem similar → one will be more precise\n\nAlways ask: \"What is this paragraph MAINLY about?\" not \"What is mentioned in this paragraph?\""
+      }
+    ],
+    "highlight": "If a heading uses one specific example from the paragraph but the paragraph covers a broader idea, it's probably wrong."
+  },
+  {
+    "kind": "passage",
+    "band": 6,
+    "label": "📖 Read carefully — questions follow",
+    "text": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
+    "tip": "Tip: As you read, ask yourself: \"What is each paragraph mainly about?\" Skim for structure first."
+  },
+  {
+    "kind": "mini_explainer",
+    "band": 6,
+    "title": "🔍 Reading Tip: Paraphrase Alert",
+    "body": "IELTS questions NEVER use the exact words from the passage. They always paraphrase.\n\nExample:\nPassage says: \"subtle changes to the way choices are presented\"\nQuestion says: \"minor modifications to how options are displayed\"\n\nSame meaning — different words. Always look for MEANING, not matching words.",
+    "quick": [
+      {
+        "label": "Train yourself to think: what does this MEAN?",
+        "icon": "💡"
+      }
+    ]
+  },
+  {
+    "kind": "tfng_single",
+    "band": 6,
+    "statement": "Nudge theory relies primarily on financial incentives to change behaviour.",
+    "answer": "False",
+    "passage": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
+    "explanation": "The passage explicitly states: \"Unlike traditional policy approaches that rely on... financial incentives, nudge theory works by redesigning 'choice architectures'\" — this directly contradicts the statement."
+  },
+  {
+    "kind": "tfng_single",
+    "band": 6,
+    "statement": "The placement of food in canteens can influence what people choose to eat.",
+    "answer": "True",
+    "passage": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
+    "explanation": "\"Research consistently demonstrates that people are more likely to select whichever option requires the least effort\" + the canteen eye-level example confirms this is true."
+  },
+  {
+    "kind": "tfng_single",
+    "band": 7,
+    "statement": "Thaler and Sunstein conducted experiments in school canteens.",
+    "answer": "Not Given",
+    "passage": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
+    "explanation": "The passage mentions them as developers of nudge theory but says nothing about them conducting canteen experiments specifically. The canteen example is cited as research, not linked to them directly.\n\nNot Given ≠ False. The passage simply doesn't address this claim."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "According to the passage, what is a \"choice architecture\"?",
+    "options": [
+      "A type of building designed for making decisions",
+      "The environment in which decisions are made",
+      "A financial incentive to encourage healthy choices",
+      "A legal framework for regulating behaviour"
+    ],
+    "correct": "The environment in which decisions are made",
+    "explanation": "Directly defined in the text: \"redesigning 'choice architectures' — the environments in which decisions are made\"\n\nThis is a DEFINITION question. Always look for where the passage defines a term — often signalled by a dash (—) or \"which means...\" or \"refers to...\"",
+    "hint": "The passage defines \"choice architectures\" with a dash — look for that definition."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "What is the critics' main objection to nudge theory?",
+    "options": [
+      "It does not work in practice",
+      "It is too expensive to implement",
+      "It manipulates people without their knowledge",
+      "It limits the range of choices available"
+    ],
+    "correct": "It manipulates people without their knowledge",
+    "explanation": "\"subtly manipulating individuals without their explicit consent\" — this is the critics' core objection.\n\n❌ \"limits the range of choices\" — critics actually say choice IS technically preserved, just influenced\n❌ \"does not work\" — the passage doesn't say this\n❌ \"too expensive\" — not mentioned\n\nFor opinion/viewpoint questions: find who is speaking (critics, proponents, researchers) and what they specifically say.",
+    "hint": "Find the paragraph that talks about \"critics\" — what specific objection do they raise?"
+  },
+  {
+    "kind": "reorder_sentence",
+    "band": 8,
+    "instruction": "Put these summary sentences in the order they appear in the passage:",
+    "words": [
+      "Nudge theory achieves change without restricting choice (Para 1)",
+      "Making healthy food easier to reach influences selection (Para 2)",
+      "Critics call nudge theory paternalistic (Para 3)"
+    ],
+    "isOrdering": true,
+    "correct": "Nudge theory achieves change without restricting choice (Para 1)|Making healthy food easier to reach influences selection (Para 2)|Critics call nudge theory paternalistic (Para 3)",
+    "explanation": "This reflects the passage structure:\n1. Definition and core concept\n2. Concrete example\n3. Critical perspective\n\nUnderstanding paragraph structure helps you predict where answers are located — saving valuable exam time.",
+    "hint": "Think about what order makes logical sense for explaining a concept."
+  }
+]

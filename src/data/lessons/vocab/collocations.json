@@ -1,0 +1,95 @@
+[
+  {
+    "kind": "explainer",
+    "band": 7,
+    "title": "🔗 Collocations — Words That Go Together",
+    "sections": [
+      {
+        "heading": "What is a collocation?",
+        "body": "A collocation is a natural word combination that sounds \"right\" to native speakers. Using wrong collocations is one of the most obvious signs of a non-native writer/speaker.\n\n✅ \"make a decision\" (not \"do a decision\")\n✅ \"conduct research\" (not \"make research\")\n✅ \"raise awareness\" (not \"increase awareness\")\n✅ \"pose a risk\" (not \"create a risk\" — though both work, pose is more formal)"
+      },
+      {
+        "heading": "Collocation types",
+        "body": "Verb + Noun: make progress, take action, reach a conclusion\nAdjective + Noun: significant impact, mounting evidence, widespread concern\nNoun + Noun: climate change, policy framework, research findings\nAdverb + Verb: deeply concerned, highly recommend, strongly suggest\nNoun + Verb: problems arise, issues emerge, results indicate"
+      }
+    ],
+    "highlight": "Examiners cannot always explain WHY a collocation is right — it's instinctive. Learning collocations in chunks (\"mounting evidence\" as one unit) is faster than learning them separately."
+  },
+  {
+    "kind": "match_pairs",
+    "band": 7,
+    "instruction": "Match each verb to its correct noun partner (collocation):",
+    "pairs": [
+      {
+        "word": "conduct",
+        "meaning": "research / an experiment"
+      },
+      {
+        "word": "reach",
+        "meaning": "a conclusion / an agreement"
+      },
+      {
+        "word": "raise",
+        "meaning": "awareness / concerns"
+      },
+      {
+        "word": "pose",
+        "meaning": "a risk / a challenge / a threat"
+      }
+    ],
+    "explanation": "These are four of the most common academic collocations in IELTS Writing and Speaking.\n\n\"Pose a threat\" specifically is a Band 8+ collocation — it replaces \"create a threat\" or \"be a threat\" with a more academic, precise expression."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "Which collocation is INCORRECT?",
+    "options": [
+      "make a suggestion",
+      "do a suggestion",
+      "raise a concern",
+      "take action"
+    ],
+    "correct": "do a suggestion",
+    "explanation": "\"Do a suggestion\" is not a natural English collocation.\n\n✅ MAKE a suggestion / recommendation / decision / difference / progress\n✅ DO research / homework / business / harm / damage\n\nThe make/do distinction is one of the hardest for non-native speakers. Rule of thumb: \"make\" creates something, \"do\" carries out an activity."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "The new policy is expected to _______ significant improvements in public health outcomes.",
+    "blanks": [
+      {
+        "correct": "bring about",
+        "distractors": [
+          "do",
+          "make",
+          "have"
+        ]
+      }
+    ],
+    "explanation": "\"Bring about\" = cause something to happen (usually a positive change)\n\nThis is a strong academic collocation: \"bring about change / improvements / a transformation\"\n\n\"Make improvements\" ✅ also works, but \"bring about significant improvements\" is more formal and demonstrates a richer vocabulary range."
+  },
+  {
+    "kind": "match_pairs",
+    "band": 8,
+    "instruction": "Match each adjective to its most natural noun partner:",
+    "pairs": [
+      {
+        "word": "mounting",
+        "meaning": "evidence / pressure / concerns"
+      },
+      {
+        "word": "widespread",
+        "meaning": "support / adoption / criticism"
+      },
+      {
+        "word": "stark",
+        "meaning": "contrast / reminder / reality"
+      },
+      {
+        "word": "compelling",
+        "meaning": "argument / evidence / reason"
+      }
+    ],
+    "explanation": "These adjective-noun collocations are hallmarks of Band 8+ academic writing.\n\n\"Compelling argument\" sounds confident and authoritative.\n\"Stark contrast\" creates vivid, precise imagery.\n\"Mounting evidence\" implies accumulation over time — perfect for academic writing."
+  }
+]

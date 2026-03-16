@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import Navbar from '../components/Navbar'
+import SpeakingEvaluator from '../components/SpeakingEvaluator'
 import { useProgress } from '../contexts/ProgressContext'
 import { Mic, MicOff, Play, RotateCcw, ChevronDown, ChevronUp, Clock } from 'lucide-react'
 
@@ -132,8 +133,10 @@ export default function SpeakingPractice() {
   const [expandedPart3, setExpandedPart3] = useState(0)
   const timerRef = useRef(null)
   const { awardXP } = useProgress()
+  const [evalPart, setEvalPart] = useState(1)
+  const [evalQ, setEvalQ] = useState('Do you prefer mornings or evenings? Why?')
 
-  const TABS = ['Part 1', 'Part 2', 'Part 3', 'Phrases', 'Tips']
+  const TABS = ['Part 1', 'Part 2', 'Part 3', 'AI Evaluate', 'Phrases', 'Tips']
 
   function startPrepTimer() {
     setPrepTime(60)
@@ -360,7 +363,72 @@ export default function SpeakingPractice() {
           </div>
         )}
 
-        {/* ── PHRASES ── */}
+        {/* ── AI EVALUATE ── */}
+        {activeTab === 'AI Evaluate' && (
+          <div className="space-y-4">
+            <div className="card bg-gradient-to-br from-pink-50 to-rose-50">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-2xl">🤖</span>
+                <h3 className="font-bold text-green-800">AI Speaking Evaluator</h3>
+              </div>
+              <p className="text-sm text-green-700 font-semibold">
+                Speak your answer using Chrome's speech recognition, then get AI examiner feedback on your vocabulary, grammar, fluency, and pronunciation.
+              </p>
+            </div>
+
+            {/* Part selector */}
+            <div className="flex gap-2">
+              {[1,2,3].map(p => (
+                <button key={p} onClick={() => setEvalPart(p)}
+                  className={`flex-1 py-2.5 rounded-2xl font-bold text-sm transition-all border-2 ${evalPart === p ? 'bg-pink-400 border-pink-500 text-white' : 'bg-white border-pink-200 text-pink-600 hover:border-pink-300'}`}>
+                  Part {p}
+                </button>
+              ))}
+            </div>
+
+            {/* Question selector */}
+            <div>
+              <p className="text-xs font-bold text-gray-500 mb-2">Select a question to answer:</p>
+              <div className="space-y-2 max-h-48 overflow-y-auto">
+                {evalPart === 1 && PART1_TOPICS.flatMap(t => t.questions).slice(0,8).map((q, i) => (
+                  <button key={i} onClick={() => setEvalQ(q)}
+                    className={`w-full text-left p-3 rounded-xl text-sm font-semibold border-2 transition-all ${evalQ === q ? 'bg-pink-50 border-pink-400 text-pink-900' : 'bg-white border-gray-200 text-gray-700 hover:border-pink-200'}`}>
+                    {q}
+                  </button>
+                ))}
+                {evalPart === 2 && PART2_CARDS.map((card, i) => (
+                  <button key={i} onClick={() => setEvalQ(card.topic)}
+                    className={`w-full text-left p-3 rounded-xl text-sm font-semibold border-2 transition-all ${evalQ === card.topic ? 'bg-pink-50 border-pink-400 text-pink-900' : 'bg-white border-gray-200 text-gray-700 hover:border-pink-200'}`}>
+                    {card.topic}
+                  </button>
+                ))}
+                {evalPart === 3 && [
+                  'Do you think social media has changed the way people form relationships?',
+                  'Should governments invest more in public transport?',
+                  'How has technology changed the way people work?',
+                  'Do you think environmental problems will get better or worse in the future?',
+                  'Is it important for young people to learn a second language?',
+                ].map((q, i) => (
+                  <button key={i} onClick={() => setEvalQ(q)}
+                    className={`w-full text-left p-3 rounded-xl text-sm font-semibold border-2 transition-all ${evalQ === q ? 'bg-pink-50 border-pink-400 text-pink-900' : 'bg-white border-gray-200 text-gray-700 hover:border-pink-200'}`}>
+                    {q}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {evalQ && (
+              <SpeakingEvaluator
+                key={evalQ}
+                question={evalQ}
+                part={evalPart}
+                cueCard={evalPart === 2 ? evalQ : null}
+              />
+            )}
+          </div>
+        )}
+
+        {/* ── PHRASES ── */}}
         {activeTab === 'Phrases' && (
           <div className="space-y-3">
             <div className="card bg-gradient-to-br from-green-50 to-lime-50">

@@ -1,0 +1,64 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "✍️ Writing Mini-Test",
+    "sections": [
+      {
+        "heading": "Instructions",
+        "body": "This test covers writing strategies from all Writing lessons. Questions test your understanding of structure, vocabulary, grammar, and task requirements."
+      }
+    ],
+    "highlight": "Task Achievement is the most important criterion — always answer the WHOLE question."
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "A Task 2 question asks: \"To what extent do you agree that social media has had a negative impact on young people? Discuss and give your opinion.\" You write only about negative impacts. What mark will this lose?",
+    "options": [
+      "Nothing — the question says negative impact",
+      "Task Achievement — you missed the \"extent\" requirement",
+      "Coherence — you didn't organise well",
+      "Lexical Resource — you repeated words"
+    ],
+    "correct": "Task Achievement — you missed the \"extent\" requirement",
+    "explanation": "\"To what extent\" = How much? Partially? Fully? Not at all?\n\nYou must state your DEGREE of agreement — not just describe negatives.\n\nA full answer: \"While social media has several negative effects, I believe these are often overstated, and its benefits for connectivity and information access are considerable.\""
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "Task 2 requires a minimum of _______ words. Task 1 requires a minimum of _______ words.",
+    "blanks": [
+      {
+        "correct": "250",
+        "distractors": [
+          "200",
+          "300",
+          "150"
+        ]
+      },
+      {
+        "correct": "150",
+        "distractors": [
+          "100",
+          "200",
+          "250"
+        ]
+      }
+    ],
+    "explanation": "Task 1: 150+ words (20 minutes recommended)\nTask 2: 250+ words (40 minutes recommended)\n\nWriting fewer words automatically drops Task Achievement/Task Response. Always check your count before finishing."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which Task 2 conclusion is Band 8+?",
+    "options": [
+      "In conclusion, I think technology is good.",
+      "In conclusion, this essay has discussed technology.",
+      "In conclusion, despite the concerns outlined above, the transformative potential of technology — particularly in widening educational access — ultimately outweighs its drawbacks, provided that robust regulatory frameworks are established.",
+      "To conclude, technology has advantages and disadvantages as I have shown."
+    ],
+    "correct": "In conclusion, despite the concerns outlined above, the transformative potential of technology — particularly in widening educational access — ultimately outweighs its drawbacks, provided that robust regulatory frameworks are established.",
+    "explanation": "✅ Band 8+ conclusion:\n• \"despite the concerns outlined above\" — references the essay structure\n• \"transformative potential\" — sophisticated noun phrase\n• \"particularly in widening educational access\" — specific example\n• \"provided that\" — conditional clause showing nuance\n• No: \"In this essay I have shown\" (meta-commentary)\n• No: \"I think\" (informal)"
+  }
+]

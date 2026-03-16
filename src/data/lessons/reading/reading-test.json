@@ -1,0 +1,52 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "👁️ Reading Mini-Test",
+    "sections": [
+      {
+        "heading": "Instructions",
+        "body": "This mini-test covers all reading strategies from this unit. Apply your T/F/NG skills, heading-matching technique, and scanning strategies."
+      }
+    ],
+    "highlight": "Remember: the answer is always in the passage. Never use outside knowledge."
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "\"The study found that participants who exercised regularly showed significant improvement.\" Which T/F/NG answer is correct for: \"Exercise always leads to improvement\"?",
+    "options": [
+      "True",
+      "False",
+      "Not Given"
+    ],
+    "correct": "False",
+    "explanation": "\"Showed significant improvement\" ≠ \"always leads to improvement\".\n\nThe passage says \"significant improvement\" for participants in the study. \"Always\" is an absolute — the passage doesn't claim this. In fact, \"showed\" (past tense, specific study) directly contradicts the claim that exercise \"always\" leads to improvement as a universal truth.\n\nWhen the passage says something more limited/specific and the statement claims \"always\" — it's FALSE."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "You need to match a paragraph that discusses \"the negative environmental consequences of increased consumer demand.\" Which heading fits BEST?",
+    "options": [
+      "The origins of modern consumerism",
+      "The ecological costs of growing consumption",
+      "How businesses respond to consumer needs",
+      "The economic benefits of retail growth"
+    ],
+    "correct": "The ecological costs of growing consumption",
+    "explanation": "\"Ecological costs\" = environmental consequences (same meaning)\n\"Growing consumption\" = increased consumer demand (paraphrase)\n\nNote: \"The origins of modern consumerism\" might mention consumption but it's about HISTORY, not consequences. Always check: does the heading capture the MAIN IDEA of the whole paragraph?"
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "A summary completion gap reads: \"The process was _______ due to limited funding.\" What answer type should you predict?",
+    "options": [
+      "A verb in past tense",
+      "An adjective or past participle describing the process",
+      "A number or date",
+      "A person's name"
+    ],
+    "correct": "An adjective or past participle describing the process",
+    "explanation": "\"The process was _____\" → needs:\n• An adjective (e.g. \"delayed\", \"abandoned\", \"compromised\")\n• OR a past participle acting as an adjective\n\nThe phrase \"due to limited funding\" tells you the meaning: something NEGATIVE happened to the process because of lack of money. Predict: \"delayed\", \"halted\", \"suspended\", \"undermined\"."
+  }
+]

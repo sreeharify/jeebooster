@@ -1,0 +1,124 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "⚖️ Discussion Essays (Discuss both views)",
+    "sections": [
+      {
+        "heading": "The key difference",
+        "body": "\"Discuss both views and give your own opinion\" = you must:\n1. Discuss View A fairly and objectively\n2. Discuss View B fairly and objectively\n3. Give YOUR OWN clear opinion\n\nA common Band 5–6 mistake: writing body paragraphs that only support one view and ignoring the requirement to \"discuss both\"."
+      },
+      {
+        "heading": "Structure option A (balanced)",
+        "body": "Introduction: Outline both views + state your position\nBody 1: Those who believe [View A] argue that... [evidence]\nBody 2: On the other hand, advocates of [View B] contend that... [evidence]\nConclusion: Restate your overall position"
+      }
+    ],
+    "highlight": "\"Discuss both views\" does NOT mean \"agree with both equally.\" You must still give YOUR position clearly in the introduction and conclusion."
+  },
+  {
+    "kind": "mini_explainer",
+    "band": 6,
+    "title": "🔗 Cohesive Devices: Using Them Correctly",
+    "body": "Cohesive devices link ideas and show your reasoning — but OVERUSE is penalised.\n\nAdding: Furthermore, Moreover, In addition, Additionally\nContrast: However, Nevertheless, On the other hand, Conversely\nCause: Consequently, Therefore, As a result, Hence\nExample: For instance, For example, To illustrate, A case in point\nConcluding: In conclusion, To summarise, Overall",
+    "quick": [
+      {
+        "label": "Vary your devices — don't repeat the same one",
+        "icon": "🔄"
+      },
+      {
+        "label": "\"Furthermore\" ≠ \"Moreover\" always — use the right one",
+        "icon": "💡"
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "Which cohesive device shows RESULT or CONSEQUENCE?",
+    "options": [
+      "Furthermore",
+      "However",
+      "Consequently",
+      "Nevertheless"
+    ],
+    "correct": "Consequently",
+    "explanation": "\"Consequently\" introduces a result or consequence of what was just said.\n\nFurthermore = adds more supporting information\nHowever = introduces contrast\nNevertheless = shows contrast despite difficulty (similar to \"however\" but stronger)\n\nExample: \"Air pollution levels have risen dramatically. Consequently, respiratory diseases have become more prevalent.\"",
+    "hint": "Think: \"as a result of this...\" — which word fits that meaning?"
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "Urban farming requires significant investment. _______, the long-term environmental benefits may outweigh the initial costs.",
+    "blanks": [
+      {
+        "correct": "Nevertheless",
+        "distractors": [
+          "Consequently",
+          "Furthermore",
+          "Similarly"
+        ]
+      }
+    ],
+    "explanation": "\"Nevertheless\" is perfect here — it says \"even though there's a problem (high cost), the result (benefits) still stands.\"\n\nIt's stronger and more academic than \"However\" alone. Use it when you want to say \"this difficulty exists, BUT the main point remains valid.\"",
+    "hint": "The sentence first gives a problem, then says the benefits still matter — that's a contrast/concession."
+  },
+  {
+    "kind": "error_correction",
+    "band": 7,
+    "title": "✏️ Find the Writing Error",
+    "instruction": "One of these sentences contains a common IELTS writing error:",
+    "sentences": [
+      {
+        "text": "In conclusion, governments should prioritise renewable energy investment.",
+        "correct": true
+      },
+      {
+        "text": "Despite of the challenges, the policy was implemented successfully.",
+        "correct": false,
+        "explanation": "\"Despite\" is NEVER followed by \"of\" in standard English.\n\n✅ Fix: \"Despite the challenges, the policy was implemented successfully.\"\n✅ Or: \"In spite of the challenges, the policy was implemented successfully.\"\n\nThis error appears in approximately 30% of Band 6 essays — eliminating it alone can raise your score."
+      },
+      {
+        "text": "Furthermore, the economic benefits of automation are well-documented.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "kind": "match_pairs",
+    "band": 8,
+    "instruction": "Match each essay element to its purpose:",
+    "pairs": [
+      {
+        "word": "Introduction",
+        "meaning": "Paraphrase topic + state your position"
+      },
+      {
+        "word": "Topic sentence",
+        "meaning": "State the main idea of each body paragraph"
+      },
+      {
+        "word": "Supporting detail",
+        "meaning": "Explain and provide evidence for your point"
+      },
+      {
+        "word": "Conclusion",
+        "meaning": "Restate position + recommend or predict"
+      }
+    ],
+    "explanation": "A well-structured essay shows the examiner you can organise information logically — this directly boosts your Coherence & Cohesion score.\n\nBand 9 essays have CLEAR topic sentences at the start of every body paragraph. Examiners can read just the first sentence of each paragraph and understand the entire argument."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which Task 2 introduction is closest to Band 8–9 quality?",
+    "options": [
+      "In this essay, I will discuss the advantages and disadvantages of technology.",
+      "Technology is a very important topic. There are many pros and cons.",
+      "The question of whether technological advancement serves society's interests more than it harms them is one that has attracted considerable debate in recent decades.",
+      "I think technology has both good and bad sides, which I will explain in this essay."
+    ],
+    "correct": "The question of whether technological advancement serves society's interests more than it harms them is one that has attracted considerable debate in recent decades.",
+    "explanation": "✅ Band 8+ introduction features:\n• Complex sentence structure with \"whether...or\"\n• Sophisticated vocabulary: \"technological advancement\", \"considerable debate\"\n• Paraphrases the topic without repeating the question verbatim\n• Does NOT announce \"I will discuss...\" (avoid meta-commentary)\n• Sets up a nuanced discussion\n\n❌ \"In this essay, I will discuss...\" is the classic Band 5 opener — never say what you're about to do; just do it.",
+    "hint": "The best introduction paraphrases the topic using sophisticated vocabulary — it never copies the question."
+  }
+]

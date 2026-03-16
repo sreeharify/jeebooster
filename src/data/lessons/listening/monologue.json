@@ -1,0 +1,68 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "📢 Section 2 — Monologue Practice",
+    "sections": [
+      {
+        "heading": "What to expect",
+        "body": "Section 2 is a single speaker talking about a general topic:\n• A tour guide describing a venue\n• A radio presenter announcing local events\n• A manager explaining workplace facilities\n• A student union representative giving an induction\n\nThere's NO conversation — just one voice. Questions include multiple choice, map labelling, form completion, and matching."
+      },
+      {
+        "heading": "Key differences from Section 1",
+        "body": "Section 1: Two speakers, everyday booking/enquiry\nSection 2: One speaker, slightly more complex information\n\nSection 2 often has TWO question types (e.g. multiple choice for Q11-15, then map for Q16-20). Read both sets during preparation time."
+      }
+    ],
+    "highlight": "In Section 2, the speaker often gives a list of items with a description of each. Keep up by predicting when one item ends and the next begins."
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "A section 2 speaker says: \"The sports centre has three main areas. First, the gym on the ground floor — that's open 6am to 10pm. Then the swimming pool, which is on the first floor and closes at 9pm. Finally, the courts...\" What is the swimming pool's closing time?",
+    "options": [
+      "6pm",
+      "9pm",
+      "10pm",
+      "Not stated"
+    ],
+    "correct": "9pm",
+    "explanation": "The speaker lists three items in order. For each, they give specific details:\n• Gym: 6am to 10pm\n• Swimming pool: closes at 9pm ← the answer\n• Courts: details presumably follow\n\nListing structures are very common in Section 2. \"First... Then... Finally...\" signals three separate items — listen for the detail attached to each."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "In the IELTS Listening test, Section 2 is DIFFERENT from Section 4 because:",
+    "options": [
+      "Section 2 has no questions",
+      "Section 4 involves two speakers discussing an academic topic",
+      "Section 2 is about everyday topics; Section 4 is an academic lecture/talk",
+      "Section 4 is always about science"
+    ],
+    "correct": "Section 2 is about everyday topics; Section 4 is an academic lecture/talk",
+    "explanation": "Section 2: One speaker, everyday non-academic topic (tour, local radio, workplace induction)\nSection 4: One speaker, academic lecture or talk on a university subject\n\nSection 4 is typically the hardest — faster, more academic vocabulary, denser information."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "In Section 2, the recording typically involves _______ speaker(s) talking about _______ topics.",
+    "blanks": [
+      {
+        "correct": "one",
+        "distractors": [
+          "two",
+          "three",
+          "four"
+        ]
+      },
+      {
+        "correct": "everyday",
+        "distractors": [
+          "academic",
+          "scientific",
+          "professional"
+        ]
+      }
+    ],
+    "explanation": "Section 2 = 1 speaker, everyday/social topics.\nSection 4 = 1 speaker, academic topics.\n\nBoth are monologues but differ in register and difficulty. Knowing the format prevents surprises on test day."
+  }
+]

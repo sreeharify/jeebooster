@@ -1,0 +1,68 @@
+[
+  {
+    "kind": "explainer",
+    "band": 7,
+    "title": "📝 Section 4 — Lecture Note-Taking",
+    "sections": [
+      {
+        "heading": "Section 4 format",
+        "body": "Section 4 is the hardest — a single academic lecture or talk with no pauses. Question types include:\n• Note/summary completion\n• Table completion\n• Multiple choice\n• Short answer\n\nYou're essentially taking lecture notes under exam conditions. The vocabulary is academic and specialist."
+      },
+      {
+        "heading": "Abbreviation system",
+        "body": "You need a personal shorthand for fast note-taking:\n• → = leads to / causes\n• ↑ = increase   ↓ = decrease\n• ∴ = therefore   ∵ = because\n• w/ = with   w/o = without\n• e.g. = for example   i.e. = that is\n• govt = government   env = environment\n• c. = approximately\n\nDevelop YOUR OWN system and practise it consistently."
+      }
+    ],
+    "highlight": "In Section 4, you won't understand every word — that's normal. Keep writing. A partial answer may still be correct. Never stop to think about a word you missed."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "In Section 4 note-completion, you hear \"...which ultimately led to a dramatic reduction in biodiversity across the region.\" The gap is: \"Result: dramatic _______ in biodiversity\". What do you write?",
+    "options": [
+      "reduction",
+      "reduce",
+      "reduced",
+      "reducing"
+    ],
+    "correct": "reduction",
+    "explanation": "\"Reduction\" is correct — it's a NOUN to follow \"dramatic\" and fill the noun phrase \"dramatic _____ in biodiversity\".\n\nAlways check the grammatical category required:\n• After \"dramatic\" → noun or adjective\n• \"Reduction\" (noun) ✅  \"Reduce\" (verb) ❌\n• The answer must fit the slot grammatically"
+  },
+  {
+    "kind": "match_pairs",
+    "band": 7,
+    "instruction": "Match each abbreviation to its meaning:",
+    "pairs": [
+      {
+        "word": "∴",
+        "meaning": "therefore"
+      },
+      {
+        "word": "↑",
+        "meaning": "increase / rise"
+      },
+      {
+        "word": "w/o",
+        "meaning": "without"
+      },
+      {
+        "word": "e.g.",
+        "meaning": "for example"
+      }
+    ],
+    "explanation": "Building a fast abbreviation system lets you keep pace with Section 4 lectures. Practise using these symbols when watching any educational video — make it automatic before test day."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "The lecture mentions: \"...three main causes: industrial pollution, which is the primary driver; agricultural runoff; and, to a lesser extent, urban development.\" The question asks: \"What is identified as the PRIMARY cause?\" What do you write?",
+    "options": [
+      "all three causes",
+      "industrial pollution",
+      "agricultural runoff",
+      "urban development"
+    ],
+    "correct": "industrial pollution",
+    "explanation": "\"Primary driver\" = main/most important cause.\n\nThe lecturer explicitly signals importance: \"the primary driver\". In Section 4, always listen for:\n• \"The main/primary/key...\"\n• \"Most importantly...\"\n• \"Above all...\"\n• \"The principal factor...\""
+  }
+]

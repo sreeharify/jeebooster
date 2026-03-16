@@ -1,0 +1,82 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "📋 Form Completion",
+    "sections": [
+      {
+        "heading": "What it is",
+        "body": "Form completion asks you to fill in a form, table, or note-taking template based on what you hear. Common forms:\n• Registration forms (name, address, booking reference)\n• Order forms (product, quantity, price)\n• Application forms (qualifications, experience)\n\nWord limit: usually \"NO MORE THAN TWO WORDS AND/OR A NUMBER\""
+      },
+      {
+        "heading": "Technique",
+        "body": "1. Before listening: read the form and predict what's missing\n2. Identify what TYPE of information each gap needs (name? number? adjective?)\n3. While listening: write quickly — you can correct spelling later\n4. After: check grammar and word limits\n\nThe answers follow the ORDER of the form, top to bottom."
+      }
+    ],
+    "highlight": "Spelling counts. \"Tuesday\" not \"Tuseday\". Proper nouns are often spelled out in the recording — write each letter as you hear it."
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "A form has: \"Name: __________\". You hear \"Sarah — that's S-A-R-A-H.\" What do you write?",
+    "options": [
+      "Sarah",
+      "SARAH",
+      "Sarah (S-A-R-A-H)",
+      "s-a-r-a-h"
+    ],
+    "correct": "Sarah",
+    "explanation": "Write the NAME normally — \"Sarah\". The spelling in the recording is just to help you, not to copy verbatim.\n\nAlways write proper nouns with standard capitalisation:\n• Names: Sarah, not SARAH\n• Places: London, not london\n\nFormatting errors don't lose marks, but clarity is important."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "The form says \"Membership fee: £_____\". You hear \"Our standard annual fee is forty-five pounds, though with the student discount it comes to thirty-eight.\" What do you write?",
+    "options": [
+      "£45",
+      "£38",
+      "forty-five",
+      "thirty-eight"
+    ],
+    "correct": "£38",
+    "explanation": "The FINAL figure mentioned is the one that applies to the situation. The student discount makes it £38.\n\nAlways follow the CONTEXT:\n• Does the question specify who? (student, member, adult?)\n• Is there a discount/condition being applied?\n\nWriting \"£45\" misses the critical detail that the discount applies."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "For form completion, you should write answers using _______ than the stated word limit.",
+    "blanks": [
+      {
+        "correct": "no more",
+        "distractors": [
+          "no fewer",
+          "exactly",
+          "at least"
+        ]
+      }
+    ],
+    "explanation": "\"No more than TWO words\" means 1 or 2 words are both acceptable — but 3 words is always wrong.\n\nCommon trap: \"swimming pool\" = 2 words ✅\n\"outdoor swimming pool\" = 3 words ❌ (even if it sounds more precise)\n\nIf the answer naturally has 3 words, there's usually a shorter alternative accepted."
+  },
+  {
+    "kind": "error_correction",
+    "band": 7,
+    "title": "Form Completion: Spot the Error",
+    "instruction": "One answer to a form completion task is wrong. Which one?",
+    "sentences": [
+      {
+        "text": "Name: \"James\" (heard: \"James, J-A-M-E-S\")",
+        "correct": true
+      },
+      {
+        "text": "Phone: \"0779-334-21\" (heard: \"zero-seven-seven-nine, three-three-four, two-one\")",
+        "correct": false,
+        "explanation": "Phone numbers should be written as digits, unformatted: \"07793342 1\" or \"0779 334 21\" depending on how it's spoken. The hyphen format is fine, but each digit must be written — re-listen to verify you didn't miss or transpose a digit. Phone number errors are very common."
+      },
+      {
+        "text": "Day: \"Wednesday\" (heard: \"Can we say Wednesday? No, actually Thursday is better.\")",
+        "correct": false,
+        "explanation": "The speaker CORRECTED themselves — \"Thursday\" is the answer, not \"Wednesday\". Always write the corrected version."
+      }
+    ]
+  }
+]

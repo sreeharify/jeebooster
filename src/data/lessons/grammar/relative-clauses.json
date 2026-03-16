@@ -1,0 +1,112 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "🧩 Relative Clauses",
+    "sections": [
+      {
+        "heading": "What they are",
+        "body": "Relative clauses add information about a noun using a relative pronoun.\n\nWHO → people (subject): \"The student who studies hard...\"\nWHOM → people (object, formal): \"The teacher whom I respect...\"\nWHICH → things (non-defining): \"The report, which was published last year...\"\nTHAT → people or things (defining only): \"The study that examined...\"\nWHOSE → possession: \"Students whose results improved...\"\nWHERE → places: \"The university where I studied...\"\nWHEN → times: \"The era when technology advanced...\""
+      },
+      {
+        "heading": "Defining vs Non-defining",
+        "body": "DEFINING (no commas): identifies WHICH one\n\"Students who study daily improve faster.\" → tells us which students\n\nNON-DEFINING (with commas): adds extra information\n\"My tutor, who has 20 years experience, teaches grammar.\" → adds info, not identifying"
+      }
+    ],
+    "highlight": "Non-defining clauses CANNOT use \"that\". Only \"which/who/whose/where\". This is a very common Band 6 error.",
+    "example": {
+      "wrong": "The book, that I recommended, is excellent.",
+      "right": "The book, which I recommended, is excellent. / The book that I recommended is excellent."
+    }
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "Choose the correct relative pronoun: \"The researcher _____ discovered this was awarded a prize.\"",
+    "options": [
+      "which",
+      "who",
+      "whom",
+      "whose"
+    ],
+    "correct": "who",
+    "explanation": "\"Who\" is correct because the researcher is the SUBJECT of the relative clause (they discovered).\n\n\"Whom\" would be used if they were the object: \"The researcher whom I admire...\"\n\"Which\" is for things, not people.\n\"Whose\" shows possession.",
+    "hint": "Is the researcher doing the action or receiving it?"
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "Which sentence uses a NON-DEFINING relative clause correctly?",
+    "options": [
+      "Technology which is ubiquitous has changed society.",
+      "Technology, which is ubiquitous, has changed society.",
+      "Technology, that is ubiquitous, has changed society.",
+      "Technology which, is ubiquitous, has changed society."
+    ],
+    "correct": "Technology, which is ubiquitous, has changed society.",
+    "explanation": "Non-defining clauses:\n✅ Use commas before and after\n✅ Use \"which\" for things (not \"that\")\n✅ Could be removed without changing the core meaning\n\n\"Technology, which is ubiquitous, has changed society\" = \"Technology has changed society\" still makes sense.",
+    "hint": "Non-defining clauses need commas AND cannot use \"that\"."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "The city _______ I grew up has changed enormously since the 1990s.",
+    "blanks": [
+      {
+        "correct": "where",
+        "distractors": [
+          "which",
+          "that",
+          "in which"
+        ]
+      }
+    ],
+    "explanation": "\"Where\" refers to a place and functions as a locative adverb in the clause.\n\nYou could also say \"in which\" but \"where\" is more natural and concise — preferred in Band 8+ writing.\n\n❌ \"that I grew up\" sounds incomplete — needs \"in that\" which is ungrammatical.",
+    "hint": "We grew UP somewhere — what relative pronoun introduces a place?"
+  },
+  {
+    "kind": "match_pairs",
+    "band": 8,
+    "instruction": "Match each relative clause to what it describes:",
+    "pairs": [
+      {
+        "word": "who",
+        "meaning": "a person as the subject"
+      },
+      {
+        "word": "whom",
+        "meaning": "a person as the object (formal)"
+      },
+      {
+        "word": "whose",
+        "meaning": "possession — belonging to someone"
+      },
+      {
+        "word": "which",
+        "meaning": "a thing (non-defining clause)"
+      }
+    ],
+    "explanation": "Mastering pronoun choice is a Band 8 signal. The most commonly confused are who/whom and which/that in defining vs non-defining contexts."
+  },
+  {
+    "kind": "error_correction",
+    "band": 8,
+    "title": "Find the Relative Clause Error",
+    "instruction": "One sentence contains a relative clause error:",
+    "sentences": [
+      {
+        "text": "The scientists whose research was published received an award.",
+        "correct": true
+      },
+      {
+        "text": "The city, that was founded in the 12th century, is now a major hub.",
+        "correct": false,
+        "explanation": "\"That\" cannot be used in NON-DEFINING relative clauses (clauses set off by commas).\n\n✅ Correct: \"The city, which was founded in the 12th century, is now a major hub.\""
+      },
+      {
+        "text": "Students who fail to plan often struggle with timed essays.",
+        "correct": true
+      }
+    ]
+  }
+]

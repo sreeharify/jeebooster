@@ -1,0 +1,98 @@
+[
+  {
+    "setId": "S1",
+    "title": "Speaking Test — Set A",
+    "part1": {
+      "topic": "Technology & Daily Life",
+      "questions": [
+        {
+          "q": "How often do you use technology in your daily life?",
+          "bandTip": "Give a direct answer + extend with specific examples. \"I use it constantly — from checking emails first thing in the morning to unwinding with streaming services at night.\""
+        },
+        {
+          "q": "Do you think young people today rely too much on technology?",
+          "bandTip": "Show balance: agree partially, then nuance. Use \"To some extent...\" or \"While I can see the argument...\""
+        },
+        {
+          "q": "What technology do you think has made the biggest impact on society?",
+          "bandTip": "Pick ONE specific technology and develop it with a reason + example. More impressive than listing several vaguely."
+        }
+      ]
+    },
+    "part2": {
+      "topic": "Describe a time when technology helped you solve a problem.",
+      "cuePoints": [
+        "What the problem was",
+        "What technology you used",
+        "How it helped you solve it",
+        "And explain how you felt about it"
+      ],
+      "modelOpening": "I'd like to talk about a time about two years ago when I was trying to navigate a completely unfamiliar city abroad and my phone battery had died..."
+    },
+    "part3": {
+      "theme": "Technology in Society",
+      "questions": [
+        {
+          "q": "Do you think technology has made people more or less connected to each other?",
+          "bandTip": "Use concessive structure: \"While digital platforms have undeniably expanded the reach of human connection, there is a compelling case that the depth and quality of those connections has diminished.\""
+        },
+        {
+          "q": "Should governments regulate how technology companies use personal data?",
+          "bandTip": "Show awareness of complexity: individuals vs. corporations vs. state. Use \"It strikes me that...\" to signal a considered position."
+        },
+        {
+          "q": "How do you think artificial intelligence will change the workplace in the future?",
+          "bandTip": "Speculate using: \"It seems reasonable to anticipate...\", \"One can envisage a scenario in which...\""
+        }
+      ]
+    }
+  },
+  {
+    "setId": "S2",
+    "title": "Speaking Test — Set B",
+    "part1": {
+      "topic": "Environment & Nature",
+      "questions": [
+        {
+          "q": "How important is it to you to spend time in nature?",
+          "bandTip": "Personal + reason + example. Don't just say \"I like nature\" — describe a specific memory or feeling."
+        },
+        {
+          "q": "Do you think people in cities are less connected to the natural world?",
+          "bandTip": "Partially agree + nuance. Mention urban parks, awareness campaigns as counterexamples."
+        },
+        {
+          "q": "What do you do in your daily life to help the environment?",
+          "bandTip": "Be honest and specific. Examiners appreciate genuine answers over impressive-sounding ones."
+        }
+      ]
+    },
+    "part2": {
+      "topic": "Describe a natural place that has impressed you.",
+      "cuePoints": [
+        "Where it is",
+        "When you visited or learned about it",
+        "What makes it special",
+        "And explain why it left an impression on you"
+      ],
+      "modelOpening": "The place that has most impressed me is a coastal nature reserve I visited with my family a few years ago. It was situated about three hours from where I grew up..."
+    },
+    "part3": {
+      "theme": "Environment & Society",
+      "questions": [
+        {
+          "q": "Who do you think bears the greatest responsibility for environmental protection — individuals, corporations, or governments?",
+          "bandTip": "Avoid simplistic answers. Acknowledge all three levels then argue for your position: \"While all three have a role to play, I would argue that...\""
+        },
+        {
+          "q": "Do you think economic development and environmental protection are compatible goals?",
+          "bandTip": "Use real examples: Bhutan's carbon-negative status, the EU's green industrial policy, etc."
+        },
+        {
+          "q": "How has your generation's attitude towards the environment changed compared to previous generations?",
+          "bandTip": "Contrast using \"Whereas previous generations..., my generation tends to...\" Show awareness of social change."
+        }
+      ]
+    }
+  }
+]

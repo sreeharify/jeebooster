@@ -1,0 +1,19 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "📖 Lesson",
+    "sections": [
+      { "heading": "What you will practise", "body": "IELTS tests four equally important skills:\n🎧 Listening  ·  👁️ Reading  ·  ✍️ Writing  ·  🗣️ Speaking\n\nWork through each question carefully. After checking, read the full explanation — even if you got it right, the explanation often contains Band 8+ tips." }
+    ],
+    "highlight": "There are no penalties for wrong answers in IELTS. Always attempt every question!"
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "What is a key feature of Band 8+ academic writing?",
+    "options": ["Using very long sentences","Using a wide range of vocabulary accurately","Writing as many words as possible","Using the same vocabulary throughout"],
+    "correct": "Using a wide range of vocabulary accurately",
+    "explanation": "Band 8–9 writing uses vocabulary with natural flexibility and precision — the right word in the right context, not just difficult words.\n\nRange = variety. Accuracy = appropriate usage. Both are required."
+  }
+]

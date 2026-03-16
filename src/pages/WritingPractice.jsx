@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
+import EssayEvaluator from '../components/EssayEvaluator'
 import { WRITING_TEMPLATES } from '../data/courseData'
 import { useProgress } from '../contexts/ProgressContext'
 import { Copy, CheckCircle, ChevronDown, ChevronUp } from 'lucide-react'
@@ -44,6 +45,7 @@ export default function WritingPractice() {
   const [showCriteria, setShowCriteria] = useState(true)
   const [copied, setCopied] = useState(null)
   const { awardXP } = useProgress()
+  const [showEvaluator, setShowEvaluator] = useState(false)
 
   const wordCount = essayText.trim().split(/\s+/).filter(Boolean).length
   const minWords = tab === 'Task 2' ? 250 : 150
@@ -58,6 +60,7 @@ export default function WritingPractice() {
   async function handleSubmit() {
     if (isLongEnough) {
       await awardXP(40, 'Writing submitted')
+      setShowEvaluator(true)
     }
   }
 
@@ -180,6 +183,8 @@ export default function WritingPractice() {
                 </div>
               </div>
               <textarea
+                id="essay-text"
+                name="essay-text"
                 value={essayText}
                 onChange={e => setEssayText(e.target.value)}
                 className="w-full h-64 input-field resize-none leading-relaxed"
@@ -208,8 +213,24 @@ ${tab === 'Task 2' ? '• Write at least 250 words\n• Have a clear introductio
               disabled={!isLongEnough}
               className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed"
             >
-              {isLongEnough ? '📤 Submit for Review (+40 XP)' : `📝 Keep writing (${minWords - wordCount} words left)`}
+              {isLongEnough ? '✅ Submit (+40 XP) & Evaluate' : `📝 Keep writing (${minWords - wordCount} words left)`}
             </button>
+
+            {/* AI Essay Evaluator */}
+            {showEvaluator && (
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="h-0.5 flex-1 bg-lime-200" />
+                  <span className="text-xs font-bold text-green-600 uppercase tracking-wide">AI Examiner Feedback</span>
+                  <div className="h-0.5 flex-1 bg-lime-200" />
+                </div>
+                <EssayEvaluator
+                  prompt={selectedTopic.prompt}
+                  taskType={tab === 'Task 1' ? 'task1' : 'task2'}
+                  minWords={minWords}
+                />
+              </div>
+            )}
           </>
         )}
 

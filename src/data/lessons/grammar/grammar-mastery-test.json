@@ -1,0 +1,85 @@
+[
+  {
+    "kind": "explainer",
+    "band": 7,
+    "title": "⚡ Grammar Mastery Test",
+    "sections": [
+      {
+        "heading": "Instructions",
+        "body": "This test covers all grammar structures from this unit: complex sentences, relative clauses, passive voice, conditionals, reported speech, inversion, nominalization, hedging, and discourse markers.\n\nYou need 80% to achieve \"Grammar Mastery\" status."
+      }
+    ],
+    "highlight": "This is the hardest test in the course. Every question targets a different grammar structure. Take your time."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "Which sentence uses PASSIVE VOICE correctly?",
+    "options": [
+      "The research conducted by scientists.",
+      "The research has conducted by scientists.",
+      "The research was conducted by scientists.",
+      "Scientists were conducted the research."
+    ],
+    "correct": "The research was conducted by scientists.",
+    "explanation": "Past simple passive: WAS/WERE + past participle\n\"The research WAS CONDUCTED by scientists\" ✅\n\n❌ \"conducted by\" with no auxiliary = incomplete\n❌ \"has conducted\" = present perfect ACTIVE\n❌ \"were conducted the research\" = nonsensical structure"
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which sentence correctly uses INVERSION after a negative adverb?",
+    "options": [
+      "Never I have witnessed such a transformation.",
+      "Never have I witnessed such a transformation.",
+      "I have never witnessed such a transformation.",
+      "Never witnessed have I such a transformation."
+    ],
+    "correct": "Never have I witnessed such a transformation.",
+    "explanation": "Inversion pattern: NEGATIVE ADVERB + AUXILIARY + SUBJECT + MAIN VERB\nNever HAVE I WITNESSED ✅\n\nStandard position: I have NEVER witnessed (no inversion)"
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which correctly nominalizes the verb \"decide\"?",
+    "options": [
+      "The decidement was made.",
+      "The deciding was made.",
+      "The decision was made.",
+      "The decided was made."
+    ],
+    "correct": "The decision was made.",
+    "explanation": "\"Decision\" is the correct nominalization of \"decide\".\n\n\"Decidement\" — not a word\n\"The deciding\" — gerund, not standard nominalization\n\"The decided\" — adjective used as noun, ungrammatical here"
+  },
+  {
+    "kind": "fill_blank",
+    "band": 9,
+    "sentence": "_______ the government _______ invested more in renewable energy earlier, the current energy crisis might _______ been avoided.",
+    "blanks": [
+      {
+        "correct": "Had",
+        "distractors": [
+          "If",
+          "Were",
+          "Should"
+        ]
+      },
+      {
+        "correct": "have",
+        "distractors": [
+          "had",
+          "has",
+          "would"
+        ]
+      },
+      {
+        "correct": "have",
+        "distractors": [
+          "had",
+          "has",
+          "of"
+        ]
+      }
+    ],
+    "explanation": "Type 3 conditional inversion: HAD + subject + past participle... MIGHT HAVE + past participle\n\nFull sentence: \"Had the government invested more... the crisis might have been avoided\"\n\nThis combines inversion (Had) + Type 3 conditional + modal perfect (might have been) — a Band 9 structure."
+  }
+]

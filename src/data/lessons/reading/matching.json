@@ -1,0 +1,77 @@
+[
+  {
+    "kind": "explainer",
+    "band": 7,
+    "title": "🔗 Matching Information — Strategy",
+    "sections": [
+      {
+        "heading": "What this question type tests",
+        "body": "You are given a list of statements and must identify which paragraph (A, B, C...) contains that information.\n\nKey rule: The SAME paragraph can contain MORE than one statement. Some paragraphs may contain NO matching statement.\n\nYou are not matching headings — you are matching specific pieces of information."
+      },
+      {
+        "heading": "Strategy",
+        "body": "1. Read the list of statements first\n2. For each statement, identify its KEY CONCEPT (2–3 words)\n3. Scan each paragraph for that concept\n4. When you find the concept, slow down and read carefully to confirm the match\n5. Work from most specific to least specific statements — specific details are easier to locate"
+      }
+    ],
+    "highlight": "Paragraphs CAN be used more than once. Don't eliminate a paragraph just because you've already used it."
+  },
+  {
+    "kind": "passage",
+    "band": 7,
+    "label": "📖 Read the passage — matching questions follow",
+    "text": "(A) The industrial revolution of the 18th and 19th centuries fundamentally altered the economic landscape of Western Europe. The shift from agrarian to manufacturing economies created unprecedented urban migration, as workers flocked to factory towns seeking employment. This demographic transformation laid the groundwork for modern labour relations and social welfare systems.\n\n(B) Technological innovation has historically been the primary driver of economic growth. From the steam engine to digital computing, each successive wave of technological change has disrupted existing industries while simultaneously creating new ones. Economists studying Schumpeter's theory of \"creative destruction\" argue that this cycle of disruption and renewal is not merely an inevitable feature of capitalism but its defining strength.\n\n(C) The environmental consequences of industrialisation have been extensively documented. Carbon emissions, habitat destruction, and resource depletion represent the most significant legacies of two centuries of industrial development. Climate scientists now warn that without substantial policy intervention, these trends will accelerate beyond the point of reversibility within the current century.\n\n(D) Social inequality has both preceded and been exacerbated by industrialisation. While rising GDP figures suggest broad prosperity, wealth concentration data indicates that the gains of economic growth have been distributed highly unevenly. Studies in comparative economics show that countries with stronger redistributive mechanisms consistently demonstrate higher levels of social mobility.",
+    "tip": "Note the topic of each paragraph as you skim: (A) labour/migration (B) technology/growth (C) environment (D) inequality"
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "Which paragraph discusses a theory about the relationship between disruption and economic renewal?",
+    "options": [
+      "Paragraph A",
+      "Paragraph B",
+      "Paragraph C",
+      "Paragraph D"
+    ],
+    "correct": "Paragraph B",
+    "explanation": "Paragraph B mentions \"Schumpeter's theory of 'creative destruction'\" and argues that \"this cycle of disruption and renewal is... capitalism's defining strength.\"\n\nKey technique: The word \"theory\" in the question directed you to look for a named theory — \"Schumpeter's theory\" in paragraph B."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "Which paragraph suggests that the benefits of economic growth have not been shared equally?",
+    "options": [
+      "Paragraph A",
+      "Paragraph B",
+      "Paragraph C",
+      "Paragraph D"
+    ],
+    "correct": "Paragraph D",
+    "explanation": "\"The gains of economic growth have been distributed highly unevenly\" (Paragraph D) directly matches \"benefits of economic growth have not been shared equally.\"\n\nNote the paraphrase: \"not shared equally\" = \"distributed highly unevenly\". Always look for meaning, not matching words."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which paragraph mentions both a negative consequence AND a warning about future consequences?",
+    "options": [
+      "Paragraph A",
+      "Paragraph B",
+      "Paragraph C",
+      "Paragraph D"
+    ],
+    "correct": "Paragraph C",
+    "explanation": "Paragraph C mentions:\n✅ Negative consequence: \"Carbon emissions, habitat destruction, and resource depletion\"\n✅ Warning about future: \"without substantial policy intervention, these trends will accelerate beyond the point of reversibility\"\n\nThis question tests whether you can identify TWO pieces of information in the same paragraph."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which TWO paragraphs discuss how economic changes affected people's lives and social structures?",
+    "options": [
+      "A and B",
+      "A and D",
+      "B and C",
+      "C and D"
+    ],
+    "correct": "A and D",
+    "explanation": "Paragraph A: urban migration → \"laid the groundwork for modern labour relations and social welfare systems\"\nParagraph D: inequality → \"wealth concentration data indicates that gains have been distributed unevenly\"\n\nBoth discuss social impacts of economic change. B discusses technology/growth theory; C discusses environment."
+  }
+]

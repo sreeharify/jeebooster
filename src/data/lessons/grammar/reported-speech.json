@@ -1,0 +1,106 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "💬 Reported Speech",
+    "sections": [
+      {
+        "heading": "What it is",
+        "body": "Reported speech (indirect speech) conveys what someone said without quoting them directly. In academic writing, it's essential for citing research.\n\nDirect: The researcher said, \"The results are significant.\"\nReported: The researcher stated that the results were significant."
+      },
+      {
+        "heading": "Tense backshift",
+        "body": "Present → Past: \"is\" → \"was\"\nPresent perfect → Past perfect: \"has found\" → \"had found\"\nPast → Past perfect: \"found\" → \"had found\"\nWill → Would: \"will improve\" → \"would improve\"\nCan → Could: \"can reduce\" → \"could reduce\""
+      },
+      {
+        "heading": "Reporting verbs (academic)",
+        "body": "Neutral: stated, noted, observed, remarked\nClaiming: argued, contended, maintained, asserted\nSuggesting: suggested, proposed, indicated, implied\nAgreeing: acknowledged, confirmed, concurred\nCriticising: questioned, challenged, disputed, refuted"
+      }
+    ],
+    "highlight": "Using a variety of reporting verbs (not just \"said\") is a direct marker of Band 7+ Lexical Resource."
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "\"Technology improves learning.\" → Which reported speech is correct?",
+    "options": [
+      "She said technology improves learning.",
+      "She said that technology improved learning.",
+      "She said that technology will improve learning.",
+      "She said technology has improved learning."
+    ],
+    "correct": "She said that technology improved learning.",
+    "explanation": "Present simple → Past simple in reported speech: \"improves\" → \"improved\"\n\nThe word \"that\" is optional but recommended in formal writing.\n\n❌ \"improves\" — no tense shift (only acceptable in academic writing when the statement is still true)\n❌ \"will improve\" — wrong tense shift\n❌ \"has improved\" — present perfect, wrong here",
+    "hint": "Tense backshift: present simple \"improves\" → past simple \"improved\"."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "The scientists _______ that rising sea levels _______ a significant threat to coastal cities.",
+    "blanks": [
+      {
+        "correct": "argued",
+        "distractors": [
+          "said",
+          "told",
+          "talked"
+        ]
+      },
+      {
+        "correct": "posed",
+        "distractors": [
+          "posing",
+          "pose",
+          "to pose"
+        ]
+      }
+    ],
+    "explanation": "\"Argued\" is a sophisticated academic reporting verb — much stronger and more precise than \"said\".\n\n\"Posed a threat\" is an academic collocation — you \"pose\" a threat/risk/challenge in formal writing.\n\nNever use \"told\" without an object: \"told us that\" ✅ but \"told that\" ❌",
+    "hint": "Use a formal reporting verb. \"Pose a threat\" is a fixed collocation."
+  },
+  {
+    "kind": "match_pairs",
+    "band": 7,
+    "instruction": "Match each reporting verb to its meaning:",
+    "pairs": [
+      {
+        "word": "contended",
+        "meaning": "argued strongly that something is true"
+      },
+      {
+        "word": "conceded",
+        "meaning": "admitted something reluctantly"
+      },
+      {
+        "word": "refuted",
+        "meaning": "proved something to be wrong"
+      },
+      {
+        "word": "postulated",
+        "meaning": "suggested as a hypothesis without proof"
+      }
+    ],
+    "explanation": "These Band 8+ reporting verbs each carry a specific stance. Choosing the right one shows both Lexical Resource and academic understanding — examiners notice the difference."
+  },
+  {
+    "kind": "error_correction",
+    "band": 7,
+    "title": "Reported Speech Error",
+    "instruction": "Find the reporting error:",
+    "sentences": [
+      {
+        "text": "The study concluded that air pollution had increased over the decade.",
+        "correct": true
+      },
+      {
+        "text": "The researcher told that the experiment was a success.",
+        "correct": false,
+        "explanation": "\"Tell\" requires an object: \"told US/HIM/THE CLASS that...\"\n\n✅ Correct options:\n• \"The researcher SAID that the experiment was a success.\"\n• \"The researcher TOLD US that the experiment was a success.\"\n\nThis is one of the most common grammar errors in IELTS Writing."
+      },
+      {
+        "text": "Critics argued that the policy would fail to address inequality.",
+        "correct": true
+      }
+    ]
+  }
+]

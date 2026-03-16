@@ -1,0 +1,256 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "📚 What is Lexical Resource?",
+    "sections": [
+      {
+        "heading": "Why it matters",
+        "body": "Lexical Resource is one of four equally-weighted criteria in IELTS Writing and Speaking (25% each). It measures not just WHAT words you know, but HOW flexibly and accurately you use them."
+      },
+      {
+        "heading": "The band difference",
+        "body": "Band 6 uses common words correctly but repetitively.\nBand 7 uses some less common vocabulary with occasional errors.\nBand 8 uses a wide range with only minor inaccuracies.\nBand 9 uses vocabulary with full flexibility and precise meaning."
+      }
+    ],
+    "highlight": "The examiner is NOT counting rare words. They're looking for natural, confident use of a wide range.",
+    "example": {
+      "wrong": "The problem is very bad. It is a bad problem that causes bad things.",
+      "right": "The issue is increasingly severe, exacerbating existing social inequalities and undermining long-term economic stability."
+    }
+  },
+  {
+    "kind": "flashcard",
+    "band": 6,
+    "word": "mitigate",
+    "meaning": "to reduce the severity or seriousness of something",
+    "example": "Governments must take action to mitigate the effects of climate change.",
+    "partOfSpeech": "verb",
+    "wrong": "to make something worse (that's \"exacerbate\")",
+    "collocations": [
+      "mitigate the effects",
+      "mitigate the impact",
+      "mitigate risk",
+      "mitigate damage"
+    ],
+    "family": [
+      "mitigation (n)",
+      "mitigating (adj) — mitigating circumstances"
+    ]
+  },
+  {
+    "kind": "mini_explainer",
+    "band": 6,
+    "title": "💡 Remember: mitigate vs exacerbate",
+    "body": "These two are often confused and frequently appear in IELTS.\n\n✅ mitigate = make LESS severe → \"reduce, lessen, ease\"\n❌ exacerbate = make MORE severe → \"worsen, aggravate, intensify\"\n\nThey are antonyms — opposite meanings.",
+    "quick": [
+      {
+        "label": "mitigate the damage",
+        "icon": "✅"
+      },
+      {
+        "label": "exacerbate the damage",
+        "icon": "❌"
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "Which sentence uses \"mitigate\" correctly?",
+    "options": [
+      "The new law will mitigate the crime rate significantly.",
+      "The drought mitigated the water shortage.",
+      "Urban trees can mitigate the effects of air pollution.",
+      "Stress can mitigate health problems."
+    ],
+    "correct": "Urban trees can mitigate the effects of air pollution.",
+    "explanation": "✅ Trees REDUCE air pollution — that fits \"mitigate\" perfectly.\n\n❌ \"The new law will mitigate the crime rate\" — you mitigate effects/impacts, not rates directly. Better: \"reduce the crime rate\"\n❌ \"The drought mitigated the water shortage\" — a drought CAUSES a shortage, not reduces it\n❌ \"Stress can mitigate health problems\" — stress WORSENS health; use \"exacerbate\"",
+    "hint": "Mitigate always makes something LESS bad, not more bad."
+  },
+  {
+    "kind": "flashcard",
+    "band": 7,
+    "word": "exacerbate",
+    "meaning": "to make a problem or bad situation worse",
+    "example": "Poor housing conditions can exacerbate mental health issues.",
+    "partOfSpeech": "verb",
+    "wrong": "to solve or improve something",
+    "collocations": [
+      "exacerbate the problem",
+      "exacerbate tensions",
+      "exacerbate inequality",
+      "exacerbate symptoms"
+    ],
+    "family": [
+      "exacerbation (n)"
+    ]
+  },
+  {
+    "kind": "fill_blank",
+    "band": 7,
+    "sentence": "Social media can _______ feelings of loneliness among teenagers.",
+    "blanks": [
+      {
+        "correct": "exacerbate",
+        "distractors": [
+          "mitigate",
+          "alleviate",
+          "reduce"
+        ]
+      }
+    ],
+    "explanation": "Social media makes loneliness WORSE for many teenagers — \"exacerbate\" is the only word that means \"worsen\".\n\n\"Mitigate\" and \"alleviate\" both mean to reduce/lessen. \"Reduce\" is too simple for Band 7+.",
+    "hint": "Social media makes loneliness better or worse?"
+  },
+  {
+    "kind": "flashcard",
+    "band": 7,
+    "word": "ubiquitous",
+    "meaning": "present, appearing, or found everywhere",
+    "example": "Smartphones have become ubiquitous in modern society.",
+    "partOfSpeech": "adjective",
+    "wrong": "very rare or hard to find",
+    "collocations": [
+      "become ubiquitous",
+      "ubiquitous presence",
+      "increasingly ubiquitous",
+      "ubiquitous in modern life"
+    ],
+    "family": [
+      "ubiquity (n) — \"the ubiquity of social media\""
+    ]
+  },
+  {
+    "kind": "reorder_sentence",
+    "band": 7,
+    "instruction": "Arrange the words to make a correct sentence:",
+    "words": [
+      "become",
+      "Technology",
+      "in",
+      "ubiquitous",
+      "has",
+      "the",
+      "workplace",
+      "modern"
+    ],
+    "correct": "Technology has become ubiquitous in the modern workplace.",
+    "explanation": "The correct structure is: Subject (Technology) + auxiliary (has) + verb (become) + adjective (ubiquitous) + prepositional phrase (in the modern workplace).\n\nNote the article \"the\" before \"modern workplace\" — we say \"the modern workplace\" as a concept.",
+    "hint": "Start with \"Technology has...\""
+  },
+  {
+    "kind": "flashcard",
+    "band": 8,
+    "word": "proliferate",
+    "meaning": "to increase rapidly in numbers or amount",
+    "example": "Fast food chains have proliferated across developing nations.",
+    "partOfSpeech": "verb",
+    "wrong": "to decrease or disappear",
+    "collocations": [
+      "proliferate rapidly",
+      "continue to proliferate",
+      "proliferate across",
+      "proliferate in urban areas"
+    ],
+    "family": [
+      "proliferation (n) — \"the proliferation of social media platforms\"",
+      "proliferating (adj)"
+    ]
+  },
+  {
+    "kind": "match_pairs",
+    "band": 8,
+    "instruction": "Match each word to its correct meaning:",
+    "pairs": [
+      {
+        "word": "mitigate",
+        "meaning": "reduce the severity of"
+      },
+      {
+        "word": "exacerbate",
+        "meaning": "make a problem worse"
+      },
+      {
+        "word": "ubiquitous",
+        "meaning": "found everywhere"
+      },
+      {
+        "word": "proliferate",
+        "meaning": "increase rapidly in number"
+      }
+    ],
+    "explanation": "These four words form a powerful vocabulary cluster. Knowing them all helps you discuss problems and changes at Band 8 level."
+  },
+  {
+    "kind": "flashcard",
+    "band": 9,
+    "word": "substantiate",
+    "meaning": "to provide evidence to support or prove something",
+    "example": "The researcher substantiated her claims with longitudinal data.",
+    "partOfSpeech": "verb",
+    "wrong": "to question or doubt something",
+    "collocations": [
+      "substantiate a claim",
+      "substantiate an argument",
+      "substantiate with evidence",
+      "well-substantiated"
+    ],
+    "family": [
+      "substantiation (n)",
+      "substantiated (adj)",
+      "unsubstantiated (adj) — \"unsubstantiated claims\""
+    ]
+  },
+  {
+    "kind": "error_correction",
+    "band": 9,
+    "title": "✏️ Spot the Vocabulary Error",
+    "instruction": "One sentence uses a word incorrectly. Which one?",
+    "sentences": [
+      {
+        "text": "The study substantiated the link between diet and longevity.",
+        "correct": true
+      },
+      {
+        "text": "Deforestation has substantiated the problem of climate change.",
+        "correct": false,
+        "explanation": "\"Substantiate\" means to PROVE or SUPPORT with evidence — it doesn't mean to worsen or cause something.\n\n✅ Correct: \"Deforestation has exacerbated the problem of climate change.\"\n\nThis is a common Band 6 error — using sophisticated words without understanding their precise meaning."
+      },
+      {
+        "text": "She failed to substantiate her argument with concrete examples.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "kind": "explainer",
+    "band": 8,
+    "title": "🔑 Using These Words in IELTS Writing",
+    "sections": [
+      {
+        "heading": "In introductions",
+        "body": "Avoid: \"There are many problems with technology.\"\nBetter: \"While technological advancements have proliferated across all sectors, they have simultaneously exacerbated pre-existing social inequalities.\""
+      },
+      {
+        "heading": "In body paragraphs",
+        "body": "Avoid: \"The government should do something about pollution.\"\nBetter: \"Governments must implement comprehensive strategies to mitigate the environmental impact of industrial expansion — a claim well-substantiated by recent climate research.\""
+      }
+    ],
+    "highlight": "One sophisticated word used correctly is worth more than five simple words. Quality always beats quantity."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which sentence demonstrates the BEST lexical resource for Band 8?",
+    "options": [
+      "Technology is a very important thing in our lives nowadays.",
+      "The proliferation of digital devices has fundamentally transformed how we communicate.",
+      "There are more and more technologies that people use a lot.",
+      "Technology has become very, very common in modern daily life."
+    ],
+    "correct": "The proliferation of digital devices has fundamentally transformed how we communicate.",
+    "explanation": "✅ \"Proliferation\" (sophisticated noun), \"digital devices\" (precise), \"fundamentally transformed\" (strong verb phrase), \"communicate\" (precise verb).\n\n❌ The others use vague words: \"important thing\", \"a lot\", \"very, very common\" — all Band 5–6 language.\n\nBand 8+ avoids vague intensifiers (very, really, a lot) and replaces them with precise vocabulary.",
+    "hint": "Look for precise, specific language — not vague or repetitive words."
+  }
+]

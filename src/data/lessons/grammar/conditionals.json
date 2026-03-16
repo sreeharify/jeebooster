@@ -1,0 +1,89 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "⚡ Conditionals",
+    "sections": [
+      {
+        "heading": "The four types",
+        "body": "Type 0 (always true): If + present, present\n\"If you heat ice, it melts.\"\n\nType 1 (real future): If + present, will + infinitive\n\"If emissions rise, temperatures will increase.\"\n\nType 2 (hypothetical present): If + past simple, would + infinitive\n\"If governments invested more, outcomes would improve.\"\n\nType 3 (hypothetical past): If + past perfect, would have + past participle\n\"If action had been taken sooner, the crisis could have been avoided.\""
+      },
+      {
+        "heading": "Mixed conditionals (Band 8+)",
+        "body": "Mixed conditionals combine time frames:\n\nPast condition → present result:\n\"If she had studied medicine (past), she would be a doctor now (present).\"\n\nPresent condition → past result:\n\"If he were more careful (present), he would not have made that error (past).\""
+      }
+    ],
+    "highlight": "Type 2 and Type 3 are most common in IELTS essays. Using Type 3 correctly signals Band 8+ grammatical range.",
+    "example": {
+      "wrong": "If governments will invest in renewables, emissions reduce.",
+      "right": "If governments were to invest substantially in renewables, carbon emissions would fall dramatically within a decade."
+    }
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "Which is a correct Type 1 (First) conditional?",
+    "options": [
+      "If temperatures rise, sea levels will increase.",
+      "If temperatures rose, sea levels would increase.",
+      "If temperatures will rise, sea levels increase.",
+      "If temperatures had risen, sea levels would have increased."
+    ],
+    "correct": "If temperatures rise, sea levels will increase.",
+    "explanation": "Type 1: If + PRESENT SIMPLE, will + INFINITIVE\n\nType 2 would be: \"If temperatures ROSE, sea levels WOULD increase\"\nType 3 would be: \"If temperatures HAD RISEN, sea levels WOULD HAVE increased\"\n\nNever use \"will\" in the if-clause of a conditional.",
+    "hint": "Type 1 = real future possibility. Structure: if + present, will + base verb."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "Choose the correct Type 2 (Second) conditional:",
+    "options": [
+      "If the government invests in education, literacy rates would improve.",
+      "If the government invested in education, literacy rates would improve.",
+      "If the government had invested in education, literacy rates improve.",
+      "If the government will invest in education, literacy rates would improve."
+    ],
+    "correct": "If the government invested in education, literacy rates would improve.",
+    "explanation": "Type 2: If + PAST SIMPLE (invested), WOULD + infinitive (improve)\n\nThis expresses a hypothetical or unlikely scenario in the present/future.\n\n❌ \"invests\" with \"would\" mixes Type 1 and Type 2\n❌ \"had invested\" is Type 3 (past hypothetical)\n❌ Never \"will\" in the if-clause",
+    "hint": "Type 2: if + past simple... would + bare infinitive. Hypothetical present/future."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 8,
+    "sentence": "If the industrial revolution _______ occurred earlier, modern technology _______ developed far more rapidly.",
+    "blanks": [
+      {
+        "correct": "had",
+        "distractors": [
+          "would have",
+          "has",
+          "did"
+        ]
+      },
+      {
+        "correct": "would have",
+        "distractors": [
+          "would",
+          "will have",
+          "had"
+        ]
+      }
+    ],
+    "explanation": "Type 3 conditional: IF + past perfect (had occurred) + WOULD HAVE + past participle (developed)\n\nBoth blanks are crucial:\n• \"had occurred\" = past perfect in the if-clause\n• \"would have developed\" = modal perfect in the result clause",
+    "hint": "Type 3: If + had + past participle... would have + past participle."
+  },
+  {
+    "kind": "mcq",
+    "band": 9,
+    "question": "\"_____ the government to act decisively, the crisis could have been averted.\" Which opening is correct?",
+    "options": [
+      "If",
+      "Were",
+      "Should",
+      "Had"
+    ],
+    "correct": "Had",
+    "explanation": "\"Had the government acted decisively\" = formal Type 3 conditional INVERSION.\n\nWhen we remove \"if\" and invert, Type 3 uses HAD:\n\"If the government had acted\" → \"Had the government acted\"\n\nType 2 inversion uses WERE: \"Were I in charge...\"\nModal inversion uses SHOULD: \"Should you need help...\"\n\nThis is a Band 9 structure — examiners reward it highly.",
+    "hint": "Type 3 inversion: remove \"if\", put HAD first, then subject."
+  }
+]

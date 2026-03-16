@@ -1,0 +1,98 @@
+[
+  {
+    "kind": "explainer",
+    "band": 8,
+    "title": "📦 Nominalization",
+    "sections": [
+      {
+        "heading": "What is it?",
+        "body": "Nominalization = turning verbs or adjectives into nouns. It's a key feature of academic writing that creates a denser, more formal style.\n\nVerb → Noun:\ndecide → decision\nanalyse → analysis\nimprove → improvement\ndevelop → development\n\nAdjective → Noun:\naccurate → accuracy\nefficient → efficiency\ncomplex → complexity"
+      },
+      {
+        "heading": "Why it matters",
+        "body": "Nominalization allows you to:\n• Pack more information into fewer words\n• Create noun phrases as subjects (\"The analysis of data...\")\n• Avoid weak sentence structures\n• Sound more academic and formal\n\nBand 6: \"The government decided to invest.\"\nBand 8: \"The government's decision to invest...\"\nBand 9: \"The decision to substantially increase investment...\""
+      }
+    ],
+    "highlight": "Nominalization is a defining feature of academic writing. Band 9 essays nominalise frequently and naturally — without sounding forced.",
+    "example": {
+      "wrong": "When it rained heavily, the roads flooded and this caused many accidents.",
+      "right": "The heavy rainfall resulted in severe flooding, leading to a significant increase in road accidents."
+    }
+  },
+  {
+    "kind": "match_pairs",
+    "band": 8,
+    "instruction": "Match each verb to its correct nominalization:",
+    "pairs": [
+      {
+        "word": "investigate",
+        "meaning": "investigation"
+      },
+      {
+        "word": "conclude",
+        "meaning": "conclusion"
+      },
+      {
+        "word": "significant",
+        "meaning": "significance"
+      },
+      {
+        "word": "contribute",
+        "meaning": "contribution"
+      }
+    ],
+    "explanation": "These nominalisations appear constantly in academic writing. The ability to switch between verb and noun forms fluidly is a Band 8+ skill."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which sentence uses nominalization most effectively for academic writing?",
+    "options": [
+      "Researchers decided to investigate how students learn.",
+      "Research involved investigating how students learn.",
+      "The investigation of student learning strategies revealed key insights.",
+      "They investigated students and found some things out."
+    ],
+    "correct": "The investigation of student learning strategies revealed key insights.",
+    "explanation": "✅ \"The investigation of student learning strategies\" = nominalization + of-phrase = formal, dense academic style\n\n\"Decided to investigate\" and \"involved investigating\" still use verb forms\n\"They investigated...found some things out\" = informal and vague\n\nThe nominalized version allows a clear, precise subject at the start of the sentence.",
+    "hint": "Look for the option that turns the verb into a noun and uses an \"of\" phrase."
+  },
+  {
+    "kind": "fill_blank",
+    "band": 8,
+    "sentence": "The _______ of greenhouse gas emissions has become a central concern for modern governments.",
+    "blanks": [
+      {
+        "correct": "reduction",
+        "distractors": [
+          "reducing",
+          "reduce",
+          "reduced"
+        ]
+      }
+    ],
+    "explanation": "\"Reduction\" is the nominalized form of \"reduce\".\n\nThe structure \"The reduction of X\" is a classic academic noun phrase — subject + of + noun phrase.\n\n❌ \"The reducing of\" — gerund, less formal\n❌ \"The reduce of\" — ungrammatical\n❌ \"The reduced of\" — adjective, ungrammatical here",
+    "hint": "Turn the verb \"reduce\" into a noun to fit \"The ___ of...\""
+  },
+  {
+    "kind": "error_correction",
+    "band": 9,
+    "title": "Nominalization Error",
+    "instruction": "Find the sentence that misuses nominalization:",
+    "sentences": [
+      {
+        "text": "The implementation of this policy requires careful consideration.",
+        "correct": true
+      },
+      {
+        "text": "The government made a decision of implementing the new tax.",
+        "correct": false,
+        "explanation": "\"Made a decision of implementing\" is ungrammatical. The correct structures are:\n\n✅ \"made a decision to implement\" (infinitive)\n✅ \"made the decision of implementation\" (but awkward)\n✅ \"The government's decision to implement the new tax...\" (best)\n\nNominalization doesn't mean stuffing nouns everywhere — the result must be grammatical and natural."
+      },
+      {
+        "text": "An increase in urban migration has led to significant housing shortages.",
+        "correct": true
+      }
+    ]
+  }
+]

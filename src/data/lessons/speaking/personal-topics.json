@@ -1,0 +1,82 @@
+[
+  {
+    "kind": "explainer",
+    "band": 6,
+    "title": "🏠 Part 1 — Personal Topics",
+    "sections": [
+      {
+        "heading": "Common Part 1 topics",
+        "body": "Hometown & where you live\nStudies or work\nHobbies and free time\nFood and cooking\nSports and fitness\nMusic and entertainment\nTravel and holidays\nFriends and family\nShopping\nTechnology and social media"
+      },
+      {
+        "heading": "Making your answers memorable",
+        "body": "Examiners assess fluency, not content knowledge. But interesting, specific answers naturally sound more fluent.\n\nInstead of: \"I like music because it is relaxing.\"\nTry: \"I'm particularly drawn to jazz — there's something about its improvisational quality that I find both relaxing and intellectually stimulating, which is a rare combination.\""
+      }
+    ],
+    "highlight": "Add ONE specific detail to every Part 1 answer. Not \"I like cooking\" but \"I particularly enjoy making South Indian food — the complexity of spice combinations fascinates me.\""
+  },
+  {
+    "kind": "mini_explainer",
+    "band": 6,
+    "title": "📢 Extending Answers in Part 1",
+    "body": "The examiner expects 2–4 sentences per Part 1 answer. Never give one-word or one-sentence replies.\n\nThe P-R-E-L formula:\nP = Point (answer the question directly)\nR = Reason (say why)\nE = Example (give a specific example)\nL = Link (connect back to the question or add a follow-up thought)\n\nQ: \"Do you enjoy cooking?\"\n❌ \"Yes, I do.\"\n✅ \"I genuinely enjoy cooking, mainly because I find it a relaxing way to unwind after work. For example, experimenting with new recipes at the weekend has become something of a hobby. I think there's something deeply satisfying about creating something from scratch.\"",
+    "quick": [
+      {
+        "label": "P: Point → R: Reason → E: Example → L: Link",
+        "icon": "🔗"
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "band": 6,
+    "question": "Which Part 1 answer demonstrates the best speaking skills?",
+    "options": [
+      "\"Yes, I like reading.\"",
+      "\"I like reading because it is good.\"",
+      "\"I'm quite an avid reader, actually — I tend to gravitate towards non-fiction, particularly books about psychology and human behaviour. I find that reading before bed helps me unwind, and I've learned a great deal from books I'd never have encountered otherwise.\"",
+      "\"Reading is my hobby. I read books. Books are interesting. I read every day.\""
+    ],
+    "correct": "\"I'm quite an avid reader, actually — I tend to gravitate towards non-fiction, particularly books about psychology and human behaviour. I find that reading before bed helps me unwind, and I've learned a great deal from books I'd never have encountered otherwise.\"",
+    "explanation": "✅ The best answer uses:\n• \"actually\" — natural discourse marker\n• \"quite an avid reader\" — precise vocabulary (avid = enthusiastic)\n• \"tend to gravitate towards\" — sophisticated verb phrase\n• Specific genre + specific reason + personal reflection\n• Natural, flowing sentences\n\n❌ The others are too short, too vague, or repetitive.",
+    "hint": "Look for the answer that gives specific details and uses varied, precise language."
+  },
+  {
+    "kind": "match_pairs",
+    "band": 7,
+    "instruction": "Match each speaking phrase to its function:",
+    "pairs": [
+      {
+        "word": "\"That's an interesting question — let me think...\"",
+        "meaning": "Buying thinking time naturally"
+      },
+      {
+        "word": "\"What I mean is...\"",
+        "meaning": "Self-correcting or clarifying"
+      },
+      {
+        "word": "\"Not only that, but...\"",
+        "meaning": "Adding a second connected point"
+      },
+      {
+        "word": "\"Having said that...\"",
+        "meaning": "Introducing a contrast or nuance"
+      }
+    ],
+    "explanation": "These discourse markers signal to the examiner that you're thinking in English — not translating. Using them naturally (not robotically) is a marker of Band 7+ fluency.\n\nKey word: NATURALLY. If they sound rehearsed, they lose their effect."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "In Part 3, the examiner asks: \"Do you think social media has changed the way people form friendships?\" Which response is closest to Band 8?",
+    "options": [
+      "\"Yes, social media changed friendships a lot. People use it to talk to friends.\"",
+      "\"I think social media is both good and bad for friendships. It has advantages and disadvantages.\"",
+      "\"It's a nuanced question. While digital platforms have undeniably broadened the scope of who we can connect with, there's a compelling argument that the depth of those connections has diminished — we have more acquaintances but fewer genuinely close friends.\"",
+      "\"Social media is very popular nowadays and everyone uses it for friendships and communication purposes.\""
+    ],
+    "correct": "\"It's a nuanced question. While digital platforms have undeniably broadened the scope of who we can connect with, there's a compelling argument that the depth of those connections has diminished — we have more acquaintances but fewer genuinely close friends.\"",
+    "explanation": "✅ Band 8 answer features:\n• \"It's a nuanced question\" — shows academic thinking\n• \"While...there's a compelling argument that...\" — complex sentence with concession\n• \"undeniably\", \"compelling\" — precise adverbs\n• Specific insight: breadth vs depth of connection\n• No hesitation fillers like \"um\", \"very popular\"\n\nBand 8 speaks in structured, specific, nuanced answers — not generalisations.",
+    "hint": "The best Part 3 answer shows depth of thought, specific vocabulary, and complex sentence structures."
+  }
+]

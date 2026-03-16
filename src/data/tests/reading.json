@@ -1,0 +1,290 @@
+[
+  {
+    "setId": "R1",
+    "title": "Reading Test — Set A",
+    "passages": [
+      {
+        "passageNum": 1,
+        "title": "The Rise of Remote Work",
+        "text": "The global shift towards remote work, dramatically accelerated by the COVID-19 pandemic, has fundamentally altered conventional notions of the workplace. Prior to 2020, remote work was largely considered a privilege afforded to senior employees in technology-oriented industries. Within months, it became the operational norm for hundreds of millions of workers across sectors as diverse as finance, education, and healthcare.\n\nResearch conducted in the aftermath of this transition presents a nuanced picture. A study by Stanford University economist Nicholas Bloom found that productivity among remote workers increased by approximately 13% during the initial period of widespread home working. However, subsequent research has complicated this finding, suggesting that productivity gains are heavily dependent on the nature of the work performed and the quality of the home environment. Collaborative, creative, and mentoring activities, in particular, appear to suffer in remote settings.\n\nThe environmental implications of remote work have also attracted scholarly attention. Reduced commuting leads to lower carbon emissions in the transport sector, but this benefit is partially offset by increased domestic energy consumption as heating and electricity usage rises in homes during working hours. The net environmental impact thus varies considerably depending on regional energy sources and housing infrastructure.\n\nPerhaps the most contested aspect of remote work concerns its social dimensions. Proponents argue that flexibility enhances work-life balance, particularly for caregivers and those with disabilities. Critics counter that the erosion of physical workplace boundaries can lead to longer working hours, social isolation, and the blurring of professional and personal identities. The long-term psychological effects remain an active area of research.",
+        "questions": [
+          {
+            "id": "R1_1",
+            "type": "tfng",
+            "statement": "Remote work was common across all industries before 2020.",
+            "answer": "False",
+            "explanation": "The passage says it was \"largely considered a privilege afforded to senior employees in technology-oriented industries\" — not common across all industries."
+          },
+          {
+            "id": "R1_2",
+            "type": "tfng",
+            "statement": "Bloom's research found a 13% productivity increase among remote workers.",
+            "answer": "True",
+            "explanation": "Directly stated: \"productivity among remote workers increased by approximately 13%\"."
+          },
+          {
+            "id": "R1_3",
+            "type": "tfng",
+            "statement": "Remote work always results in a net reduction in carbon emissions.",
+            "answer": "False",
+            "explanation": "The passage says \"the net environmental impact varies considerably\" — it is NOT always a net reduction."
+          },
+          {
+            "id": "R1_4",
+            "type": "tfng",
+            "statement": "Remote work has been shown to improve social connections between colleagues.",
+            "answer": "Not Given",
+            "explanation": "The passage discusses social isolation as a concern but never claims it improves social connections."
+          },
+          {
+            "id": "R1_5",
+            "type": "mcq",
+            "question": "According to the passage, which type of work is MOST negatively affected by remote settings?",
+            "options": [
+              "Administrative tasks",
+              "Collaborative and mentoring activities",
+              "Independent research",
+              "Data entry"
+            ],
+            "correct": "Collaborative and mentoring activities",
+            "explanation": "\"Collaborative, creative, and mentoring activities, in particular, appear to suffer in remote settings.\""
+          },
+          {
+            "id": "R1_6",
+            "type": "mcq",
+            "question": "What does the passage say about the environmental impact of remote work?",
+            "options": [
+              "It always reduces carbon emissions",
+              "It always increases energy use",
+              "It varies depending on regional factors",
+              "It has no significant impact"
+            ],
+            "correct": "It varies depending on regional factors",
+            "explanation": "\"The net environmental impact thus varies considerably depending on regional energy sources and housing infrastructure.\""
+          },
+          {
+            "id": "R1_7",
+            "type": "heading",
+            "question": "Which heading best fits Paragraph 2?",
+            "options": [
+              "The Origins of Remote Work",
+              "Mixed Evidence on Productivity",
+              "Environmental Benefits of Working From Home",
+              "The Future of the Office"
+            ],
+            "correct": "Mixed Evidence on Productivity",
+            "explanation": "Paragraph 2 discusses Bloom's productivity finding then complicates it with subsequent research — \"mixed evidence\"."
+          }
+        ]
+      },
+      {
+        "passageNum": 2,
+        "title": "Biomimicry in Engineering",
+        "text": "Biomimicry — the practice of drawing inspiration from natural systems to solve human engineering challenges — has emerged as a significant strand of contemporary design thinking. Proponents argue that billions of years of evolutionary refinement have produced solutions of extraordinary elegance and efficiency, and that human engineers would do well to learn from nature's trial-and-error process.\n\nOne of the most celebrated examples is the Shinkansen bullet train in Japan. Engineers working on the train faced a problem: when the train emerged from a tunnel at high speed, it produced a loud sonic boom caused by the sudden change in air pressure. The solution came from an unlikely source — the kingfisher bird, which dives from air into water with minimal splash because of its aerodynamically optimised beak. By redesigning the front of the train to mimic the kingfisher's beak profile, engineers not only eliminated the sonic boom but also reduced energy consumption by 15% and increased the train's speed.\n\nTermite mounds provide another compelling example. In Zimbabwe, architect Mick Pearce designed the Eastgate Centre shopping complex using passive ventilation principles observed in termite mounds, which maintain a near-constant internal temperature despite extreme external temperature fluctuations. The building requires no conventional air conditioning, resulting in energy savings of approximately 90% compared to similar buildings.\n\nNot all biomimicry projects succeed, however. Critics point out that biological solutions have evolved to solve specific problems in specific environments, and translating them to engineering contexts involves substantial complexity. Furthermore, the functional requirements of human infrastructure often differ fundamentally from those driving biological evolution, making direct analogies potentially misleading.",
+        "questions": [
+          {
+            "id": "R1_8",
+            "type": "tfng",
+            "statement": "The kingfisher redesign increased the Shinkansen's speed and reduced energy use.",
+            "answer": "True",
+            "explanation": "\"reduced energy consumption by 15% and increased the train's speed\" — both stated."
+          },
+          {
+            "id": "R1_9",
+            "type": "tfng",
+            "statement": "The Eastgate Centre uses conventional air conditioning as a backup system.",
+            "answer": "False",
+            "explanation": "\"The building requires no conventional air conditioning\"."
+          },
+          {
+            "id": "R1_10",
+            "type": "tfng",
+            "statement": "Mick Pearce studied termite mounds for ten years before designing the Eastgate Centre.",
+            "answer": "Not Given",
+            "explanation": "The length of his study is never mentioned."
+          },
+          {
+            "id": "R1_11",
+            "type": "mcq",
+            "question": "What problem did the Shinkansen bullet train originally have?",
+            "options": [
+              "It was too slow",
+              "It produced a sonic boom at tunnel exits",
+              "Its energy consumption was too high",
+              "It caused structural damage to tunnels"
+            ],
+            "correct": "It produced a sonic boom at tunnel exits",
+            "explanation": "\"when the train emerged from a tunnel at high speed, it produced a loud sonic boom\"."
+          },
+          {
+            "id": "R1_12",
+            "type": "mcq",
+            "question": "According to critics, what is a key limitation of biomimicry?",
+            "options": [
+              "Nature does not produce efficient solutions",
+              "It is too expensive to implement",
+              "Biological solutions are context-specific and may not transfer well",
+              "Engineers lack the knowledge to apply it"
+            ],
+            "correct": "Biological solutions are context-specific and may not transfer well",
+            "explanation": "\"biological solutions have evolved to solve specific problems in specific environments, and translating them to engineering contexts involves substantial complexity\"."
+          },
+          {
+            "id": "R1_13",
+            "type": "heading",
+            "question": "Which heading best describes Paragraph 4?",
+            "options": [
+              "The Success of Biomimicry",
+              "Limitations and Criticisms",
+              "How Termites Inspire Architecture",
+              "The History of Engineering Innovation"
+            ],
+            "correct": "Limitations and Criticisms",
+            "explanation": "Paragraph 4 presents critics' concerns about the limitations of biomimicry."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "setId": "R2",
+    "title": "Reading Test — Set B",
+    "passages": [
+      {
+        "passageNum": 1,
+        "title": "The Psychology of Decision-Making",
+        "text": "Classical economic theory long assumed that human beings are fundamentally rational agents who make decisions by carefully weighing available information to maximise their utility. This model, known as Homo Economicus, provided the theoretical foundation for much of twentieth-century economics. However, research conducted by psychologists Daniel Kahneman and Amos Tversky from the 1970s onwards demonstrated that human decision-making is systematically irrational in predictable ways.\n\nKahneman and Tversky identified numerous cognitive biases — systematic errors in thinking — that distort judgement. The anchoring effect, for instance, refers to the tendency to rely too heavily on the first piece of information encountered when making decisions. In a famous experiment, participants who were first shown a high random number subsequently gave higher estimates when asked unrelated numerical questions. The mere exposure to an irrelevant initial figure had measurably skewed their responses.\n\nLoss aversion is another well-documented bias: the psychological pain of losing something is approximately twice as powerful as the pleasure of gaining something of equivalent value. This asymmetry has profound implications for financial behaviour, marketing, and public policy. Pension schemes, for example, can dramatically increase enrolment rates by framing non-participation as a loss rather than a mere failure to gain.\n\nThe implications of this research extend far beyond academic psychology. Governments and organisations increasingly employ \"nudge theory\" — the practice of designing choice environments to guide people towards better decisions without restricting their freedom of choice. The placement of healthier foods at eye level in canteens, or automatic enrolment in savings programmes with an opt-out option, are practical manifestations of these insights.",
+        "questions": [
+          {
+            "id": "R2_1",
+            "type": "tfng",
+            "statement": "Classical economics assumed that people always make perfectly rational decisions.",
+            "answer": "True",
+            "explanation": "\"humans are fundamentally rational agents who make decisions by carefully weighing available information to maximise their utility\" — this was the classical assumption."
+          },
+          {
+            "id": "R2_2",
+            "type": "tfng",
+            "statement": "Kahneman and Tversky's research showed human irrationality is random and unpredictable.",
+            "answer": "False",
+            "explanation": "\"human decision-making is systematically irrational in predictable ways\" — the opposite of random."
+          },
+          {
+            "id": "R2_3",
+            "type": "tfng",
+            "statement": "The anchoring experiment used numbers that were relevant to the questions asked.",
+            "answer": "False",
+            "explanation": "\"an irrelevant initial figure\" — the numbers were deliberately unrelated."
+          },
+          {
+            "id": "R2_4",
+            "type": "tfng",
+            "statement": "Nudge theory removes freedom of choice from individuals.",
+            "answer": "False",
+            "explanation": "\"without restricting their freedom of choice\" — explicitly contradicted."
+          },
+          {
+            "id": "R2_5",
+            "type": "mcq",
+            "question": "According to the passage, how does loss aversion affect pension scheme enrolment?",
+            "options": [
+              "It reduces willingness to save",
+              "Framing non-participation as a loss increases enrolment",
+              "It makes people save too much",
+              "It has no effect on financial behaviour"
+            ],
+            "correct": "Framing non-participation as a loss increases enrolment",
+            "explanation": "\"Pension schemes can dramatically increase enrolment rates by framing non-participation as a loss\"."
+          },
+          {
+            "id": "R2_6",
+            "type": "mcq",
+            "question": "What is the ratio of pain to pleasure described in loss aversion?",
+            "options": [
+              "Equal",
+              "Pain is twice as strong as pleasure",
+              "Pleasure is twice as strong as pain",
+              "Pain is three times as strong"
+            ],
+            "correct": "Pain is twice as strong as pleasure",
+            "explanation": "\"the psychological pain of losing something is approximately twice as powerful as the pleasure of gaining something of equivalent value\"."
+          },
+          {
+            "id": "R2_7",
+            "type": "heading",
+            "question": "Which heading best fits Paragraph 4?",
+            "options": [
+              "The History of Economic Theory",
+              "Practical Applications of Behavioural Insights",
+              "How Loss Aversion Affects Finance",
+              "Kahneman's Experiments"
+            ],
+            "correct": "Practical Applications of Behavioural Insights",
+            "explanation": "Paragraph 4 discusses real-world applications — nudge theory, canteen food placement, savings schemes."
+          }
+        ]
+      },
+      {
+        "passageNum": 2,
+        "title": "Ocean Acidification",
+        "text": "Since the Industrial Revolution, the world's oceans have absorbed approximately 30% of the carbon dioxide released by human activities. While this has buffered the atmosphere against even greater temperature increases, it has triggered a chemical process with potentially devastating consequences for marine ecosystems: ocean acidification.\n\nWhen carbon dioxide dissolves in seawater, it forms carbonic acid, which subsequently releases hydrogen ions, increasing the water's acidity. Since pre-industrial times, the average ocean pH has dropped from 8.2 to approximately 8.1. While this may appear a modest change, it represents a 26% increase in acidity due to the logarithmic nature of the pH scale. Current projections suggest that pH could fall to 7.8 by the end of the century under high-emission scenarios.\n\nThe most vulnerable organisms are those that build shells or skeletons from calcium carbonate, a compound that dissolves more readily in acidic water. Coral reefs, pteropods (small sea snails), and various shellfish species face significant threats. Laboratory studies have demonstrated reduced shell growth, increased vulnerability to predation, and impaired reproduction in these organisms under elevated acidity conditions.\n\nThe economic implications are substantial. Coral reef ecosystems support fisheries that provide food security for over one billion people worldwide, and their tourism value is estimated in the hundreds of billions of dollars annually. The collapse of shellfish aquaculture industries in regions where acidification is already measurable represents a present-day economic reality rather than a future projection.",
+        "questions": [
+          {
+            "id": "R2_8",
+            "type": "tfng",
+            "statement": "The oceans have absorbed about 30% of human CO₂ emissions.",
+            "answer": "True",
+            "explanation": "Directly stated in the opening sentence."
+          },
+          {
+            "id": "R2_9",
+            "type": "tfng",
+            "statement": "Ocean pH has remained stable since pre-industrial times.",
+            "answer": "False",
+            "explanation": "\"dropped from 8.2 to approximately 8.1\" — it has changed."
+          },
+          {
+            "id": "R2_10",
+            "type": "tfng",
+            "statement": "A pH drop from 8.2 to 8.1 represents a 26% decrease in acidity.",
+            "answer": "False",
+            "explanation": "It represents a 26% INCREASE in acidity, not a decrease."
+          },
+          {
+            "id": "R2_11",
+            "type": "tfng",
+            "statement": "All marine species are equally threatened by ocean acidification.",
+            "answer": "False",
+            "explanation": "\"The most vulnerable organisms are those that build shells or skeletons from calcium carbonate\" — not all species equally."
+          },
+          {
+            "id": "R2_12",
+            "type": "mcq",
+            "question": "How does CO₂ increase ocean acidity?",
+            "options": [
+              "It directly heats the water",
+              "It forms carbonic acid which releases hydrogen ions",
+              "It reduces oxygen levels",
+              "It creates nitrogen compounds"
+            ],
+            "correct": "It forms carbonic acid which releases hydrogen ions",
+            "explanation": "\"carbon dioxide dissolves in seawater, it forms carbonic acid, which subsequently releases hydrogen ions\"."
+          },
+          {
+            "id": "R2_13",
+            "type": "mcq",
+            "question": "How many people rely on coral reef fisheries for food security?",
+            "options": [
+              "100 million",
+              "500 million",
+              "Over 1 billion",
+              "2 billion"
+            ],
+            "correct": "Over 1 billion",
+            "explanation": "\"provide food security for over one billion people worldwide\"."
+          }
+        ]
+      }
+    ]
+  }
+]
