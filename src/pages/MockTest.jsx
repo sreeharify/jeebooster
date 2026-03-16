@@ -5,7 +5,6 @@ import { useProgress } from '../contexts/ProgressContext'
 import { Clock, ChevronRight, RotateCcw, Volume2, VolumeX, Play } from 'lucide-react'
 import { LISTENING_SETS, READING_SETS, WRITING_SETS, SPEAKING_SETS } from '../data/mockTestData'
 import Confetti from 'react-confetti'
-import SpeakingEvaluator from '../components/SpeakingEvaluator'
 
 function pickRandom(arr) { return arr[Math.floor(Math.random() * arr.length)] }
 
@@ -739,16 +738,20 @@ function SpeakingTest({ set, onComplete }) {
                 </div>
               </div>
             ))}
-            {/* AI Speaking Evaluator for Part 3 */}
+            {/* Manual Speaking Practice Instructions for Part 3 */}
             <div className="bg-pink-50 border-2 border-pink-200 rounded-2xl p-4">
-              <h3 className="font-bold text-pink-800 mb-2 text-sm">🤖 Optional: AI Feedback</h3>
+              <h3 className="font-bold text-pink-800 mb-2 text-sm">📢 Self-Assessment Practice</h3>
               <p className="text-xs text-pink-700 font-semibold mb-3">
-                Record your answer to a Part 3 question for AI examiner feedback before finishing.
+                Part 3 requires deep, abstract discussion. Record your answers on your phone or practice aloud, then review them against the Band 9 tips above.
               </p>
-              <SpeakingEvaluator
-                question={set.part3.questions[0]?.q || 'Discuss the topic from your cue card in more depth.'}
-                part={3}
-              />
+              <div className="flex flex-col gap-2">
+                <div className="flex items-start gap-2 text-xs text-green-700 font-semibold">
+                  <span className="text-pink-500">✔</span> Focus on lexical resource (varied vocabulary)
+                </div>
+                <div className="flex items-start gap-2 text-xs text-green-700 font-semibold">
+                  <span className="text-pink-500">✔</span> Use complex grammatical structures
+                </div>
+              </div>
             </div>
 
             <button onClick={() => onComplete()} className="btn-primary w-full mt-2">
@@ -1000,15 +1003,25 @@ export default function MockTest() {
 
   // ── ACTIVE TEST ──
   if (phase === 'test') {
-    // Use fixed positioning for each test so they aren't affected by the Navbar layout
-    // Each test component handles its own scroll + sticky action bar
+    // We use a relative container that fills the viewport height between Navbar and bottom
+    // But for mock tests, we often want "fullscreen" feel without the bottom nav
     return (
-      <div className="fixed inset-0 bg-lime-50 flex flex-col" style={{top:'64px', bottom:'64px'}}>
-        <Navbar />
-        {currentSec === 'listening' && <ListeningTest set={sets.listening} onComplete={handleListeningDone} />}
-        {currentSec === 'reading'   && <ReadingTest   set={sets.reading}   onComplete={handleReadingDone}   />}
-        {currentSec === 'writing'   && <WritingTest   set={sets.writing}   onComplete={handleWritingDone}   />}
-        {currentSec === 'speaking'  && <SpeakingTest  set={sets.speaking}  onComplete={handleSpeakingDone}  />}
+      <div className="fixed inset-0 z-50 bg-white flex flex-col overflow-hidden">
+        {/* Top Header for Test */}
+        <div className="bg-white border-b-2 border-lime-200 px-4 py-3 flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2">
+            <span className="text-xl">🌿</span>
+            <span className="font-display text-green-700">IELTSdua Mock</span>
+          </div>
+          <button onClick={() => setPhase('home')} className="text-sm font-bold text-gray-400 hover:text-gray-600">Quit Test</button>
+        </div>
+
+        <div className="flex-1 overflow-hidden flex flex-col">
+          {currentSec === 'listening' && <ListeningTest set={sets.listening} onComplete={handleListeningDone} />}
+          {currentSec === 'reading'   && <ReadingTest   set={sets.reading}   onComplete={handleReadingDone}   />}
+          {currentSec === 'writing'   && <WritingTest   set={sets.writing}   onComplete={handleWritingDone}   />}
+          {currentSec === 'speaking'  && <SpeakingTest  set={sets.speaking}  onComplete={handleSpeakingDone}  />}
+        </div>
       </div>
     )
   }
