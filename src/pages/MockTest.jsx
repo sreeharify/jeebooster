@@ -421,7 +421,7 @@ function ReadingTest({ set, onComplete }) {
                     return (
                       <button key={opt} onClick={() => !checked && setSelected(opt)}
                         className={`py-3 rounded-2xl font-bold text-sm transition-all ${cls}`}>
-                        {opt === 'Not Given' ? 'N∕G' : opt}
+                        {opt === 'Not Given' ? 'N/G' : opt}
                       </button>
                     )
                   })}
@@ -480,9 +480,8 @@ function ReadingTest({ set, onComplete }) {
         </div>
         <div className="h-4" />
       </div>
-    </div>
-  )
-}
+    )
+  }
 
 // ──────────────────────────────────────────────────────────────
 //  WRITING TEST
