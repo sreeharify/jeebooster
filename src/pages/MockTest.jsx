@@ -21,37 +21,39 @@ function bandColor(b) {
 }
 
 // ──────────────────────────────────────────────────────────────
-//  CHROME TTS AUDIO PLAYER — non-replayable, no pause
+//  CHROME TTS AUDIO PLAYER
+//  Plays the transcript aloud. User can answer questions while
+//  it plays. Cannot be paused — tap Play again to replay.
 // ──────────────────────────────────────────────────────────────
 function AudioPlayer({ transcript, context, onPlayed }) {
-  const [state, setState] = useState('idle') // idle | playing | done
+  const [state, setState] = useState('idle') // idle | playing
   const utterRef = useRef(null)
+  const waveBarsRef = useRef([...Array(8)].map(() => Math.round(8 + Math.random() * 14)))
 
   useEffect(() => {
-    return () => {
-      // Cancel speech on unmount
-      if (window.speechSynthesis) window.speechSynthesis.cancel()
-    }
+    return () => { if (window.speechSynthesis) window.speechSynthesis.cancel() }
   }, [])
 
   function play() {
-    if (!window.speechSynthesis || state !== 'idle') return
+    if (!window.speechSynthesis) return
     window.speechSynthesis.cancel()
 
     const utter = new SpeechSynthesisUtterance(transcript)
-    utter.rate  = 0.9
+    utter.rate  = 0.88
     utter.pitch = 1.0
 
-    // Try to use a British/American voice if available
+    // Prefer a natural English voice
     const voices = window.speechSynthesis.getVoices()
-    const preferred = voices.find(v =>
-      v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('UK') || v.name.includes('US'))
-    ) || voices.find(v => v.lang.startsWith('en')) || null
+    const preferred =
+      voices.find(v => v.lang.startsWith('en') && v.name.includes('Google')) ||
+      voices.find(v => v.lang.startsWith('en-GB')) ||
+      voices.find(v => v.lang.startsWith('en-US')) ||
+      voices.find(v => v.lang.startsWith('en')) || null
     if (preferred) utter.voice = preferred
 
     utter.onstart = () => setState('playing')
-    utter.onend   = () => { setState('done'); onPlayed?.() }
-    utter.onerror = () => { setState('done'); onPlayed?.() }
+    utter.onend   = () => { setState('idle'); onPlayed?.() }
+    utter.onerror = () => setState('idle')
 
     utterRef.current = utter
     window.speechSynthesis.speak(utter)
@@ -59,55 +61,53 @@ function AudioPlayer({ transcript, context, onPlayed }) {
   }
 
   return (
-    <div className={`rounded-2xl border-2 p-4 mb-4 ${
-      state === 'done'    ? 'bg-gray-50 border-gray-200' :
-      state === 'playing' ? 'bg-blue-50 border-blue-400' :
-                            'bg-blue-50 border-blue-200'
+    <div className={`rounded-2xl border-2 p-4 transition-all ${
+      state === 'playing' ? 'bg-blue-50 border-blue-400' : 'bg-white border-blue-200'
     }`}>
-      <div className="flex items-center gap-3 mb-2">
-        <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-          state === 'playing' ? 'bg-blue-500 animate-pulse' :
-          state === 'done'    ? 'bg-gray-300' : 'bg-blue-500'
+      <div className="flex items-center gap-3">
+        <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+          state === 'playing' ? 'bg-blue-500' : 'bg-blue-100'
         }`}>
-          {state === 'done'
-            ? <VolumeX className="w-5 h-5 text-white" />
-            : <Volume2 className="w-5 h-5 text-white" />
-          }
+          <Volume2 className={`w-5 h-5 ${state === 'playing' ? 'text-white' : 'text-blue-500'}`} />
         </div>
-        <div className="flex-1">
-          <p className="font-bold text-green-800 text-sm">{context}</p>
-          <p className="text-xs text-green-500 font-semibold">
-            {state === 'idle'    && 'Press Play — you can only listen once'}
-            {state === 'playing' && '🔊 Playing now — listen carefully!'}
-            {state === 'done'    && '✅ Audio finished — answer below'}
+        <div className="flex-1 min-w-0">
+          <p className="font-bold text-green-800 text-sm truncate">{context}</p>
+          <p className="text-xs text-blue-600 font-semibold">
+            {state === 'playing'
+              ? '🔊 Playing — answer questions as you listen'
+              : '▶ Press Play to hear the audio'}
           </p>
         </div>
         <button
           onClick={play}
-          disabled={state !== 'idle'}
-          className={`px-4 py-2 rounded-xl font-bold text-sm flex items-center gap-1.5 transition-all ${
-            state === 'idle'
-              ? 'bg-blue-500 text-white hover:bg-blue-600 active:scale-95'
-              : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+          disabled={state === 'playing'}
+          className={`shrink-0 px-4 py-2 rounded-xl font-bold text-sm flex items-center gap-1.5 transition-all ${
+            state === 'playing'
+              ? 'bg-blue-200 text-blue-600 cursor-not-allowed'
+              : 'bg-blue-500 text-white hover:bg-blue-600 active:scale-95'
           }`}
         >
           <Play className="w-4 h-4" />
-          {state === 'idle' ? 'Play' : state === 'playing' ? 'Playing…' : 'Played'}
+          {state === 'playing' ? 'Playing…' : 'Play'}
         </button>
       </div>
+
+      {/* Waveform animation while playing */}
       {state === 'playing' && (
-        <div className="flex gap-1 mt-1">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="flex-1 bg-blue-300 rounded-full animate-bounce"
-              style={{ height: `${8 + Math.random() * 16}px`, animationDelay: `${i * 0.1}s` }} />
+        <div className="flex items-end gap-1 mt-3 h-6">
+          {waveBarsRef.current.map((h, i) => (
+            <div key={i} className="flex-1 bg-blue-400 rounded-full animate-bounce"
+              style={{ height: `${h}px`, animationDelay: `${i * 0.1}s`, animationDuration: '0.8s' }} />
           ))}
         </div>
       )}
-      {state === 'idle' && (
-        <p className="text-xs text-blue-600 font-semibold mt-1">
-          ⚠️ Exam condition: audio plays once only and cannot be paused
-        </p>
-      )}
+
+      {/* Tip */}
+      <p className="text-xs text-gray-400 font-semibold mt-2">
+        {state === 'playing'
+          ? '💡 Select answers while listening. Submit when all answered.'
+          : '💡 Read all questions first, then press Play.'}
+      </p>
     </div>
   )
 }
@@ -158,53 +158,55 @@ function SectionIntro({ section, onStart, onSkip }) {
 }
 
 // ──────────────────────────────────────────────────────────────
-//  LISTENING TEST  — complete rewrite
+//  LISTENING TEST  — live answering while audio plays
 // ──────────────────────────────────────────────────────────────
 function ListeningTest({ set, onComplete }) {
-  // Flatten all questions with section metadata
-  const allQs = set.sections.flatMap(s =>
-    s.questions.map(q => ({ ...q, _section: s }))
-  )
-  const total = allQs.length
+  // Show all questions for the CURRENT SECTION simultaneously
+  // User answers as audio plays — just like the real IELTS test
+  const [secIdx,   setSecIdx]   = useState(0)
+  const [answers,  setAnswers]  = useState({})   // { qId: selectedOption }
+  const [revealed, setRevealed] = useState({})   // { qId: true } after submit
+  const [submitted, setSubmitted] = useState(false)
 
-  const [qIdx,    setQIdx]    = useState(0)
-  const [answers, setAnswers] = useState({})   // { qId: selectedOption }
-  const [checked, setChecked] = useState(false)
-  const [selected, setSelected] = useState(null)
-  const [audioPlayed, setAudioPlayed] = useState({}) // { sectionLabel: true }
+  const sec    = set.sections[secIdx]
+  const isLast = secIdx === set.sections.length - 1
+  const allQs  = set.sections.flatMap(s => s.questions)
+  const total  = allQs.length
+  const answered = sec.questions.filter(q => answers[q.id]).length
 
-  const q       = allQs[qIdx]
-  const sec     = q?._section
-  const isFirst = qIdx === 0 || allQs[qIdx - 1]?._section?.label !== sec?.label
-  const isLast  = qIdx === total - 1
-  const progress = ((qIdx) / total) * 100
-
-  function handleCheck() {
-    if (!selected) return
-    setChecked(true)
-    setAnswers(prev => ({ ...prev, [q.id]: selected }))
+  function handleSelect(qId, opt) {
+    if (submitted) return
+    setAnswers(prev => ({ ...prev, [qId]: opt }))
   }
 
-  function handleNext() {
+  function handleSubmitSection() {
+    // Reveal all answers for this section
+    const newRevealed = {}
+    sec.questions.forEach(q => { newRevealed[q.id] = true })
+    setRevealed(prev => ({ ...prev, ...newRevealed }))
+    setSubmitted(true)
+  }
+
+  function handleNextSection() {
     if (isLast) {
-      // Build final answers including current
-      const final = { ...answers, [q.id]: selected }
-      const correct = allQs.filter(item => final[item.id] === item.correct).length
-      onComplete(correct, total, final)
+      const correct = allQs.filter(q => answers[q.id] === q.correct).length
+      onComplete(correct, total, answers)
     } else {
-      setQIdx(i => i + 1)
-      setSelected(null)
-      setChecked(false)
+      setSecIdx(i => i + 1)
+      setSubmitted(false)
     }
   }
 
+  const doneCount = secIdx * (set.sections[0]?.questions?.length || 5)
+  const progress  = (doneCount / total) * 100
+
   return (
-    <div className="flex-1 flex flex-col">
-      {/* Progress bar — sticky */}
+    <div className="flex-1 flex flex-col overflow-hidden">
+      {/* Progress */}
       <div className="bg-white border-b-2 border-lime-200 px-4 py-2 shrink-0">
         <div className="flex justify-between text-xs font-bold text-green-600 mb-1">
-          <span>🎧 {sec?.label}</span>
-          <span>Q{qIdx + 1} / {total}</span>
+          <span>🎧 {sec.label}</span>
+          <span>Section {secIdx + 1} / {set.sections.length}</span>
         </div>
         <div className="h-2.5 bg-lime-100 rounded-full overflow-hidden">
           <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full progress-fill"
@@ -212,69 +214,103 @@ function ListeningTest({ set, onComplete }) {
         </div>
       </div>
 
-      {/* Scrollable content */}
+      {/* Scrollable — audio + all questions for this section */}
       <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
-        {/* Audio player — shown once per section (on the first question of that section) */}
-        {isFirst && sec && (
-          <AudioPlayer
-            transcript={sec.transcript}
-            context={sec.context}
-            onPlayed={() => setAudioPlayed(prev => ({ ...prev, [sec.label]: true }))}
-          />
-        )}
 
-        {/* Section reminder if not first question */}
-        {!isFirst && sec && !audioPlayed[sec.label] && (
-          <div className="bg-orange-50 border-2 border-orange-200 rounded-2xl p-3 text-xs font-bold text-orange-700">
-            ⚠️ Remember: base your answers on what you heard in the audio above
+        {/* Audio player — stays visible throughout the section */}
+        <AudioPlayer
+          key={secIdx}
+          transcript={sec.transcript}
+          context={sec.context}
+          onPlayed={() => {}}
+        />
+
+        {/* Instructions */}
+        {!submitted && (
+          <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl px-4 py-3">
+            <p className="text-xs font-bold text-blue-700">
+              📋 Answer all {sec.questions.length} questions as you listen.
+              Select an answer for each question, then tap <strong>Submit Section</strong> when done.
+            </p>
           </div>
         )}
 
-        {/* Question */}
-        {q && (
-          <div>
-            <div className="bg-blue-100 text-blue-700 rounded-2xl px-3 py-1 text-xs font-bold inline-block mb-3">
-              Question {qIdx + 1}
-            </div>
-            <h3 className="font-display text-xl text-green-900 mb-4">{q.question}</h3>
-            <div className="space-y-3">
-              {q.options.map((opt, i) => {
-                let cls = 'bg-white border-2 border-gray-200 text-gray-700 hover:border-blue-300 hover:bg-blue-50'
-                if (checked) {
-                  if (opt === q.correct)    cls = 'bg-lime-100 border-2 border-lime-500 text-green-900'
-                  else if (opt === selected) cls = 'bg-red-100 border-2 border-red-400 text-red-900'
-                  else                      cls = 'bg-gray-50 border-2 border-gray-200 text-gray-400 opacity-50'
-                } else if (opt === selected) cls = 'bg-blue-100 border-2 border-blue-400 text-blue-900'
-                return (
-                  <button key={i} onClick={() => !checked && setSelected(opt)}
-                    className={`w-full p-4 rounded-2xl text-left font-semibold text-sm transition-all ${cls}`}>
-                    <span className="opacity-50 mr-2">{['A','B','C','D'][i]}.</span>{opt}
-                  </button>
-                )
-              })}
-            </div>
-            {checked && (
-              <div className={`mt-3 p-4 rounded-2xl border-2 ${selected === q.correct ? 'bg-lime-50 border-lime-400' : 'bg-blue-50 border-blue-300'}`}>
-                <p className="font-bold text-sm">{selected === q.correct ? '✅ Correct!' : `❌ Correct: ${q.correct}`}</p>
-                {q.explanation && <p className="text-xs text-gray-600 font-semibold mt-1">{q.explanation}</p>}
+        {/* All questions for this section — shown simultaneously */}
+        {sec.questions.map((q, qi) => {
+          const sel  = answers[q.id]
+          const done = !!revealed[q.id]
+          return (
+            <div key={q.id} className={`card border-2 transition-all ${
+              done
+                ? sel === q.correct ? 'border-lime-300 bg-lime-50' : 'border-red-200 bg-red-50'
+                : sel ? 'border-blue-300 bg-blue-50' : 'border-gray-200'
+            }`}>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-blue-100 text-blue-700 rounded-xl px-2.5 py-1 text-xs font-bold shrink-0">
+                  Q{doneCount + qi + 1}
+                </span>
+                {done && (
+                  <span className={`text-xs font-bold ${sel === q.correct ? 'text-lime-600' : 'text-red-500'}`}>
+                    {sel === q.correct ? '✅ Correct' : `❌ Answer: ${q.correct}`}
+                  </span>
+                )}
               </div>
-            )}
-          </div>
-        )}
-      </div>
+              <p className="font-semibold text-green-900 text-sm mb-3">{q.question}</p>
+              <div className="grid grid-cols-1 gap-2">
+                {q.options.map((opt, i) => {
+                  let cls = 'border-2 border-gray-200 bg-white hover:border-blue-300 hover:bg-blue-50'
+                  if (done) {
+                    if (opt === q.correct)  cls = 'border-2 border-lime-500 bg-lime-100'
+                    else if (opt === sel)   cls = 'border-2 border-red-400 bg-red-100'
+                    else                    cls = 'border-2 border-gray-100 bg-gray-50 opacity-40'
+                  } else if (opt === sel)   cls = 'border-2 border-blue-400 bg-blue-100 font-bold'
+                  return (
+                    <button key={i} onClick={() => handleSelect(q.id, opt)}
+                      disabled={done || submitted}
+                      className={`w-full p-3 rounded-xl text-left text-sm font-semibold transition-all ${cls}`}>
+                      <span className="opacity-50 mr-2 text-xs font-bold">{['A','B','C','D'][i]}.</span>{opt}
+                    </button>
+                  )
+                })}
+              </div>
+              {done && q.explanation && (
+                <p className="text-xs text-gray-500 font-semibold mt-2 pt-2 border-t border-gray-200">
+                  {q.explanation}
+                </p>
+              )}
+            </div>
+          )
+        })}
 
-      {/* Action bar — always visible at bottom */}
-      <div className="shrink-0 bg-white border-t-2 border-lime-200 px-4 py-4">
-        {!checked
-          ? <button onClick={handleCheck} disabled={!selected}
-              className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed">
-              Check Answer
-            </button>
-          : <button onClick={handleNext}
+        {/* Submit / Next button INSIDE scroll — always reachable */}
+        <div className="bg-white border-2 border-blue-200 rounded-2xl px-4 py-4 sticky bottom-0 shadow-lg">
+          {!submitted ? (
+            <>
+              <button
+                onClick={handleSubmitSection}
+                disabled={answered < sec.questions.length}
+                className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed"
+                style={{background: answered === sec.questions.length ? undefined : undefined}}>
+                {answered < sec.questions.length
+                  ? `Answer all questions (${answered}/${sec.questions.length} answered)`
+                  : '✓ Submit Section Answers'}
+              </button>
+              {answered < sec.questions.length && (
+                <p className="text-center text-xs text-blue-500 font-semibold mt-1">
+                  {sec.questions.length - answered} question{sec.questions.length - answered !== 1 ? 's' : ''} remaining
+                </p>
+              )}
+            </>
+          ) : (
+            <button onClick={handleNextSection}
               className="btn-primary w-full flex items-center justify-center gap-2">
-              {isLast ? '✅ Finish Listening' : 'Next Question'} <ChevronRight className="w-5 h-5" />
+              {isLast ? '✅ Finish Listening' : `Next Section →`}
+              <ChevronRight className="w-5 h-5" />
             </button>
-        }
+          )}
+        </div>
+
+        <div className="h-4" />
       </div>
     </div>
   )
@@ -431,17 +467,20 @@ function ReadingTest({ set, onComplete }) {
         )}
       </div>
 
-      <div className="shrink-0 bg-white border-t-2 border-lime-200 px-4 py-4">
-        {!checked
-          ? <button onClick={handleCheck} disabled={!selected}
-              className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed">
-              Check Answer
-            </button>
-          : <button onClick={handleNext}
-              className="btn-primary w-full flex items-center justify-center gap-2">
-              {isLast ? '✅ Finish Reading' : 'Next Question'} <ChevronRight className="w-5 h-5" />
-            </button>
-        }
+      {/* Reading action bar — sticky inside scroll so always reachable */}
+        <div className="bg-white border-2 border-purple-200 rounded-2xl px-4 py-4 sticky bottom-0 shadow-lg">
+          {!checked
+            ? <button onClick={handleCheck} disabled={!selected}
+                className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed">
+                Check Answer
+              </button>
+            : <button onClick={handleNext}
+                className="btn-primary w-full flex items-center justify-center gap-2">
+                {isLast ? '✅ Finish Reading' : 'Next Question'} <ChevronRight className="w-5 h-5" />
+              </button>
+          }
+        </div>
+        <div className="h-4" />
       </div>
     </div>
   )
@@ -532,18 +571,22 @@ function WritingTest({ set, onComplete }) {
               style={{ width: `${Math.min(100, (wordCount / task.minWords) * 100)}%` }} />
           </div>
         </div>
-      </div>
 
-      <div className="shrink-0 bg-white border-t-2 border-lime-200 px-4 py-4">
-        <button onClick={handleNext} disabled={!isEnough}
-          className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed">
-          {isLast ? '✅ Finish Writing' : `Next Task →`}
-        </button>
-        {!isEnough && (
-          <p className="text-center text-xs text-orange-500 font-semibold mt-2">
-            {task.minWords - wordCount} more words needed
-          </p>
-        )}
+        {/* Submit button INSIDE scroll area — always reachable by scrolling down */}
+        <div className="bg-white border-2 border-lime-200 rounded-2xl px-4 py-4 sticky bottom-0 shadow-lg">
+          <button onClick={handleNext} disabled={!isEnough}
+            className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed">
+            {isLast ? '✅ Finish Writing' : 'Next Task →'}
+          </button>
+          {!isEnough && (
+            <p className="text-center text-xs text-orange-500 font-semibold mt-2">
+              ✏️ {task.minWords - wordCount} more words needed to continue
+            </p>
+          )}
+        </div>
+
+        {/* Spacer so sticky button doesn't overlap last content */}
+        <div className="h-4" />
       </div>
     </div>
   )
@@ -960,8 +1003,10 @@ export default function MockTest() {
 
   // ── ACTIVE TEST ──
   if (phase === 'test') {
+    // Use fixed positioning for each test so they aren't affected by the Navbar layout
+    // Each test component handles its own scroll + sticky action bar
     return (
-      <div className="h-screen bg-lime-50 flex flex-col" style={{paddingTop:'64px', paddingBottom:'64px'}}>
+      <div className="fixed inset-0 bg-lime-50 flex flex-col" style={{top:'64px', bottom:'64px'}}>
         <Navbar />
         {currentSec === 'listening' && <ListeningTest set={sets.listening} onComplete={handleListeningDone} />}
         {currentSec === 'reading'   && <ReadingTest   set={sets.reading}   onComplete={handleReadingDone}   />}
