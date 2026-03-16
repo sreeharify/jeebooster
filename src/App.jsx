@@ -24,7 +24,7 @@ function Splash() {
     <div className="min-h-screen bg-lime-50 flex flex-col items-center justify-center dot-pattern">
       <div className="text-center animate-fade-in">
         <div className="text-7xl animate-bounce-slow mb-4">🌿</div>
-        <p className="font-display text-3xl text-green-700 mb-2">IELTS Master</p>
+        <p className="font-display text-3xl text-green-700 mb-2">IELTSdua</p>
         <p className="font-body text-green-400 font-semibold text-sm mb-6">Loading your progress…</p>
         <div className="flex items-center justify-center gap-2">
           {[0, 1, 2].map(i => (

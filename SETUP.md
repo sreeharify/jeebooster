@@ -1,4 +1,4 @@
-# 🌿 IELTS Master — Setup Guide (Google OAuth)
+# 🌿 IELTSdua — Setup Guide (Google OAuth)
 
 ## Overview
 - **Frontend**: React + Vite + Tailwind CSS
@@ -49,7 +49,7 @@
 1. Go to **APIs & Services → OAuth consent screen**
 2. Choose **External** → **Create**
 3. Fill in:
-   - App name: `IELTS Master`
+   - App name: `IELTSdua`
    - User support email: your email
    - Developer contact: your email
 4. Click **Save and Continue** through all steps
@@ -61,7 +61,7 @@
 1. Go to **APIs & Services → Credentials**
 2. Click **Create Credentials → OAuth 2.0 Client IDs**
 3. Application type: **Web application**
-4. Name: `IELTS Master Web`
+4. Name: `IELTSdua Web`
 5. Under **Authorised redirect URIs**, add the Callback URL from Supabase Step 1.3:
    ```
    https://YOUR_PROJECT_ID.supabase.co/auth/v1/callback
@@ -104,7 +104,7 @@ Open [http://localhost:5173](http://localhost:5173) — click "Continue with Goo
 ```bash
 git init
 git add .
-git commit -m "IELTS Master"
+git commit -m "IELTSdua"
 git remote add origin https://github.com/YOUR_USERNAME/ielts-master.git
 git push -u origin main
 ```

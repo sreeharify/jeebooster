@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-IELTS Master — Project Setup Script
+IELTSdua — Project Setup Script
 Run from the root folder where you extracted all files.
 """
 import os, shutil, sys
@@ -14,7 +14,7 @@ def cyan(t): return f"\033[96m{t}\033[0m"
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 print()
-print(bold(cyan("  🌿 IELTS Master — Project Setup")))
+print(bold(cyan("  🌿 IELTSdua — Project Setup")))
 print(cyan("  " + "=" * 40))
 print()
 

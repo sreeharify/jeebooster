@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="max-w-lg mx-auto flex items-center justify-between px-4 py-2">
           <Link to="/" className="flex items-center gap-1.5">
             <span className="text-2xl">🌿</span>
-            <span className="font-display text-green-700 text-xl">IELTS Master</span>
+            <span className="font-display text-green-700 text-xl">IELTSdua</span>
           </Link>
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1 bg-orange-50 rounded-full px-2.5 py-1">

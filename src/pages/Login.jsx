@@ -25,7 +25,7 @@ export default function Login() {
         {/* Logo */}
         <div className="text-center mb-10 animate-pop">
           <div className="text-7xl mb-3">🌿</div>
-          <h1 className="font-display text-5xl text-green-700">IELTS Master</h1>
+          <h1 className="font-display text-5xl text-green-700">IELTSdua</h1>
           <p className="font-body font-semibold text-green-500 mt-2 text-lg">Your path to Band 9 🎯</p>
         </div>
 
