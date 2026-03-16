@@ -2,11 +2,11 @@
   {
     "kind": "explainer",
     "band": 6,
-    "title": "⚖️ Discussion Essays (Discuss both views)",
+    "title": "\u2696\ufe0f Discussion Essays (Discuss both views)",
     "sections": [
       {
         "heading": "The key difference",
-        "body": "\"Discuss both views and give your own opinion\" = you must:\n1. Discuss View A fairly and objectively\n2. Discuss View B fairly and objectively\n3. Give YOUR OWN clear opinion\n\nA common Band 5–6 mistake: writing body paragraphs that only support one view and ignoring the requirement to \"discuss both\"."
+        "body": "\"Discuss both views and give your own opinion\" = you must:\n1. Discuss View A fairly and objectively\n2. Discuss View B fairly and objectively\n3. Give YOUR OWN clear opinion\n\nA common Band 5\u20136 mistake: writing body paragraphs that only support one view and ignoring the requirement to \"discuss both\"."
       },
       {
         "heading": "Structure option A (balanced)",
@@ -14,36 +14,6 @@
       }
     ],
     "highlight": "\"Discuss both views\" does NOT mean \"agree with both equally.\" You must still give YOUR position clearly in the introduction and conclusion."
-  },
-  {
-    "kind": "mini_explainer",
-    "band": 6,
-    "title": "🔗 Cohesive Devices: Using Them Correctly",
-    "body": "Cohesive devices link ideas and show your reasoning — but OVERUSE is penalised.\n\nAdding: Furthermore, Moreover, In addition, Additionally\nContrast: However, Nevertheless, On the other hand, Conversely\nCause: Consequently, Therefore, As a result, Hence\nExample: For instance, For example, To illustrate, A case in point\nConcluding: In conclusion, To summarise, Overall",
-    "quick": [
-      {
-        "label": "Vary your devices — don't repeat the same one",
-        "icon": "🔄"
-      },
-      {
-        "label": "\"Furthermore\" ≠ \"Moreover\" always — use the right one",
-        "icon": "💡"
-      }
-    ]
-  },
-  {
-    "kind": "mcq",
-    "band": 6,
-    "question": "Which cohesive device shows RESULT or CONSEQUENCE?",
-    "options": [
-      "Furthermore",
-      "However",
-      "Consequently",
-      "Nevertheless"
-    ],
-    "correct": "Consequently",
-    "explanation": "\"Consequently\" introduces a result or consequence of what was just said.\n\nFurthermore = adds more supporting information\nHowever = introduces contrast\nNevertheless = shows contrast despite difficulty (similar to \"however\" but stronger)\n\nExample: \"Air pollution levels have risen dramatically. Consequently, respiratory diseases have become more prevalent.\"",
-    "hint": "Think: \"as a result of this...\" — which word fits that meaning?"
   },
   {
     "kind": "fill_blank",
@@ -59,29 +29,8 @@
         ]
       }
     ],
-    "explanation": "\"Nevertheless\" is perfect here — it says \"even though there's a problem (high cost), the result (benefits) still stands.\"\n\nIt's stronger and more academic than \"However\" alone. Use it when you want to say \"this difficulty exists, BUT the main point remains valid.\"",
-    "hint": "The sentence first gives a problem, then says the benefits still matter — that's a contrast/concession."
-  },
-  {
-    "kind": "error_correction",
-    "band": 7,
-    "title": "✏️ Find the Writing Error",
-    "instruction": "One of these sentences contains a common IELTS writing error:",
-    "sentences": [
-      {
-        "text": "In conclusion, governments should prioritise renewable energy investment.",
-        "correct": true
-      },
-      {
-        "text": "Despite of the challenges, the policy was implemented successfully.",
-        "correct": false,
-        "explanation": "\"Despite\" is NEVER followed by \"of\" in standard English.\n\n✅ Fix: \"Despite the challenges, the policy was implemented successfully.\"\n✅ Or: \"In spite of the challenges, the policy was implemented successfully.\"\n\nThis error appears in approximately 30% of Band 6 essays — eliminating it alone can raise your score."
-      },
-      {
-        "text": "Furthermore, the economic benefits of automation are well-documented.",
-        "correct": true
-      }
-    ]
+    "explanation": "\"Nevertheless\" is perfect here \u2014 it says \"even though there's a problem (high cost), the result (benefits) still stands.\"\n\nIt's stronger and more academic than \"However\" alone. Use it when you want to say \"this difficulty exists, BUT the main point remains valid.\"",
+    "hint": "The sentence first gives a problem, then says the benefits still matter \u2014 that's a contrast/concession."
   },
   {
     "kind": "match_pairs",
@@ -105,20 +54,45 @@
         "meaning": "Restate position + recommend or predict"
       }
     ],
-    "explanation": "A well-structured essay shows the examiner you can organise information logically — this directly boosts your Coherence & Cohesion score.\n\nBand 9 essays have CLEAR topic sentences at the start of every body paragraph. Examiners can read just the first sentence of each paragraph and understand the entire argument."
+    "explanation": "A well-structured essay shows the examiner you can organise information logically \u2014 this directly boosts your Coherence & Cohesion score.\n\nBand 9 essays have CLEAR topic sentences at the start of every body paragraph. Examiners can read just the first sentence of each paragraph and understand the entire argument."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "A Task 2 question says: 'Discuss both views and give your own opinion.' You only discuss one view. What mark will this affect MOST?",
+    "options": [
+      "Coherence & Cohesion",
+      "Lexical Resource",
+      "Task Response",
+      "Grammatical Range"
+    ],
+    "correct": "Task Response",
+    "explanation": "'Discuss BOTH views' is a direct instruction. Ignoring one view = failure to complete the task = Task Response penalty.\n\nTask Response assesses:\n\u2022 Did you address ALL parts of the question?\n\u2022 Did you present a clear position?\n\u2022 Are ideas fully developed?\n\nMissing a sub-task is the most common high-band student error."
   },
   {
     "kind": "mcq",
     "band": 8,
-    "question": "Which Task 2 introduction is closest to Band 8–9 quality?",
+    "question": "Which discussion essay introduction is Band 8?",
     "options": [
-      "In this essay, I will discuss the advantages and disadvantages of technology.",
-      "Technology is a very important topic. There are many pros and cons.",
-      "The question of whether technological advancement serves society's interests more than it harms them is one that has attracted considerable debate in recent decades.",
-      "I think technology has both good and bad sides, which I will explain in this essay."
+      "'This essay will discuss both views about technology.'",
+      "'Some people like technology and some people don\\'t. I will discuss this.'",
+      "'The question of whether technological advancement represents a net benefit to humanity has generated considerable debate, with proponents emphasising enhanced productivity while critics point to growing social fragmentation.'",
+      "'Technology has advantages and disadvantages and I will explain them in this essay.'"
     ],
-    "correct": "The question of whether technological advancement serves society's interests more than it harms them is one that has attracted considerable debate in recent decades.",
-    "explanation": "✅ Band 8+ introduction features:\n• Complex sentence structure with \"whether...or\"\n• Sophisticated vocabulary: \"technological advancement\", \"considerable debate\"\n• Paraphrases the topic without repeating the question verbatim\n• Does NOT announce \"I will discuss...\" (avoid meta-commentary)\n• Sets up a nuanced discussion\n\n❌ \"In this essay, I will discuss...\" is the classic Band 5 opener — never say what you're about to do; just do it.",
-    "hint": "The best introduction paraphrases the topic using sophisticated vocabulary — it never copies the question."
+    "correct": "'The question of whether technological advancement represents a net benefit to humanity has generated considerable debate, with proponents emphasising enhanced productivity while critics point to growing social fragmentation.'",
+    "explanation": "\u2705 'The question of whether...' = nominalized structure (Band 8+)\n\u2705 'has generated considerable debate' = impersonal academic framing\n\u2705 'proponents emphasising... critics point to' = identifies BOTH sides concisely\n\u2705 'net benefit' and 'social fragmentation' = precise, sophisticated vocabulary\n\u2705 No 'I will discuss' announcement"
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Where in a discussion essay should you state YOUR OWN opinion?",
+    "options": [
+      "Only in the conclusion",
+      "Only in the introduction",
+      "In the introduction AND conclusion",
+      "Never \u2014 just present both views fairly"
+    ],
+    "correct": "In the introduction AND conclusion",
+    "explanation": "For 'Discuss both views AND give your own opinion' questions:\n\n\u2705 Introduction: 'While I acknowledge both perspectives, I believe...'\n\u2705 Body 1: Present View A (fairly)\n\u2705 Body 2: Present View B (fairly)\n\u2705 Conclusion: Restate YOUR position clearly\n\nYour opinion must appear in BOTH intro and conclusion for Task Response marks.\n\n\u274c 'Only in conclusion' = late position = weaker Task Response score\n\u274c 'Never' = fails to 'give your own opinion' = Task Response penalty"
   }
 ]

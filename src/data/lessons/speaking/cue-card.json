@@ -2,44 +2,18 @@
   {
     "kind": "explainer",
     "band": 7,
-    "title": "🎤 Part 2 — Cue Card Mastery",
+    "title": "\ud83c\udfa4 Part 2 \u2014 Cue Card Mastery",
     "sections": [
       {
         "heading": "The 1-minute preparation",
-        "body": "This minute is invaluable — most students waste it panicking.\n\nUse it to:\n1. Decide on ONE specific story/experience (not a general answer)\n2. Note 3–4 bullet points — not full sentences\n3. Think of 2 descriptive words/phrases for each bullet point\n4. Plan your ending (final reflection, why it was significant)\n\nSpecific > General: \"A trip to Kerala in 2019\" beats \"A holiday I once had\"."
+        "body": "This minute is invaluable \u2014 most students waste it panicking.\n\nUse it to:\n1. Decide on ONE specific story/experience (not a general answer)\n2. Note 3\u20134 bullet points \u2014 not full sentences\n3. Think of 2 descriptive words/phrases for each bullet point\n4. Plan your ending (final reflection, why it was significant)\n\nSpecific > General: \"A trip to Kerala in 2019\" beats \"A holiday I once had\"."
       },
       {
         "heading": "Structure for 2 minutes",
-        "body": "Opening (20 sec): Set the scene — when, where, who\nMiddle (80 sec): What happened + sensory/emotional details\nReflection (20 sec): Why it was significant + what you learned or felt\n\nThe reflection is where Band 7 becomes Band 8–9. Anyone can describe. Reflective analysis is what examiners reward."
+        "body": "Opening (20 sec): Set the scene \u2014 when, where, who\nMiddle (80 sec): What happened + sensory/emotional details\nReflection (20 sec): Why it was significant + what you learned or felt\n\nThe reflection is where Band 7 becomes Band 8\u20139. Anyone can describe. Reflective analysis is what examiners reward."
       }
     ],
     "highlight": "Don't stop at 1:30. Keep talking until the examiner says \"Thank you.\" Every extra second demonstrates fluency."
-  },
-  {
-    "kind": "mini_explainer",
-    "band": 6,
-    "title": "📢 Extending Answers in Part 1",
-    "body": "The examiner expects 2–4 sentences per Part 1 answer. Never give one-word or one-sentence replies.\n\nThe P-R-E-L formula:\nP = Point (answer the question directly)\nR = Reason (say why)\nE = Example (give a specific example)\nL = Link (connect back to the question or add a follow-up thought)\n\nQ: \"Do you enjoy cooking?\"\n❌ \"Yes, I do.\"\n✅ \"I genuinely enjoy cooking, mainly because I find it a relaxing way to unwind after work. For example, experimenting with new recipes at the weekend has become something of a hobby. I think there's something deeply satisfying about creating something from scratch.\"",
-    "quick": [
-      {
-        "label": "P: Point → R: Reason → E: Example → L: Link",
-        "icon": "🔗"
-      }
-    ]
-  },
-  {
-    "kind": "mcq",
-    "band": 6,
-    "question": "Which Part 1 answer demonstrates the best speaking skills?",
-    "options": [
-      "\"Yes, I like reading.\"",
-      "\"I like reading because it is good.\"",
-      "\"I'm quite an avid reader, actually — I tend to gravitate towards non-fiction, particularly books about psychology and human behaviour. I find that reading before bed helps me unwind, and I've learned a great deal from books I'd never have encountered otherwise.\"",
-      "\"Reading is my hobby. I read books. Books are interesting. I read every day.\""
-    ],
-    "correct": "\"I'm quite an avid reader, actually — I tend to gravitate towards non-fiction, particularly books about psychology and human behaviour. I find that reading before bed helps me unwind, and I've learned a great deal from books I'd never have encountered otherwise.\"",
-    "explanation": "✅ The best answer uses:\n• \"actually\" — natural discourse marker\n• \"quite an avid reader\" — precise vocabulary (avid = enthusiastic)\n• \"tend to gravitate towards\" — sophisticated verb phrase\n• Specific genre + specific reason + personal reflection\n• Natural, flowing sentences\n\n❌ The others are too short, too vague, or repetitive.",
-    "hint": "Look for the answer that gives specific details and uses varied, precise language."
   },
   {
     "kind": "match_pairs",
@@ -47,7 +21,7 @@
     "instruction": "Match each speaking phrase to its function:",
     "pairs": [
       {
-        "word": "\"That's an interesting question — let me think...\"",
+        "word": "\"That's an interesting question \u2014 let me think...\"",
         "meaning": "Buying thinking time naturally"
       },
       {
@@ -63,20 +37,49 @@
         "meaning": "Introducing a contrast or nuance"
       }
     ],
-    "explanation": "These discourse markers signal to the examiner that you're thinking in English — not translating. Using them naturally (not robotically) is a marker of Band 7+ fluency.\n\nKey word: NATURALLY. If they sound rehearsed, they lose their effect."
+    "explanation": "These discourse markers signal to the examiner that you're thinking in English \u2014 not translating. Using them naturally (not robotically) is a marker of Band 7+ fluency.\n\nKey word: NATURALLY. If they sound rehearsed, they lose their effect."
+  },
+  {
+    "kind": "mini_explainer",
+    "band": 7,
+    "title": "\ud83d\udde3\ufe0f Part 2 Language \u2014 Making It Flow",
+    "body": "Part 2 success = fluency + structure + specific details.\n\nUseful language to structure your 2 minutes:\n\nOpening: 'I\\'d like to talk about... which happened/took place...'\nSetting scene: 'At the time, I was... / It was a particularly...'\nMain events: 'What struck me most was... / The thing I remember vividly is...'\nReflection: 'Looking back, I think... / What made it special was...'\n\nNever just list facts. Use sensory and emotional detail.",
+    "quick": [
+      {
+        "label": "Setting \u2192 Events \u2192 Reflection = natural structure",
+        "icon": "\ud83c\udfd7\ufe0f"
+      },
+      {
+        "label": "Sensory details ('the smell of...', 'the sound of...') score highly",
+        "icon": "\ud83c\udfaf"
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "You finish your Part 2 talk after 1 minute 20 seconds. The examiner hasn't stopped you. What should you do?",
+    "options": [
+      "Stop \u2014 you've said enough",
+      "Apologise and wait",
+      "Continue speaking until the examiner says 'Thank you'",
+      "Start repeating what you've already said"
+    ],
+    "correct": "Continue speaking until the examiner says 'Thank you'",
+    "explanation": "The examiner will ALWAYS stop you at 2 minutes. If they haven't stopped you, keep going.\n\nStopping early signals:\n\u274c Running out of ideas (fluency penalty)\n\u274c Poor self-management\n\nIf you're worried about running out of content:\n\u2022 Add more sensory/emotional detail\n\u2022 Reflect on what you learned or felt\n\u2022 Speculate: 'I imagine that if it had been different...'\n\nEvery extra second demonstrates fluency.",
+    "hint": "The examiner controls the timing \u2014 your job is to keep talking."
   },
   {
     "kind": "mcq",
     "band": 8,
-    "question": "In Part 3, the examiner asks: \"Do you think social media has changed the way people form friendships?\" Which response is closest to Band 8?",
+    "question": "Which Part 2 opening is Band 8?",
     "options": [
-      "\"Yes, social media changed friendships a lot. People use it to talk to friends.\"",
-      "\"I think social media is both good and bad for friendships. It has advantages and disadvantages.\"",
-      "\"It's a nuanced question. While digital platforms have undeniably broadened the scope of who we can connect with, there's a compelling argument that the depth of those connections has diminished — we have more acquaintances but fewer genuinely close friends.\"",
-      "\"Social media is very popular nowadays and everyone uses it for friendships and communication purposes.\""
+      "'I want to talk about my holiday.'",
+      "'The topic I have chosen is about a trip I made.'",
+      "'I\\'d like to describe a journey I made to Kerala in 2019 \u2014 it was a trip that, unexpectedly, changed my perspective on what I value in travel.'",
+      "'I will now talk about a memorable travel experience from my past.'"
     ],
-    "correct": "\"It's a nuanced question. While digital platforms have undeniably broadened the scope of who we can connect with, there's a compelling argument that the depth of those connections has diminished — we have more acquaintances but fewer genuinely close friends.\"",
-    "explanation": "✅ Band 8 answer features:\n• \"It's a nuanced question\" — shows academic thinking\n• \"While...there's a compelling argument that...\" — complex sentence with concession\n• \"undeniably\", \"compelling\" — precise adverbs\n• Specific insight: breadth vs depth of connection\n• No hesitation fillers like \"um\", \"very popular\"\n\nBand 8 speaks in structured, specific, nuanced answers — not generalisations.",
-    "hint": "The best Part 3 answer shows depth of thought, specific vocabulary, and complex sentence structures."
+    "correct": "'I\\'d like to describe a journey I made to Kerala in 2019 \u2014 it was a trip that, unexpectedly, changed my perspective on what I value in travel.'",
+    "explanation": "\u2705 Band 8 opening:\n\u2022 'I\\'d like to describe' \u2014 natural, not 'I will talk about'\n\u2022 Specific: Kerala, 2019\n\u2022 'unexpectedly' \u2014 adverb adds authenticity\n\u2022 'changed my perspective on what I value in travel' \u2014 reflective, interesting claim\n\u2022 Creates immediate intrigue \u2014 examiner wants to hear more\n\n\u274c Others: announce rather than engage; vague; no detail"
   }
 ]

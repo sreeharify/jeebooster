@@ -2,122 +2,93 @@
   {
     "kind": "explainer",
     "band": 6,
-    "title": "📝 Summary Completion Strategy",
+    "title": "\ud83d\udcdd Summary Completion \u2014 The Rules",
     "sections": [
       {
         "heading": "What it tests",
-        "body": "Summary completion gives you a paragraph with gaps to fill. You must:\n• Find the correct section of the passage (skim for the topic first)\n• Identify exactly what type of word fits (noun, verb, adjective?)\n• Use ONLY words from the passage — never rephrase\n• Check word limit: usually \"NO MORE THAN TWO WORDS\""
+        "body": "You are given a summary paragraph with gaps. You must fill each gap using words DIRECTLY from the passage.\n\nThe instruction always specifies a word limit:\n\u2022 'NO MORE THAN TWO WORDS' = 1 or 2 words only\n\u2022 'NO MORE THAN THREE WORDS AND/OR A NUMBER' = up to 3 words + optional number\n\u2022 'ONE WORD ONLY' = exactly 1 word\n\nBreaking the word limit = automatically wrong, even if the meaning is perfect."
       },
       {
-        "heading": "The technique",
-        "body": "1. Read the summary before looking at the passage\n2. Predict what kind of information is missing (number? noun? adjective?)\n3. Find the relevant passage section by matching key words\n4. Use the exact words from the passage — don't paraphrase\n5. Check grammar: the word must fit the gap grammatically"
+        "heading": "Critical rule",
+        "body": "Use the EXACT words from the passage \u2014 do NOT paraphrase.\n\nThis is the OPPOSITE of what you do in Writing.\n\nPassage says: 'a dramatic deterioration in air quality'\nGap: 'a dramatic _______ in air quality'\nAnswer: 'deterioration' \u2014 copy it directly."
       }
     ],
-    "highlight": "\"No more than two words\" is strict. Writing three words = wrong, even if the meaning is correct. Always count."
+    "highlight": "Articles (a, an, the) count as words. Removing an article from a 3-word answer often gives you a 2-word answer that still makes sense grammatically.",
+    "example": {
+      "wrong": "Passage: 'significantly reduced biodiversity' \u2192 You write: 'big drop in species' (paraphrase)",
+      "right": "Passage: 'significantly reduced biodiversity' \u2192 You write: 'reduced biodiversity' (exact words, 2 words)"
+    }
   },
   {
     "kind": "mini_explainer",
     "band": 6,
-    "title": "✅ True / False / Not Given — The Trickiest Type",
-    "body": "TRUE: The statement agrees with the passage\nFALSE: The passage says the OPPOSITE\nNOT GIVEN: The passage doesn't mention this at all\n\nThe key distinction:\nFALSE = text contradicts → \"many\" vs \"all\"\nNOT GIVEN = topic simply absent from text\n\nCommon trap: \"I know this is false in real life\" doesn't matter. Only what the TEXT says.",
+    "title": "\ud83d\udd22 Word Count Rules \u2014 The Tricky Cases",
+    "body": "These rules catch many students:\n\n\u2705 'climate change' = 2 words\n\u2705 'well-established' = 1 word (hyphenated words count as ONE)\n\u2705 'CO\u2082' = 1 word (abbreviations count as ONE)\n\u2705 '2,500 workers' = 2 words (number + noun)\n\n\u274c 'the climate change' = 3 words (unnecessary article)\n\u274c 'a well-established fact' = 3 words\n\nTip: If your answer is one word too long, check if you can drop an article without losing the meaning.",
     "quick": [
       {
-        "label": "TRUE: matches the text",
-        "icon": "✅"
+        "label": "Hyphenated = 1 word | Numbers = 1 word each",
+        "icon": "\ud83d\udccf"
       },
       {
-        "label": "FALSE: contradicts the text",
-        "icon": "❌"
-      },
-      {
-        "label": "N/G: not mentioned anywhere",
-        "icon": "❓"
+        "label": "Articles (a/an/the) count as full words",
+        "icon": "\u26a0\ufe0f"
       }
     ]
   },
   {
-    "kind": "passage",
+    "kind": "mcq",
     "band": 6,
-    "label": "📖 Read carefully — questions follow",
-    "text": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
-    "tip": "Tip: As you read, ask yourself: \"What is each paragraph mainly about?\" Skim for structure first."
-  },
-  {
-    "kind": "mini_explainer",
-    "band": 6,
-    "title": "🔍 Reading Tip: Paraphrase Alert",
-    "body": "IELTS questions NEVER use the exact words from the passage. They always paraphrase.\n\nExample:\nPassage says: \"subtle changes to the way choices are presented\"\nQuestion says: \"minor modifications to how options are displayed\"\n\nSame meaning — different words. Always look for MEANING, not matching words.",
-    "quick": [
-      {
-        "label": "Train yourself to think: what does this MEAN?",
-        "icon": "💡"
-      }
-    ]
-  },
-  {
-    "kind": "tfng_single",
-    "band": 6,
-    "statement": "Nudge theory relies primarily on financial incentives to change behaviour.",
-    "answer": "False",
-    "passage": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
-    "explanation": "The passage explicitly states: \"Unlike traditional policy approaches that rely on... financial incentives, nudge theory works by redesigning 'choice architectures'\" — this directly contradicts the statement."
-  },
-  {
-    "kind": "tfng_single",
-    "band": 6,
-    "statement": "The placement of food in canteens can influence what people choose to eat.",
-    "answer": "True",
-    "passage": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
-    "explanation": "\"Research consistently demonstrates that people are more likely to select whichever option requires the least effort\" + the canteen eye-level example confirms this is true."
-  },
-  {
-    "kind": "tfng_single",
-    "band": 7,
-    "statement": "Thaler and Sunstein conducted experiments in school canteens.",
-    "answer": "Not Given",
-    "passage": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
-    "explanation": "The passage mentions them as developers of nudge theory but says nothing about them conducting canteen experiments specifically. The canteen example is cited as research, not linked to them directly.\n\nNot Given ≠ False. The passage simply doesn't address this claim."
+    "question": "The instruction says 'NO MORE THAN TWO WORDS.' The answer in the passage is 'a significant reduction.' What should you write?",
+    "options": [
+      "a significant reduction",
+      "significant reduction",
+      "reduction",
+      "a reduction"
+    ],
+    "correct": "significant reduction",
+    "explanation": "'A significant reduction' = 3 words \u274c (exceeds limit)\n'Significant reduction' = 2 words \u2705\n'Reduction' alone = 1 word \u2705 but loses important detail\n'A reduction' = 2 words \u2705 but loses the key detail 'significant'\n\nBest answer: 'significant reduction' \u2014 most precise within the limit.",
+    "hint": "Drop the article 'a' to stay within 2 words while keeping the key adjective."
   },
   {
     "kind": "mcq",
     "band": 7,
-    "question": "According to the passage, what is a \"choice architecture\"?",
+    "question": "A summary gap reads: 'Scientists believe that _______ is the primary driver of the current crisis.' The passage says: 'Researchers have concluded that human-induced climate change is the primary driver.' What is the correct answer?",
     "options": [
-      "A type of building designed for making decisions",
-      "The environment in which decisions are made",
-      "A financial incentive to encourage healthy choices",
-      "A legal framework for regulating behaviour"
+      "human-induced climate change",
+      "the human-induced climate change",
+      "climate change is",
+      "human induced climate"
     ],
-    "correct": "The environment in which decisions are made",
-    "explanation": "Directly defined in the text: \"redesigning 'choice architectures' — the environments in which decisions are made\"\n\nThis is a DEFINITION question. Always look for where the passage defines a term — often signalled by a dash (—) or \"which means...\" or \"refers to...\"",
-    "hint": "The passage defines \"choice architectures\" with a dash — look for that definition."
+    "correct": "human-induced climate change",
+    "explanation": "'Human-induced climate change' = 3 words (hyphenated 'human-induced' counts as 1 word + 'climate' + 'change') \u2705\n\n\u2705 Copies exact words from the passage\n\u2705 3 words \u2014 within a 'no more than three words' limit\n\u2705 The hyphen makes 'human-induced' count as one word\n\n\u274c 'The human-induced climate change' = 4 words\n\u274c 'Climate change is' \u2014 'is' is the verb, not part of the answer",
+    "hint": "Remember: hyphenated words count as ONE word. Count again."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "When doing summary completion, where do you look for the answer in the passage?",
+    "options": [
+      "Always in the first paragraph",
+      "Scan for keywords from the summary to locate the relevant passage section",
+      "Read the whole passage paragraph by paragraph",
+      "The answers always follow the order of the passage exactly"
+    ],
+    "correct": "Scan for keywords from the summary to locate the relevant passage section",
+    "explanation": "Strategy:\n1. Read the summary before the passage\n2. Identify keywords around each gap\n3. Scan the passage for those keywords (or their synonyms)\n4. Slow down when you find the relevant section\n5. Find the exact words to fill the gap\n\nNote: Summary completion questions DO follow the order of the passage \u2014 but you still need to SCAN to find the right section efficiently.",
+    "hint": "Use keywords around the gap to locate the right passage section."
   },
   {
     "kind": "mcq",
     "band": 8,
-    "question": "What is the critics' main objection to nudge theory?",
+    "question": "A summary uses the word 'beneficial' near a gap. The passage says 'advantageous' in the relevant section. Should you write 'advantageous' or 'beneficial'?",
     "options": [
-      "It does not work in practice",
-      "It is too expensive to implement",
-      "It manipulates people without their knowledge",
-      "It limits the range of choices available"
+      "'beneficial' \u2014 use the summary's word",
+      "'advantageous' \u2014 use the exact word from the passage",
+      "Either word is acceptable",
+      "Neither \u2014 rephrase using your own words"
     ],
-    "correct": "It manipulates people without their knowledge",
-    "explanation": "\"subtly manipulating individuals without their explicit consent\" — this is the critics' core objection.\n\n❌ \"limits the range of choices\" — critics actually say choice IS technically preserved, just influenced\n❌ \"does not work\" — the passage doesn't say this\n❌ \"too expensive\" — not mentioned\n\nFor opinion/viewpoint questions: find who is speaking (critics, proponents, researchers) and what they specifically say.",
-    "hint": "Find the paragraph that talks about \"critics\" — what specific objection do they raise?"
-  },
-  {
-    "kind": "reorder_sentence",
-    "band": 8,
-    "instruction": "Put these summary sentences in the order they appear in the passage:",
-    "words": [
-      "Nudge theory achieves change without restricting choice (Para 1)",
-      "Making healthy food easier to reach influences selection (Para 2)",
-      "Critics call nudge theory paternalistic (Para 3)"
-    ],
-    "isOrdering": true,
-    "correct": "Nudge theory achieves change without restricting choice (Para 1)|Making healthy food easier to reach influences selection (Para 2)|Critics call nudge theory paternalistic (Para 3)",
-    "explanation": "This reflects the passage structure:\n1. Definition and core concept\n2. Concrete example\n3. Critical perspective\n\nUnderstanding paragraph structure helps you predict where answers are located — saving valuable exam time.",
-    "hint": "Think about what order makes logical sense for explaining a concept."
+    "correct": "'advantageous' \u2014 use the exact word from the passage",
+    "explanation": "Always use the EXACT word from the PASSAGE \u2014 not from the summary.\n\nThe summary paraphrases the passage. The gap requires you to retrieve the passage's exact wording.\n\nIn this case:\n\u2022 Summary: 'beneficial' (paraphrase)\n\u2022 Passage: 'advantageous' (the original word)\n\u2022 Answer: 'advantageous' \u2705\n\nThis is why you cannot paraphrase in summary completion answers.",
+    "hint": "The answer comes from the PASSAGE \u2014 not from the summary."
   }
 ]

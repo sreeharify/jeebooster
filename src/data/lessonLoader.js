@@ -83,6 +83,8 @@ import infoTestFormat        from './lessons/info/test-format.json'
 import infoStudyPlan         from './lessons/info/study-plan.json'
 
 import quizGeneral           from './lessons/quiz/general-quiz.json'
+import quizBandSystem        from './lessons/quiz/band-score-system.json'
+import quizAcadVsGen         from './lessons/quiz/academic-vs-general.json'
 
 import mockRedirect          from './lessons/mock/redirect.json'
 import defaultFallback       from './lessons/default/fallback.json'
@@ -158,7 +160,9 @@ const LESSON_SLIDES = {
   'l4_4': listeningPredict,
   'l4_5': listeningTest,
 
-  // Quiz
+  // Quiz / Foundations
+  'l1_2': quizBandSystem,
+  'l1_3': quizAcadVsGen,
   'l4_2': quizGeneral,
 
   // Mock tests (all redirect to the Mock Test page for now)

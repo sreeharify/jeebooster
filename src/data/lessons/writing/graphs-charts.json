@@ -2,7 +2,7 @@
   {
     "kind": "explainer",
     "band": 6,
-    "title": "📊 Task 1 — Graphs & Charts",
+    "title": "\ud83d\udcca Task 1 \u2014 Graphs & Charts",
     "sections": [
       {
         "heading": "The 4-part structure",
@@ -10,44 +10,14 @@
       },
       {
         "heading": "The overview is critical",
-        "body": "Band 7+ essays ALWAYS have a clear overview paragraph.\nBand 5–6 essays describe data without identifying overall trends.\n\nThe overview answers: \"What is the BIG PICTURE here?\" not \"What are the specific numbers?\""
+        "body": "Band 7+ essays ALWAYS have a clear overview paragraph.\nBand 5\u20136 essays describe data without identifying overall trends.\n\nThe overview answers: \"What is the BIG PICTURE here?\" not \"What are the specific numbers?\""
       }
     ],
-    "highlight": "The overview should contain NO specific numbers — just the overall trend. Put numbers in your body paragraphs.",
+    "highlight": "The overview should contain NO specific numbers \u2014 just the overall trend. Put numbers in your body paragraphs.",
     "example": {
       "wrong": "The chart shows that in 2010 sales were 50, in 2015 they were 70, in 2020 they were 80.",
       "right": "Overall, sales demonstrated a consistent upward trend throughout the period, with the steepest growth occurring between 2010 and 2015."
     }
-  },
-  {
-    "kind": "mini_explainer",
-    "band": 6,
-    "title": "🔗 Cohesive Devices: Using Them Correctly",
-    "body": "Cohesive devices link ideas and show your reasoning — but OVERUSE is penalised.\n\nAdding: Furthermore, Moreover, In addition, Additionally\nContrast: However, Nevertheless, On the other hand, Conversely\nCause: Consequently, Therefore, As a result, Hence\nExample: For instance, For example, To illustrate, A case in point\nConcluding: In conclusion, To summarise, Overall",
-    "quick": [
-      {
-        "label": "Vary your devices — don't repeat the same one",
-        "icon": "🔄"
-      },
-      {
-        "label": "\"Furthermore\" ≠ \"Moreover\" always — use the right one",
-        "icon": "💡"
-      }
-    ]
-  },
-  {
-    "kind": "mcq",
-    "band": 6,
-    "question": "Which cohesive device shows RESULT or CONSEQUENCE?",
-    "options": [
-      "Furthermore",
-      "However",
-      "Consequently",
-      "Nevertheless"
-    ],
-    "correct": "Consequently",
-    "explanation": "\"Consequently\" introduces a result or consequence of what was just said.\n\nFurthermore = adds more supporting information\nHowever = introduces contrast\nNevertheless = shows contrast despite difficulty (similar to \"however\" but stronger)\n\nExample: \"Air pollution levels have risen dramatically. Consequently, respiratory diseases have become more prevalent.\"",
-    "hint": "Think: \"as a result of this...\" — which word fits that meaning?"
   },
   {
     "kind": "fill_blank",
@@ -63,29 +33,8 @@
         ]
       }
     ],
-    "explanation": "\"Nevertheless\" is perfect here — it says \"even though there's a problem (high cost), the result (benefits) still stands.\"\n\nIt's stronger and more academic than \"However\" alone. Use it when you want to say \"this difficulty exists, BUT the main point remains valid.\"",
-    "hint": "The sentence first gives a problem, then says the benefits still matter — that's a contrast/concession."
-  },
-  {
-    "kind": "error_correction",
-    "band": 7,
-    "title": "✏️ Find the Writing Error",
-    "instruction": "One of these sentences contains a common IELTS writing error:",
-    "sentences": [
-      {
-        "text": "In conclusion, governments should prioritise renewable energy investment.",
-        "correct": true
-      },
-      {
-        "text": "Despite of the challenges, the policy was implemented successfully.",
-        "correct": false,
-        "explanation": "\"Despite\" is NEVER followed by \"of\" in standard English.\n\n✅ Fix: \"Despite the challenges, the policy was implemented successfully.\"\n✅ Or: \"In spite of the challenges, the policy was implemented successfully.\"\n\nThis error appears in approximately 30% of Band 6 essays — eliminating it alone can raise your score."
-      },
-      {
-        "text": "Furthermore, the economic benefits of automation are well-documented.",
-        "correct": true
-      }
-    ]
+    "explanation": "\"Nevertheless\" is perfect here \u2014 it says \"even though there's a problem (high cost), the result (benefits) still stands.\"\n\nIt's stronger and more academic than \"However\" alone. Use it when you want to say \"this difficulty exists, BUT the main point remains valid.\"",
+    "hint": "The sentence first gives a problem, then says the benefits still matter \u2014 that's a contrast/concession."
   },
   {
     "kind": "match_pairs",
@@ -109,20 +58,67 @@
         "meaning": "Restate position + recommend or predict"
       }
     ],
-    "explanation": "A well-structured essay shows the examiner you can organise information logically — this directly boosts your Coherence & Cohesion score.\n\nBand 9 essays have CLEAR topic sentences at the start of every body paragraph. Examiners can read just the first sentence of each paragraph and understand the entire argument."
+    "explanation": "A well-structured essay shows the examiner you can organise information logically \u2014 this directly boosts your Coherence & Cohesion score.\n\nBand 9 essays have CLEAR topic sentences at the start of every body paragraph. Examiners can read just the first sentence of each paragraph and understand the entire argument."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "A bar chart shows energy consumption in four countries. Which overview is BEST?",
+    "options": [
+      "The chart shows energy consumption in four countries.",
+      "Overall, Country A consumed the most energy while Country D consumed the least, with Countries B and C showing broadly comparable levels throughout the period.",
+      "The chart has many bars of different heights showing how much energy each country uses.",
+      "In conclusion, energy consumption varies between countries."
+    ],
+    "correct": "Overall, Country A consumed the most energy while Country D consumed the least, with Countries B and C showing broadly comparable levels throughout the period.",
+    "explanation": "\u2705 A strong overview:\n\u2022 Identifies the HIGHEST: Country A\n\u2022 Identifies the LOWEST: Country D\n\u2022 Notes a PATTERN: B and C comparable\n\u2022 No specific numbers (those go in body paragraphs)\n\u2022 Starts with 'Overall' (signals overview to examiner)\n\n\u274c Others: describe rather than analyse, lack key comparisons, or are too vague",
+    "hint": "An overview answers: what are the most NOTABLE features? Highest, lowest, any clear pattern."
   },
   {
     "kind": "mcq",
     "band": 8,
-    "question": "Which Task 2 introduction is closest to Band 8–9 quality?",
+    "question": "Which phrase is MOST appropriate for describing a sharp rise followed by a plateau?",
     "options": [
-      "In this essay, I will discuss the advantages and disadvantages of technology.",
-      "Technology is a very important topic. There are many pros and cons.",
-      "The question of whether technological advancement serves society's interests more than it harms them is one that has attracted considerable debate in recent decades.",
-      "I think technology has both good and bad sides, which I will explain in this essay."
+      "'increased a lot then stopped'",
+      "'rose dramatically before levelling off at around 40%'",
+      "'went up then was stable'",
+      "'increased and then did not increase anymore'"
     ],
-    "correct": "The question of whether technological advancement serves society's interests more than it harms them is one that has attracted considerable debate in recent decades.",
-    "explanation": "✅ Band 8+ introduction features:\n• Complex sentence structure with \"whether...or\"\n• Sophisticated vocabulary: \"technological advancement\", \"considerable debate\"\n• Paraphrases the topic without repeating the question verbatim\n• Does NOT announce \"I will discuss...\" (avoid meta-commentary)\n• Sets up a nuanced discussion\n\n❌ \"In this essay, I will discuss...\" is the classic Band 5 opener — never say what you're about to do; just do it.",
-    "hint": "The best introduction paraphrases the topic using sophisticated vocabulary — it never copies the question."
+    "correct": "'rose dramatically before levelling off at around 40%'",
+    "explanation": "\u2705 'rose dramatically' = strong verb + adverb\n\u2705 'before levelling off' = precise verb for plateau\n\u2705 'at around 40%' = specific data reference\n\nKey vocabulary for plateaus:\n\u2022 level off / level out\n\u2022 stabilise / remain stable\n\u2022 plateau (as a verb: 'the figure plateaued')\n\u2022 flatten out",
+    "hint": "Use a precise verb for the plateau: 'level off', 'stabilise', 'plateau'."
+  },
+  {
+    "kind": "reorder_sentence",
+    "band": 7,
+    "instruction": "Build a correct overview sentence for a line graph:",
+    "words": [
+      "evident",
+      "is",
+      "that",
+      "Overall",
+      "it",
+      "rose",
+      "consumption",
+      "steadily",
+      "throughout",
+      "the",
+      "period"
+    ],
+    "correct": "Overall it is evident that consumption rose steadily throughout the period.",
+    "explanation": "Structure: Overall + it is evident that + subject + verb + adverb + time phrase\n\n'It is evident that' is a formal impersonal structure \u2014 more academic than 'We can see that' or 'The graph shows that'.\n'Rose steadily' = verb + manner adverb \u2014 precise and concise."
+  },
+  {
+    "kind": "mcq",
+    "band": 8,
+    "question": "Which sentence best describes a gradual decline in a Task 1 graph?",
+    "options": [
+      "'The figure went down gradually over the years.'",
+      "'Sales experienced a progressive decline, falling from approximately 80 units in 2010 to just under 40 by 2020.'",
+      "'There was a decrease in the number.'",
+      "'It became less and less over time.'"
+    ],
+    "correct": "'Sales experienced a progressive decline, falling from approximately 80 units in 2010 to just under 40 by 2020.'",
+    "explanation": "\u2705 'experienced a progressive decline' = verb phrase + noun (nominalization)\n\u2705 'falling from... to...' = participial clause showing range\n\u2705 'approximately 80' = hedged data reference\n\u2705 'just under 40' = precise but natural phrasing\n\nThis sentence packs: trend + specific data + time range into one elegant sentence."
   }
 ]

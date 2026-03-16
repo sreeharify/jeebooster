@@ -2,9 +2,12 @@
   {
     "kind": "explainer",
     "band": 6,
-    "title": "📖 Lesson",
+    "title": "\ud83d\udcd6 Lesson",
     "sections": [
-      { "heading": "What you will practise", "body": "IELTS tests four equally important skills:\n🎧 Listening  ·  👁️ Reading  ·  ✍️ Writing  ·  🗣️ Speaking\n\nWork through each question carefully. After checking, read the full explanation — even if you got it right, the explanation often contains Band 8+ tips." }
+      {
+        "heading": "What you will practise",
+        "body": "IELTS tests four equally important skills:\n\ud83c\udfa7 Listening  \u00b7  \ud83d\udc41\ufe0f Reading  \u00b7  \u270d\ufe0f Writing  \u00b7  \ud83d\udde3\ufe0f Speaking\n\nWork through each question carefully. After checking, read the full explanation \u2014 even if you got it right, the explanation often contains Band 8+ tips."
+      }
     ],
     "highlight": "There are no penalties for wrong answers in IELTS. Always attempt every question!"
   },
@@ -12,8 +15,26 @@
     "kind": "mcq",
     "band": 6,
     "question": "What is a key feature of Band 8+ academic writing?",
-    "options": ["Using very long sentences","Using a wide range of vocabulary accurately","Writing as many words as possible","Using the same vocabulary throughout"],
+    "options": [
+      "Using very long sentences",
+      "Using a wide range of vocabulary accurately",
+      "Writing as many words as possible",
+      "Using the same vocabulary throughout"
+    ],
     "correct": "Using a wide range of vocabulary accurately",
-    "explanation": "Band 8–9 writing uses vocabulary with natural flexibility and precision — the right word in the right context, not just difficult words.\n\nRange = variety. Accuracy = appropriate usage. Both are required."
+    "explanation": "Band 8\u20139 writing uses vocabulary with natural flexibility and precision \u2014 the right word in the right context, not just difficult words.\n\nRange = variety. Accuracy = appropriate usage. Both are required."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "In IELTS Writing, which criterion is worth the MOST marks?",
+    "options": [
+      "Word count",
+      "All four criteria are worth equal marks (25% each)",
+      "Grammar is most important",
+      "Vocabulary is most important"
+    ],
+    "correct": "All four criteria are worth equal marks (25% each)",
+    "explanation": "Each criterion is exactly 25%:\n\ud83c\udfaf Task Achievement / Task Response\n\ud83d\udd17 Coherence & Cohesion\n\ud83d\udcda Lexical Resource\n\u26a1 Grammatical Range & Accuracy\n\nThis means a weakness in ANY criterion pulls down your score equally. You cannot compensate for poor grammar with excellent vocabulary."
   }
 ]

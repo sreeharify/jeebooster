@@ -2,7 +2,7 @@
   {
     "kind": "explainer",
     "band": 6,
-    "title": "🏠 Part 1 — Personal Topics",
+    "title": "\ud83c\udfe0 Part 1 \u2014 Personal Topics",
     "sections": [
       {
         "heading": "Common Part 1 topics",
@@ -10,36 +10,10 @@
       },
       {
         "heading": "Making your answers memorable",
-        "body": "Examiners assess fluency, not content knowledge. But interesting, specific answers naturally sound more fluent.\n\nInstead of: \"I like music because it is relaxing.\"\nTry: \"I'm particularly drawn to jazz — there's something about its improvisational quality that I find both relaxing and intellectually stimulating, which is a rare combination.\""
+        "body": "Examiners assess fluency, not content knowledge. But interesting, specific answers naturally sound more fluent.\n\nInstead of: \"I like music because it is relaxing.\"\nTry: \"I'm particularly drawn to jazz \u2014 there's something about its improvisational quality that I find both relaxing and intellectually stimulating, which is a rare combination.\""
       }
     ],
-    "highlight": "Add ONE specific detail to every Part 1 answer. Not \"I like cooking\" but \"I particularly enjoy making South Indian food — the complexity of spice combinations fascinates me.\""
-  },
-  {
-    "kind": "mini_explainer",
-    "band": 6,
-    "title": "📢 Extending Answers in Part 1",
-    "body": "The examiner expects 2–4 sentences per Part 1 answer. Never give one-word or one-sentence replies.\n\nThe P-R-E-L formula:\nP = Point (answer the question directly)\nR = Reason (say why)\nE = Example (give a specific example)\nL = Link (connect back to the question or add a follow-up thought)\n\nQ: \"Do you enjoy cooking?\"\n❌ \"Yes, I do.\"\n✅ \"I genuinely enjoy cooking, mainly because I find it a relaxing way to unwind after work. For example, experimenting with new recipes at the weekend has become something of a hobby. I think there's something deeply satisfying about creating something from scratch.\"",
-    "quick": [
-      {
-        "label": "P: Point → R: Reason → E: Example → L: Link",
-        "icon": "🔗"
-      }
-    ]
-  },
-  {
-    "kind": "mcq",
-    "band": 6,
-    "question": "Which Part 1 answer demonstrates the best speaking skills?",
-    "options": [
-      "\"Yes, I like reading.\"",
-      "\"I like reading because it is good.\"",
-      "\"I'm quite an avid reader, actually — I tend to gravitate towards non-fiction, particularly books about psychology and human behaviour. I find that reading before bed helps me unwind, and I've learned a great deal from books I'd never have encountered otherwise.\"",
-      "\"Reading is my hobby. I read books. Books are interesting. I read every day.\""
-    ],
-    "correct": "\"I'm quite an avid reader, actually — I tend to gravitate towards non-fiction, particularly books about psychology and human behaviour. I find that reading before bed helps me unwind, and I've learned a great deal from books I'd never have encountered otherwise.\"",
-    "explanation": "✅ The best answer uses:\n• \"actually\" — natural discourse marker\n• \"quite an avid reader\" — precise vocabulary (avid = enthusiastic)\n• \"tend to gravitate towards\" — sophisticated verb phrase\n• Specific genre + specific reason + personal reflection\n• Natural, flowing sentences\n\n❌ The others are too short, too vague, or repetitive.",
-    "hint": "Look for the answer that gives specific details and uses varied, precise language."
+    "highlight": "Add ONE specific detail to every Part 1 answer. Not \"I like cooking\" but \"I particularly enjoy making South Indian food \u2014 the complexity of spice combinations fascinates me.\""
   },
   {
     "kind": "match_pairs",
@@ -47,7 +21,7 @@
     "instruction": "Match each speaking phrase to its function:",
     "pairs": [
       {
-        "word": "\"That's an interesting question — let me think...\"",
+        "word": "\"That's an interesting question \u2014 let me think...\"",
         "meaning": "Buying thinking time naturally"
       },
       {
@@ -63,20 +37,57 @@
         "meaning": "Introducing a contrast or nuance"
       }
     ],
-    "explanation": "These discourse markers signal to the examiner that you're thinking in English — not translating. Using them naturally (not robotically) is a marker of Band 7+ fluency.\n\nKey word: NATURALLY. If they sound rehearsed, they lose their effect."
+    "explanation": "These discourse markers signal to the examiner that you're thinking in English \u2014 not translating. Using them naturally (not robotically) is a marker of Band 7+ fluency.\n\nKey word: NATURALLY. If they sound rehearsed, they lose their effect."
+  },
+  {
+    "kind": "match_pairs",
+    "band": 7,
+    "instruction": "Match each Part 1 topic to the best extension technique:",
+    "pairs": [
+      {
+        "word": "Hometown",
+        "meaning": "Give a contrast or unique detail about the place"
+      },
+      {
+        "word": "Work/Studies",
+        "meaning": "Describe one specific aspect you find meaningful"
+      },
+      {
+        "word": "Hobbies",
+        "meaning": "Explain HOW and WHY, not just WHAT you do"
+      },
+      {
+        "word": "Technology use",
+        "meaning": "Give a personal example showing how it affects your life"
+      }
+    ],
+    "explanation": "Specificity is the key to scoring well in Part 1. A specific, honest answer about something ordinary ('I find debugging code unexpectedly satisfying') outscores a vague answer about something impressive."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "You are asked: 'Do you prefer cooking at home or eating out?' You actually love cooking. Which answer is Band 8?",
+    "options": [
+      "'I prefer cooking at home.'",
+      "'I prefer cooking at home because it is cheaper and healthier.'",
+      "'I genuinely love cooking at home \u2014 there\\'s something deeply satisfying about the process of taking raw ingredients and transforming them into something people enjoy. I\\'ve become particularly interested in regional Indian cuisine recently, which has been quite an adventure.'",
+      "'Cooking is better than restaurants because home food is more healthy and restaurants are expensive and sometimes not clean.'"
+    ],
+    "correct": "'I genuinely love cooking at home \u2014 there\\'s something deeply satisfying about the process of taking raw ingredients and transforming them into something people enjoy. I\\'ve become particularly interested in regional Indian cuisine recently, which has been quite an adventure.'",
+    "explanation": "\u2705 'genuinely love' \u2014 adverb + strong verb (not 'really like')\n\u2705 'something deeply satisfying about the process' \u2014 abstract, thoughtful reflection\n\u2705 'transforming them into something people enjoy' \u2014 vivid, specific image\n\u2705 'regional Indian cuisine' \u2014 specific, interesting detail\n\u2705 'quite an adventure' \u2014 natural colloquial expression\n\nThe key: specificity + personal reflection = authentic = Band 8",
+    "hint": "Specific details and genuine reflection trump general statements every time."
   },
   {
     "kind": "mcq",
     "band": 8,
-    "question": "In Part 3, the examiner asks: \"Do you think social media has changed the way people form friendships?\" Which response is closest to Band 8?",
+    "question": "Which sentence opening is MOST likely to score Band 8 in Part 1?",
     "options": [
-      "\"Yes, social media changed friendships a lot. People use it to talk to friends.\"",
-      "\"I think social media is both good and bad for friendships. It has advantages and disadvantages.\"",
-      "\"It's a nuanced question. While digital platforms have undeniably broadened the scope of who we can connect with, there's a compelling argument that the depth of those connections has diminished — we have more acquaintances but fewer genuinely close friends.\"",
-      "\"Social media is very popular nowadays and everyone uses it for friendships and communication purposes.\""
+      "'I think...'",
+      "'In my opinion...'",
+      "'What I find particularly fascinating is...'",
+      "'Yes, I do.'"
     ],
-    "correct": "\"It's a nuanced question. While digital platforms have undeniably broadened the scope of who we can connect with, there's a compelling argument that the depth of those connections has diminished — we have more acquaintances but fewer genuinely close friends.\"",
-    "explanation": "✅ Band 8 answer features:\n• \"It's a nuanced question\" — shows academic thinking\n• \"While...there's a compelling argument that...\" — complex sentence with concession\n• \"undeniably\", \"compelling\" — precise adverbs\n• Specific insight: breadth vs depth of connection\n• No hesitation fillers like \"um\", \"very popular\"\n\nBand 8 speaks in structured, specific, nuanced answers — not generalisations.",
-    "hint": "The best Part 3 answer shows depth of thought, specific vocabulary, and complex sentence structures."
+    "correct": "'What I find particularly fascinating is...'",
+    "explanation": "'What I find particularly fascinating is...' uses a CLEFT SENTENCE \u2014 a Band 8 grammatical structure.\n\nCleft sentences: 'What + subject + verb + is...'\nThey emphasise the main point and sound naturally sophisticated.\n\nOther Band 8+ openers:\n\u2022 'The thing that strikes me most is...'\n\u2022 'What I appreciate most about X is...'\n\u2022 'If I had to identify one aspect...'\n\u2022 'I\\'d say the most compelling reason is...'"
   }
 ]

@@ -2,255 +2,178 @@
   {
     "kind": "explainer",
     "band": 6,
-    "title": "📚 What is Lexical Resource?",
+    "title": "\ud83d\udcda Advanced Academic Vocabulary \u2014 Set 2",
     "sections": [
       {
-        "heading": "Why it matters",
-        "body": "Lexical Resource is one of four equally-weighted criteria in IELTS Writing and Speaking (25% each). It measures not just WHAT words you know, but HOW flexibly and accurately you use them."
+        "heading": "Words that signal academic thinking",
+        "body": "Set 2 focuses on words that show CRITICAL THINKING in your writing:\n\n\u2022 Words that indicate stance: 'contend', 'assert', 'refute'\n\u2022 Words that show causation: 'precipitate', 'engender', 'underpin'\n\u2022 Words that describe change: 'transform', 'reshape', 'erode'\n\u2022 Words that indicate extent: 'substantially', 'marginally', 'disproportionately'"
       },
       {
-        "heading": "The band difference",
-        "body": "Band 6 uses common words correctly but repetitively.\nBand 7 uses some less common vocabulary with occasional errors.\nBand 8 uses a wide range with only minor inaccuracies.\nBand 9 uses vocabulary with full flexibility and precise meaning."
+        "heading": "How to use them",
+        "body": "These words don't just describe \u2014 they show the examiner you can think analytically.\n\n\u274c Basic: 'Technology has changed society a lot.'\n\u2705 Advanced: 'Digital technology has fundamentally reshaped societal structures, engendering both unprecedented connectivity and new forms of inequality.'"
       }
     ],
-    "highlight": "The examiner is NOT counting rare words. They're looking for natural, confident use of a wide range.",
-    "example": {
-      "wrong": "The problem is very bad. It is a bad problem that causes bad things.",
-      "right": "The issue is increasingly severe, exacerbating existing social inequalities and undermining long-term economic stability."
-    }
+    "highlight": "One precise advanced verb ('precipitate', 'engender') is worth more than three simple ones ('cause', 'make', 'lead to'). Precision is the goal."
   },
   {
     "kind": "flashcard",
-    "band": 6,
-    "word": "mitigate",
-    "meaning": "to reduce the severity or seriousness of something",
-    "example": "Governments must take action to mitigate the effects of climate change.",
+    "band": 7,
+    "word": "precipitate",
+    "meaning": "to cause something (usually undesirable) to happen suddenly",
+    "example": "The financial crisis precipitated a wave of unemployment across the region.",
     "partOfSpeech": "verb",
-    "wrong": "to make something worse (that's \"exacerbate\")",
+    "wrong": "not the same as 'prevent' \u2014 it CAUSES, not stops",
     "collocations": [
-      "mitigate the effects",
-      "mitigate the impact",
-      "mitigate risk",
-      "mitigate damage"
+      "precipitate a crisis",
+      "precipitate change",
+      "precipitate conflict"
     ],
     "family": [
-      "mitigation (n)",
-      "mitigating (adj) — mitigating circumstances"
-    ]
-  },
-  {
-    "kind": "mini_explainer",
-    "band": 6,
-    "title": "💡 Remember: mitigate vs exacerbate",
-    "body": "These two are often confused and frequently appear in IELTS.\n\n✅ mitigate = make LESS severe → \"reduce, lessen, ease\"\n❌ exacerbate = make MORE severe → \"worsen, aggravate, intensify\"\n\nThey are antonyms — opposite meanings.",
-    "quick": [
-      {
-        "label": "mitigate the damage",
-        "icon": "✅"
-      },
-      {
-        "label": "exacerbate the damage",
-        "icon": "❌"
-      }
+      "precipitous (adj) \u2014 'a precipitous decline'",
+      "precipitation (n) \u2014 also means rainfall"
     ]
   },
   {
     "kind": "mcq",
-    "band": 6,
-    "question": "Which sentence uses \"mitigate\" correctly?",
+    "band": 7,
+    "question": "Which sentence uses 'precipitate' correctly?",
     "options": [
-      "The new law will mitigate the crime rate significantly.",
-      "The drought mitigated the water shortage.",
-      "Urban trees can mitigate the effects of air pollution.",
-      "Stress can mitigate health problems."
+      "The new law will precipitate the problem of pollution.",
+      "Scientists hope to precipitate climate change.",
+      "The banking collapse precipitated the worst recession in decades.",
+      "Exercise can precipitate good health outcomes."
     ],
-    "correct": "Urban trees can mitigate the effects of air pollution.",
-    "explanation": "✅ Trees REDUCE air pollution — that fits \"mitigate\" perfectly.\n\n❌ \"The new law will mitigate the crime rate\" — you mitigate effects/impacts, not rates directly. Better: \"reduce the crime rate\"\n❌ \"The drought mitigated the water shortage\" — a drought CAUSES a shortage, not reduces it\n❌ \"Stress can mitigate health problems\" — stress WORSENS health; use \"exacerbate\"",
-    "hint": "Mitigate always makes something LESS bad, not more bad."
+    "correct": "The banking collapse precipitated the worst recession in decades.",
+    "explanation": "'Precipitate' means to CAUSE something negative to happen suddenly.\n\n\u2705 'The banking collapse precipitated the recession' \u2014 collapse caused (triggered) recession suddenly \u2705\n\n\u274c 'Precipitate the problem' \u2014 you don't precipitate a problem; you precipitate a CRISIS or EVENT\n\u274c 'Precipitate climate change' \u2014 climate change is an ongoing process, not a sudden event\n\u274c 'Precipitate good health' \u2014 precipitate is used for sudden, often negative events",
+    "hint": "Precipitate suggests suddenness and usually a negative trigger event."
   },
   {
     "kind": "flashcard",
     "band": 7,
-    "word": "exacerbate",
-    "meaning": "to make a problem or bad situation worse",
-    "example": "Poor housing conditions can exacerbate mental health issues.",
+    "word": "engender",
+    "meaning": "to cause or give rise to a feeling, situation, or condition",
+    "example": "The policy engendered widespread resentment among the affected communities.",
     "partOfSpeech": "verb",
-    "wrong": "to solve or improve something",
+    "wrong": "not the same as 'gender' \u2014 it means to CREATE or CAUSE",
     "collocations": [
-      "exacerbate the problem",
-      "exacerbate tensions",
-      "exacerbate inequality",
-      "exacerbate symptoms"
+      "engender trust",
+      "engender conflict",
+      "engender a sense of",
+      "engender change"
     ],
     "family": [
-      "exacerbation (n)"
+      "engendered (past tense)",
+      "engendering (gerund)"
     ]
-  },
-  {
-    "kind": "fill_blank",
-    "band": 7,
-    "sentence": "Social media can _______ feelings of loneliness among teenagers.",
-    "blanks": [
-      {
-        "correct": "exacerbate",
-        "distractors": [
-          "mitigate",
-          "alleviate",
-          "reduce"
-        ]
-      }
-    ],
-    "explanation": "Social media makes loneliness WORSE for many teenagers — \"exacerbate\" is the only word that means \"worsen\".\n\n\"Mitigate\" and \"alleviate\" both mean to reduce/lessen. \"Reduce\" is too simple for Band 7+.",
-    "hint": "Social media makes loneliness better or worse?"
-  },
-  {
-    "kind": "flashcard",
-    "band": 7,
-    "word": "ubiquitous",
-    "meaning": "present, appearing, or found everywhere",
-    "example": "Smartphones have become ubiquitous in modern society.",
-    "partOfSpeech": "adjective",
-    "wrong": "very rare or hard to find",
-    "collocations": [
-      "become ubiquitous",
-      "ubiquitous presence",
-      "increasingly ubiquitous",
-      "ubiquitous in modern life"
-    ],
-    "family": [
-      "ubiquity (n) — \"the ubiquity of social media\""
-    ]
-  },
-  {
-    "kind": "reorder_sentence",
-    "band": 7,
-    "instruction": "Arrange the words to make a correct sentence:",
-    "words": [
-      "become",
-      "Technology",
-      "in",
-      "ubiquitous",
-      "has",
-      "the",
-      "workplace",
-      "modern"
-    ],
-    "correct": "Technology has become ubiquitous in the modern workplace.",
-    "explanation": "The correct structure is: Subject (Technology) + auxiliary (has) + verb (become) + adjective (ubiquitous) + prepositional phrase (in the modern workplace).\n\nNote the article \"the\" before \"modern workplace\" — we say \"the modern workplace\" as a concept.",
-    "hint": "Start with \"Technology has...\""
   },
   {
     "kind": "flashcard",
     "band": 8,
-    "word": "proliferate",
-    "meaning": "to increase rapidly in numbers or amount",
-    "example": "Fast food chains have proliferated across developing nations.",
+    "word": "underpin",
+    "meaning": "to support or form the basis of something",
+    "example": "Free trade agreements underpin much of the global economic order.",
     "partOfSpeech": "verb",
-    "wrong": "to decrease or disappear",
+    "wrong": "not the same as 'undermine' \u2014 underpin SUPPORTS, undermine WEAKENS",
     "collocations": [
-      "proliferate rapidly",
-      "continue to proliferate",
-      "proliferate across",
-      "proliferate in urban areas"
+      "underpin the economy",
+      "underpin an argument",
+      "underpinned by evidence"
     ],
     "family": [
-      "proliferation (n) — \"the proliferation of social media platforms\"",
-      "proliferating (adj)"
+      "underpinning (n) \u2014 'the underpinnings of democracy'"
+    ]
+  },
+  {
+    "kind": "mini_explainer",
+    "band": 7,
+    "title": "\ud83d\udd04 underpin vs undermine \u2014 Critical Distinction",
+    "body": "These two are frequently confused in IELTS essays:\n\n\u2705 UNDERPIN = to support from below, to provide a foundation for\n'Democratic values underpin this policy.'\n\n\u274c UNDERMINE = to weaken gradually, to erode the foundation of\n'Corruption undermines democratic institutions.'\n\nMemory trick: Under-PIN = PIN it up (support)\nUnder-MINE = dig a MINE underneath (weaken the foundation)",
+    "quick": [
+      {
+        "label": "underpin = support, form the basis of",
+        "icon": "\ud83c\udfdb\ufe0f"
+      },
+      {
+        "label": "undermine = weaken, erode",
+        "icon": "\u26cf\ufe0f"
+      }
     ]
   },
   {
     "kind": "match_pairs",
     "band": 8,
-    "instruction": "Match each word to its correct meaning:",
+    "instruction": "Match each verb to its correct meaning:",
     "pairs": [
       {
-        "word": "mitigate",
-        "meaning": "reduce the severity of"
+        "word": "precipitate",
+        "meaning": "cause something to happen suddenly"
       },
       {
-        "word": "exacerbate",
-        "meaning": "make a problem worse"
+        "word": "engender",
+        "meaning": "give rise to a feeling or condition"
       },
       {
-        "word": "ubiquitous",
-        "meaning": "found everywhere"
+        "word": "underpin",
+        "meaning": "provide the foundation or basis for"
       },
       {
-        "word": "proliferate",
-        "meaning": "increase rapidly in number"
+        "word": "undermine",
+        "meaning": "gradually weaken or erode"
       }
     ],
-    "explanation": "These four words form a powerful vocabulary cluster. Knowing them all helps you discuss problems and changes at Band 8 level."
+    "explanation": "These four verbs describe CAUSATION and SUPPORT at an advanced academic level. Using them precisely replaces vague phrases like 'cause', 'create', 'support', 'weaken' \u2014 instantly elevating your Lexical Resource score."
   },
   {
     "kind": "flashcard",
-    "band": 9,
-    "word": "substantiate",
-    "meaning": "to provide evidence to support or prove something",
-    "example": "The researcher substantiated her claims with longitudinal data.",
-    "partOfSpeech": "verb",
-    "wrong": "to question or doubt something",
+    "band": 8,
+    "word": "disproportionate",
+    "meaning": "too large or too small in relation to something else; out of proportion",
+    "example": "The tax burden falls disproportionately on low-income households.",
+    "partOfSpeech": "adjective",
+    "wrong": "not the same as 'unequal' \u2014 disproportionate refers to a specific RATIO being off",
     "collocations": [
-      "substantiate a claim",
-      "substantiate an argument",
-      "substantiate with evidence",
-      "well-substantiated"
+      "disproportionate impact",
+      "disproportionately affect",
+      "disproportionate burden"
     ],
     "family": [
-      "substantiation (n)",
-      "substantiated (adj)",
-      "unsubstantiated (adj) — \"unsubstantiated claims\""
+      "disproportionately (adv)",
+      "disproportion (n)"
     ]
-  },
-  {
-    "kind": "error_correction",
-    "band": 9,
-    "title": "✏️ Spot the Vocabulary Error",
-    "instruction": "One sentence uses a word incorrectly. Which one?",
-    "sentences": [
-      {
-        "text": "The study substantiated the link between diet and longevity.",
-        "correct": true
-      },
-      {
-        "text": "Deforestation has substantiated the problem of climate change.",
-        "correct": false,
-        "explanation": "\"Substantiate\" means to PROVE or SUPPORT with evidence — it doesn't mean to worsen or cause something.\n\n✅ Correct: \"Deforestation has exacerbated the problem of climate change.\"\n\nThis is a common Band 6 error — using sophisticated words without understanding their precise meaning."
-      },
-      {
-        "text": "She failed to substantiate her argument with concrete examples.",
-        "correct": true
-      }
-    ]
-  },
-  {
-    "kind": "explainer",
-    "band": 8,
-    "title": "🔑 Using These Words in IELTS Writing",
-    "sections": [
-      {
-        "heading": "In introductions",
-        "body": "Avoid: \"There are many problems with technology.\"\nBetter: \"While technological advancements have proliferated across all sectors, they have simultaneously exacerbated pre-existing social inequalities.\""
-      },
-      {
-        "heading": "In body paragraphs",
-        "body": "Avoid: \"The government should do something about pollution.\"\nBetter: \"Governments must implement comprehensive strategies to mitigate the environmental impact of industrial expansion — a claim well-substantiated by recent climate research.\""
-      }
-    ],
-    "highlight": "One sophisticated word used correctly is worth more than five simple words. Quality always beats quantity."
   },
   {
     "kind": "mcq",
     "band": 8,
-    "question": "Which sentence demonstrates the BEST lexical resource for Band 8?",
+    "question": "Which sentence uses 'disproportionate' most accurately?",
     "options": [
-      "Technology is a very important thing in our lives nowadays.",
-      "The proliferation of digital devices has fundamentally transformed how we communicate.",
-      "There are more and more technologies that people use a lot.",
-      "Technology has become very, very common in modern daily life."
+      "The government has a disproportionate amount of money.",
+      "Climate change has a disproportionate impact on developing nations, despite their minimal contribution to global emissions.",
+      "The essay was disproportionate in its arguments.",
+      "She felt disproportionate about the decision."
     ],
-    "correct": "The proliferation of digital devices has fundamentally transformed how we communicate.",
-    "explanation": "✅ \"Proliferation\" (sophisticated noun), \"digital devices\" (precise), \"fundamentally transformed\" (strong verb phrase), \"communicate\" (precise verb).\n\n❌ The others use vague words: \"important thing\", \"a lot\", \"very, very common\" — all Band 5–6 language.\n\nBand 8+ avoids vague intensifiers (very, really, a lot) and replaces them with precise vocabulary.",
-    "hint": "Look for precise, specific language — not vague or repetitive words."
+    "correct": "Climate change has a disproportionate impact on developing nations, despite their minimal contribution to global emissions.",
+    "explanation": "'Disproportionate' means the impact is OUT OF PROPORTION to a related measure.\n\n\u2705 Developing nations contribute little to emissions (small input) but suffer greatly (large impact) \u2014 this ratio is disproportionate.\n\n\u274c 'Disproportionate amount of money' \u2014 requires a comparison (than what?)\n\u274c 'Disproportionate in its arguments' \u2014 arguments aren't measured in quantities\n\u274c 'Felt disproportionate' \u2014 can't use it as a feeling adjective",
+    "hint": "Disproportionate always implies a comparison \u2014 X is too large/small relative to Y."
+  },
+  {
+    "kind": "error_correction",
+    "band": 9,
+    "title": "\u270f\ufe0f Advanced Vocabulary Error",
+    "instruction": "Find the sentence that misuses an advanced vocabulary word:",
+    "sentences": [
+      {
+        "text": "Rapid industrialisation precipitated severe environmental degradation throughout the 20th century.",
+        "correct": true
+      },
+      {
+        "text": "The government's investment in education will undermine economic growth in the long term.",
+        "correct": false,
+        "explanation": "'Undermine' means to WEAKEN \u2014 but investment in education SUPPORTS economic growth.\n\n\u2705 Correct: 'The government's investment in education will underpin economic growth in the long term.'\n\nThis is a critical distinction: underpin (support) vs undermine (weaken). Using the wrong one completely reverses your intended meaning."
+      },
+      {
+        "text": "Globalisation has engendered both unprecedented opportunity and new forms of inequality.",
+        "correct": true
+      }
+    ]
   }
 ]

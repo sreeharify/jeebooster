@@ -2,11 +2,11 @@
   {
     "kind": "explainer",
     "band": 6,
-    "title": "💭 Opinion Essays (To what extent...)",
+    "title": "\ud83d\udcad Opinion Essays (To what extent...)",
     "sections": [
       {
         "heading": "The structure",
-        "body": "Introduction: Paraphrase topic + state your clear position\nBody 1: Your strongest argument FOR your position\nBody 2: A counterargument + rebuttal (concede then refute)\nConclusion: Restate position + recommendation/prediction\n\nIMPORTANT: In \"To what extent do you agree?\" questions — give ONE clear position. Don't sit on the fence."
+        "body": "Introduction: Paraphrase topic + state your clear position\nBody 1: Your strongest argument FOR your position\nBody 2: A counterargument + rebuttal (concede then refute)\nConclusion: Restate position + recommendation/prediction\n\nIMPORTANT: In \"To what extent do you agree?\" questions \u2014 give ONE clear position. Don't sit on the fence."
       },
       {
         "heading": "The counterargument paragraph",
@@ -18,36 +18,6 @@
       "wrong": "In conclusion, technology has advantages and disadvantages so it depends on the situation.",
       "right": "In conclusion, despite isolated drawbacks, I maintain that technology's potential to democratise education far outweighs its risks, provided appropriate oversight is maintained."
     }
-  },
-  {
-    "kind": "mini_explainer",
-    "band": 6,
-    "title": "🔗 Cohesive Devices: Using Them Correctly",
-    "body": "Cohesive devices link ideas and show your reasoning — but OVERUSE is penalised.\n\nAdding: Furthermore, Moreover, In addition, Additionally\nContrast: However, Nevertheless, On the other hand, Conversely\nCause: Consequently, Therefore, As a result, Hence\nExample: For instance, For example, To illustrate, A case in point\nConcluding: In conclusion, To summarise, Overall",
-    "quick": [
-      {
-        "label": "Vary your devices — don't repeat the same one",
-        "icon": "🔄"
-      },
-      {
-        "label": "\"Furthermore\" ≠ \"Moreover\" always — use the right one",
-        "icon": "💡"
-      }
-    ]
-  },
-  {
-    "kind": "mcq",
-    "band": 6,
-    "question": "Which cohesive device shows RESULT or CONSEQUENCE?",
-    "options": [
-      "Furthermore",
-      "However",
-      "Consequently",
-      "Nevertheless"
-    ],
-    "correct": "Consequently",
-    "explanation": "\"Consequently\" introduces a result or consequence of what was just said.\n\nFurthermore = adds more supporting information\nHowever = introduces contrast\nNevertheless = shows contrast despite difficulty (similar to \"however\" but stronger)\n\nExample: \"Air pollution levels have risen dramatically. Consequently, respiratory diseases have become more prevalent.\"",
-    "hint": "Think: \"as a result of this...\" — which word fits that meaning?"
   },
   {
     "kind": "fill_blank",
@@ -63,29 +33,8 @@
         ]
       }
     ],
-    "explanation": "\"Nevertheless\" is perfect here — it says \"even though there's a problem (high cost), the result (benefits) still stands.\"\n\nIt's stronger and more academic than \"However\" alone. Use it when you want to say \"this difficulty exists, BUT the main point remains valid.\"",
-    "hint": "The sentence first gives a problem, then says the benefits still matter — that's a contrast/concession."
-  },
-  {
-    "kind": "error_correction",
-    "band": 7,
-    "title": "✏️ Find the Writing Error",
-    "instruction": "One of these sentences contains a common IELTS writing error:",
-    "sentences": [
-      {
-        "text": "In conclusion, governments should prioritise renewable energy investment.",
-        "correct": true
-      },
-      {
-        "text": "Despite of the challenges, the policy was implemented successfully.",
-        "correct": false,
-        "explanation": "\"Despite\" is NEVER followed by \"of\" in standard English.\n\n✅ Fix: \"Despite the challenges, the policy was implemented successfully.\"\n✅ Or: \"In spite of the challenges, the policy was implemented successfully.\"\n\nThis error appears in approximately 30% of Band 6 essays — eliminating it alone can raise your score."
-      },
-      {
-        "text": "Furthermore, the economic benefits of automation are well-documented.",
-        "correct": true
-      }
-    ]
+    "explanation": "\"Nevertheless\" is perfect here \u2014 it says \"even though there's a problem (high cost), the result (benefits) still stands.\"\n\nIt's stronger and more academic than \"However\" alone. Use it when you want to say \"this difficulty exists, BUT the main point remains valid.\"",
+    "hint": "The sentence first gives a problem, then says the benefits still matter \u2014 that's a contrast/concession."
   },
   {
     "kind": "match_pairs",
@@ -109,20 +58,32 @@
         "meaning": "Restate position + recommend or predict"
       }
     ],
-    "explanation": "A well-structured essay shows the examiner you can organise information logically — this directly boosts your Coherence & Cohesion score.\n\nBand 9 essays have CLEAR topic sentences at the start of every body paragraph. Examiners can read just the first sentence of each paragraph and understand the entire argument."
+    "explanation": "A well-structured essay shows the examiner you can organise information logically \u2014 this directly boosts your Coherence & Cohesion score.\n\nBand 9 essays have CLEAR topic sentences at the start of every body paragraph. Examiners can read just the first sentence of each paragraph and understand the entire argument."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "For 'To what extent do you agree or disagree?' questions, which approach scores highest?",
+    "options": [
+      "Agree 50% with both sides equally",
+      "State a clear position (fully agree or partially agree) and maintain it throughout",
+      "Change your position between paragraphs",
+      "Only present the side you agree with, ignoring the other view"
+    ],
+    "correct": "State a clear position (fully agree or partially agree) and maintain it throughout",
+    "explanation": "'To what extent' = how much? Fully? Partially? Not at all?\n\n\u2705 Give a CLEAR position in the intro and maintain it:\n\u2022 'I fully agree that...' (stronger)\n\u2022 'While X has merit, I strongly believe that...' (nuanced)\n\n\u274c Sitting on the fence ('it depends') = unclear position = Task Response penalty\n\u274c Only presenting your side = missing counterargument = incomplete\n\nBand 9: clear position + acknowledge other view + strong conclusion"
   },
   {
     "kind": "mcq",
     "band": 8,
-    "question": "Which Task 2 introduction is closest to Band 8–9 quality?",
+    "question": "Which counterargument paragraph is Band 8?",
     "options": [
-      "In this essay, I will discuss the advantages and disadvantages of technology.",
-      "Technology is a very important topic. There are many pros and cons.",
-      "The question of whether technological advancement serves society's interests more than it harms them is one that has attracted considerable debate in recent decades.",
-      "I think technology has both good and bad sides, which I will explain in this essay."
+      "'Some people disagree with my view. However, I still think I am right.'",
+      "'Admittedly, technology presents risks regarding privacy erosion. However, these concerns, while legitimate, are largely addressable through robust regulatory frameworks \u2014 a point that ultimately strengthens rather than undermines the case for technological adoption.'",
+      "'There are also disadvantages to consider. These are important to think about.'",
+      "'Not everyone agrees. But technology is still good.'"
     ],
-    "correct": "The question of whether technological advancement serves society's interests more than it harms them is one that has attracted considerable debate in recent decades.",
-    "explanation": "✅ Band 8+ introduction features:\n• Complex sentence structure with \"whether...or\"\n• Sophisticated vocabulary: \"technological advancement\", \"considerable debate\"\n• Paraphrases the topic without repeating the question verbatim\n• Does NOT announce \"I will discuss...\" (avoid meta-commentary)\n• Sets up a nuanced discussion\n\n❌ \"In this essay, I will discuss...\" is the classic Band 5 opener — never say what you're about to do; just do it.",
-    "hint": "The best introduction paraphrases the topic using sophisticated vocabulary — it never copies the question."
+    "correct": "'Admittedly, technology presents risks regarding privacy erosion. However, these concerns, while legitimate, are largely addressable through robust regulatory frameworks \u2014 a point that ultimately strengthens rather than undermines the case for technological adoption.'",
+    "explanation": "\u2705 'Admittedly' = concedes the point honestly\n\u2705 'while legitimate' = acknowledges the concern's validity\n\u2705 'largely addressable through... frameworks' = specific rebuttal mechanism\n\u2705 'ultimately strengthens rather than undermines' = turns the counterargument INTO support\n\nThe best counterargument paragraphs don't just dismiss the other view \u2014 they show why it doesn't invalidate YOUR position."
   }
 ]

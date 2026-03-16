@@ -115,7 +115,9 @@ function ExplainerSlide({ slide, onNext }) {
   const { label, color } = bandLabel(slide.band)
   return (
     <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full overflow-y-auto">
-      <div className={`${color} text-white rounded-2xl px-3 py-1.5 text-xs font-bold self-start mb-3`}>{label}</div>
+      {slide.band && slide.band > 0 && (
+        <div className={`${color} text-white rounded-2xl px-3 py-1.5 text-xs font-bold self-start mb-3`}>{label}</div>
+      )}
       <div className="flex items-start gap-2 mb-4">
         <BookOpen className="w-5 h-5 text-lime-600 shrink-0 mt-0.5" />
         <h3 className="font-display text-xl text-green-800 leading-snug">{slide.title}</h3>
@@ -676,7 +678,10 @@ export default function Lesson() {
       const t     = finalAnswers.length
       const score = t > 0 ? Math.round((c / t) * 100) : 80
       setAnswers(finalAnswers)
-      await completeLesson(lessonId, score)
+      // Only mark as complete (unlocks next lesson) if score >= 60%
+      if (score >= 60) {
+        await completeLesson(lessonId, score)
+      }
       setFinished(true)
     } else {
       setSlideIdx(next)
@@ -697,20 +702,34 @@ export default function Lesson() {
   })()
 
   // ── Finished screen ──
+  const MIN_PASS = 60  // minimum score to mark lesson as complete
+
   if (finished) {
-    const score = total > 0 ? Math.round((correct / total) * 100) : 80
-    const xp    = Math.round((score / 100) * (lesson.xp || 20)) + 10
+    const score  = total > 0 ? Math.round((correct / total) * 100) : 80
+    const passed = score >= MIN_PASS
+    const xp     = passed ? Math.round((score / 100) * (lesson.xp || 20)) + 10 : 0
     return (
       <div className="min-h-screen bg-lime-50 flex items-center justify-center p-4">
-        {score >= 70 && <Confetti recycle={false} numberOfPieces={200} colors={['#bbff33','#84d600','#22c55e','#a3f007']} />}
+        {passed && score >= 70 && <Confetti recycle={false} numberOfPieces={200} colors={['#bbff33','#84d600','#22c55e','#a3f007']} />}
         <div className="max-w-sm w-full text-center">
-          <div className="text-7xl mb-4">{score === 100 ? '🌟' : score >= 70 ? '🎉' : '💪'}</div>
+          <div className="text-7xl mb-4">{score === 100 ? '🌟' : score >= 70 ? '🎉' : passed ? '👍' : '💪'}</div>
           <h2 className="font-display text-3xl text-green-800 mb-1">
-            {score === 100 ? 'Perfect!' : score >= 70 ? 'Well done!' : 'Keep going!'}
+            {score === 100 ? 'Perfect!' : score >= 70 ? 'Well done!' : passed ? 'Lesson passed!' : 'Not quite!'}
           </h2>
-          <p className="text-green-500 font-semibold mb-5">
-            {score >= 70 ? 'Great progress toward Band 9!' : 'Review the explanations and try again!'}
+          <p className={`font-semibold mb-5 ${passed ? 'text-green-500' : 'text-orange-500'}`}>
+            {passed
+              ? score >= 70 ? 'Great progress toward Band 9!' : 'Passed! Keep practising to improve.'
+              : `You need ${MIN_PASS}% to pass. You got ${score}%. Review the explanations and retry.`}
           </p>
+          {!passed && (
+            <div className="bg-orange-50 border-2 border-orange-300 rounded-2xl p-4 mb-4 text-left">
+              <div className="font-bold text-orange-800 text-sm mb-1">📖 Why you need 60% to proceed:</div>
+              <p className="text-xs text-orange-700 font-semibold">
+                Passing each lesson ensures you understand the concept before building on it.
+                Review the explanations below, then retry the lesson.
+              </p>
+            </div>
+          )}
           <div className="card mb-4">
             <div className="grid grid-cols-3 gap-3 text-center mb-4">
               <div><div className="font-display text-3xl text-lime-600">{score}%</div><div className="text-xs font-bold text-gray-500">Score</div></div>
@@ -740,12 +759,18 @@ export default function Lesson() {
           )}
           <div className="flex gap-3">
             <button onClick={() => navigate('/learn')} className="btn-secondary flex-1">← Learn</button>
-            <button onClick={() => {
-              setSlideIdx(0); setStarted(false); setAnswers([])
-              setFinished(false); setMatchChecked(false); setMatchHadWrong(false)
-            }} className="btn-primary flex-1">
-              <RotateCcw className="w-4 h-4 inline mr-1" />Retry
-            </button>
+            {passed ? (
+              <button onClick={() => navigate('/learn')} className="btn-primary flex-1">
+                Continue →
+              </button>
+            ) : (
+              <button onClick={() => {
+                setSlideIdx(0); setStarted(false); setAnswers([])
+                setFinished(false); setMatchChecked(false); setMatchHadWrong(false)
+              }} className="btn-primary flex-1 bg-orange-400 hover:bg-orange-500">
+                <RotateCcw className="w-4 h-4 inline mr-1" />Retry Lesson
+              </button>
+            )}
           </div>
         </div>
       </div>

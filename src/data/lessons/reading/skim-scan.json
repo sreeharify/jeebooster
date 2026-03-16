@@ -2,122 +2,108 @@
   {
     "kind": "explainer",
     "band": 6,
-    "title": "⚡ Skim & Scan Strategy",
+    "title": "\u26a1 Skimming \u2014 Read for Structure, Not Detail",
     "sections": [
       {
-        "heading": "Skimming (30–60 seconds)",
-        "body": "Read FAST to get the overall structure — not every word.\n\nHow:\n• Read the title and first sentence of each paragraph only\n• Note the topic of each paragraph mentally\n• Don't stop for unknown words\n\nGoal: Know WHERE information is before you look for it"
+        "heading": "What skimming means",
+        "body": "Skimming = reading the FIRST SENTENCE of each paragraph only. You get the topic map of the passage without reading everything.\n\nGoal: In 60 seconds, know:\n\u2022 What is the overall topic?\n\u2022 How many paragraphs are there?\n\u2022 What is each paragraph roughly about?\n\nThis is NOT detailed reading. You are building a mental map."
       },
       {
-        "heading": "Scanning",
-        "body": "Search for SPECIFIC information — names, dates, numbers, proper nouns.\n\nHow:\n• Move your eyes quickly over the text\n• Only slow down when you spot your keyword\n• Look for SYNONYMS — questions never use the exact words from the text\n\nGoal: Find the answer location efficiently"
+        "heading": "Why it works",
+        "body": "Academic texts always begin paragraphs with the main idea (the topic sentence). If you read only first sentences, you capture ~70% of the content structure in 15% of the time."
       }
     ],
-    "highlight": "The biggest time-waster in IELTS Reading: reading every word carefully. You only have 90 seconds per question. Skim → Questions → Scan is the winning order."
+    "highlight": "Never start reading the whole passage first. Skim \u2192 read questions \u2192 scan. This order saves 8\u201310 minutes per test.",
+    "example": {
+      "wrong": "Reading every word of the passage before looking at the questions.",
+      "right": "Read first sentences only (60 sec) \u2192 read all questions \u2192 scan for specific answers using keywords."
+    }
   },
   {
     "kind": "mini_explainer",
     "band": 6,
-    "title": "✅ True / False / Not Given — The Trickiest Type",
-    "body": "TRUE: The statement agrees with the passage\nFALSE: The passage says the OPPOSITE\nNOT GIVEN: The passage doesn't mention this at all\n\nThe key distinction:\nFALSE = text contradicts → \"many\" vs \"all\"\nNOT GIVEN = topic simply absent from text\n\nCommon trap: \"I know this is false in real life\" doesn't matter. Only what the TEXT says.",
+    "title": "\ud83d\udd0d Scanning \u2014 Finding Information Fast",
+    "body": "Scanning = searching for SPECIFIC information without reading everything.\n\nHow to scan:\n1. Identify 2\u20133 keywords from the question\n2. Move your eyes quickly down the passage\n3. Slow down ONLY when you see a keyword or its synonym\n4. Read that sentence + the one before and after\n\nCritical: Questions use SYNONYMS \u2014 never the exact passage words.\nQuestion says 'children' \u2192 passage says 'young people'\nQuestion says 'increase' \u2192 passage says 'rise / grow / expand'",
     "quick": [
       {
-        "label": "TRUE: matches the text",
-        "icon": "✅"
+        "label": "Scan for MEANING, not identical words",
+        "icon": "\ud83d\udd0d"
       },
       {
-        "label": "FALSE: contradicts the text",
-        "icon": "❌"
-      },
-      {
-        "label": "N/G: not mentioned anywhere",
-        "icon": "❓"
+        "label": "Move your eyes quickly \u2014 don't read",
+        "icon": "\ud83d\udc41\ufe0f"
       }
     ]
   },
   {
-    "kind": "passage",
+    "kind": "mcq",
     "band": 6,
-    "label": "📖 Read carefully — questions follow",
-    "text": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
-    "tip": "Tip: As you read, ask yourself: \"What is each paragraph mainly about?\" Skim for structure first."
+    "question": "What is the correct order of steps in the IELTS Reading approach?",
+    "options": [
+      "Read everything carefully \u2192 answer questions",
+      "Read questions first \u2192 then read the whole passage",
+      "Skim passage (60 sec) \u2192 read all questions \u2192 scan for answers",
+      "Scan passage \u2192 skim questions \u2192 read for detail"
+    ],
+    "correct": "Skim passage (60 sec) \u2192 read all questions \u2192 scan for answers",
+    "explanation": "\u2705 Correct order:\n1. SKIM (60 sec): first sentences only \u2192 get structure\n2. READ QUESTIONS: know what you're looking for\n3. SCAN: search for keywords \u2192 slow down only at the right section\n\n\u274c Reading everything first wastes 10+ minutes and causes panic.\n\u274c Questions first without any passage knowledge means you don't know where to look.",
+    "hint": "You read the passage FIRST \u2014 but only the first sentence of each paragraph."
+  },
+  {
+    "kind": "mcq",
+    "band": 7,
+    "question": "A question asks about 'the economic consequences of urbanisation.' Which part of the passage should you scan for?",
+    "options": [
+      "Any paragraph mentioning cities",
+      "Paragraphs with numbers or statistics",
+      "Paragraphs where 'economic', 'financial', 'costs', or 'benefits' appear near words for 'cities' or 'urban areas'",
+      "The first paragraph only"
+    ],
+    "correct": "Paragraphs where 'economic', 'financial', 'costs', or 'benefits' appear near words for 'cities' or 'urban areas'",
+    "explanation": "Scanning for SYNONYMS of your keywords is essential.\n\n'Economic consequences' \u2192 synonyms: financial impact, costs, monetary effects, fiscal results\n'Urbanisation' \u2192 synonyms: urban migration, city growth, movement to cities\n\nScan for ANY of these \u2014 not just the exact phrase from the question.",
+    "hint": "Think: what SYNONYMS might the passage use for 'economic' and 'urbanisation'?"
   },
   {
     "kind": "mini_explainer",
-    "band": 6,
-    "title": "🔍 Reading Tip: Paraphrase Alert",
-    "body": "IELTS questions NEVER use the exact words from the passage. They always paraphrase.\n\nExample:\nPassage says: \"subtle changes to the way choices are presented\"\nQuestion says: \"minor modifications to how options are displayed\"\n\nSame meaning — different words. Always look for MEANING, not matching words.",
+    "band": 7,
+    "title": "\u23f1\ufe0f Time Management in IELTS Reading",
+    "body": "60 minutes. 40 questions. 3 passages.\n\nRecommended time split:\nPassage 1 (easiest): 17 minutes\nPassage 2 (medium): 20 minutes\nPassage 3 (hardest): 23 minutes\n\nFor EACH passage:\n\u2022 60 seconds: skim\n\u2022 2 minutes: read all questions\n\u2022 Remaining time: scan and answer\n\nIf stuck on a question: SKIP and return. Never spend more than 90 seconds on one question.",
     "quick": [
       {
-        "label": "Train yourself to think: what does this MEAN?",
-        "icon": "💡"
+        "label": "Stuck? Mark it, move on, return later",
+        "icon": "\u23ed\ufe0f"
+      },
+      {
+        "label": "No penalty for wrong answers \u2014 always guess",
+        "icon": "\u2705"
       }
     ]
   },
   {
-    "kind": "tfng_single",
-    "band": 6,
-    "statement": "Nudge theory relies primarily on financial incentives to change behaviour.",
-    "answer": "False",
-    "passage": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
-    "explanation": "The passage explicitly states: \"Unlike traditional policy approaches that rely on... financial incentives, nudge theory works by redesigning 'choice architectures'\" — this directly contradicts the statement."
-  },
-  {
-    "kind": "tfng_single",
-    "band": 6,
-    "statement": "The placement of food in canteens can influence what people choose to eat.",
-    "answer": "True",
-    "passage": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
-    "explanation": "\"Research consistently demonstrates that people are more likely to select whichever option requires the least effort\" + the canteen eye-level example confirms this is true."
-  },
-  {
-    "kind": "tfng_single",
-    "band": 7,
-    "statement": "Thaler and Sunstein conducted experiments in school canteens.",
-    "answer": "Not Given",
-    "passage": "The concept of \"nudge theory,\" developed by behavioural economists Richard Thaler and Cass Sunstein, proposes that subtle changes to the way choices are presented can significantly influence human behaviour without restricting freedom of choice. Unlike traditional policy approaches that rely on legislation or financial incentives, nudge theory works by redesigning \"choice architectures\" — the environments in which decisions are made.\n\nA classic example is the placement of healthier foods at eye level in canteens. Research consistently demonstrates that people are more likely to select whichever option requires the least effort. By making the healthier choice the default — the path of least resistance — nudge theory achieves behaviour change through environment design rather than instruction.\n\nCritics of nudge theory argue that it is inherently paternalistic, subtly manipulating individuals without their explicit consent. They contend that while choice is technically preserved, the deliberate design of choice environments to favour particular outcomes undermines genuine autonomy. Proponents counter that all choice environments are already designed — the question is merely whether that design is intentional and beneficial.",
-    "explanation": "The passage mentions them as developers of nudge theory but says nothing about them conducting canteen experiments specifically. The canteen example is cited as research, not linked to them directly.\n\nNot Given ≠ False. The passage simply doesn't address this claim."
-  },
-  {
     "kind": "mcq",
     "band": 7,
-    "question": "According to the passage, what is a \"choice architecture\"?",
+    "question": "You have 3 minutes left and 4 questions unanswered. What should you do?",
     "options": [
-      "A type of building designed for making decisions",
-      "The environment in which decisions are made",
-      "A financial incentive to encourage healthy choices",
-      "A legal framework for regulating behaviour"
+      "Leave them blank \u2014 guessing is dishonest",
+      "Carefully read the passage to find each answer",
+      "Quickly scan for each answer; write your best guess for any you cannot find in time",
+      "Spend all 3 minutes on the first unanswered question"
     ],
-    "correct": "The environment in which decisions are made",
-    "explanation": "Directly defined in the text: \"redesigning 'choice architectures' — the environments in which decisions are made\"\n\nThis is a DEFINITION question. Always look for where the passage defines a term — often signalled by a dash (—) or \"which means...\" or \"refers to...\"",
-    "hint": "The passage defines \"choice architectures\" with a dash — look for that definition."
+    "correct": "Quickly scan for each answer; write your best guess for any you cannot find in time",
+    "explanation": "IELTS has NO negative marking \u2014 a wrong answer = 0 marks, same as a blank.\nTherefore: always guess rather than leave blank.\n\nWith 3 minutes and 4 questions:\n\u2022 ~40 seconds per question maximum\n\u2022 Quick scan for each; if not found in 40 sec \u2192 write a plausible guess\n\u2022 Never sacrifice 3 questions to spend 3 minutes on 1",
+    "hint": "No penalty for wrong answers. A blank is guaranteed zero. A guess has a chance."
   },
   {
     "kind": "mcq",
     "band": 8,
-    "question": "What is the critics' main objection to nudge theory?",
+    "question": "Which approach best demonstrates Band 8+ reading technique?",
     "options": [
-      "It does not work in practice",
-      "It is too expensive to implement",
-      "It manipulates people without their knowledge",
-      "It limits the range of choices available"
+      "Reading every word carefully to ensure full understanding before answering",
+      "Answering questions in the order they appear without checking the passage",
+      "Skimming the structure, predicting where answers will be, then scanning with synonyms in mind",
+      "Reading the passage three times to memorise the content"
     ],
-    "correct": "It manipulates people without their knowledge",
-    "explanation": "\"subtly manipulating individuals without their explicit consent\" — this is the critics' core objection.\n\n❌ \"limits the range of choices\" — critics actually say choice IS technically preserved, just influenced\n❌ \"does not work\" — the passage doesn't say this\n❌ \"too expensive\" — not mentioned\n\nFor opinion/viewpoint questions: find who is speaking (critics, proponents, researchers) and what they specifically say.",
-    "hint": "Find the paragraph that talks about \"critics\" — what specific objection do they raise?"
-  },
-  {
-    "kind": "reorder_sentence",
-    "band": 8,
-    "instruction": "Put these summary sentences in the order they appear in the passage:",
-    "words": [
-      "Nudge theory achieves change without restricting choice (Para 1)",
-      "Making healthy food easier to reach influences selection (Para 2)",
-      "Critics call nudge theory paternalistic (Para 3)"
-    ],
-    "isOrdering": true,
-    "correct": "Nudge theory achieves change without restricting choice (Para 1)|Making healthy food easier to reach influences selection (Para 2)|Critics call nudge theory paternalistic (Para 3)",
-    "explanation": "This reflects the passage structure:\n1. Definition and core concept\n2. Concrete example\n3. Critical perspective\n\nUnderstanding paragraph structure helps you predict where answers are located — saving valuable exam time.",
-    "hint": "Think about what order makes logical sense for explaining a concept."
+    "correct": "Skimming the structure, predicting where answers will be, then scanning with synonyms in mind",
+    "explanation": "Band 8 readers are STRATEGIC:\n\u2705 They skim first \u2014 mental map of structure\n\u2705 They predict where answers will be (Q1 is usually in Para A-B, Q10 in Para D-E)\n\u2705 They scan using synonyms \u2014 not matching exact words\n\u2705 They manage time deliberately\n\n\u274c Careful word-by-word reading = runs out of time\n\u274c Memorising = impossible and pointless for the questions asked"
   }
 ]
