@@ -562,7 +562,7 @@ function TFNGSlide({ slide, checked, selected, setSelected }) {
           return (
             <button key={opt} onClick={() => !checked && setSelected(opt)}
               className={`py-4 rounded-2xl font-bold text-sm transition-all ${cls}`}>
-              {opt === 'Not Given' ? 'N / G' : opt}
+              {opt === 'Not Given' ? 'N·G' : opt}
             </button>
           )
         })}

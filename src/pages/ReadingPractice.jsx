@@ -262,7 +262,7 @@ export default function ReadingPractice() {
                                 ? (opt === item.answer ? 'bg-lime-400 border-lime-500 text-green-900' : (opt === ans && opt !== item.answer) ? 'bg-red-300 border-red-400 text-white' : 'bg-gray-100 border-gray-200 text-gray-500')
                                 : (ans === opt ? 'bg-lime-200 border-lime-400 text-green-800' : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-lime-50')
                               }`}>
-                            {opt === 'Not Given' ? 'N/G' : opt}
+                            {opt === 'Not Given' ? 'N·G' : opt}
                           </button>
                         ))}
                       </div>

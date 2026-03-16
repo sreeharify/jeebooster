@@ -404,9 +404,7 @@ function ReadingTest({ set, onComplete }) {
         {q && (
           <div>
             <div className="bg-purple-100 text-purple-700 rounded-2xl px-3 py-1 text-xs font-bold inline-block mb-3">
-              {q.type === 'tfng' ? 'True / False / Not Given'
-                : q.type === 'heading' ? 'Matching Headings'
-                : 'Multiple Choice'}
+              {q.type === 'tfng' ? 'T • F • NG' : q.type === 'heading' ? 'Matching Headings' : 'Multiple Choice'}
             </div>
 
             {q.type === 'tfng' && (
@@ -423,7 +421,7 @@ function ReadingTest({ set, onComplete }) {
                     return (
                       <button key={opt} onClick={() => !checked && setSelected(opt)}
                         className={`py-3 rounded-2xl font-bold text-sm transition-all ${cls}`}>
-                        {opt === 'Not Given' ? 'N/G' : opt}
+                        {opt === 'Not Given' ? 'N∕G' : opt}
                       </button>
                     )
                   })}
@@ -969,7 +967,7 @@ export default function MockTest() {
             <h3 className="font-bold text-green-800 mb-2">ℹ️ About These Tests</h3>
             <div className="space-y-1.5 text-xs font-semibold text-green-700">
               <p>• 🎧 Listening: audio via Chrome TTS — plays once, cannot be paused (exam conditions)</p>
-              <p>• 👁️ Reading: full passages with T/F/NG, MCQ, and heading-match</p>
+              <p>• 👁️ Reading: full passages with T·F·NG, MCQ, and heading-match</p>
               <p>• ✍️ Writing: Task 1 + Task 2 with band criteria and model paragraphs</p>
               <p>• 🗣️ Speaking: cue cards, Part 2 timer, Band 9 strategy tips</p>
               <p>• Questions are randomly picked from 2 different sets each time</p>
