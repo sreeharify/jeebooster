@@ -20,7 +20,7 @@ const LESSON_TYPE_ICONS = {
 export default function Learn() {
   const { profile } = useAuth()
   const completed = profile?.completed_lessons || []
-  const [expandedSections, setExpandedSections] = useState({ c11: true, c12: true, misc: true })
+  const [expandedSections, setExpandedSections] = useState({})
   const [expandedChapters, setExpandedChapters] = useState({})
 
   function toggleChapter(chapterId) {

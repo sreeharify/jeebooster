@@ -15,159 +15,209 @@ export const COURSE_DATA = [
             id: 'p11_c1',
             title: 'Units and Measurements',
             lessons: [
-              { id: 'p11_c1_l1', title: 'SI Units & Fundamental Quantities', type: 'info', xp: 20 },
-              { id: 'p11_c1_l2', title: 'Dimensional Analysis & Applications', type: 'quiz', xp: 30 },
+              { id: 'p11_c1_l1', title: 'SI Units & Fundamental Units', type: 'info', xp: 20 },
+              { id: 'p11_c1_l2', title: 'Least Count, Accuracy & Precision', type: 'quiz', xp: 30 },
               { id: 'p11_c1_l3', title: 'Errors & Significant Figures', type: 'quiz', xp: 30 },
+              { id: 'p11_c1_l4', title: 'Dimensional Analysis & Applications', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'p11_c2',
-            title: 'Kinematics',
+            title: 'Motion in a Straight Line',
             lessons: [
-              { id: 'p11_c2_l1', title: 'Motion in Straight Line: Graphs', type: 'info', xp: 20 },
-              { id: 'p11_c2_l2', title: 'Vector Algebra & Resolution', type: 'quiz', xp: 30 },
-              { id: 'p11_c2_l3', title: 'Projectile Motion', type: 'quiz', xp: 35 },
-              { id: 'p11_c2_l4', title: 'Uniform Circular Motion', type: 'quiz', xp: 30 },
+              { id: 'p11_c2_l1', title: 'Frame of Reference & Graphs', type: 'info', xp: 20 },
+              { id: 'p11_c2_l2', title: 'Speed, Velocity & Uniform Motion', type: 'quiz', xp: 30 },
+              { id: 'p11_c2_l3', title: 'Accelerated Motion & Graphs', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'p11_c3',
-            title: 'Laws of Motion',
+            title: 'Motion in a Plane',
             lessons: [
-              { id: 'p11_c3_l1', title: 'Newton’s Laws & Inertia', type: 'info', xp: 20 },
-              { id: 'p11_c3_l2', title: 'Friction: Static & Kinetic', type: 'quiz', xp: 30 },
-              { id: 'p11_c3_l3', title: 'Circular Dynamics & Banking', type: 'quiz', xp: 35 },
+              { id: 'p11_c3_l1', title: 'Scalars, Vectors & Unit Vector', type: 'info', xp: 20 },
+              { id: 'p11_c3_l2', title: 'Vector Products & Resolution', type: 'quiz', xp: 30 },
+              { id: 'p11_c3_l3', title: 'Projectile Motion', type: 'quiz', xp: 35 },
+              { id: 'p11_c3_l4', title: 'Uniform Circular Motion', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'p11_c4',
-            title: 'Work, Energy and Power',
+            title: 'Laws of Motion',
             lessons: [
-              { id: 'p11_c4_l1', title: 'Work-Energy Theorem', type: 'info', xp: 20 },
-              { id: 'p11_c4_l2', title: 'Conservation of Energy', type: 'quiz', xp: 30 },
-              { id: 'p11_c4_l3', title: 'Power and Collisions', type: 'quiz', xp: 30 },
+              { id: 'p11_c4_l1', title: 'Force, Inertia & Newton’s Laws', type: 'info', xp: 20 },
+              { id: 'p11_c4_l2', title: 'Momentum, Impulse & Conservation', type: 'quiz', xp: 30 },
+              { id: 'p11_c4_l3', title: 'Static, Kinetic & Rolling Friction', type: 'quiz', xp: 35 },
+              { id: 'p11_c4_l4', title: 'Dynamics of Circular Motion', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'p11_c5',
-            title: 'Rotational Motion',
+            title: 'Work, Energy, and Power',
             lessons: [
-              { id: 'p11_c5_l1', title: 'Centre of Mass', type: 'info', xp: 20 },
-              { id: 'p11_c5_l2', title: 'Torque & Angular Momentum', type: 'quiz', xp: 35 },
-              { id: 'p11_c5_l3', title: 'Moment of Inertia', type: 'quiz', xp: 40 },
+              { id: 'p11_c5_l1', title: 'Work Done by Constant/Variable Forces', type: 'info', xp: 20 },
+              { id: 'p11_c5_l2', title: 'Kinetic & Potential Energies', type: 'quiz', xp: 30 },
+              { id: 'p11_c5_l3', title: 'Work-Energy Theorem & Power', type: 'quiz', xp: 30 },
+              { id: 'p11_c5_l4', title: 'Spring PE & Motion in Vertical Circle', type: 'quiz', xp: 35 },
+              { id: 'p11_c5_l5', title: 'Elastic & Inelastic Collisions', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'p11_c6',
-            title: 'Gravitation',
+            title: 'System of Particles and Rotational Motion',
             lessons: [
-              { id: 'p11_c6_l1', title: 'Kepler’s Laws', type: 'info', xp: 20 },
-              { id: 'p11_c6_l2', title: 'Gravitational Potential', type: 'quiz', xp: 30 },
-              { id: 'p11_c6_l3', title: 'Satellites & Escape Velocity', type: 'quiz', xp: 30 },
+              { id: 'p11_c6_l1', title: 'Centre of Mass: System & Rigid Body', type: 'info', xp: 25 },
+              { id: 'p11_c6_l2', title: 'Torque & Angular Momentum', type: 'quiz', xp: 35 },
+              { id: 'p11_c6_l3', title: 'Moment of Inertia & Gyration', type: 'quiz', xp: 40 },
+              { id: 'p11_c6_l4', title: 'Parallel & Perpendicular Axes Theorems', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'p11_c7',
-            title: 'Properties of Matter',
+            title: 'Gravitation',
             lessons: [
-              { id: 'p11_c7_l1', title: 'Elasticity & Hooke’s Law', type: 'info', xp: 20 },
-              { id: 'p11_c7_l2', title: 'Fluids: Bernoulli’s Principle', type: 'quiz', xp: 35 },
-              { id: 'p11_c7_l3', title: 'Surface Tension & Viscosity', type: 'quiz', xp: 35 },
+              { id: 'p11_c7_l1', title: 'Kepler’s Laws & Universal Law', type: 'info', xp: 20 },
+              { id: 'p11_c7_l2', title: 'Acceleration due to Gravity (g)', type: 'quiz', xp: 30 },
+              { id: 'p11_c7_l3', title: 'Gravitational Potential & Energy', type: 'quiz', xp: 30 },
+              { id: 'p11_c7_l4', title: 'Escape & Orbital Velocity', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'p11_c8',
-            title: 'Thermodynamics',
+            title: 'Mechanical Properties of Solids',
             lessons: [
-              { id: 'p11_c8_l1', title: 'Laws of Thermodynamics', type: 'info', xp: 25 },
-              { id: 'p11_c8_l2', title: 'Heat Engines & Spontaneity', type: 'quiz', xp: 35 },
+              { id: 'p11_c8_l1', title: 'Elastic Behavior & Stress-Strain', type: 'info', xp: 20 },
+              { id: 'p11_c8_l2', title: 'Hooke’s Law & Moduli (Y, B, G)', type: 'quiz', xp: 30 },
+              { id: 'p11_c8_l3', title: 'Poisson’s Ratio & Elastic Energy', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'p11_c9',
-            title: 'Kinetic Theory of Gases',
+            title: 'Mechanical Properties of Fluids',
             lessons: [
-              { id: 'p11_c9_l1', title: 'Ideal Gas Equation', type: 'info', xp: 20 },
-              { id: 'p11_c9_l2', title: 'RMS Speed & Degree of Freedom', type: 'quiz', xp: 30 },
+              { id: 'p11_c9_l1', title: 'Pascal’s Law & Fluid Pressure', type: 'info', xp: 20 },
+              { id: 'p11_c9_l2', title: 'Viscosity, Stokes’ Law & Terminal velocity', type: 'quiz', xp: 35 },
+              { id: 'p11_c9_l3', title: 'Bernoulli’s Principle & Applications', type: 'quiz', xp: 35 },
+              { id: 'p11_c9_l4', title: 'Surface Tension, Contact Angle & Capillary', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'p11_c10',
-            title: 'Oscillations and Waves',
+            title: 'Thermal Properties of Matter',
             lessons: [
-              { id: 'p11_c10_l1', title: 'SHM & Pendulums', type: 'info', xp: 25 },
-              { id: 'p11_c10_l2', title: 'Wave Superposition & Beats', type: 'quiz', xp: 35 },
-              { id: 'p11_c10_l3', title: 'Doppler Effect', type: 'quiz', xp: 35 },
+              { id: 'p11_c10_l1', title: 'Thermal Expansion & Calorimetry', type: 'info', xp: 20 },
+              { id: 'p11_c10_l2', title: 'Change of State & Latent Heat', type: 'quiz', xp: 30 },
+              { id: 'p11_c10_l3', title: 'Heat Transfer: Conduction, Convection, Radiation', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'p11_c11',
+            title: 'Thermodynamics',
+            lessons: [
+              { id: 'p11_c11_l1', title: 'Zeroth & First Law', type: 'info', xp: 25 },
+              { id: 'p11_c11_l2', title: 'Isothermal & Adiabatic Processes', type: 'quiz', xp: 35 },
+              { id: 'p11_c11_l3', title: 'Second Law & Reversible Processes', type: 'quiz', xp: 35 },
+            ]
+          },
+          {
+            id: 'p11_c12',
+            title: 'Kinetic Theory',
+            lessons: [
+              { id: 'p11_c12_l1', title: 'Ideal Gas Equation & RMS Speed', type: 'info', xp: 20 },
+              { id: 'p11_c12_l2', title: 'Degrees of Freedom & Equipartition', type: 'quiz', xp: 30 },
+              { id: 'p11_c12_l3', title: 'Specific Heats & Mean Free Path', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'p11_c13',
+            title: 'Oscillations',
+            lessons: [
+              { id: 'p11_c13_l1', title: 'Simple Harmonic Motion (SHM)', type: 'info', xp: 25 },
+              { id: 'p11_c13_l2', title: 'Energy in SHM & Simple Pendulum', type: 'quiz', xp: 35 },
+            ]
+          },
+          {
+            id: 'p11_c14',
+            title: 'Waves',
+            lessons: [
+              { id: 'p11_c14_l1', title: 'Traveling & Progressive Waves', type: 'info', xp: 25 },
+              { id: 'p11_c14_l2', title: 'Superposition & Standing Waves', type: 'quiz', xp: 35 },
+              { id: 'p11_c14_l3', title: 'Beats & Doppler Effect', type: 'quiz', xp: 35 },
             ]
           }
         ]
       },
       {
-        id: 'c11',
+        id: 'c11_s',
         title: 'Chemistry',
         icon: '🧪',
         chapters: [
           {
             id: 'c11_c1',
-            title: 'Basic Concepts of Chemistry',
+            title: 'Some Basic Concepts of Chemistry',
             lessons: [
-              { id: 'c11_c1_l1', title: 'Mole Concept & Molar Mass', type: 'info', xp: 25 },
-              { id: 'c11_c1_l2', title: 'Stoichiometry & Molarity', type: 'quiz', xp: 30 },
+              { id: 'c11_c1_l1', title: 'Laws of Combination & Dalton’s Theory', type: 'info', xp: 25 },
+              { id: 'c11_c1_l2', title: 'Mole Concept & Molar Mass', type: 'quiz', xp: 30 },
+              { id: 'c11_c1_l3', title: 'Formula & Stoichiometry', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'c11_c2',
-            title: 'Atomic Structure',
+            title: 'Structure of Atom',
             lessons: [
-              { id: 'c11_c2_l1', title: 'Bohr’s Model & Spectrum', type: 'info', xp: 25 },
+              { id: 'c11_c2_l1', title: 'Atomic Models & Dual Nature', type: 'info', xp: 25 },
               { id: 'c11_c2_l2', title: 'Quantum Numbers & Orbitals', type: 'quiz', xp: 35 },
+              { id: 'c11_c2_l3', title: 'Aufbau, Pauli & Hund’s Rules', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'c11_c3',
-            title: 'Chemical Bonding',
+            title: 'Classification of Elements',
             lessons: [
-              { id: 'c11_c3_l1', title: 'VSEPR & Hybridization', type: 'info', xp: 30 },
-              { id: 'c11_c3_l2', title: 'MOT & H-Bonding', type: 'quiz', xp: 35 },
+              { id: 'c11_c3_l1', title: 'Modern Periodic Law & Table', type: 'info', xp: 20 },
+              { id: 'c11_c3_l2', title: 'Periodic Trends (Radii, Enthalpy, etc)', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'c11_c4',
-            title: 'Chemical Thermodynamics',
+            title: 'Chemical Bonding',
             lessons: [
-              { id: 'c11_c4_l1', title: 'Enthalpy & Entropy', type: 'info', xp: 25 },
-              { id: 'c11_c4_l2', title: 'Gibbs Energy & Spontaneity', type: 'quiz', xp: 35 },
+              { id: 'c11_c4_l1', title: 'Lewis Structure & Bond Parameters', type: 'info', xp: 30 },
+              { id: 'c11_c4_l2', title: 'VSEPR Theory & Hybridization', type: 'quiz', xp: 35 },
+              { id: 'c11_c4_l3', title: 'MOT & Hydrogen Bonding', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'c11_c5',
-            title: 'Equilibrium',
+            title: 'Chemical Thermodynamics',
             lessons: [
-              { id: 'c11_c5_l1', title: 'Le Chatelier’s Principle', type: 'info', xp: 25 },
-              { id: 'c11_c5_l2', title: 'pH & Buffer Solutions', type: 'quiz', xp: 35 },
-              { id: 'c11_c5_l3', title: 'Solubility Product (Ksp)', type: 'quiz', xp: 30 },
+              { id: 'c11_c5_l1', title: 'First Law: Enthalpy & Internal Energy', type: 'info', xp: 30 },
+              { id: 'c11_c5_l2', title: 'Hess’s Law & Enthalpy Types', type: 'quiz', xp: 35 },
+              { id: 'c11_c5_l3', title: 'Second Law & Gibbs Energy', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'c11_c6',
-            title: 'Redox Reactions',
+            title: 'Equilibrium',
             lessons: [
-              { id: 'c11_c6_l1', title: 'Oxidation Number & Balancing', type: 'info', xp: 25 },
+              { id: 'c11_c6_l1', title: 'Chemical Equilibrium & Le Chatelier', type: 'info', xp: 30 },
+              { id: 'c11_c6_l2', title: 'Ionic Equilibrium: Acids & Bases', type: 'quiz', xp: 35 },
+              { id: 'c11_c6_l3', title: 'Buffer, Solubility Product & Common Ion', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'c11_c7',
-            title: 'p-Block Elements',
+            title: 'Redox Reactions',
             lessons: [
-              { id: 'c11_c7_l1', title: 'Group 13 & 14 Trends', type: 'info', xp: 25 },
+              { id: 'c11_c7_l1', title: 'Oxidation Number & Redox balancing', type: 'info', xp: 25 },
             ]
           },
           {
             id: 'c11_c8',
-            title: 'Basic Organic Chemistry',
+            title: 'Organic Chemistry: Basic Principles',
             lessons: [
-              { id: 'c11_c8_l1', title: 'IUPAC Nomenclature', type: 'info', xp: 25 },
-              { id: 'c11_c8_l2', title: 'Electronic Effects', type: 'quiz', xp: 35 },
+              { id: 'c11_c8_l1', title: 'IUPAC Nomenclature & Classification', type: 'info', xp: 25 },
+              { id: 'c11_c8_l2', title: 'Electronic Displacements', type: 'quiz', xp: 35 },
+              { id: 'c11_c8_l3', title: 'Reaction Mechanisms & Purification', type: 'quiz', xp: 35 },
             ]
           },
           {
@@ -175,7 +225,7 @@ export const COURSE_DATA = [
             title: 'Hydrocarbons',
             lessons: [
               { id: 'c11_c9_l1', title: 'Alkanes, Alkenes & Alkynes', type: 'info', xp: 30 },
-              { id: 'c11_c9_l2', title: 'Aromaticity & Preparation', type: 'quiz', xp: 35 },
+              { id: 'c11_c9_l2', title: 'Aromatic Hydrocarbons', type: 'quiz', xp: 30 },
             ]
           }
         ]
@@ -187,65 +237,110 @@ export const COURSE_DATA = [
         chapters: [
           {
             id: 'm11_c1',
-            title: 'Sets, Relations & Functions',
+            title: 'Sets',
             lessons: [
-              { id: 'm11_c1_l1', title: 'Set Operations', type: 'info', xp: 20 },
-              { id: 'm11_c1_l2', title: 'Types of Functions', type: 'quiz', xp: 30 },
+              { id: 'm11_c1_l1', title: 'Sets & Representations', type: 'info', xp: 20 },
+              { id: 'm11_c1_l2', title: 'Subsets & Venn Diagrams', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'm11_c2',
-            title: 'Complex Numbers',
+            title: 'Relations and Functions',
             lessons: [
-              { id: 'm11_c2_l1', title: 'Algebra of Complex Numbers', type: 'info', xp: 25 },
-              { id: 'm11_c2_l2', title: 'Quadratic Roots & Formations', type: 'quiz', xp: 30 },
+              { id: 'm11_c2_l1', title: 'Cartesian Product & Relations', type: 'info', xp: 20 },
+              { id: 'm11_c2_l2', title: 'Types of Real Functions', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'm11_c3',
-            title: 'Permutations & Combinations',
+            title: 'Trigonometric Functions',
             lessons: [
-              { id: 'm11_c3_l1', title: 'Fundamental Principle', type: 'info', xp: 25 },
-              { id: 'm11_c3_l2', title: 'Circular & Practical P&C', type: 'quiz', xp: 35 },
+              { id: 'm11_c3_l1', title: 'Measuring Angles & Signs', type: 'info', xp: 25 },
+              { id: 'm11_c3_l2', title: 'Addition & Double Angle Formulae', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'm11_c4',
-            title: 'Binomial Theorem',
+            title: 'Complex Numbers & Quadratic',
             lessons: [
-              { id: 'm11_c4_l1', title: 'General & Middle Terms', type: 'info', xp: 25 },
+              { id: 'm11_c4_l1', title: 'Algebraic Properties & Argand Plane', type: 'info', xp: 25 },
+              { id: 'm11_c4_l2', title: 'Fundamental Theorem & Quadratic Solns', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'm11_c5',
-            title: 'Sequence and Series',
+            title: 'Linear Inequalities',
             lessons: [
-              { id: 'm11_c5_l1', title: 'AP & GP Properties', type: 'info', xp: 25 },
-              { id: 'm11_c5_l2', title: 'Sum of Special Series', type: 'quiz', xp: 30 },
+              { id: 'm11_c5_l1', title: 'Algebraic Solutions & Number Line', type: 'info', xp: 20 },
             ]
           },
           {
             id: 'm11_c6',
-            title: 'Coordinate Geometry I',
+            title: 'Permutations and Combinations',
             lessons: [
-              { id: 'm11_c6_l1', title: 'Straight Lines: Forms', type: 'info', xp: 25 },
-              { id: 'm11_c6_l2', title: 'Circles: Standard Equations', type: 'quiz', xp: 30 },
+              { id: 'm11_c6_l1', title: 'Fundamental Principle & Factorial', type: 'info', xp: 25 },
+              { id: 'm11_c6_l2', title: 'Permutations & Combinations formula', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'm11_c7',
-            title: 'Conic Sections',
+            title: 'Binomial Theorem',
             lessons: [
-              { id: 'm11_c7_l1', title: 'Parabola & Ellipse', type: 'info', xp: 30 },
-              { id: 'm11_c7_l2', title: 'Hyperbola Properties', type: 'quiz', xp: 30 },
+              { id: 'm11_c7_l1', title: 'Binomial Expansion & General Terms', type: 'info', xp: 25 },
             ]
           },
           {
             id: 'm11_c8',
-            title: 'Trigonometry',
+            title: 'Sequence and Series',
             lessons: [
-              { id: 'm11_c8_l1', title: 'Trigonometric Identities', type: 'info', xp: 25 },
-              { id: 'm11_c8_l2', title: 'General Solutions', type: 'quiz', xp: 30 },
+              { id: 'm11_c8_l1', title: 'Arithmetic Progression (AP)', type: 'info', xp: 25 },
+              { id: 'm11_c8_l2', title: 'Geometric Progression (GP)', type: 'quiz', xp: 30 },
+              { id: 'm11_c8_l3', title: 'AM & GM Relationship', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'm11_c9',
+            title: 'Straight Lines',
+            lessons: [
+              { id: 'm11_c9_l1', title: 'Slope & Equation Forms', type: 'info', xp: 25 },
+              { id: 'm11_c9_l2', title: 'Distance Calculations', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'm11_c10',
+            title: 'Conic Sections',
+            lessons: [
+              { id: 'm11_c10_l1', title: 'Circle & Parabola', type: 'info', xp: 30 },
+              { id: 'm11_c10_l2', title: 'Ellipse & Hyperbola', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'm11_c11',
+            title: '3D Geometry Basics',
+            lessons: [
+              { id: 'm11_c11_l1', title: 'Coordinates & Distance in 3D', type: 'info', xp: 20 },
+            ]
+          },
+          {
+            id: 'm11_c12',
+            title: 'Limits and Derivatives',
+            lessons: [
+              { id: 'm11_c12_l1', title: 'Intuitive Idea of Limits', type: 'info', xp: 25 },
+              { id: 'm11_c12_l2', title: 'Standard Limits & Derivatives', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'm11_c13',
+            title: 'Statistics',
+            lessons: [
+              { id: 'm11_c13_l1', title: 'Mean Deviation & Variance', type: 'info', xp: 25 },
+            ]
+          },
+          {
+            id: 'm11_c14',
+            title: 'Probability',
+            lessons: [
+              { id: 'm11_c14_l1', title: 'Sample Spaces & Probability of Event', type: 'info', xp: 25 },
             ]
           }
         ]
@@ -256,7 +351,7 @@ export const COURSE_DATA = [
     id: 'c12',
     title: 'Class 12',
     icon: '📘',
-    color: 'from-purple-500 to-red-600',
+    color: 'from-orange-500 to-red-600',
     description: 'Advanced topics for JEE Main and Advanced success.',
     subjects: [
       {
@@ -266,69 +361,126 @@ export const COURSE_DATA = [
         chapters: [
           {
             id: 'p12_c1',
-            title: 'Electrostatics',
+            title: 'Electric Charges and Fields',
             lessons: [
-              { id: 'p12_c1_l1', title: 'Coulomb’s & Gauss’s Law', type: 'info', xp: 30 },
-              { id: 'p12_c1_l2', title: 'Electric Potential & Energy', type: 'quiz', xp: 30 },
-              { id: 'p12_c1_l3', title: 'Capacitance & Dielectrics', type: 'quiz', xp: 35 },
+              { id: 'p12_c1_l1', title: 'Coulomb’s Law & Electric Field', type: 'info', xp: 30 },
+              { id: 'p12_c1_l2', title: 'Dipole, Flux & Gauss’s Law', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'p12_c2',
-            title: 'Current Electricity',
+            title: 'Electrostatic Potential & Capacitance',
             lessons: [
-              { id: 'p12_c2_l1', title: 'Drift Velocity & Ohm’s Law', type: 'info', xp: 25 },
-              { id: 'p12_c2_l2', title: 'Kirchhoff’s Laws & Bridges', type: 'quiz', xp: 35 },
+              { id: 'p12_c2_l1', title: 'Potential Difference & Energy', type: 'info', xp: 30 },
+              { id: 'p12_c2_l2', title: 'Equipotential Surfaces & Dielectrics', type: 'quiz', xp: 35 },
+              { id: 'p12_c2_l3', title: 'Capacitors & Energy Storage', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'p12_c3',
-            title: 'Magnetism',
+            title: 'Current Electricity',
             lessons: [
-              { id: 'p12_c3_l1', title: 'Moving Charges: Force', type: 'info', xp: 30 },
-              { id: 'p12_c3_l2', title: 'Ampere’s Law & Solenoids', type: 'quiz', xp: 35 },
-              { id: 'p12_c3_l3', title: 'Earth Magnetism', type: 'quiz', xp: 30 },
+              { id: 'p12_c3_l1', title: 'Ohm’s law, Drift Velocity & Mobility', type: 'info', xp: 25 },
+              { id: 'p12_c3_l2', title: 'Kirchhoff’s laws & Wheatstone bridge', type: 'quiz', xp: 35 },
+              { id: 'p12_c3_l3', title: 'Emf, Internal resistance & Cells', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'p12_c4',
-            title: 'EMI and AC',
+            title: 'Moving Charges and Magnetism',
             lessons: [
-              { id: 'p12_c4_l1', title: 'Faraday’s Law & Lenz Law', type: 'info', xp: 30 },
-              { id: 'p12_c4_l2', title: 'LCR Circuits & Resonance', type: 'quiz', xp: 40 },
-              { id: 'p12_c4_l3', title: 'Transformers & Generators', type: 'quiz', xp: 30 },
+              { id: 'p12_c4_l1', title: 'Biot-Savart & Ampere’s law', type: 'info', xp: 30 },
+              { id: 'p12_c4_l2', title: 'Magnet Force on Charge & Conductors', type: 'quiz', xp: 35 },
+              { id: 'p12_c4_l3', title: 'Torque & Moving Coil Galvanometer', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'p12_c5',
-            title: 'Optics',
+            title: 'Magnetism and Matter',
             lessons: [
-              { id: 'p12_c5_l1', title: 'Ray Optics: Lens Formula', type: 'info', xp: 30 },
-              { id: 'p12_c5_l2', title: 'Wave Optics: YDSE', type: 'quiz', xp: 40 },
-              { id: 'p12_c5_l3', title: 'Diffraction & Polarization', type: 'quiz', xp: 35 },
+              { id: 'p12_c5_l1', title: 'Magnetic Dipole & Bar Magnet', type: 'info', xp: 20 },
+              { id: 'p12_c5_l2', title: 'Magnetic properties of materials', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'p12_c6',
-            title: 'Modern Physics',
+            title: 'Electromagnetic Induction',
             lessons: [
-              { id: 'p12_c6_l1', title: 'Photoelectric Effect', type: 'info', xp: 30 },
-              { id: 'p12_c6_l2', title: 'Atoms: Bohr Model', type: 'quiz', xp: 30 },
-              { id: 'p12_c6_l3', title: 'Nuclei: Fission & Fusion', type: 'quiz', xp: 35 },
+              { id: 'p12_c6_l1', title: 'Faraday’s Law & Lenz’s Law', type: 'info', xp: 30 },
+              { id: 'p12_c6_l2', title: 'Self and Mutual Inductance', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'p12_c7',
-            title: 'Semiconductors',
+            title: 'Alternating Current',
             lessons: [
-              { id: 'p12_c7_l1', title: 'Diodes & Rectifiers', type: 'info', xp: 30 },
-              { id: 'p12_c7_l2', title: 'Transistors & Logic Gates', type: 'quiz', xp: 40 },
+              { id: 'p12_c7_l1', title: 'RMS Value, Reactance & Impedance', type: 'info', xp: 30 },
+              { id: 'p12_c7_l2', title: 'LCR Circuits & Resonance', type: 'quiz', xp: 40 },
+              { id: 'p12_c7_l3', title: 'AC Generator & Transformer', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'p12_c8',
+            title: 'Electromagnetic Waves',
+            lessons: [
+              { id: 'p12_c8_l1', title: 'Displacement current & EM Spectrum', type: 'info', xp: 20 },
+            ]
+          },
+          {
+            id: 'p12_c9',
+            title: 'Ray Optics & Instruments',
+            lessons: [
+              { id: 'p12_c9_l1', title: 'Reflection, Refraction & TIR', type: 'info', xp: 30 },
+              { id: 'p12_c9_l2', title: 'Lenses & Prisms', type: 'quiz', xp: 35 },
+              { id: 'p12_c9_l3', title: 'Optical Instruments: Microscopes', type: 'quiz', xp: 35 },
+            ]
+          },
+          {
+            id: 'p12_c10',
+            title: 'Wave Optics',
+            lessons: [
+              { id: 'p12_c10_l1', title: 'Huygens’ Principle & Reflection', type: 'info', xp: 35 },
+              { id: 'p12_c10_l2', title: 'Interference & YDSE', type: 'quiz', xp: 40 },
+              { id: 'p12_c10_l3', title: 'Diffraction & Resolving Power', type: 'quiz', xp: 40 },
+            ]
+          },
+          {
+            id: 'p12_c11',
+            title: 'Dual Nature of Radiation',
+            lessons: [
+              { id: 'p12_c11_l1', title: 'Photoelectric Effect & Einstein Equation', type: 'info', xp: 30 },
+              { id: 'p12_c11_l2', title: 'Matter Waves & de Broglie', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'p12_c12',
+            title: 'Atoms',
+            lessons: [
+              { id: 'p12_c12_l1', title: 'Rutherford & Bohr Model', type: 'info', xp: 30 },
+              { id: 'p12_c12_l2', title: 'Hydrogen Spectrum', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'p12_c13',
+            title: 'Nuclei',
+            lessons: [
+              { id: 'p12_c13_l1', title: 'Mass-Energy & Binding Energy', type: 'info', xp: 30 },
+              { id: 'p12_c13_l2', title: 'Nuclear Fission and Fusion', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'p12_c14',
+            title: 'Semiconductor Electronics',
+            lessons: [
+              { id: 'p12_c14_l1', title: 'Intrinsic/Extrinsic p-n Junction', type: 'info', xp: 30 },
+              { id: 'p12_c14_l2', title: 'Diode as Rectifier & I-V characteristics', type: 'quiz', xp: 40 },
+              { id: 'p12_c14_l3', title: 'Logic Gates: AND, OR, NOT, etc', type: 'quiz', xp: 40 },
             ]
           }
         ]
       },
       {
-        id: 'c12',
+        id: 'c12_s',
         title: 'Chemistry',
         icon: '⚗️',
         chapters: [
@@ -336,48 +488,77 @@ export const COURSE_DATA = [
             id: 'c12_c1',
             title: 'Solutions',
             lessons: [
-              { id: 'c12_c1_l1', title: 'Raoult’s Law & Ideal Solns', type: 'info', xp: 30 },
-              { id: 'c12_c1_l2', title: 'Colligative Properties', type: 'quiz', xp: 35 },
+              { id: 'c12_c1_l1', title: 'Raoult’s Law & Ideal Solutions', type: 'info', xp: 30 },
+              { id: 'c12_c1_l2', title: 'Colligative Properties & Van’t Hoff', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'c12_c2',
             title: 'Electrochemistry',
             lessons: [
-              { id: 'c12_c2_l1', title: 'Nernst Equation', type: 'info', xp: 30 },
-              { id: 'c12_c2_l2', title: 'Molar Conductivity', type: 'quiz', xp: 35 },
+              { id: 'c12_c2_l1', title: 'Standard Potential & Nernst Eq', type: 'info', xp: 30 },
+              { id: 'c12_c2_l2', title: 'Conductivity, Electrolysis & Corrosion', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'c12_c3',
             title: 'Chemical Kinetics',
             lessons: [
-              { id: 'c12_c3_l1', title: 'Order & Molecularity', type: 'info', xp: 30 },
-              { id: 'c12_c3_l2', title: 'Arrhenius Equation', type: 'quiz', xp: 35 },
+              { id: 'c12_c3_l1', title: 'Rate Law, Order & Molecularity', type: 'info', xp: 30 },
+              { id: 'c12_c3_l2', title: 'Arrhenius Eq & Collision Theory', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'c12_c4',
-            title: 'Coordination Compounds',
+            title: 'd- and f-Block Elements',
             lessons: [
-              { id: 'c12_c4_l1', title: 'IUPAC & Werner’s Theory', type: 'info', xp: 30 },
-              { id: 'c12_c4_l2', title: 'VBT & CFT Theory', type: 'quiz', xp: 40 },
+              { id: 'c12_c4_l1', title: 'Transition Metal Trends & Oxidation States', type: 'info', xp: 30 },
+              { id: 'c12_c4_l2', title: 'Lanthanoids and Actinoids', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'c12_c5',
-            title: 'Organic Compounds I',
+            title: 'Coordination Compounds',
             lessons: [
-              { id: 'c12_c5_l1', title: 'Haloalkanes & Haloarenes', type: 'info', xp: 30 },
-              { id: 'c12_c5_l2', title: 'Alcohols & Phenols', type: 'quiz', xp: 35 },
+              { id: 'c12_c5_l1', title: 'Bonding: Werner, VBT & CFT', type: 'info', xp: 35 },
+              { id: 'c12_c5_l2', title: 'Isomerism & Nomenclature', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'c12_c6',
-            title: 'Organic Compounds II',
+            title: 'Haloalkanes and Haloarenes',
             lessons: [
-              { id: 'c12_c6_l1', title: 'Aldehydes & Ketones', type: 'info', xp: 30 },
-              { id: 'c12_c6_l2', title: 'Amines & Biomolecules', type: 'quiz', xp: 35 },
+              { id: 'c12_c6_l1', title: 'Nature of C-X & Substitution Mechanisms', type: 'info', xp: 35 },
+            ]
+          },
+          {
+            id: 'c12_c7',
+            title: 'Alcohols, Phenols, and Ethers',
+            lessons: [
+              { id: 'c12_c7_l1', title: 'Preparation & Dehydration mechanism', type: 'info', xp: 35 },
+            ]
+          },
+          {
+            id: 'c12_c8',
+            title: 'Aldehydes, Ketones, Carboxylic Acids',
+            lessons: [
+              { id: 'c12_c8_l1', title: 'Carbonyl nucleophilic addition', type: 'info', xp: 35 },
+              { id: 'c12_c8_l2', title: 'Acidity of Carboxylic Acids', type: 'quiz', xp: 30 },
+            ]
+          },
+          {
+            id: 'c12_c9',
+            title: 'Amines',
+            lessons: [
+              { id: 'c12_c9_l1', title: 'Preparation & Diazonium salts', type: 'info', xp: 30 },
+            ]
+          },
+          {
+            id: 'c12_c10',
+            title: 'Biomolecules',
+            lessons: [
+              { id: 'c12_c10_l1', title: 'Carbohydrates & Proteins', type: 'info', xp: 30 },
+              { id: 'c12_c10_l2', title: 'Vitamins & Nucleic Acids', type: 'quiz', xp: 30 },
             ]
           }
         ]
@@ -389,42 +570,101 @@ export const COURSE_DATA = [
         chapters: [
           {
             id: 'm12_c1',
-            title: 'Matrices & Determinants',
+            title: 'Relations and Functions',
             lessons: [
-              { id: 'm12_c1_l1', title: 'Matrix Algebra', type: 'info', xp: 30 },
-              { id: 'm12_c1_l2', title: 'Properties of Determinants', type: 'quiz', xp: 35 },
+              { id: 'm12_c1_l1', title: 'Reflexive, Symmetric, Transitive & Equivalence', type: 'info', xp: 30 },
+              { id: 'm12_c1_l2', title: 'One-to-one & Onto Functions', type: 'quiz', xp: 30 },
             ]
           },
           {
             id: 'm12_c2',
-            title: 'Calculus I',
+            title: 'Inverse Trigonometric Functions',
             lessons: [
-              { id: 'm12_c2_l1', title: 'Limits & Continuity', type: 'info', xp: 30 },
-              { id: 'm12_c2_l2', title: 'Differentiation & Apps', type: 'quiz', xp: 40 },
+              { id: 'm12_c2_l1', title: 'Principal Value Branches & Graphs', type: 'info', xp: 30 },
             ]
           },
           {
             id: 'm12_c3',
-            title: 'Calculus II',
+            title: 'Matrices',
             lessons: [
-              { id: 'm12_c3_l1', title: 'Definite Integrals', type: 'info', xp: 35 },
-              { id: 'm12_c3_l2', title: 'Differential Equations', type: 'quiz', xp: 40 },
+              { id: 'm12_c3_l1', title: 'Matrix Operations & Transpose', type: 'info', xp: 30 },
+              { id: 'm12_c3_l2', title: 'Symmetric & Invertible Matrices', type: 'quiz', xp: 35 },
             ]
           },
           {
             id: 'm12_c4',
-            title: 'Vector & 3D Geometry',
+            title: 'Determinants',
             lessons: [
-              { id: 'm12_c4_l1', title: 'Vector Algebra', type: 'info', xp: 30 },
-              { id: 'm12_c4_l2', title: '3D Lines & Shortest Dist', type: 'quiz', xp: 40 },
+              { id: 'm12_c4_l1', title: 'Adjoint, Inverse & System Solutions', type: 'info', xp: 35 },
             ]
           },
           {
             id: 'm12_c5',
+            title: 'Continuity and Differentiability',
+            lessons: [
+              { id: 'm12_c5_l1', title: 'Chain rule & Implicit Derivatives', type: 'info', xp: 30 },
+              { id: 'm12_c5_l2', title: 'Exp/Log & Second-order Derivatives', type: 'quiz', xp: 40 },
+            ]
+          },
+          {
+            id: 'm12_c6',
+            title: 'Applications of Derivatives',
+            lessons: [
+              { id: 'm12_c6_l1', title: 'Increasing/Decreasing Functions', type: 'info', xp: 30 },
+              { id: 'm12_c6_l2', title: 'Maxima and Minima Tests', type: 'quiz', xp: 40 },
+            ]
+          },
+          {
+            id: 'm12_c7',
+            title: 'Integrals',
+            lessons: [
+              { id: 'm12_c7_l1', title: 'Substitution & Parts Integration', type: 'info', xp: 35 },
+              { id: 'm12_c7_l2', title: 'Definite Integrals: Fundamental Theorem', type: 'quiz', xp: 40 },
+            ]
+          },
+          {
+            id: 'm12_c8',
+            title: 'Applications of Integrals',
+            lessons: [
+              { id: 'm12_c8_l1', title: 'Area under Standard Curves', type: 'info', xp: 35 },
+            ]
+          },
+          {
+            id: 'm12_c9',
+            title: 'Differential Equations',
+            lessons: [
+              { id: 'm12_c9_l1', title: 'Variable Separation & Homogeneous Eq', type: 'info', xp: 35 },
+              { id: 'm12_c9_l2', title: 'Linear Eq of First Order', type: 'quiz', xp: 35 },
+            ]
+          },
+          {
+            id: 'm12_c10',
+            title: 'Vector Algebra',
+            lessons: [
+              { id: 'm12_c10_l1', title: 'Magnitude, Direction & Components', type: 'info', xp: 30 },
+              { id: 'm12_c10_l2', title: 'Dot and Cross products', type: 'quiz', xp: 35 },
+            ]
+          },
+          {
+            id: 'm12_c11',
+            title: '3D Geometry',
+            lessons: [
+              { id: 'm12_c11_l1', title: 'Direction Cosines & Line Equations', type: 'info', xp: 35 },
+              { id: 'm12_c11_l2', title: 'Shortest Distance between lines', type: 'quiz', xp: 40 },
+            ]
+          },
+          {
+            id: 'm12_c12',
+            title: 'Linear Programming',
+            lessons: [
+              { id: 'm12_c12_l1', title: 'Graphical Method & Feasibility', type: 'info', xp: 30 },
+            ]
+          },
+          {
+            id: 'm12_c13',
             title: 'Probability',
             lessons: [
-              { id: 'm12_c5_l1', title: 'Bayes’ Theorem', type: 'info', xp: 35 },
-              { id: 'm12_c5_l2', title: 'Random Variables', type: 'quiz', xp: 35 },
+              { id: 'm12_c13_l1', title: 'Bayes’ Theorem & Distributions', type: 'info', xp: 35 },
             ]
           }
         ]
@@ -436,11 +676,11 @@ export const COURSE_DATA = [
     title: 'Miscellaneous & Strategy',
     icon: '🚀',
     color: 'from-orange-400 to-pink-600',
-    description: 'Exam strategy, rank prediction, and mental preparation.',
+    description: 'Exam strategy, experimental skills, and advanced JEE topics.',
     subjects: [
       {
         id: 'strategy',
-        title: 'Preparation Strategy',
+        title: 'JEE Mastery',
         icon: '💡',
         chapters: [
           {
@@ -450,20 +690,33 @@ export const COURSE_DATA = [
               { id: 's_c1_l1', title: 'Preparation Roadmap', type: 'info', xp: 50 },
               { id: 's_c1_l2', title: 'Time Management', type: 'quiz', xp: 50 },
             ]
-          }
-        ]
-      },
-      {
-        id: 'mock_zone',
-        title: 'Mock Test Zone',
-        icon: '📝',
-        chapters: [
+          },
           {
-            id: 'mz_c1',
-            title: 'Simulator',
+            id: 'extra_p',
+            title: 'Physics Experimental Skills',
             lessons: [
-              { id: 'mz_c1_l1', title: 'Daily JEE Quiz', type: 'quiz', xp: 40 },
-              { id: 'mz_c1_l2', title: 'Full Practice Mock', type: 'mock', xp: 100 },
+              { id: 'extra_p_l1', title: 'Vernier Callipers & Screw Gauge', type: 'info', xp: 40 },
+              { id: 'extra_p_l2', title: 'Error Analysis: Simple Pendulum', type: 'quiz', xp: 40 },
+              { id: 'extra_p_l3', title: 'Metre Bridge & Potentiometer', type: 'quiz', xp: 40 },
+              { id: 'extra_p_l4', title: 'Resonance Column & Cooling laws', type: 'quiz', xp: 40 },
+            ]
+          },
+          {
+            id: 'extra_c',
+            title: 'Chemistry practicals',
+            lessons: [
+              { id: 'extra_c_l1', title: 'Detection of extra elements (N, S, Cl)', type: 'info', xp: 40 },
+              { id: 'extra_c_l2', title: 'Inorganic Qualitative Analysis', type: 'quiz', xp: 50 },
+              { id: 'extra_c_l3', title: 'Titrimetric analysis (KMnO4)', type: 'quiz', xp: 40 },
+            ]
+          },
+          {
+            id: 'extra_m',
+            title: 'Advanced Mathematics',
+            lessons: [
+              { id: 'extra_m_l1', title: 'Logarithms & HP/AGP', type: 'info', xp: 40 },
+              { id: 'extra_m_l2', title: 'System of Equations (Cramer’s Rule)', type: 'quiz', xp: 50 },
+              { id: 'extra_m_l3', title: 'Newton-Leibniz Formula', type: 'quiz', xp: 40 },
             ]
           }
         ]
@@ -481,7 +734,6 @@ export const ACHIEVEMENTS = [
   { id: 'xp_2000', title: 'Expert', desc: 'Earn 2000 XP', icon: '🎓', xp: 100 },
   { id: 'perfect_lesson', title: 'Perfectionist', desc: 'Score 100% on a lesson', icon: '⭐', xp: 75 },
   { id: 'complete_section', title: 'Subject Master', desc: 'Complete a full subject section', icon: '🏆', xp: 150 },
-  { id: 'rank_prediction', title: 'Fortune Teller', desc: 'Get your focus areas in Rank Predictor', icon: '🔮', xp: 100 },
   { id: 'all_units', title: 'JeeBooster Champion', desc: 'Complete all units', icon: '👑', xp: 500 },
 ]
 
