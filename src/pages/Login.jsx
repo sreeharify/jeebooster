@@ -24,9 +24,9 @@ export default function Login() {
 
         {/* Logo */}
         <div className="text-center mb-10 animate-pop">
-          <div className="text-7xl mb-3">🌿</div>
-          <h1 className="font-display text-5xl text-green-700">IELTSdua</h1>
-          <p className="font-body font-semibold text-green-500 mt-2 text-lg">Your path to Band 9 🎯</p>
+          <div className="text-7xl mb-3">🚀</div>
+          <h1 className="font-display text-5xl text-green-700">JeeBooster</h1>
+          <p className="font-body font-semibold text-green-500 mt-2 text-lg">Your path to Success 🎯</p>
         </div>
 
         {/* Card */}
@@ -60,7 +60,7 @@ export default function Login() {
 
           <p className="text-xs text-gray-400 font-semibold mt-5">
             By signing in you agree to our terms. <br />
-            New accounts are created automatically 🌱
+            New accounts are created automatically 🚀
           </p>
         </div>
 

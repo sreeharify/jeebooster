@@ -10,12 +10,7 @@ import Profile from './pages/Profile'
 import Leaderboard from './pages/Leaderboard'
 import Achievements from './pages/Achievements'
 import MockTest from './pages/MockTest'
-import Vocabulary from './pages/Vocabulary'
-import WritingPractice from './pages/WritingPractice'
-import SpeakingPractice from './pages/SpeakingPractice'
-import GrammarDrills from './pages/GrammarDrills'
-import ReadingPractice from './pages/ReadingPractice'
-import BandEstimator from './pages/BandEstimator'
+import RankPredictor from './pages/RankPredictor'
 import NotificationToast from './components/NotificationToast'
 import './index.css'
 
@@ -23,8 +18,8 @@ function Splash() {
   return (
     <div className="min-h-screen bg-lime-50 flex flex-col items-center justify-center dot-pattern">
       <div className="text-center animate-fade-in">
-        <div className="text-7xl animate-bounce-slow mb-4">🌿</div>
-        <p className="font-display text-3xl text-green-700 mb-2">IELTSdua</p>
+        <div className="text-7xl animate-bounce-slow mb-4">🚀</div>
+        <p className="font-display text-3xl text-green-700 mb-2">JeeBooster</p>
         <p className="font-body text-green-400 font-semibold text-sm mb-6">Loading your progress…</p>
         <div className="flex items-center justify-center gap-2">
           {[0, 1, 2].map(i => (
@@ -58,12 +53,7 @@ function AppRoutes() {
         <Route path="/leaderboard"    element={user ? <Leaderboard />    : <Navigate to="/login" replace />} />
         <Route path="/achievements"   element={user ? <Achievements />   : <Navigate to="/login" replace />} />
         <Route path="/mock-test"      element={user ? <MockTest />       : <Navigate to="/login" replace />} />
-        <Route path="/vocabulary"     element={user ? <Vocabulary />     : <Navigate to="/login" replace />} />
-        <Route path="/writing"        element={user ? <WritingPractice />: <Navigate to="/login" replace />} />
-        <Route path="/speaking"       element={user ? <SpeakingPractice />: <Navigate to="/login" replace />} />
-        <Route path="/grammar"        element={user ? <GrammarDrills />  : <Navigate to="/login" replace />} />
-        <Route path="/reading"        element={user ? <ReadingPractice />: <Navigate to="/login" replace />} />
-        <Route path="/band-estimator" element={user ? <BandEstimator />  : <Navigate to="/login" replace />} />
+        <Route path="/rank-predictor" element={user ? <RankPredictor /> : <Navigate to="/login" replace />} />
 
         <Route path="*" element={<Navigate to={user ? '/' : '/login'} replace />} />
       </Routes>

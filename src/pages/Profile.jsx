@@ -88,7 +88,7 @@ export default function Profile() {
 
         {/* ── Hero card ── */}
         <div className="bg-gradient-to-br from-lime-400 to-green-600 rounded-3xl p-5 text-white relative overflow-hidden">
-          <div className="absolute -right-6 -top-6 text-9xl opacity-10 pointer-events-none select-none">🌿</div>
+          <div className="absolute -right-6 -top-6 text-9xl opacity-10 pointer-events-none select-none">🚀</div>
 
           <div className="flex items-start gap-4">
             <GooglePFP profile={profile} size="lg" />
@@ -223,7 +223,7 @@ export default function Profile() {
                     ? 'border-lime-400 bg-lime-50 text-lime-700'
                     : 'border-gray-200 text-gray-600 hover:border-lime-200'}`}
               >
-                <div className="text-lg">{goal === 50 ? '🌱' : goal === 100 ? '🌿' : '🌳'}</div>
+                <div className="text-lg">{goal === 50 ? '🌱' : goal === 100 ? '⚡' : '🔥'}</div>
                 <div className="text-sm">{goal} XP</div>
               </button>
             ))}

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "c1",
+    "title": "Chemistry Mock Test 1",
+    "questions": [
+      {
+        "id": "c1_1",
+        "question": "Which of the following has the highest electronegativity?",
+        "options": ["Oxygen", "Fluorine", "Nitrogen", "Chlorine"],
+        "correct": "Fluorine",
+        "explanation": "Fluorine is the most electronegative element in the periodic table."
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "m1",
+    "title": "Math Mock Test 1",
+    "questions": [
+      {
+        "id": "m1_1",
+        "question": "The value of sin(90°) is:",
+        "options": ["0", "0.5", "1", "undefined"],
+        "correct": "1",
+        "explanation": "The sine of 90 degrees is exactly 1."
+      }
+    ]
+  }
+]

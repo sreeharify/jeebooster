@@ -1,0 +1,25 @@
+[
+  {
+    "kind": "explainer",
+    "title": "🚀 Welcome to JEE Prep",
+    "sections": [
+      {
+        "heading": "Getting Started",
+        "body": "JEE (Joint Entrance Examination) is one of the most competitive exams. It tests your fundamental understanding of Physics, Chemistry, and Mathematics.\n\nOur lessons are designed to build your concepts from scratch and challenge you with advanced problems."
+      }
+    ],
+    "highlight": "Consistency is key. Study every day to see progress!"
+  },
+  {
+    "kind": "mcq",
+    "question": "Which of these is fundamental to success in JEE?",
+    "options": [
+      "Rote learning formulas",
+      "Understanding core concepts and practice",
+      "Guessing answers",
+      "Skipping difficult topics"
+    ],
+    "correct": "Understanding core concepts and practice",
+    "explanation": "JEE Advanced specifically tests conceptual depth. Mere formula application is often not enough for high-weightage questions."
+  }
+]

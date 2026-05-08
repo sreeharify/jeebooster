@@ -1,217 +1,111 @@
 export const COURSE_DATA = [
   {
     id: 1,
-    title: 'IELTS Foundations',
-    icon: '🌱',
-    color: 'from-lime-400 to-green-500',
-    description: 'Learn what IELTS is and build core skills',
+    title: 'Class 11 - JEE Prep',
+    icon: '📗',
+    color: 'from-blue-500 to-indigo-600',
+    description: 'Foundation for Physics, Chemistry, and Mathematics',
     units: [
       {
-        id: 'u1',
-        title: 'What is IELTS?',
-        icon: '📚',
+        id: 'u11_p',
+        title: 'Physics - Mechanics I',
+        icon: '⚛️',
         lessons: [
-          { id: 'l1_1', title: 'Test Format Overview', type: 'info', xp: 15 },
-          { id: 'l1_2', title: 'Band Score System', type: 'quiz', xp: 20 },
-          { id: 'l1_3', title: 'Academic vs General', type: 'quiz', xp: 20 },
-          { id: 'l1_4', title: 'Study Plan Builder', type: 'interactive', xp: 25 },
+          { id: 'l11_p1', title: 'Units & Dimensions', type: 'info', xp: 20 },
+          { id: 'l11_p2', title: 'Kinematics', type: 'quiz', xp: 30 },
+          { id: 'l11_p3', title: 'Laws of Motion', type: 'quiz', xp: 30 },
+          { id: 'l11_p4', title: 'Work, Energy & Power', type: 'quiz', xp: 30 },
         ]
       },
       {
-        id: 'u2',
-        title: 'Core Vocabulary',
-        icon: '📝',
+        id: 'u11_c',
+        title: 'Chemistry - Physical I',
+        icon: '🧪',
         lessons: [
-          { id: 'l2_1', title: 'Academic Word List 1', type: 'vocab', xp: 20 },
-          { id: 'l2_2', title: 'Academic Word List 2', type: 'vocab', xp: 20 },
-          { id: 'l2_3', title: 'Collocations', type: 'match', xp: 25 },
-          { id: 'l2_4', title: 'Synonyms & Paraphrasing', type: 'fill', xp: 30 },
-          { id: 'l2_5', title: 'Vocabulary Test', type: 'test', xp: 40 },
+          { id: 'l11_c1', title: 'Mole Concept', type: 'info', xp: 25 },
+          { id: 'l11_c2', title: 'Atomic Structure', type: 'quiz', xp: 30 },
+          { id: 'l11_c3', title: 'Chemical Bondnig', type: 'quiz', xp: 30 },
+          { id: 'l11_c4', title: 'Thermodynamics', type: 'quiz', xp: 35 },
+        ]
+      },
+      {
+        id: 'u11_m',
+        title: 'Mathematics - Algebra I',
+        icon: '📐',
+        lessons: [
+          { id: 'l11_m1', title: 'Sets & Relations', type: 'info', xp: 20 },
+          { id: 'l11_m2', title: 'Trigonometry', type: 'quiz', xp: 30 },
+          { id: 'l11_m3', title: 'Quadratic Equations', type: 'quiz', xp: 30 },
+          { id: 'l11_m4', title: 'Sequence & Series', type: 'quiz', xp: 30 },
         ]
       }
     ]
   },
   {
     id: 2,
-    title: 'Listening Mastery',
-    icon: '🎧',
-    color: 'from-green-400 to-green-600',
-    description: 'Ace all 4 sections of the Listening test',
+    title: 'Class 12 - JEE Advanced',
+    icon: '📘',
+    color: 'from-red-500 to-orange-600',
+    description: 'Mastering the final year topics for JEE Main/Advanced',
     units: [
       {
-        id: 'u3',
-        title: 'Listening Section 1 & 2',
-        icon: '🔊',
+        id: 'u12_p',
+        title: 'Physics - Electromagnetism',
+        icon: '⚡',
         lessons: [
-          { id: 'l3_1', title: 'Everyday Conversations', type: 'listen', xp: 20 },
-          { id: 'l3_2', title: 'Form Completion', type: 'listen_fill', xp: 25 },
-          { id: 'l3_3', title: 'Map & Diagram Labelling', type: 'listen', xp: 25 },
-          { id: 'l3_4', title: 'Monologue Practice', type: 'listen', xp: 25 },
+          { id: 'l12_p1', title: 'Electrostatics', type: 'info', xp: 30 },
+          { id: 'l12_p2', title: 'Current Electricity', type: 'quiz', xp: 30 },
+          { id: 'l12_p3', title: 'Magnetism', type: 'quiz', xp: 30 },
+          { id: 'l12_p4', title: 'Modern Physics', type: 'quiz', xp: 40 },
         ]
       },
       {
-        id: 'u4',
-        title: 'Listening Section 3 & 4',
-        icon: '🎓',
+        id: 'u12_c',
+        title: 'Chemistry - Organic',
+        icon: '⚗️',
         lessons: [
-          { id: 'l4_1', title: 'Academic Discussions', type: 'listen', xp: 30 },
-          { id: 'l4_2', title: 'Multiple Choice', type: 'quiz', xp: 25 },
-          { id: 'l4_3', title: 'Lecture Note-Taking', type: 'listen', xp: 30 },
-          { id: 'l4_4', title: 'Prediction Strategies', type: 'info', xp: 20 },
-          { id: 'l4_5', title: 'Listening Mini-Test', type: 'test', xp: 50 },
+          { id: 'l12_c1', title: 'Haloalkanes', type: 'info', xp: 30 },
+          { id: 'l12_c2', title: 'Alcohols & Phenols', type: 'quiz', xp: 30 },
+          { id: 'l12_c3', title: 'Biomolecules', type: 'quiz', xp: 30 },
+          { id: 'l12_c4', title: 'Polymers', type: 'quiz', xp: 30 },
+        ]
+      },
+      {
+        id: 'u12_m',
+        title: 'Mathematics - Calculus II',
+        icon: '📊',
+        lessons: [
+          { id: 'l12_m1', title: 'Limits & Continuity', type: 'info', xp: 30 },
+          { id: 'l12_m2', title: 'Differentiation', type: 'quiz', xp: 30 },
+          { id: 'l12_m3', title: 'Integration', type: 'quiz', xp: 40 },
+          { id: 'l12_m4', title: 'Probability', type: 'quiz', xp: 40 },
         ]
       }
     ]
   },
   {
     id: 3,
-    title: 'Reading Skills',
-    icon: '👁️',
-    color: 'from-green-500 to-green-700',
-    description: 'Master skimming, scanning, and comprehension',
+    title: 'Miscellaneous & Strategy',
+    icon: '🏆',
+    color: 'from-purple-500 to-pink-600',
+    description: 'Tips, Rank Predictions and General Strategy',
     units: [
       {
-        id: 'u5',
-        title: 'Reading Strategies',
-        icon: '🔍',
+        id: 'umisc_s',
+        title: 'JEE Strategy',
+        icon: '💡',
         lessons: [
-          { id: 'l5_1', title: 'Skimming & Scanning', type: 'reading', xp: 20 },
-          { id: 'l5_2', title: 'True/False/Not Given', type: 'reading', xp: 25 },
-          { id: 'l5_3', title: 'Matching Headings', type: 'reading', xp: 25 },
-          { id: 'l5_4', title: 'Matching Information', type: 'reading', xp: 25 },
+          { id: 'l_strat1', title: 'Preparation Roadmap', type: 'info', xp: 50 },
+          { id: 'l_strat2', title: 'Time Management', type: 'info', xp: 50 },
         ]
       },
       {
-        id: 'u6',
-        title: 'Reading Question Types',
-        icon: '❓',
+        id: 'umisc_t',
+        title: 'Mock Test Zone',
+        icon: '📝',
         lessons: [
-          { id: 'l6_1', title: 'Summary Completion', type: 'reading', xp: 25 },
-          { id: 'l6_2', title: 'Sentence Completion', type: 'reading', xp: 25 },
-          { id: 'l6_3', title: 'Short Answer Questions', type: 'reading', xp: 25 },
-          { id: 'l6_4', title: 'Diagram Labelling', type: 'reading', xp: 25 },
-          { id: 'l6_5', title: 'Reading Mini-Test', type: 'test', xp: 50 },
-        ]
-      }
-    ]
-  },
-  {
-    id: 4,
-    title: 'Writing Excellence',
-    icon: '✍️',
-    color: 'from-lime-500 to-green-600',
-    description: 'Write Band 9 Task 1 and Task 2 essays',
-    units: [
-      {
-        id: 'u7',
-        title: 'Task 1 Academic',
-        icon: '📊',
-        lessons: [
-          { id: 'l7_1', title: 'Describing Graphs & Charts', type: 'writing', xp: 30 },
-          { id: 'l7_2', title: 'Process Diagrams', type: 'writing', xp: 30 },
-          { id: 'l7_3', title: 'Maps & Plans', type: 'writing', xp: 30 },
-          { id: 'l7_4', title: 'Data Comparisons', type: 'writing', xp: 30 },
-          { id: 'l7_5', title: 'Task 1 Vocabulary', type: 'vocab', xp: 25 },
-        ]
-      },
-      {
-        id: 'u8',
-        title: 'Task 2 Essays',
-        icon: '📄',
-        lessons: [
-          { id: 'l8_1', title: 'Opinion Essays', type: 'writing', xp: 35 },
-          { id: 'l8_2', title: 'Discussion Essays', type: 'writing', xp: 35 },
-          { id: 'l8_3', title: 'Problem-Solution Essays', type: 'writing', xp: 35 },
-          { id: 'l8_4', title: 'Advantages-Disadvantages', type: 'writing', xp: 35 },
-          { id: 'l8_5', title: 'Thesis Statements', type: 'writing', xp: 30 },
-          { id: 'l8_6', title: 'Cohesion & Coherence', type: 'writing', xp: 30 },
-          { id: 'l8_7', title: 'Writing Mini-Test', type: 'test', xp: 60 },
-        ]
-      }
-    ]
-  },
-  {
-    id: 5,
-    title: 'Speaking Confidence',
-    icon: '🗣️',
-    color: 'from-green-400 to-lime-500',
-    description: 'Speak fluently and achieve Band 9 in Speaking',
-    units: [
-      {
-        id: 'u9',
-        title: 'Speaking Part 1',
-        icon: '💬',
-        lessons: [
-          { id: 'l9_1', title: 'Introducing Yourself', type: 'speaking', xp: 25 },
-          { id: 'l9_2', title: 'Personal Topics', type: 'speaking', xp: 25 },
-          { id: 'l9_3', title: 'Extending Answers', type: 'speaking', xp: 25 },
-          { id: 'l9_4', title: 'Part 1 Fluency Tips', type: 'info', xp: 20 },
-        ]
-      },
-      {
-        id: 'u10',
-        title: 'Speaking Parts 2 & 3',
-        icon: '🎤',
-        lessons: [
-          { id: 'l10_1', title: 'Cue Card Technique', type: 'speaking', xp: 30 },
-          { id: 'l10_2', title: 'Abstract Discussion', type: 'speaking', xp: 30 },
-          { id: 'l10_3', title: 'Expressing Opinions', type: 'speaking', xp: 30 },
-          { id: 'l10_4', title: 'Lexical Resource', type: 'vocab', xp: 25 },
-          { id: 'l10_5', title: 'Speaking Mock Test', type: 'test', xp: 60 },
-        ]
-      }
-    ]
-  },
-  {
-    id: 6,
-    title: 'Grammar for Band 9',
-    icon: '⚡',
-    color: 'from-green-600 to-green-800',
-    description: 'Master complex grammar structures',
-    units: [
-      {
-        id: 'u11',
-        title: 'Sentence Structures',
-        icon: '🔧',
-        lessons: [
-          { id: 'l11_1', title: 'Complex Sentences', type: 'grammar', xp: 25 },
-          { id: 'l11_2', title: 'Relative Clauses', type: 'grammar', xp: 25 },
-          { id: 'l11_3', title: 'Passive Voice', type: 'grammar', xp: 25 },
-          { id: 'l11_4', title: 'Conditionals', type: 'grammar', xp: 30 },
-          { id: 'l11_5', title: 'Reported Speech', type: 'grammar', xp: 25 },
-        ]
-      },
-      {
-        id: 'u12',
-        title: 'Advanced Grammar',
-        icon: '🏆',
-        lessons: [
-          { id: 'l12_1', title: 'Inversion & Emphasis', type: 'grammar', xp: 35 },
-          { id: 'l12_2', title: 'Nominalization', type: 'grammar', xp: 35 },
-          { id: 'l12_3', title: 'Hedging Language', type: 'grammar', xp: 30 },
-          { id: 'l12_4', title: 'Discourse Markers', type: 'grammar', xp: 30 },
-          { id: 'l12_5', title: 'Grammar Mastery Test', type: 'test', xp: 70 },
-        ]
-      }
-    ]
-  },
-  {
-    id: 7,
-    title: 'Full Mock Tests',
-    icon: '🏅',
-    color: 'from-lime-400 to-lime-600',
-    description: 'Complete timed practice tests',
-    units: [
-      {
-        id: 'u13',
-        title: 'Practice Tests',
-        icon: '📋',
-        lessons: [
-          { id: 'l13_1', title: 'Mock Test 1 — Listening', type: 'mock', xp: 80 },
-          { id: 'l13_2', title: 'Mock Test 1 — Reading', type: 'mock', xp: 80 },
-          { id: 'l13_3', title: 'Mock Test 1 — Writing', type: 'mock', xp: 80 },
-          { id: 'l13_4', title: 'Mock Test 2 — Full', type: 'mock', xp: 120 },
-          { id: 'l13_5', title: 'Mock Test 3 — Full', type: 'mock', xp: 120 },
+          { id: 'l_mock1', title: 'Daily JEE Quiz', type: 'quiz', xp: 40 },
+          { id: 'l_mock2', title: 'Mock Test 1', type: 'mock', xp: 100 },
         ]
       }
     ]

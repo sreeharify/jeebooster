@@ -530,3 +530,4 @@ Each slide has a `kind` field. The app renders a different component per kind.
 - **Writing**: An additional MCQ comparing Band 6 vs Band 8 paragraphs
 - **Listening**: An entirely new set (L3) with a different context (job interview, academic lecture, phone booking)
 - **Mock tests**: A third set (L3, R3, W3, S3) for each section doubles practice variety
+

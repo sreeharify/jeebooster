@@ -6,14 +6,10 @@ import { COURSE_DATA } from '../data/courseData'
 import { ChevronRight, Target, Zap, Flame } from 'lucide-react'
 
 const PRACTICE_CARDS = [
-  { path:'/reading',        emoji:'👁️', label:'Reading',       sub:'Passages & questions',   color:'bg-blue-50   border-blue-200'   },
-  { path:'/writing',        emoji:'✍️', label:'Writing',       sub:'Task 1 & Task 2',        color:'bg-yellow-50 border-yellow-200' },
-  { path:'/speaking',       emoji:'🗣️', label:'Speaking',      sub:'Parts 1, 2 & 3',         color:'bg-pink-50   border-pink-200'   },
-  { path:'/vocabulary',     emoji:'📖', label:'Vocabulary',    sub:'Flashcards & quizzes',   color:'bg-purple-50 border-purple-200' },
-  { path:'/grammar',        emoji:'⚡', label:'Grammar',       sub:'Drills & explanations',  color:'bg-orange-50 border-orange-200' },
-  { path:'/mock-test',      emoji:'📋', label:'Mock Tests',    sub:'Timed practice',         color:'bg-red-50    border-red-200'    },
-  { path:'/band-estimator', emoji:'📊', label:'Band Estimator',sub:'Check your level',       color:'bg-teal-50   border-teal-200'   },
-  { path:'/achievements',   emoji:'🏆', label:'Achievements',  sub:'Unlock rewards',         color:'bg-amber-50  border-amber-200'  },
+  { path:'/learn',          emoji:'📚', label:'Start Learning', sub:'Subject-wise topics',  color:'bg-lime-50   border-lime-200'   },
+  { path:'/mock-test',      emoji:'📋', label:'Mock Tests',    sub:'Timed JEE practice',   color:'bg-red-50    border-red-200'    },
+  { path:'/leaderboard',    emoji:'🏆', label:'Leaderboard',   sub:'Check your rank',      color:'bg-amber-50  border-amber-200'  },
+  { path:'/rank-predictor', emoji:'📊', label:'Rank Predictor',sub:'Predict your AIR',     color:'bg-teal-50   border-teal-200'   },
 ]
 
 export default function Dashboard() {
@@ -31,7 +27,7 @@ export default function Dashboard() {
 
         {/* Hero */}
         <div className="bg-gradient-to-br from-lime-400 to-green-600 rounded-3xl p-5 shadow-lg text-white relative overflow-hidden">
-          <div className="absolute -right-6 -top-6 text-9xl opacity-10 select-none pointer-events-none">🌿</div>
+          <div className="absolute -right-6 -top-6 text-9xl opacity-10 select-none pointer-events-none">🚀</div>
           <h2 className="font-display text-2xl mb-0.5">Hi, {profile?.username || 'Learner'}! 👋</h2>
           <p className="font-semibold text-lime-100 text-sm mb-3">Ready to level up today?</p>
           <XPBar />
@@ -81,7 +77,7 @@ export default function Dashboard() {
             <div className="flex-1">
               <div className="font-display text-xl">Continue Learning</div>
               <div className="text-lime-100 text-sm font-semibold">
-                {completed.length > 0 ? `${completed.length} lessons done · ${pct}% complete` : 'Start your Band 9 journey!'}
+                {completed.length > 0 ? `${completed.length} lessons done · ${pct}% complete` : 'Start your JEE Success journey!'}
               </div>
             </div>
             <ChevronRight className="w-6 h-6 text-white/70" />
@@ -152,8 +148,8 @@ export default function Dashboard() {
               </div>
             </div>
           ))}
-          <Link to="/band-estimator" className="block mt-3 text-center text-sm font-bold text-lime-600 hover:text-lime-800">
-            → Estimate your current band
+          <Link to="/rank-predictor" className="block mt-3 text-center text-sm font-bold text-lime-600 hover:text-lime-800">
+            → Predict your JEE Rank
           </Link>
         </div>
       </div>

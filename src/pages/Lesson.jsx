@@ -19,11 +19,11 @@ function findLesson(id) {
   return null
 }
 
-function bandLabel(b) {
-  if (!b || b <= 6) return { label: 'Band 6 — Foundation', color: 'bg-orange-400', emoji: '🌱' }
-  if (b === 7)      return { label: 'Band 7 — Developing', color: 'bg-yellow-400', emoji: '🌿' }
-  if (b === 8)      return { label: 'Band 8 — Advanced',   color: 'bg-green-500',  emoji: '🌳' }
-  return               { label: 'Band 9 — Expert',          color: 'bg-lime-500',   emoji: '🏆' }
+function levelLabel(l) {
+  if (!l || l <= 1) return { label: 'Level 1 — Foundation', color: 'bg-blue-400', emoji: '🌱' }
+  if (l === 2)      return { label: 'Level 2 — Intermediate', color: 'bg-indigo-500', emoji: '⚡' }
+  if (l === 3)      return { label: 'Level 3 — Advanced',   color: 'bg-purple-600',  emoji: '🔥' }
+  return               { label: 'Level 4 — Expert',     color: 'bg-red-600',     emoji: '🚀' }
 }
 
 function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5) }
@@ -41,38 +41,31 @@ function validatePairs(pairs, context) {
 // Build the full slide list for a lesson: prepend the intro card
 function buildAllSlides(lesson) {
   const TYPE_ICON = {
-    vocab:'📝', grammar:'⚡', reading:'👁️', quiz:'❓', fill:'✏️',
-    writing:'✍️', speaking:'🗣️', test:'📋', mock:'🏅',
-    listen:'🎧', listen_fill:'🎧', info:'📖', match:'🔗', interactive:'🎮'
+    physics:'⚛️', chemistry:'🧪', math:'📐', quiz:'❓', fill:'✏️',
+    info:'📖', match:'🔗', interactive:'🎮', test:'📋', mock:'🏅'
   }
   const WHAT = {
-    vocab:   'Master academic vocabulary for Band 7–9 answers.',
-    grammar: 'Practise grammar structures examiners reward at Band 7+.',
-    reading: 'Build strategies to read passages fast and accurately.',
-    quiz:    'Test your IELTS exam knowledge.',
-    writing: 'Learn techniques that push your writing to Band 8+.',
-    speaking:'Build fluency and natural response skills.',
-    listen:  'Develop your listening skills for all four IELTS sections.',
-    info:    'Understand the exam format and build your strategy.',
-    match:   'Practise collocations and vocabulary in context.',
-    fill:    'Sharpen your paraphrasing and word-choice skills.',
-    interactive: 'Build your personalised IELTS study plan.',
-    test:    'Mini-test covering everything from this unit.',
-    mock:    'Full mock test — practise all four sections.',
+    physics: 'Master core concepts of Physics for JEE.',
+    chemistry: 'Build a strong foundation in Organic, Inorganic, and Physical Chemistry.',
+    math: 'Solve complex problems in Calculus, Algebra, and Geometry.',
+    quiz: 'Test your understanding of the latest concepts.',
+    info: 'Learn strategical tips for JEE Main and Advanced.',
+    match: 'Match concepts with their definitions or formulas.',
+    fill: 'Complete the steps in a derivation or formula.',
+    interactive: 'Build your personalised JEE study plan.',
+    test: 'Unit test covering everything you learned.',
+    mock: 'Full subject-wise mock test practice.',
   }
   const TIPS = {
-    vocab:   '💡 Always read the example sentence — context makes words stick!',
-    grammar: '💡 After each question, make your own sentence with the new structure.',
-    reading: '💡 Skim first (60 sec), read questions, then scan for answers.',
-    quiz:    '💡 Read ALL options before choosing — eliminate obviously wrong ones first.',
-    writing: '💡 One fully-developed idea beats three shallow ones every time.',
-    speaking:'💡 Point → Reason → Example → Link. Always extend your answers.',
-    listen:  '💡 Read the questions BEFORE the audio plays. Predict answer types.',
-    info:    '💡 Understanding the exam format saves time and reduces anxiety.',
-    match:   '💡 Learn collocations as whole chunks — not word by word.',
-    fill:    '💡 Think about word class first (noun? verb? adjective?) before choosing.',
-    test:    '💡 Treat this like the real exam — timed, focused, no distractions.',
-    mock:    '💡 Simulate real exam conditions: quiet room, no phone, full time.',
+    physics: '💡 Focus on conceptual clarity before jumping to numericals.',
+    chemistry: '💡 Regularly revise reactions and periodic table trends.',
+    math: '💡 Practice makes perfect in Calculus and Algebra!',
+    quiz: '💡 Read ALL options before choosing — eliminate obviously wrong ones first.',
+    info: '💡 Strategy is just as important as knowledge in JEE.',
+    match: '💡 Link formulas with their respective physical quantities.',
+    fill: '💡 Think about the logical flow of the derivation.',
+    test: '💡 Treat this like the real exam — timed and focused.',
+    mock: '💡 Full concentration! Mimic real exam conditions.',
   }
 
   const icon = TYPE_ICON[lesson.type] || '📚'
@@ -99,7 +92,7 @@ function IntroSlide({ slide, onStart }) {
         <p className="font-semibold text-green-800 text-sm">{slide.tip}</p>
       </div>
       <div className="w-full space-y-2 mb-6">
-        {['Starts at Band 6 — beginner-friendly','Builds to Band 9 step by step',
+        {['Starts at Level 1 — beginner-friendly','Builds to Level 4 step by step',
           'Every mistake explained clearly','Variety of question types'].map((t, i) => (
           <div key={i} className="flex items-center gap-2 text-sm font-semibold text-green-700">
             <span className="text-lime-500">✓</span>{t}
@@ -112,7 +105,7 @@ function IntroSlide({ slide, onStart }) {
 }
 
 function ExplainerSlide({ slide, onNext }) {
-  const { label, color } = bandLabel(slide.band)
+  const { label, color } = levelLabel(slide.band)
   return (
     <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full overflow-y-auto">
       {slide.band && slide.band > 0 && (
@@ -191,7 +184,7 @@ function MiniExplainerSlide({ slide, onNext }) {
 function FlashcardSlide({ slide, onNext }) {
   const [flipped, setFlipped]       = useState(false)
   const [showDetails, setShowDetails] = useState(false)
-  const { label, color } = bandLabel(slide.band)
+  const { label, color } = levelLabel(slide.band)
   return (
     <div className="flex-1 flex flex-col px-4 py-3 max-w-lg mx-auto w-full">
       <div className={`${color} text-white rounded-2xl px-3 py-1.5 text-xs font-bold self-start mb-2`}>{label}</div>
@@ -270,7 +263,7 @@ function PassageSlide({ slide, onNext }) {
 }
 
 function MCQSlide({ slide, checked, selected, setSelected }) {
-  const { label, color } = bandLabel(slide.band)
+  const { label, color } = levelLabel(slide.band)
   const isCorrect = checked && selected === slide.correct
   return (
     <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full">
@@ -536,7 +529,7 @@ function ReorderSentenceSlide({ slide, checked, answer, setAnswer }) {
 }
 
 function TFNGSlide({ slide, checked, selected, setSelected }) {
-  const { label, color } = bandLabel(slide.band)
+  const { label, color } = levelLabel(slide.band)
   const isCorrect = checked && selected === slide.answer
   return (
     <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full">
@@ -718,7 +711,7 @@ export default function Lesson() {
           </h2>
           <p className={`font-semibold mb-5 ${passed ? 'text-green-500' : 'text-orange-500'}`}>
             {passed
-              ? score >= 70 ? 'Great progress toward Band 9!' : 'Passed! Keep practising to improve.'
+              ? score >= 70 ? 'Great progress toward JEE success!' : 'Passed! Keep practising to improve.'
               : `You need ${MIN_PASS}% to pass. You got ${score}%. Review the explanations and retry.`}
           </p>
           {!passed && (

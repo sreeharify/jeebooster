@@ -1,0 +1,15 @@
+[
+  {
+    "id": "p1",
+    "title": "Physics Mock Test 1",
+    "questions": [
+      {
+        "id": "p1_1",
+        "question": "A particle moves in a straight line with a constant acceleration of 2 m/s². If it starts from rest, what is its velocity after 5 seconds?",
+        "options": ["5 m/s", "10 m/s", "15 m/s", "20 m/s"],
+        "correct": "10 m/s",
+        "explanation": "Using v = u + at: v = 0 + (2 * 5) = 10 m/s."
+      }
+    ]
+  }
+]

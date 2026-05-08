@@ -1,0 +1,12 @@
+[
+  {
+    "kind": "explainer",
+    "title": "🎯 Rank Predictor Info",
+    "sections": [
+      {
+        "heading": "How it works",
+        "body": "Our Rank Predictor uses your performance in mock tests and self-assessment to estimate your All India Rank (AIR).\n\nPlease answer the assessments honestly for the most accurate prediction."
+      }
+    ]
+  }
+]

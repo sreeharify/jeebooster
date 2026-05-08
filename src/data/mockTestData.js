@@ -12,12 +12,10 @@
  *   src/data/tests/speaking.json   — array of speaking sets
  */
 
-import LISTENING_DATA from './tests/listening.json'
-import READING_DATA   from './tests/reading.json'
-import WRITING_DATA   from './tests/writing.json'
-import SPEAKING_DATA  from './tests/speaking.json'
+import PHYSICS_DATA   from './tests/physics.json'
+import CHEMISTRY_DATA from './tests/chemistry.json'
+import MATH_DATA      from './tests/math.json'
 
-export const LISTENING_SETS = LISTENING_DATA
-export const READING_SETS   = READING_DATA
-export const WRITING_SETS   = WRITING_DATA
-export const SPEAKING_SETS  = SPEAKING_DATA
+export const PHYSICS_SETS   = PHYSICS_DATA
+export const CHEMISTRY_SETS = CHEMISTRY_DATA
+export const MATH_SETS      = MATH_DATA

@@ -134,7 +134,7 @@ export default function Leaderboard() {
         {/* Loading */}
         {loading && (
           <div className="text-center py-12">
-            <div className="text-4xl animate-bounce-slow mb-3">🌿</div>
+            <div className="text-4xl animate-bounce-slow mb-3">🚀</div>
             <p className="font-semibold text-green-500">Loading rankings…</p>
           </div>
         )}

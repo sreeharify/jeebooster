@@ -1,5 +1,5 @@
 -- ============================================================
---  IELTS Master — Supabase Database Schema  (Google OAuth)
+--  JeeBooster — Supabase Database Schema  (Google OAuth)
 --  Run this in Supabase SQL Editor → New Query → Run
 --  Safe to re-run on an existing database (idempotent)
 -- ============================================================

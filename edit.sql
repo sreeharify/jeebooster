@@ -1,5 +1,5 @@
 -- ================================================================
---  IELTS Master — DATABASE MIGRATION / REPAIR SCRIPT
+--  JeeBooster — DATABASE MIGRATION / REPAIR SCRIPT
 --  Paste this entire file into Supabase → SQL Editor → Run
 --
 --  Safe to run multiple times. Fixes ALL known issues:
