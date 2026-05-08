@@ -15,7 +15,12 @@ const PRACTICE_CARDS = [
 export default function Dashboard() {
   const { profile } = useAuth()
   const completed   = profile?.completed_lessons || []
-  const total       = COURSE_DATA.reduce((sum, sec) => sum + sec.units.reduce((s, u) => s + u.lessons.length, 0), 0)
+  
+  // Calculate total lessons across all levels
+  const total = COURSE_DATA.reduce((sum, sec) => 
+    sum + sec.subjects.reduce((s, sub) => 
+      s + sub.chapters.reduce((c, ch) => c + ch.lessons.length, 0), 0), 0)
+      
   const pct         = Math.round((completed.length / total) * 100)
   const xpToday     = profile?.xp_today  || 0
   const dailyGoal   = profile?.daily_goal || 100
@@ -77,7 +82,7 @@ export default function Dashboard() {
             <div className="flex-1">
               <div className="font-display text-xl">Continue Learning</div>
               <div className="text-lime-100 text-sm font-semibold">
-                {completed.length > 0 ? `${completed.length} lessons done · ${pct}% complete` : 'Start your JEE Success journey!'}
+                {completed.length > 0 ? `${completed.length}/${total} subtopics done` : 'Start your JEE Success journey!'}
               </div>
             </div>
             <ChevronRight className="w-6 h-6 text-white/70" />
@@ -108,20 +113,22 @@ export default function Dashboard() {
           <div className="h-4 bg-lime-100 rounded-full overflow-hidden border-2 border-lime-200 mb-3">
             <div className="h-full bg-gradient-to-r from-lime-400 to-green-500 rounded-full progress-fill" style={{ width: `${pct}%` }} />
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-3">
             {COURSE_DATA.map(section => {
-              const t = section.units.reduce((s, u) => s + u.lessons.length, 0)
-              const d = section.units.reduce((s, u) => s + u.lessons.filter(l => completed.includes(l.id)).length, 0)
+              const secTotal = section.subjects.reduce((s, sub) => s + sub.chapters.reduce((c, ch) => c + ch.lessons.length, 0), 0)
+              const secDone = section.subjects.reduce((s, sub) => s + sub.chapters.reduce((c, ch) => c + ch.lessons.filter(l => completed.includes(l.id)).length, 0), 0)
+              const secPct = Math.round((secDone / secTotal) * 100)
+              
               return (
                 <div key={section.id} className="flex items-center gap-2 text-sm">
                   <span>{section.icon}</span>
                   <div className="flex-1">
-                    <div className="flex justify-between text-xs font-semibold text-green-700">
-                      <span>{section.title.split(' ')[0]}</span>
-                      <span>{Math.round((d/t)*100)}%</span>
+                    <div className="flex justify-between text-[10px] font-bold text-green-700 uppercase tracking-tight">
+                      <span>{section.title.split(' ')[0]} {section.title.split(' ')[1]}</span>
+                      <span>{secPct}%</span>
                     </div>
-                    <div className="h-1.5 bg-lime-100 rounded-full mt-0.5">
-                      <div className="h-full bg-lime-400 rounded-full" style={{ width:`${(d/t)*100}%` }} />
+                    <div className="h-1.5 bg-lime-100 rounded-full mt-0.5 border border-lime-200">
+                      <div className="h-full bg-lime-400 rounded-full" style={{ width:`${secPct}%` }} />
                     </div>
                   </div>
                 </div>
@@ -130,26 +137,30 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Band guide */}
+        {/* Score guide */}
         <div className="card bg-gradient-to-br from-green-50 to-lime-50">
-          <h3 className="font-display text-xl text-green-800 mb-3">🎯 Band Score Guide</h3>
+          <h3 className="font-display text-xl text-green-800 mb-3">🎯 JEE Performance Guide</h3>
           {[
-            {band:'9',label:'Expert',    color:'bg-lime-400',   pct:100},
-            {band:'8',label:'Very Good', color:'bg-green-400',  pct:87},
-            {band:'7',label:'Good',      color:'bg-yellow-400', pct:73},
-            {band:'6',label:'Competent', color:'bg-orange-400', pct:60},
-            {band:'5',label:'Modest',    color:'bg-red-400',    pct:47},
-          ].map(({ band, label, color, pct }) => (
-            <div key={band} className="flex items-center gap-3 mb-2">
-              <div className={`${color} text-white font-display text-lg w-9 h-9 rounded-xl flex items-center justify-center shadow shrink-0`}>{band}</div>
+            {label:'IIT Bombay Ready',  desc:'Percentile: 99.9+', color:'bg-lime-400',   pct:100},
+            {label:'Top NITs Focus',    desc:'Percentile: 99.0+', color:'bg-green-400',  pct:85},
+            {label:'Qualification Prep', desc:'Percentile: 95.0+', color:'bg-yellow-400', pct:70},
+            {label:'Work Harder',       desc:'Percentile: 85.0+', color:'bg-orange-400', pct:50},
+            {label:'Foundation Stage',   desc:'Percentile: < 80', color:'bg-red-400',    pct:30},
+          ].map(({ label, desc, color, pct }) => (
+            <div key={label} className="flex items-center gap-3 mb-3 last:mb-0">
+              <div className={`${color} w-2 h-10 rounded-full shadow-sm shrink-0`} />
               <div className="flex-1">
-                <div className="flex justify-between text-xs font-semibold text-green-700 mb-0.5"><span>{label}</span><span>{pct}%</span></div>
-                <div className="h-2 bg-gray-100 rounded-full"><div className={`h-full ${color} rounded-full`} style={{ width:`${pct}%` }} /></div>
+                <div className="flex justify-between text-xs font-bold text-green-800">
+                  <span>{label}</span>
+                  <span className="text-green-500">{pct}% Concepts</span>
+                </div>
+                <div className="text-[10px] font-semibold text-green-600/70 mb-1">{desc}</div>
+                <div className="h-1.5 bg-white rounded-full border border-green-100"><div className={`h-full ${color} rounded-full`} style={{ width:`${pct}%` }} /></div>
               </div>
             </div>
           ))}
-          <Link to="/rank-predictor" className="block mt-3 text-center text-sm font-bold text-lime-600 hover:text-lime-800">
-            → Predict your JEE Rank
+          <Link to="/rank-predictor" className="block mt-4 text-center text-sm font-bold text-white bg-green-600 py-3 rounded-2xl shadow-md hover:bg-green-700 transition-colors">
+            Calculate your Percentile →
           </Link>
         </div>
       </div>

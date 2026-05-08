@@ -2,142 +2,167 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import Navbar from '../components/Navbar'
 import { COURSE_DATA } from '../data/courseData'
-import { Lock, CheckCircle, Star, ChevronDown, ChevronUp } from 'lucide-react'
+import { Lock, CheckCircle, Star, ChevronDown, ChevronUp, BookOpen, Atom, Beaker, Ruler } from 'lucide-react'
 import { useState } from 'react'
 
+const SUBJECT_ICONS = {
+  Physics: <Atom className="w-5 h-5" />,
+  Chemistry: <Beaker className="w-5 h-5" />,
+  Mathematics: <Ruler className="w-5 h-5" />,
+  'Preparation Strategy': <BookOpen className="w-5 h-5" />,
+  'Mock Test Zone': <CheckCircle className="w-5 h-5" />,
+}
+
 const LESSON_TYPE_ICONS = {
-  info: '📖', quiz: '❓', vocab: '📝', match: '🔗', fill: '✏️',
-  listen: '🎧', listen_fill: '🎧', reading: '👁️', writing: '✍️',
-  speaking: '🗣️', grammar: '⚡', test: '📋', mock: '🏅', interactive: '🎮',
+  info: '📖', quiz: '❓', mock: '🏅', interactive: '🎮',
 }
 
 export default function Learn() {
   const { profile } = useAuth()
   const completed = profile?.completed_lessons || []
-  const [expanded, setExpanded] = useState({ 1: true })
+  const [expandedSection, setExpandedSection] = useState('c11')
+  const [expandedChapters, setExpandedChapters] = useState({})
 
-  function isLessonUnlocked(sectionIdx, unitIdx, lessonIdx, allSections) {
-    if (sectionIdx === 0 && unitIdx === 0 && lessonIdx === 0) return true
-    // Unlock if previous lesson in same unit is done
-    if (lessonIdx > 0) {
-      const prevId = allSections[sectionIdx].units[unitIdx].lessons[lessonIdx - 1].id
-      return completed.includes(prevId)
-    }
-    // First lesson of unit: previous unit must have at least 60% done
-    if (unitIdx > 0) {
-      const prevUnit = allSections[sectionIdx].units[unitIdx - 1]
-      const prevDone = prevUnit.lessons.filter(l => completed.includes(l.id)).length
-      return prevDone >= Math.ceil(prevUnit.lessons.length * 0.6)
-    }
-    // First lesson of first unit of section: prev section must be 50% done
-    if (sectionIdx > 0) {
-      const prevSection = allSections[sectionIdx - 1]
-      const total = prevSection.units.reduce((s, u) => s + u.lessons.length, 0)
-      const done = prevSection.units.reduce((s, u) => s + u.lessons.filter(l => completed.includes(l.id)).length, 0)
-      return done >= Math.ceil(total * 0.5)
-    }
-    return false
+  function toggleChapter(chapterId) {
+    setExpandedChapters(prev => ({ ...prev, [chapterId]: !prev[chapterId] }))
+  }
+
+  function isLessonUnlocked(chapter, lessonIdx) {
+    if (lessonIdx === 0) return true // Any chapter can be started anytime
+    const prevId = chapter.lessons[lessonIdx - 1].id
+    return completed.includes(prevId)
   }
 
   return (
-    <div className="min-h-screen bg-lime-50 pb-24 pt-16">
+    <div className="min-h-screen bg-lime-50 pb-24 pt-16 font-sans">
       <Navbar />
-      <div className="max-w-lg mx-auto px-4 pt-4">
-        <h2 className="font-display text-3xl text-green-800 mb-1">Learn 📚</h2>
-        <p className="text-green-500 font-semibold text-sm mb-5">Your journey to Band 9 starts here!</p>
+      <div className="max-w-lg mx-auto px-4 pt-6">
+        <div className="mb-8">
+          <h2 className="font-display text-4xl text-green-900 mb-1 drop-shadow-sm">Roadmap 🚀</h2>
+          <p className="text-green-600 font-bold text-sm">Master the JEE Syllabus step-by-step.</p>
+        </div>
 
-        <div className="space-y-4">
-          {COURSE_DATA.map((section, sIdx) => {
-            const totalLessons = section.units.reduce((s, u) => s + u.lessons.length, 0)
-            const doneLessons = section.units.reduce((s, u) => s + u.lessons.filter(l => completed.includes(l.id)).length, 0)
+        <div className="space-y-6">
+          {COURSE_DATA.map((section) => {
+            const isSectionOpen = expandedSection === section.id
+            const totalLessons = section.subjects.reduce((s, sub) => s + sub.chapters.reduce((c, ch) => c + ch.lessons.length, 0), 0)
+            const doneLessons = section.subjects.reduce((s, sub) => s + sub.chapters.reduce((c, ch) => c + ch.lessons.filter(l => completed.includes(l.id)).length, 0), 0)
             const pct = Math.round((doneLessons / totalLessons) * 100)
-            const isOpen = !!expanded[section.id]
 
             return (
-              <div key={section.id} className="card overflow-hidden">
-                {/* Section Header */}
+              <div key={section.id} className="relative">
+                {/* Section Button - 3D Look */}
                 <button
-                  onClick={() => setExpanded(prev => ({ ...prev, [section.id]: !prev[section.id] }))}
-                  className="w-full"
+                  onClick={() => setExpandedSection(isSectionOpen ? null : section.id)}
+                  className={`w-full relative transition-all duration-200 active:translate-y-1 active:shadow-none
+                    bg-white border-4 border-green-800 rounded-3xl p-5 text-left mb-2
+                    shadow-[0_8px_0_0_#166534] ${isSectionOpen ? 'translate-y-1 shadow-[0_4px_0_0_#166534]' : ''}`}
                 >
-                  <div className={`bg-gradient-to-r ${section.color} rounded-2xl p-4 flex items-center gap-3`}>
-                    <span className="text-4xl">{section.icon}</span>
-                    <div className="flex-1 text-left">
-                      <h3 className="font-display text-xl text-white">{section.title}</h3>
-                      <p className="text-white/80 text-xs font-semibold">{section.description}</p>
-                      <div className="mt-2 h-2 bg-white/30 rounded-full">
-                        <div className="h-full bg-white rounded-full progress-fill" style={{ width: `${pct}%` }} />
-                      </div>
-                      <p className="text-white/90 text-xs font-bold mt-1">{doneLessons}/{totalLessons} lessons • {pct}%</p>
+                  <div className="flex items-center gap-4">
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${section.color} flex items-center justify-center text-3xl text-white shadow-inner`}>
+                      {section.icon}
                     </div>
-                    {isOpen ? <ChevronUp className="w-5 h-5 text-white/70" /> : <ChevronDown className="w-5 h-5 text-white/70" />}
+                    <div className="flex-1">
+                      <h3 className="font-display text-2xl text-green-900 leading-tight">{section.title}</h3>
+                      <p className="text-green-600/70 text-xs font-bold uppercase tracking-wider">{doneLessons}/{totalLessons} LESSONS DONE</p>
+                    </div>
+                    {isSectionOpen ? <ChevronUp className="text-green-800 w-6 h-6" /> : <ChevronDown className="text-green-800 w-6 h-6" />}
+                  </div>
+                  
+                  {/* Mini Progress Bar */}
+                  <div className="mt-4 h-3 bg-lime-100 rounded-full border-2 border-green-800 overflow-hidden">
+                    <div className="h-full bg-lime-400 progress-fill" style={{ width: `${pct}%` }} />
                   </div>
                 </button>
 
-                {/* Units */}
-                {isOpen && (
-                  <div className="mt-4 space-y-4">
-                    {section.units.map((unit, uIdx) => {
-                      const unitDone = unit.lessons.filter(l => completed.includes(l.id)).length
-                      return (
-                        <div key={unit.id}>
-                          <div className="flex items-center gap-2 mb-2 px-1">
-                            <span className="text-xl">{unit.icon}</span>
-                            <h4 className="font-bold text-green-800">{unit.title}</h4>
-                            <span className="ml-auto text-xs font-bold text-green-500">{unitDone}/{unit.lessons.length}</span>
+                {/* Subjects & Chapters */}
+                {isSectionOpen && (
+                  <div className="pt-4 pb-2 space-y-8 animate-in fade-in slide-in-from-top-2 duration-300">
+                    {section.subjects.map((subject) => (
+                      <div key={subject.id} className="space-y-4">
+                        {/* Subject Header */}
+                        <div className="flex items-center gap-2 px-2">
+                          <div className="p-2 bg-green-100 rounded-lg text-green-700">
+                            {SUBJECT_ICONS[subject.title] || <BookOpen className="w-5 h-5" />}
                           </div>
-
-                          <div className="space-y-2">
-                            {unit.lessons.map((lesson, lIdx) => {
-                              const isDone = completed.includes(lesson.id)
-                              const isUnlocked = isDone || isLessonUnlocked(sIdx, uIdx, lIdx, COURSE_DATA)
-                              const typeIcon = LESSON_TYPE_ICONS[lesson.type] || '📖'
-
-                              return (
-                                <div key={lesson.id} className="relative">
-                                  {lIdx < unit.lessons.length - 1 && (
-                                    <div className="absolute left-6 top-full w-0.5 h-2 bg-lime-300 z-0" />
-                                  )}
-                                  {isUnlocked ? (
-                                    <Link
-                                      to={`/lesson/${lesson.id}`}
-                                      className={`relative z-10 flex items-center gap-3 p-3 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md
-                                        ${isDone
-                                          ? 'bg-lime-50 border-lime-300 hover:border-lime-400'
-                                          : 'bg-white border-gray-200 hover:border-lime-300 hover:bg-lime-50'
-                                        }`}
-                                    >
-                                      <div className={`w-11 h-11 rounded-2xl flex items-center justify-center text-xl shrink-0
-                                        ${isDone ? 'bg-lime-400' : 'bg-lime-100'}`}>
-                                        {isDone ? '✅' : typeIcon}
-                                      </div>
-                                      <div className="flex-1 min-w-0">
-                                        <div className="font-bold text-green-800 text-sm leading-tight">{lesson.title}</div>
-                                        <div className="text-xs text-green-500 font-semibold capitalize mt-0.5">{lesson.type}</div>
-                                      </div>
-                                      <div className="flex items-center gap-1 shrink-0">
-                                        <span className="text-xs font-bold text-lime-600 bg-lime-100 px-2 py-0.5 rounded-full">+{lesson.xp}xp</span>
-                                        {isDone && <Star className="w-4 h-4 text-yellow-400" fill="currentColor" />}
-                                      </div>
-                                    </Link>
-                                  ) : (
-                                    <div className="relative z-10 flex items-center gap-3 p-3 rounded-2xl border-2 border-gray-100 bg-gray-50 opacity-60">
-                                      <div className="w-11 h-11 rounded-2xl flex items-center justify-center bg-gray-200 shrink-0">
-                                        <Lock className="w-5 h-5 text-gray-400" />
-                                      </div>
-                                      <div className="flex-1 min-w-0">
-                                        <div className="font-bold text-gray-500 text-sm">{lesson.title}</div>
-                                        <div className="text-xs text-gray-400 font-semibold">Complete previous lessons</div>
-                                      </div>
-                                    </div>
-                                  )}
-                                </div>
-                              )
-                            })}
-                          </div>
+                          <h4 className="font-display text-xl text-green-800">{subject.title}</h4>
+                          <div className="flex-1 h-0.5 bg-gradient-to-r from-green-200 to-transparent ml-2" />
                         </div>
-                      )
-                    })}
+
+                        {/* Chapters */}
+                        <div className="space-y-3">
+                          {subject.chapters.map((chapter) => {
+                            const isChapterExpanded = !!expandedChapters[chapter.id]
+                            const chapterDone = chapter.lessons.filter(l => completed.includes(l.id)).length
+                            const isChapterComplete = chapterDone === chapter.lessons.length
+
+                            return (
+                              <div key={chapter.id} className="bg-white rounded-2xl border-2 border-green-800/20 overflow-hidden shadow-sm">
+                                <button
+                                  onClick={() => toggleChapter(chapter.id)}
+                                  className="w-full p-4 flex items-center justify-between hover:bg-lime-50 transition-colors"
+                                >
+                                  <div className="flex items-center gap-3">
+                                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm
+                                      ${isChapterComplete ? 'bg-lime-400 text-white' : 'bg-lime-100 text-lime-700'}`}>
+                                      {isChapterComplete ? '✓' : chapterDone}
+                                    </div>
+                                    <span className={`font-bold text-sm ${isChapterComplete ? 'text-green-800' : 'text-gray-700'}`}>
+                                      {chapter.title}
+                                    </span>
+                                  </div>
+                                  {isChapterExpanded ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
+                                </button>
+
+                                {isChapterExpanded && (
+                                  <div className="p-3 bg-gray-50/50 border-t border-green-800/10 space-y-2">
+                                    {chapter.lessons.map((lesson, lIdx) => {
+                                      const isDone = completed.includes(lesson.id)
+                                      const isUnlocked = isDone || isLessonUnlocked(chapter, lIdx)
+                                      const typeIcon = LESSON_TYPE_ICONS[lesson.type] || '📖'
+
+                                      return (
+                                        <div key={lesson.id}>
+                                          {isUnlocked ? (
+                                            <Link
+                                              to={`/lesson/${lesson.id}`}
+                                              className={`flex items-center gap-3 p-3 rounded-xl border-2 transition-all
+                                                ${isDone 
+                                                  ? 'bg-lime-50 border-lime-300 shadow-[0_4px_0_0_#bef264] active:shadow-none active:translate-y-1' 
+                                                  : 'bg-white border-green-800/10 shadow-[0_4px_0_0_#f1f5f9] hover:border-lime-400 active:shadow-none active:translate-y-1'
+                                                }`}
+                                            >
+                                              <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0
+                                                ${isDone ? 'bg-lime-400 text-white' : 'bg-lime-100 text-lime-600'}`}>
+                                                {isDone ? '✅' : typeIcon}
+                                              </div>
+                                              <div className="flex-1">
+                                                <div className="font-bold text-green-900 text-sm leading-tight">{lesson.title}</div>
+                                                <div className="text-[10px] text-green-500 font-bold uppercase tracking-tight mt-0.5">{lesson.type} • +{lesson.xp}XP</div>
+                                              </div>
+                                            </Link>
+                                          ) : (
+                                            <div className="flex items-center gap-3 p-3 rounded-xl border-2 border-gray-100 bg-gray-50/50 opacity-60">
+                                              <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-gray-100 shrink-0 text-gray-400">
+                                                <Lock className="w-4 h-4" />
+                                              </div>
+                                              <div className="flex-1">
+                                                <div className="font-bold text-gray-400 text-sm">{lesson.title}</div>
+                                                <div className="text-[10px] text-gray-400 font-bold uppercase tracking-tight">Locked</div>
+                                              </div>
+                                            </div>
+                                          )}
+                                        </div>
+                                      )
+                                    })}
+                                  </div>
+                                )}
+                              </div>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>

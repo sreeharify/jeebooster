@@ -12,10 +12,11 @@ import Confetti from 'react-confetti'
 // ─────────────────────────────────────────────────────────────
 function findLesson(id) {
   for (const s of COURSE_DATA)
-    for (const u of s.units) {
-      const l = u.lessons.find(l => l.id === id)
-      if (l) return { lesson: l, unit: u, section: s }
-    }
+    for (const sub of s.subjects)
+      for (const ch of sub.chapters) {
+        const l = ch.lessons.find(l => l.id === id)
+        if (l) return { lesson: l, chapter: ch, subject: sub, section: s }
+      }
   return null
 }
 

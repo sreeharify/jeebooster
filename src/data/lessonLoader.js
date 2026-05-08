@@ -3,30 +3,47 @@ import rankRedirect from './lessons/jee/rank-redirect.json'
 import defaultFallback from './lessons/default/fallback.json'
 
 const LESSON_SLIDES = {
-  // Class 11
-  'l11_p1': jeeGeneric, 'l11_p2': jeeGeneric, 'l11_p3': jeeGeneric, 'l11_p4': jeeGeneric,
-  'l11_c1': jeeGeneric, 'l11_c2': jeeGeneric, 'l11_c3': jeeGeneric, 'l11_c4': jeeGeneric,
-  'l11_m1': jeeGeneric, 'l11_m2': jeeGeneric, 'l11_m3': jeeGeneric, 'l11_m4': jeeGeneric,
-
-  // Class 12
-  'l12_p1': jeeGeneric, 'l12_p2': jeeGeneric, 'l12_p3': jeeGeneric, 'l12_p4': jeeGeneric,
-  'l12_c1': jeeGeneric, 'l12_c2': jeeGeneric, 'l12_c3': jeeGeneric, 'l12_c4': jeeGeneric,
-  'l12_m1': jeeGeneric, 'l12_m2': jeeGeneric, 'l12_m3': jeeGeneric, 'l12_m4': jeeGeneric,
-
-  // Misc
-  'l_strat1': jeeGeneric, 'l_strat2': jeeGeneric,
-  'l_mock1': jeeGeneric, 'l_mock2': rankRedirect,
+  // Simulator Redirect
+  'mz_c1_l2': rankRedirect,
 }
 
 export function getSlides(lessonId) {
+  // If it's the mock simulator, return the redirect
+  if (lessonId === 'mz_c1_l2') return rankRedirect
+
+  // For all new JEE patterns, return jeeGeneric
+  if (
+    lessonId.startsWith('p11_') || 
+    lessonId.startsWith('c11_') || 
+    lessonId.startsWith('m11_') ||
+    lessonId.startsWith('p12_') || 
+    lessonId.startsWith('c12_') || 
+    lessonId.startsWith('m12_') ||
+    lessonId.startsWith('s_') ||
+    lessonId.startsWith('mz_')
+  ) {
+    return jeeGeneric
+  }
+
   return LESSON_SLIDES[lessonId] ?? defaultFallback
 }
 
 export function hasContent(lessonId) {
-  return lessonId in LESSON_SLIDES
+  return (
+    lessonId === 'mz_c1_l2' ||
+    lessonId.startsWith('p11_') || 
+    lessonId.startsWith('c11_') || 
+    lessonId.startsWith('m11_') ||
+    lessonId.startsWith('p12_') || 
+    lessonId.startsWith('c12_') || 
+    lessonId.startsWith('m12_') ||
+    lessonId.startsWith('s_') ||
+    lessonId.startsWith('mz_')
+  )
 }
 
 export function getAllLessonIds() {
+  // This is primarily for debugging/tests, we can return empty or the main ones
   return Object.keys(LESSON_SLIDES)
 }
 
