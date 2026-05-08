@@ -17,9 +17,9 @@ export default function Dashboard() {
   const completed   = profile?.completed_lessons || []
   
   // Calculate total lessons across all levels
-  const total = COURSE_DATA.reduce((sum, sec) => 
-    sum + sec.subjects.reduce((s, sub) => 
-      s + sub.chapters.reduce((c, ch) => c + ch.lessons.length, 0), 0), 0)
+  const total = (COURSE_DATA || []).reduce((sum, sec) => 
+    sum + (sec.subjects || []).reduce((s, sub) => 
+      s + (sub.chapters || []).reduce((c, ch) => c + (ch.lessons || []).length, 0), 0), 0)
       
   const pct         = Math.round((completed.length / total) * 100)
   const xpToday     = profile?.xp_today  || 0
@@ -114,10 +114,10 @@ export default function Dashboard() {
             <div className="h-full bg-gradient-to-r from-lime-400 to-green-500 rounded-full progress-fill" style={{ width: `${pct}%` }} />
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {COURSE_DATA.map(section => {
-              const secTotal = section.subjects.reduce((s, sub) => s + sub.chapters.reduce((c, ch) => c + ch.lessons.length, 0), 0)
-              const secDone = section.subjects.reduce((s, sub) => s + sub.chapters.reduce((c, ch) => c + ch.lessons.filter(l => completed.includes(l.id)).length, 0), 0)
-              const secPct = Math.round((secDone / secTotal) * 100)
+            {(COURSE_DATA || []).map(section => {
+              const secTotal = (section.subjects || []).reduce((s, sub) => s + (sub.chapters || []).reduce((c, ch) => c + (ch.lessons || []).length, 0), 0)
+              const secDone = (section.subjects || []).reduce((s, sub) => s + (sub.chapters || []).reduce((c, ch) => c + (ch.lessons || []).filter(l => completed.includes(l.id)).length, 0), 0)
+              const secPct = secTotal > 0 ? Math.round((secDone / secTotal) * 100) : 0
               
               return (
                 <div key={section.id} className="flex items-center gap-2 text-sm">

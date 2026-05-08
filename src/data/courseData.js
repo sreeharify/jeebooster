@@ -1,7 +1,7 @@
 export const COURSE_DATA = [
   {
     id: 'c11',
-    title: 'Class 11 - Foundation',
+    title: 'Class 11',
     icon: '📗',
     color: 'from-blue-500 to-indigo-600',
     description: 'Master the fundamentals of Physics, Chemistry, and Mathematics.',
@@ -254,7 +254,7 @@ export const COURSE_DATA = [
   },
   {
     id: 'c12',
-    title: 'Class 12 - Advanced',
+    title: 'Class 12',
     icon: '📘',
     color: 'from-purple-500 to-red-600',
     description: 'Advanced topics for JEE Main and Advanced success.',

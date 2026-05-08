@@ -20,7 +20,7 @@ const LESSON_TYPE_ICONS = {
 export default function Learn() {
   const { profile } = useAuth()
   const completed = profile?.completed_lessons || []
-  const [expandedSection, setExpandedSection] = useState('c11')
+  const [expandedSections, setExpandedSections] = useState({ c11: true, c12: true, misc: true })
   const [expandedChapters, setExpandedChapters] = useState({})
 
   function toggleChapter(chapterId) {
@@ -44,7 +44,7 @@ export default function Learn() {
 
         <div className="space-y-6">
           {COURSE_DATA.map((section) => {
-            const isSectionOpen = expandedSection === section.id
+            const isSectionOpen = expandedSections[section.id]
             const totalLessons = section.subjects.reduce((s, sub) => s + sub.chapters.reduce((c, ch) => c + ch.lessons.length, 0), 0)
             const doneLessons = section.subjects.reduce((s, sub) => s + sub.chapters.reduce((c, ch) => c + ch.lessons.filter(l => completed.includes(l.id)).length, 0), 0)
             const pct = Math.round((doneLessons / totalLessons) * 100)
@@ -53,7 +53,7 @@ export default function Learn() {
               <div key={section.id} className="relative">
                 {/* Section Button - 3D Look */}
                 <button
-                  onClick={() => setExpandedSection(isSectionOpen ? null : section.id)}
+                  onClick={() => setExpandedSections(prev => ({ ...prev, [section.id]: !prev[section.id] }))}
                   className={`w-full relative transition-all duration-200 active:translate-y-1 active:shadow-none
                     bg-white border-4 border-green-800 rounded-3xl p-5 text-left mb-2
                     shadow-[0_8px_0_0_#166534] ${isSectionOpen ? 'translate-y-1 shadow-[0_4px_0_0_#166534]' : ''}`}

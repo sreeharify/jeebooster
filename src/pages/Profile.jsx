@@ -170,9 +170,9 @@ export default function Profile() {
         <div className="card">
           <h3 className="font-display text-xl text-green-800 mb-3">Course Progress</h3>
           <div className="space-y-3">
-            {COURSE_DATA.map(sec => {
-              const total = sec.units.reduce((s, u) => s + u.lessons.length, 0)
-              const done  = sec.units.reduce((s, u) => s + u.lessons.filter(l => completed.includes(l.id)).length, 0)
+            {(COURSE_DATA || []).map(sec => {
+              const total = (sec.subjects || []).reduce((s, sub) => s + (sub.chapters || []).reduce((c, ch) => c + (ch.lessons || []).length, 0), 0)
+              const done  = (sec.subjects || []).reduce((s, sub) => s + (sub.chapters || []).reduce((c, ch) => c + (ch.lessons || []).filter(l => completed.includes(l.id)).length, 0), 0)
               const pct   = total > 0 ? Math.round((done / total) * 100) : 0
               return (
                 <div key={sec.id}>
