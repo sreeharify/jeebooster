@@ -1,0 +1,275 @@
+[
+  {
+    "kind": "fill_blank",
+    "tag": "question",
+    "level": 1,
+    "sentence": "A Vernier caliper with 20 VSD equal to 19 MSD (1 MSD = 1 mm) has a least count of _______.",
+    "blanks": [
+      {
+        "correct": "0.05 mm",
+        "distractors": [
+          "0.1 mm",
+          "0.02 mm",
+          "0.5 mm"
+        ]
+      }
+    ],
+    "explanation": "LC = 1/n × MSD = 1/20 × 1 mm = **0.05 mm** ✓\n\nVerification: 1 VSD = 19/20 mm = 0.95 mm → LC = 1 − 0.95 = 0.05 mm"
+  },
+  {
+    "kind": "match_pairs",
+    "tag": "question",
+    "level": 1,
+    "instruction": "Match each instrument to its typical least count:",
+    "pairs": [
+      {
+        "word": "Metre Scale",
+        "meaning": "1 mm"
+      },
+      {
+        "word": "Vernier Caliper (10 div)",
+        "meaning": "0.1 mm"
+      },
+      {
+        "word": "Vernier Caliper (20 div)",
+        "meaning": "0.05 mm"
+      },
+      {
+        "word": "Screw Gauge (Pitch 1mm, 100 CSD)",
+        "meaning": "0.01 mm"
+      }
+    ],
+    "explanation": "Metre scale: least count = smallest graduation = 1 mm.\nVernier (10): LC = 1/10 mm = 0.1 mm.\nVernier (20): LC = 1/20 mm = 0.05 mm.\nScrew gauge: LC = 1/100 mm = 0.01 mm (10× finer than Vernier)."
+  },
+  {
+    "kind": "explainer",
+    "tag": "note",
+    "level": 1,
+    "title": "Absolute Error & True Value",
+    "sections": [
+      {
+        "heading": "What is the True Value?",
+        "body": "We can never know the exact true value.\n\nInstead, we take the **arithmetic mean** of n repeated measurements as our best estimate:\n\n**ā = (a₁ + a₂ + ... + aₙ) / n**"
+      },
+      {
+        "heading": "Absolute Error",
+        "body": "For each measurement aᵢ:\n\n**Δaᵢ = |aᵢ − ā|**\n\nAlways take the **absolute value** — errors are never negative."
+      },
+      {
+        "heading": "Mean Absolute Error",
+        "body": "Average all individual absolute errors:\n\n**Δā = (Δa₁ + Δa₂ + ... + Δaₙ) / n**\n\nFinal result reported as: **(ā ± Δā)**\n\nThis means the true value likely lies between ā − Δā and ā + Δā."
+      }
+    ],
+    "highlight": "Mean absolute error = our uncertainty. The true value is within ā ± Δā with high confidence."
+  },
+  {
+    "kind": "formula_card",
+    "tag": "note",
+    "level": 2,
+    "title": "Absolute → Relative → Percentage Error",
+    "formula": "Δa_rel = Δā / ā          %Error = (Δā / ā) × 100%",
+    "color": "orange",
+    "parts": [
+      {
+        "symbol": "Δā",
+        "meaning": "Mean absolute error (same units as quantity)"
+      },
+      {
+        "symbol": "Δa_rel",
+        "meaning": "Relative error (dimensionless, always < 1)"
+      },
+      {
+        "symbol": "%Error",
+        "meaning": "Percentage error (dimensionless, in %)"
+      },
+      {
+        "symbol": "ā",
+        "meaning": "Mean (best estimate) of the measured quantity"
+      }
+    ],
+    "note": "Relative error has no units. It tells you what fraction of the value is uncertain.",
+    "derived_from": "Relative error = |uncertainty|/|value|. Multiply by 100 to express as percentage."
+  },
+  {
+    "kind": "mcq",
+    "tag": "question",
+    "level": 2,
+    "question": "Five measurements of a length are: 2.62, 2.63, 2.61, 2.64, 2.60 cm. The mean absolute error is:",
+    "options": [
+      "0.01 cm",
+      "0.012 cm",
+      "0.014 cm",
+      "0.02 cm"
+    ],
+    "correct": "0.012 cm",
+    "explanation": "Mean ā = (2.62+2.63+2.61+2.64+2.60)/5 = 13.10/5 = 2.62 cm\n\nAbsolute errors:\n|2.62−2.62| = 0.00\n|2.63−2.62| = 0.01\n|2.61−2.62| = 0.01\n|2.64−2.62| = 0.02\n|2.60−2.62| = 0.02\n\nΔā = (0.00+0.01+0.01+0.02+0.02)/5 = 0.06/5 = **0.012 cm** ✓",
+    "hint": "Step 1: Find the mean. Step 2: Find |each value − mean|. Step 3: Average those."
+  },
+  {
+    "kind": "fill_blank",
+    "tag": "question",
+    "level": 2,
+    "sentence": "If the mean value is 5.00 s and the mean absolute error is 0.05 s, the percentage error is _______.",
+    "blanks": [
+      {
+        "correct": "1%",
+        "distractors": [
+          "0.1%",
+          "5%",
+          "0.5%"
+        ]
+      }
+    ],
+    "explanation": "%Error = (Δā / ā) × 100 = (0.05 / 5.00) × 100 = **1%** ✓\n\nNote: Relative error = 0.05/5.00 = 0.01 (dimensionless)"
+  },
+  {
+    "kind": "explainer",
+    "tag": "note",
+    "level": 2,
+    "title": "Error Propagation — The Core Rules",
+    "sections": [
+      {
+        "heading": "Why Propagation Matters",
+        "body": "Derived quantities (density = mass/volume, speed = distance/time) depend on measured values. Errors in each measurement **combine** to give the error in the derived result.\n\nJEE tests this regularly — learn these rules once, use them forever."
+      },
+      {
+        "heading": "Rule 1: Addition & Subtraction",
+        "body": "If Z = A + B  or  Z = A − B:\n\n**ΔZ = ΔA + ΔB**\n\nAbsolute errors always ADD — regardless of + or − sign."
+      },
+      {
+        "heading": "Rule 2: Multiplication & Division",
+        "body": "If Z = A × B  or  Z = A / B:\n\n**ΔZ/Z = ΔA/A + ΔB/B**\n\nRelative errors ADD for both multiplication and division."
+      },
+      {
+        "heading": "Rule 3: Powers",
+        "body": "If Z = Aᵖ Bq / Cʳ:\n\n**ΔZ/Z = p(ΔA/A) + q(ΔB/B) + r(ΔC/C)**\n\nThe power **multiplies** the relative error of each quantity."
+      }
+    ],
+    "highlight": "For Z = A³: ΔZ/Z = 3(ΔA/A). The exponent multiplies the error — this is the most-tested rule in JEE."
+  },
+  {
+    "kind": "formula_card",
+    "tag": "note",
+    "level": 2,
+    "title": "Error Propagation — Master Formula",
+    "formula": "Z = AᵖBq/Cʳ  →  ΔZ/Z = p(ΔA/A) + q(ΔB/B) + r(ΔC/C)",
+    "color": "purple",
+    "parts": [
+      {
+        "symbol": "p, q, r",
+        "meaning": "Absolute values of exponents/powers in the formula"
+      },
+      {
+        "symbol": "ΔA/A",
+        "meaning": "Relative error in A"
+      },
+      {
+        "symbol": "ΔZ/Z",
+        "meaning": "Relative error in the derived quantity Z"
+      }
+    ],
+    "note": "Use ABSOLUTE values of powers even for division (denominator). Never use negative exponents.",
+    "derived_from": "Take log: ln Z = p·ln A + q·ln B − r·ln C. Differentiate: dZ/Z = p·dA/A + q·dB/B + r·dC/C. For errors, use absolute values."
+  },
+  {
+    "kind": "tap_reveal",
+    "tag": "note",
+    "title": "Error Propagation — Quick Reference",
+    "instruction": "Tap each formula to see the error rule.",
+    "items": [
+      {
+        "front": "Z = A + B",
+        "back": "ΔZ = ΔA + ΔB\nAbsolute errors add."
+      },
+      {
+        "front": "Z = A − B",
+        "back": "ΔZ = ΔA + ΔB\nAbsolute errors STILL add! (Common trap in JEE)"
+      },
+      {
+        "front": "Z = A × B",
+        "back": "ΔZ/Z = ΔA/A + ΔB/B\nRelative errors add."
+      },
+      {
+        "front": "Z = A / B",
+        "back": "ΔZ/Z = ΔA/A + ΔB/B\nRelative errors add for division too."
+      },
+      {
+        "front": "Z = Aⁿ",
+        "back": "ΔZ/Z = n × (ΔA/A)\nPower multiplies the relative error."
+      },
+      {
+        "front": "Z = AᵖBq/Cʳ",
+        "back": "ΔZ/Z = p(ΔA/A) + q(ΔB/B) + r(ΔC/C)\nThe master formula."
+      }
+    ]
+  },
+  {
+    "kind": "worked_example",
+    "tag": "note",
+    "level": 2,
+    "title": "Worked Example: Error in Sum & Difference",
+    "problem": "L₁ = (12.5 ± 0.2) cm and L₂ = (7.3 ± 0.1) cm. Find (a) L₁ + L₂ and (b) L₁ − L₂ with errors.",
+    "steps": [
+      {
+        "step": "Identify values and errors",
+        "detail": "L₁ = 12.5 cm,  ΔL₁ = 0.2 cm\nL₂ = 7.3 cm,   ΔL₂ = 0.1 cm"
+      },
+      {
+        "step": "(a) Calculate L₁ + L₂",
+        "detail": "Sum = 12.5 + 7.3 = 19.8 cm\n\nError: ΔZ = ΔL₁ + ΔL₂ = 0.2 + 0.1 = 0.3 cm\n\nResult: **(19.8 ± 0.3) cm**"
+      },
+      {
+        "step": "(b) Calculate L₁ − L₂",
+        "detail": "Difference = 12.5 − 7.3 = 5.2 cm\n\nError: ΔZ = ΔL₁ + ΔL₂ = 0.2 + 0.1 = 0.3 cm\n\nResult: **(5.2 ± 0.3) cm**"
+      },
+      {
+        "step": "Key Insight",
+        "detail": "The error is IDENTICAL in both cases (0.3 cm).\n\nAbsolute errors always ADD — whether you add or subtract the quantities. This is the #1 trap in JEE for this topic!"
+      }
+    ]
+  },
+  {
+    "kind": "worked_example",
+    "tag": "note",
+    "level": 3,
+    "title": "Worked Example: Error in Powers — Sphere Volume",
+    "problem": "Radius of a sphere: r = (2.10 ± 0.05) cm. Find the percentage error in its volume V = (4/3)πr³.",
+    "steps": [
+      {
+        "step": "Identify the formula and powers",
+        "detail": "V = (4/3)πr³\n\nThe constant (4/3)π has zero error. Only r contributes.\nPower of r = **3**."
+      },
+      {
+        "step": "Apply the power rule",
+        "detail": "ΔV/V = 3 × (Δr/r)\n\nThe exponent 3 multiplies the relative error of r."
+      },
+      {
+        "step": "Calculate % error in r",
+        "detail": "%Error in r = (Δr/r) × 100 = (0.05/2.10) × 100 = 2.38%"
+      },
+      {
+        "step": "Calculate % error in V",
+        "detail": "%Error in V = 3 × %Error in r = 3 × 2.38% = **7.14%**"
+      },
+      {
+        "step": "Final Answer",
+        "detail": "Percentage error in volume ≈ **7.1%**\n\n💡 The volume error is TRIPLE the radius error because V ∝ r³.\nThis scaling by powers is the key JEE concept."
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "tag": "question",
+    "level": 3,
+    "question": "T = 2π√(L/g). If L has 2% error and g has 3% error, the % error in T is:",
+    "options": [
+      "5%",
+      "2.5%",
+      "1%",
+      "2%"
+    ],
+    "correct": "2.5%",
+    "explanation": "T = 2π × L^(1/2) × g^(−1/2)\n\nΔT/T = (1/2)(ΔL/L) + (1/2)(Δg/g)\n\n= (1/2)(2%) + (1/2)(3%) = 1% + 1.5% = **2.5%** ✓\n\nNote: Use |power| = 1/2 for both L and g. Constants 2π have no error.",
+    "hint": "Rewrite T as L^(1/2) × g^(-1/2). Power of each is 1/2. Apply: ΔT/T = (1/2)(ΔL/L) + (1/2)(Δg/g)"
+  }
+]

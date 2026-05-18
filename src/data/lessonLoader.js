@@ -3,14 +3,20 @@ import rankRedirect from './lessons/jee/rank-redirect.json'
 import defaultFallback from './lessons/default/fallback.json'
 
 // ── Dedicated lesson content (add new imports here) ──
-import p11_c1_l1 from './lessons/jee/p11_c1_l1.json'
+import p11_c1_l1_p1 from './lessons/jee/p11_c1_l1_p1.json'
+import p11_c1_l1_p2 from './lessons/jee/p11_c1_l1_p2.json'
+import p11_c1_l1_p3 from './lessons/jee/p11_c1_l1_p3.json'
+import p11_c1_l1_p4 from './lessons/jee/p11_c1_l1_p4.json'
 
 const LESSON_SLIDES = {
   // Simulator Redirect
   'mz_c1_l2': rankRedirect,
 
   // ── Physics Class 11 ──
-  'p11_c1_l1': p11_c1_l1,
+  'p11_c1_l1_p1': p11_c1_l1_p1,
+  'p11_c1_l1_p2': p11_c1_l1_p2,
+  'p11_c1_l1_p3': p11_c1_l1_p3,
+  'p11_c1_l1_p4': p11_c1_l1_p4,
 
   // ── Add more lessons below as they are created ──
   // 'p11_c1_l2': p11_c1_l2,

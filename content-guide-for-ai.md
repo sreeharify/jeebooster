@@ -508,48 +508,40 @@ Setting `"tag": "prev_year"` and `"year": "JEE Main 20XX"` renders a gold badge 
 
 ## LESSON STRUCTURE TEMPLATE
 
-A high-quality lesson with **20–30 slides** should follow this arc:
+A high-quality subtopic is now divided into **4 separate Parts** (completed progressively). 
+Each part is a separate JSON file/array containing **5–8 slides** (totalling ~20-30 slides across all parts). 
 
 ```
-── OPENING ──
-01  explainer     (tag:note, level:1)   — Hook: why this topic matters for JEE
-02  visual        (tag:note)            — Diagram or table orienting the student
+── PART 1: BASICS (5–8 slides) ──
+01  explainer     (tag:note, level:1)   — Concept intro
+02  visual        (tag:note)            — Diagram orienting the student
+03  explainer     (tag:note, level:1)   — Core concept
+04  formula_card  (tag:note, level:1)   — Main formula
+05  mcq           (tag:question, L1)    — Basic recall
 
-── CONCEPT BLOCK 1 ──
-03  explainer     (tag:note, level:1)   — Core concept / definition
-04  formula_card  (tag:note, level:1)   — The main formula with breakdown
-05  visual        (tag:note)            — Diagram illustrating the concept
-06  mcq           (tag:question, L1)    — Direct recall check
-07  fill_blank    (tag:question, L2)    — Apply the formula
+── PART 2: MEMORIZATION & CHECKING (5–8 slides) ──
+01  tap_reveal    (tag:note)            — Memorization list
+02  mini_explainer(tag:note)            — Shortcut or trick
+03  fill_blank    (tag:question, L2)    — Formula application
+04  match_pairs   (tag:question, L1)    — Concepts matching
+05  mcq           (tag:question, L2)    — Conceptual problem
 
-── CONCEPT BLOCK 2 ──
-08  tap_reveal    (tag:note)            — Memorization list
-09  mini_explainer(tag:note)            — Shortcut or trick
-10  mcq           (tag:question, L2)    — Conceptual application
-11  match_pairs   (tag:question, L1)    — Connect related concepts
+── PART 3: DEEP DIVE (5–8 slides) ──
+01  explainer     (tag:note, level:2)   — Deeper aspect
+02  visual        (tag:note)            — Complex diagram
+03  worked_example(tag:note, level:3)   — Full problem solved step by step
+04  mcq           (tag:question, L3)    — Multi-step problem
+05  reorder       (tag:question, L2)    — Sequence order
 
-── CONCEPT BLOCK 3 ──
-12  explainer     (tag:note, level:2)   — Deeper / advanced aspect
-13  visual        (tag:note)            — Another diagram if needed
-14  worked_example(tag:note, level:3)   — Full JEE-style problem solved step by step
-15  mcq           (tag:question, L3)    — Multi-step problem
-16  reorder       (tag:question, L2)    — Order steps/sequence
-
-── MISTAKE BUSTER ──
-17  common_mistake(tag:note)            — Top 3 mistakes in this topic
-18  error_correction(tag:question, L3)  — Spot the wrong statement
-
-── JEE CHALLENGE ──
-19  mcq           (tag:prev_year, L3)   — Actual JEE Main past year question
-20  mcq           (tag:question, L4)    — Expert-level problem
-
-── CLOSING ──
-21  flashcard     (tag:note, level:2)   — Formula summary flip card
-22  explainer     (tag:note, level:1)   — Chapter summary: what to remember
+── PART 4: MASTERY (5–8 slides) ──
+01  common_mistake(tag:note)            — Common misconceptions
+02  error_correction(tag:question, L3)  — Identify wrong statement
+03  mcq           (tag:prev_year, L4)   — Expert/JEE PYQ problem
+04  flashcard     (tag:note, level:2)   — Quick summary
+05  explainer     (tag:note, level:1)   — Lesson wrap-up
 ```
 
-**Minimum:** 20 slides. **Ideal:** 25–30 slides. No hard upper limit.
-Use at least **6 different slide kinds** per lesson.
+Each part should use at least **3-4 different slide kinds**.
 
 ---
 
@@ -613,6 +605,14 @@ SVG CONVENTIONS
 
 ---
 
+## MATH & EQUATION FORMATTING
+
+1. **Use Unicode & HTML for Inline Math**: For standard formulas integrated into text, use appropriate Unicode symbols (`∫`, `∑`, `°`, `±`, `α`, `β`) and HTML tags (`<sup>`, `<sub>`, `<i>`). Example: `[ML⁻¹T⁻²]`, `x² + y²`, `F = ma`.
+2. **No Raw-Text Integrals**: NEVER try to write complex structures (like integrals with limits, limits to infinity, big fractions) as raw text (e.g. "integral from 0 to 1"). 
+3. **Complex Math in Visual Slides**: If an equation is too complex to look good with Unicode/HTML in a regular text block, use a `visual` slide. Construct it elegantly with SVG or HTML layouts (using tables or flexbox for fractions) to present limits, matrices, or large summation formulas cleanly.
+
+---
+
 ## MOCK TEST FILE STRUCTURE
 
 ```json
@@ -644,11 +644,12 @@ SVG CONVENTIONS
 Before submitting a lesson JSON, verify:
 
 - [ ] Valid JSON — array of slide objects
-- [ ] File path: `src/data/lessons/jee/<lesson_id>.json`
-- [ ] **20–30 slides minimum**
+- [ ] Ensure 4 parts are generated (`<lesson_id>_p1.json` to `<lesson_id>_p4.json`)
+- [ ] **~5-8 slides per part** (totalling ~20-30 for the whole subtopic)
+- [ ] Follow Math & Equation Formatting correctly (no raw text integrals)
 - [ ] Every slide has `kind`, `tag`, and `level` (for question slides)
-- [ ] At least **6 different `kind` values** used
-- [ ] At least **2 `visual` slides** with SVG/HTML diagrams
+- [ ] At least **3-4 different `kind` values** used per part
+- [ ] At least **2 `visual` slides** with SVG/HTML diagrams overall
 - [ ] At least **1 `worked_example`** for non-trivial topics
 - [ ] At least **1 `common_mistake`** slide
 - [ ] Difficulty increases: starts L1 → ends L3–4

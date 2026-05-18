@@ -1,0 +1,209 @@
+[
+  {
+    "kind": "mcq",
+    "tag": "question",
+    "level": 3,
+    "question": "E = p²/(2m). If % error in momentum p is 1% and % error in mass m is 2%, the % error in E is:",
+    "options": [
+      "4%",
+      "3%",
+      "5%",
+      "6%"
+    ],
+    "correct": "4%",
+    "explanation": "E = p² × (2m)⁻¹ → power of p is 2, power of m is 1\n\nΔE/E = 2(Δp/p) + 1(Δm/m)\n\n= 2(1%) + 1(2%) = 2% + 2% = **4%** ✓\n\n(The constant 2 in denominator has no error. |power of m| = 1)",
+    "hint": "Write E = p² × m⁻¹. Power of p = 2, power of m = 1. Apply error formula."
+  },
+  {
+    "kind": "mini_explainer",
+    "tag": "note",
+    "title": "⚡ JEE Shortcut: Max % Error in Any Formula",
+    "body": "For Z = AᵃBᵇ/CᶜDᵈ:\n\n**% error in Z = a(%ΔA) + b(%ΔB) + c(%ΔC) + d(%ΔD)**\n\nAll terms POSITIVE (absolute powers). The variable with the HIGHEST power contributes the MOST error.\n\n💡 Strategy: if two measurements have equal % error, the one raised to a higher power dominates.",
+    "quick": [
+      {
+        "label": "Z = A²B³/C → %ΔZ = 2(%ΔA) + 3(%ΔB) + 1(%ΔC)",
+        "icon": "📐"
+      },
+      {
+        "label": "B³ gives 3× more error contribution than C¹ for same % error",
+        "icon": "⚠️"
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "tag": "question",
+    "level": 3,
+    "question": "R = V/I where V = (100 ± 2) V and I = (10 ± 0.5) A. The % error in R is:",
+    "options": [
+      "2%",
+      "5%",
+      "7%",
+      "9%"
+    ],
+    "correct": "7%",
+    "explanation": "R = V/I → ΔR/R = ΔV/V + ΔI/I\n\n%Error in V = (2/100) × 100 = 2%\n%Error in I = (0.5/10) × 100 = 5%\n\n%Error in R = 2% + 5% = **7%** ✓",
+    "hint": "For R = V/I: relative errors add. Calculate % error in V and I separately, then add."
+  },
+  {
+    "kind": "match_pairs",
+    "tag": "question",
+    "level": 2,
+    "instruction": "Match the formula to the correct error propagation rule:",
+    "pairs": [
+      {
+        "word": "Z = A + B",
+        "meaning": "ΔZ = ΔA + ΔB (absolute errors add)"
+      },
+      {
+        "word": "Z = A × B",
+        "meaning": "ΔZ/Z = ΔA/A + ΔB/B (relative errors add)"
+      },
+      {
+        "word": "Z = A³",
+        "meaning": "ΔZ/Z = 3·(ΔA/A) (power multiplies relative error)"
+      },
+      {
+        "word": "Z = √A",
+        "meaning": "ΔZ/Z = (1/2)·(ΔA/A) (fractional power rule)"
+      }
+    ],
+    "explanation": "√A = A^(1/2) so power = 1/2 → ΔZ/Z = (1/2)(ΔA/A).\nFor Z = A − B: same rule as addition — ΔZ = ΔA + ΔB (errors add regardless of sign)."
+  },
+  {
+    "kind": "explainer",
+    "tag": "note",
+    "level": 1,
+    "title": "Significant Figures — What and Why",
+    "sections": [
+      {
+        "heading": "What Are Significant Figures?",
+        "body": "Significant figures (SF or sig figs) are the **meaningful digits** in a measurement.\n\nThey reflect the precision of the measuring instrument:\n• 3.46 cm (3 SF) → read to nearest 0.01 cm\n• 3.4 cm (2 SF) → read to nearest 0.1 cm"
+      },
+      {
+        "heading": "Why It Matters in JEE",
+        "body": "JEE Numerical Value questions and result expression require correct sig figs.\n\n• Over-reporting: 2.5 × 3.1 = 7.75 → should be **7.8** (2 SF)\n• Under-reporting: 2.50 × 3.10 = 7.75 → correct to **3 SF** = 7.75"
+      }
+    ],
+    "highlight": "Sig figs = precision of measurement. Never report more precision than your instrument provides."
+  },
+  {
+    "kind": "visual",
+    "tag": "note",
+    "title": "Significant Figure Counting Rules",
+    "caption": "Apply these rules in order. Scientific notation removes all ambiguity.",
+    "html": "<div style='font-family:sans-serif;padding:8px;max-width:360px;margin:auto'><table style='width:100%;border-collapse:collapse;font-size:14px'><thead><tr style='background:#7c3aed;color:white'><th style='padding:8px 6px;text-align:left'>Rule</th><th style='padding:8px 6px;text-align:left'>Example</th><th style='padding:8px 6px;text-align:center'>SF</th></tr></thead><tbody><tr style='background:#f5f3ff'><td style='padding:7px 6px'>Non-zero digits: <b>always significant</b></td><td style='padding:7px 6px;color:#7c3aed'>3.46</td><td style='padding:7px 6px;text-align:center;font-weight:bold;color:#7c3aed'>3</td></tr><tr style='background:#ffffff'><td style='padding:7px 6px'>Zeros <b>between</b> non-zeros: significant</td><td style='padding:7px 6px;color:#7c3aed'>3.046</td><td style='padding:7px 6px;text-align:center;font-weight:bold;color:#7c3aed'>4</td></tr><tr style='background:#f5f3ff'><td style='padding:7px 6px'><b>Leading</b> zeros: NOT significant</td><td style='padding:7px 6px;color:#ef4444'>0.0034</td><td style='padding:7px 6px;text-align:center;font-weight:bold;color:#ef4444'>2</td></tr><tr style='background:#ffffff'><td style='padding:7px 6px'><b>Trailing</b> zeros after decimal: significant</td><td style='padding:7px 6px;color:#16a34a'>3.460</td><td style='padding:7px 6px;text-align:center;font-weight:bold;color:#16a34a'>4</td></tr><tr style='background:#f5f3ff'><td style='padding:7px 6px'>Trailing zeros in integer: <b>ambiguous</b></td><td style='padding:7px 6px;color:#f97316'>3400</td><td style='padding:7px 6px;text-align:center;font-weight:bold;color:#f97316'>2,3 or 4</td></tr><tr style='background:#ffffff'><td style='padding:7px 6px'>Scientific notation: all mantissa digits</td><td style='padding:7px 6px;color:#3b82f6'>3.40×10³</td><td style='padding:7px 6px;text-align:center;font-weight:bold;color:#3b82f6'>3</td></tr></tbody></table><div style='margin-top:8px;background:#fef9c3;padding:8px;border-radius:6px;font-size:13px;color:#374151'><b>💡 Tip:</b> Use scientific notation to remove all ambiguity about trailing zeros!</div></div>"
+  },
+  {
+    "kind": "tap_reveal",
+    "tag": "note",
+    "title": "Tap to Reveal: Sig Fig Rules with Examples",
+    "instruction": "Tap each rule to reveal examples.",
+    "items": [
+      {
+        "front": "Rule 1: Non-zero digits",
+        "back": "All non-zero digits are significant.\n3.46 → 3 SF | 28.9 → 3 SF | 1234 → 4 SF"
+      },
+      {
+        "front": "Rule 2: Captive zeros",
+        "back": "Zeros trapped between non-zero digits are significant.\n3.046 → 4 SF | 1001 → 4 SF | 40.05 → 4 SF"
+      },
+      {
+        "front": "Rule 3: Leading zeros",
+        "back": "Zeros to the LEFT of all non-zero digits: NOT significant.\n0.0034 → 2 SF | 0.04 → 1 SF | 0.007 → 1 SF"
+      },
+      {
+        "front": "Rule 4: Trailing zeros + decimal",
+        "back": "Trailing zeros to the RIGHT of the decimal point ARE significant.\n3.460 → 4 SF | 5.00 → 3 SF | 12.0 → 3 SF"
+      },
+      {
+        "front": "Rule 5: Trailing zeros in integers",
+        "back": "Ambiguous without a decimal point.\n3400 → could be 2, 3, or 4 SF\nWrite 3.40 × 10³ to show 3 SF clearly."
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "tag": "question",
+    "level": 2,
+    "question": "How many significant figures are in the number 0.00340?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": "3",
+    "explanation": "Breaking down 0.00340:\n• '0.00' — leading zeros → NOT significant\n• '3' → significant (non-zero digit)\n• '4' → significant (non-zero digit)\n• '0' — trailing zero after decimal → significant\n\nTotal = **3 significant figures** ✓\n\nIn scientific notation: 3.40 × 10⁻³ (3 SF is clear)",
+    "hint": "Leading zeros (before the 3) are not significant. The trailing zero after 4 IS significant because it follows the decimal."
+  },
+  {
+    "kind": "explainer",
+    "tag": "note",
+    "level": 2,
+    "title": "Sig Figs in Arithmetic Operations",
+    "sections": [
+      {
+        "heading": "Addition & Subtraction",
+        "body": "Round result to the **least number of decimal places** among all numbers.\n\nExample:\n12.4 + 3.52 + 0.123 = 16.043\n→ 12.4 has fewest decimal places (1)\n→ Answer: **16.0** (1 decimal place)"
+      },
+      {
+        "heading": "Multiplication & Division",
+        "body": "Round result to the **least number of significant figures** among all numbers.\n\nExample:\n2.5 × 3.14 = 7.85\n→ 2.5 has fewest SF (2)\n→ Answer: **7.9** (2 SF)"
+      },
+      {
+        "heading": "Rounding Rules",
+        "body": "• Digit to drop < 5 → leave preceding digit unchanged\n• Digit to drop > 5 → increase preceding digit by 1\n• Digit to drop = 5 → round to even (2.45 → 2.4, 2.35 → 2.4)"
+      }
+    ],
+    "highlight": "Addition/Subtraction → match DECIMAL PLACES. Multiplication/Division → match SIG FIGS. Two different rules!"
+  },
+  {
+    "kind": "fill_blank",
+    "tag": "question",
+    "level": 2,
+    "sentence": "The result of 2.33 × 4.1 reported to the correct number of significant figures is _______.",
+    "blanks": [
+      {
+        "correct": "9.6",
+        "distractors": [
+          "9.553",
+          "9.55",
+          "10"
+        ]
+      }
+    ],
+    "explanation": "2.33 × 4.1 = 9.553\n\nSig figs: 2.33 has 3 SF, 4.1 has **2 SF** → answer must have 2 SF.\n\n9.553 rounded to 2 SF = **9.6** ✓\n\n(The '5' in 9.553 rounds up the 9.5 to 9.6)"
+  },
+  {
+    "kind": "mini_explainer",
+    "tag": "note",
+    "title": "⚡ Order of Magnitude — Quick Concept",
+    "body": "Order of magnitude = the power of 10 nearest to the number.\n\nMethod:\n1. Write in scientific notation: N × 10ᵖ\n2. If N < √10 ≈ 3.162 → order = 10ᵖ\n3. If N ≥ 3.162 → order = 10ᵖ⁺¹\n\nExamples:\n• 4500 = 4.5 × 10³ → 4.5 > 3.162 → order = 10⁴\n• 2000 = 2.0 × 10³ → 2.0 < 3.162 → order = 10³",
+    "quick": [
+      {
+        "label": "Speed of light: 3.0×10⁸ → 3.0 < 3.162 → order = 10⁸",
+        "icon": "💡"
+      },
+      {
+        "label": "Planck's h: 6.6×10⁻³⁴ → 6.6 > 3.162 → order = 10⁻³³",
+        "icon": "🔬"
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "tag": "question",
+    "level": 3,
+    "question": "The result of (14.5 + 1.234 − 3.24) expressed to correct significant figures is:",
+    "options": [
+      "12.494",
+      "12.5",
+      "12.49",
+      "12"
+    ],
+    "correct": "12.5",
+    "explanation": "14.5 + 1.234 − 3.24 = 12.494\n\nFor addition/subtraction → match DECIMAL PLACES:\n• 14.5 → **1 decimal place** (least)\n• 1.234 → 3 decimal places\n• 3.24 → 2 decimal places\n\nRound 12.494 to 1 decimal place = **12.5** ✓",
+    "hint": "For addition/subtraction: find which number has the fewest decimal places. Round the answer to match."
+  }
+]

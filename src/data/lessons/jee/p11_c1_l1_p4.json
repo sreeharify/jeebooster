@@ -1,0 +1,259 @@
+[
+  {
+    "kind": "fill_blank",
+    "tag": "question",
+    "level": 2,
+    "sentence": "The number 0.003050 has _______ significant figures.",
+    "blanks": [
+      {
+        "correct": "4",
+        "distractors": [
+          "3",
+          "5",
+          "7"
+        ]
+      }
+    ],
+    "explanation": "Breaking down 0.003050:\n• '0.00' — leading zeros → NOT significant\n• '3' → significant\n• '0' — captive zero (between 3 and 5) → significant\n• '5' → significant\n• '0' — trailing zero after decimal → significant\n\nTotal = **4 significant figures** ✓"
+  },
+  {
+    "kind": "common_mistake",
+    "tag": "note",
+    "title": "⚠️ Common Mistakes: Error Propagation",
+    "mistakes": [
+      {
+        "mistake": "Subtracting errors: writing ΔZ = ΔA − ΔB for Z = A − B",
+        "fix": "Absolute errors ALWAYS add. For Z = A − B, the error is ΔZ = ΔA + ΔB. Subtracting errors would dangerously underestimate the uncertainty."
+      },
+      {
+        "mistake": "Ignoring the power: writing ΔZ/Z = ΔA/A for Z = A³",
+        "fix": "For Z = A³: ΔZ/Z = 3(ΔA/A). The exponent (3) multiplies the relative error. If power = 2, multiply by 2. Always."
+      },
+      {
+        "mistake": "Using the wrong type of error: mixing absolute error with relative error",
+        "fix": "Addition/subtraction uses absolute errors (ΔZ = ΔA + ΔB). Multiplication/division uses relative errors (ΔZ/Z = ΔA/A + ΔB/B). Don't cross-use them."
+      }
+    ]
+  },
+  {
+    "kind": "common_mistake",
+    "tag": "note",
+    "title": "⚠️ Common Mistakes: Significant Figures",
+    "mistakes": [
+      {
+        "mistake": "Counting leading zeros as significant: treating 0.0034 as having 4 SF",
+        "fix": "0.0034 has only 2 SF. The '0.00' only positions the decimal — it carries no precision information."
+      },
+      {
+        "mistake": "Using multiplication rules for addition: rounding 14.5 + 1.234 to 3 SF instead of 1 decimal place",
+        "fix": "Addition → round to fewest DECIMAL PLACES. Multiplication → round to fewest SF. These are completely different rules."
+      },
+      {
+        "mistake": "Forgetting to report trailing zeros: writing 3.4 instead of 3.40 after calculation",
+        "fix": "3.40 and 3.4 mean different things: 3.40 = 3 SF (measured to 0.01), 3.4 = 2 SF (measured to 0.1). Trailing zeros after the decimal matter."
+      }
+    ]
+  },
+  {
+    "kind": "error_correction",
+    "tag": "question",
+    "level": 3,
+    "title": "Spot the Mistake: Error Propagation Statements",
+    "instruction": "One of these statements is WRONG. Which one?",
+    "sentences": [
+      {
+        "text": "The mean absolute error is always a positive quantity.",
+        "correct": true
+      },
+      {
+        "text": "For Z = A × B, the relative error is ΔZ/Z = ΔA/A + ΔB/B.",
+        "correct": true
+      },
+      {
+        "text": "For Z = A − B, the absolute error is ΔZ = ΔA − ΔB.",
+        "correct": false,
+        "explanation": "WRONG — For Z = A − B, the absolute error is ΔZ = ΔA + ΔB (always add). Subtracting errors would underestimate the true uncertainty, which is physically invalid."
+      },
+      {
+        "text": "For Z = Aⁿ, the relative error is ΔZ/Z = n × (ΔA/A).",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "kind": "reorder_sentence",
+    "tag": "question",
+    "level": 2,
+    "instruction": "Arrange these steps in order to find the % error in g = 4π²L/T²:",
+    "words": [
+      "Write the error formula: Δg/g = ΔL/L + 2(ΔT/T)",
+      "Calculate % error in L: (ΔL/L)×100",
+      "Calculate % error in T: (ΔT/T)×100",
+      "Add: %Δg = %ΔL + 2×(%ΔT)"
+    ],
+    "correct": "Write the error formula: Δg/g = ΔL/L + 2(ΔT/T)|Calculate % error in L: (ΔL/L)×100|Calculate % error in T: (ΔT/T)×100|Add: %Δg = %ΔL + 2×(%ΔT)",
+    "isOrdering": true,
+    "explanation": "Step 1: Always write the error propagation formula for the given expression first.\nStep 2-3: Find % errors for each variable.\nStep 4: Combine — T gets multiplied by 2 because its power in the formula is 2."
+  },
+  {
+    "kind": "worked_example",
+    "tag": "note",
+    "level": 3,
+    "title": "Worked Example: Full JEE-Style Problem — Finding g",
+    "problem": "A simple pendulum has L = (1.00 ± 0.01) m and T = (2.00 ± 0.02) s. Using g = 4π²L/T², find g and its % error.",
+    "steps": [
+      {
+        "step": "Calculate g",
+        "detail": "g = 4π²L/T² = 4 × 9.87 × 1.00 / (2.00)²\n= 39.48 / 4.00\n= **9.87 m/s²**"
+      },
+      {
+        "step": "Write the error propagation formula",
+        "detail": "g = (4π²) × L × T⁻²\n\nΔg/g = ΔL/L + 2 × (ΔT/T)\n\n(Constant 4π² has no error. Power of L is 1, power of T is 2.)"
+      },
+      {
+        "step": "Find % errors in L and T",
+        "detail": "%Error in L = (0.01/1.00) × 100 = **1%**\n%Error in T = (0.02/2.00) × 100 = **1%**"
+      },
+      {
+        "step": "Calculate total % error in g",
+        "detail": "%Error in g = 1% + 2 × 1% = 1% + 2% = **3%**\n\nAbsolute error: Δg = 3% × 9.87 = 0.296 ≈ 0.30 m/s²"
+      },
+      {
+        "step": "Final Answer",
+        "detail": "g = **(9.87 ± 0.30) m/s²**\n\n💡 T contributes 2× more to error because its power in the formula is 2. Even though both L and T have 1% individual error, T doubles its contribution."
+      }
+    ]
+  },
+  {
+    "kind": "mcq",
+    "tag": "prev_year",
+    "level": 3,
+    "year": "JEE Main 2020",
+    "question": "A Vernier caliper has 1 MSD = 1 mm. Its Vernier scale has 50 divisions such that 50 VSD = 49 MSD. The least count of this Vernier caliper is:",
+    "options": [
+      "0.1 mm",
+      "0.05 mm",
+      "0.02 mm",
+      "0.01 mm"
+    ],
+    "correct": "0.02 mm",
+    "explanation": "LC = 1 MSD − 1 VSD\n\n50 VSD = 49 MSD → 1 VSD = 49/50 mm = 0.98 mm\n\nLC = 1.00 − 0.98 = **0.02 mm** ✓\n\nAlternatively: LC = MSD/n = 1/50 mm = 0.02 mm\n\nThis is finer than the standard 0.1 mm Vernier — 50-division Verniers are used for more precise measurements.",
+    "hint": "LC = 1 MSD / n where n = total Vernier divisions = 50"
+  },
+  {
+    "kind": "mcq",
+    "tag": "prev_year",
+    "level": 3,
+    "year": "JEE Main 2019",
+    "question": "The density of a material is calculated using ρ = M/V where volume V is measured using a cube of side L. If the % error in measuring M is 1.5% and in measuring L is 1%, the % error in density ρ is:",
+    "options": [
+      "4.5%",
+      "3.5%",
+      "2.5%",
+      "6%"
+    ],
+    "correct": "4.5%",
+    "explanation": "ρ = M / V = M / L³\n\nΔρ/ρ = ΔM/M + 3(ΔL/L)\n\n%Error in ρ = %Error in M + 3 × %Error in L\n\n= 1.5% + 3 × 1% = 1.5% + 3% = **4.5%** ✓\n\nKey: V = L³ → power of L is 3, so 3 × 1% = 3% contribution from L.",
+    "hint": "V = L³ so ΔV/V = 3(ΔL/L). Then ρ = M/V → Δρ/ρ = ΔM/M + ΔV/V."
+  },
+  {
+    "kind": "mcq",
+    "tag": "question",
+    "level": 4,
+    "question": "Z = A³B²/(C·√D). The % errors in A, B, C, D are 1%, 2%, 3%, 4% respectively. The maximum % error in Z is:",
+    "options": [
+      "11%",
+      "12%",
+      "14%",
+      "16%"
+    ],
+    "correct": "14%",
+    "explanation": "Z = A³ × B² × C⁻¹ × D^(−1/2)\n\n%ΔZ = 3(%ΔA) + 2(%ΔB) + 1(%ΔC) + (1/2)(%ΔD)\n\n= 3(1%) + 2(2%) + 1(3%) + (1/2)(4%)\n\n= 3% + 4% + 3% + 2%\n\n= **14%** ✓\n\nNote: √D = D^(1/2) → power = 1/2 → contributes (1/2) × 4% = 2%",
+    "hint": "Powers: A has 3, B has 2, C has 1, D has 1/2 (since √D = D^0.5). Multiply each power by its % error and sum all."
+  },
+  {
+    "kind": "mcq",
+    "tag": "question",
+    "level": 4,
+    "question": "A Vernier caliper (LC = 0.1 mm) has a positive zero error of 0.3 mm. The main scale reads 2.3 cm and the 4th Vernier division coincides with a main scale line. The corrected measurement is:",
+    "options": [
+      "2.37 cm",
+      "2.34 cm",
+      "2.31 cm",
+      "2.40 cm"
+    ],
+    "correct": "2.31 cm",
+    "explanation": "Raw reading = MS reading + (Coinciding VSD × LC)\n= 2.3 cm + (4 × 0.01 cm)\n= 2.3 cm + 0.04 cm = 2.34 cm\n\nZero error = +0.3 mm = +0.03 cm (positive → subtract)\n\nCorrected reading = 2.34 − 0.03 = **2.34 cm**\n\nWait: zero error = 0.3 mm = 0.03 cm\n2.34 − 0.03 = 2.31 cm\n\nActually corrected = **2.31 cm**\n\nHmm — let me recalculate properly:\nRaw = 23 mm + 4 × 0.1 mm = 23 + 0.4 = 23.4 mm\nZero error = +0.3 mm\nCorrected = 23.4 − 0.3 = 23.1 mm = **2.31 cm** ✓",
+    "hint": "Raw reading = MS + (VSD × LC). Then subtract positive zero error from raw reading."
+  },
+  {
+    "kind": "match_pairs",
+    "tag": "question",
+    "level": 2,
+    "instruction": "Match the physical quantity to its % error formula:",
+    "pairs": [
+      {
+        "word": "Volume of sphere: V = (4/3)πr³",
+        "meaning": "3(Δr/r)×100"
+      },
+      {
+        "word": "Time period: T = 2π√(L/g)",
+        "meaning": "(1/2)(ΔL/L + Δg/g)×100"
+      },
+      {
+        "word": "Power: P = V²/R",
+        "meaning": "(2ΔV/V + ΔR/R)×100"
+      },
+      {
+        "word": "Kinetic energy: E = ½mv²",
+        "meaning": "(Δm/m + 2Δv/v)×100"
+      }
+    ],
+    "explanation": "V∝r³ → 3(Δr/r)×100\nT∝L^(1/2)g^(-1/2) → (1/2)(ΔL/L+Δg/g)×100\nP=V²/R → (2ΔV/V+ΔR/R)×100\nE=mv²/2 → (Δm/m+2Δv/v)×100"
+  },
+  {
+    "kind": "flashcard",
+    "tag": "note",
+    "level": 2,
+    "word": "Measurement Error — Master Summary",
+    "meaning": "LC(Vernier) = MSD/n | LC(Screw) = Pitch/N | Δā = Σ|aᵢ−ā|/n | %Error = (Δā/ā)×100 | Z=AᵖBq → ΔZ/Z = p(ΔA/A)+q(ΔB/B)",
+    "example": "g=4π²L/T²: %Δg = 1×%ΔL + 2×%ΔT. If %ΔL=1%, %ΔT=1% → %Δg = 1+2 = 3%",
+    "partOfSpeech": "Physics · Units & Measurements",
+    "wrong": "TRAP: For Z = A−B, error is ΔZ = ΔA+ΔB (NOT ΔA−ΔB). Errors always add, never subtract!",
+    "collocations": [
+      "ΔZ = ΔA + ΔB (addition or subtraction)",
+      "ΔZ/Z = ΔA/A + ΔB/B (multiply or divide)",
+      "ΔZ/Z = n·(ΔA/A) (power n)"
+    ],
+    "family": [
+      "Add/Subtract → match decimal places for sig figs",
+      "Multiply/Divide → match sig fig COUNT",
+      "Order of magnitude: compare to √10 = 3.162"
+    ]
+  },
+  {
+    "kind": "explainer",
+    "tag": "note",
+    "level": 1,
+    "title": "📝 Chapter Summary — What to Review Before JEE",
+    "sections": [
+      {
+        "heading": "Instruments & Least Count",
+        "body": "• Metre scale: **1 mm**\n• Vernier caliper: **1/n × MSD** (typically 0.1 mm or 0.05 mm)\n• Screw gauge: **Pitch/N** (typically 0.01 mm)\n• Always apply zero correction before reporting reading."
+      },
+      {
+        "heading": "Error Analysis",
+        "body": "• True value ≈ ā = arithmetic mean\n• Absolute error: Δaᵢ = |aᵢ − ā|\n• Mean absolute error: Δā = Σ|Δaᵢ|/n\n• % error = (Δā/ā) × 100"
+      },
+      {
+        "heading": "Error Propagation (JEE Focus)",
+        "body": "• **A ± B** → ΔZ = ΔA + ΔB\n• **A × B or A/B** → ΔZ/Z = ΔA/A + ΔB/B\n• **Aⁿ** → ΔZ/Z = n(ΔA/A)\n• **AᵖBq/Cʳ** → ΔZ/Z = p(ΔA/A)+q(ΔB/B)+r(ΔC/C)"
+      },
+      {
+        "heading": "Significant Figures",
+        "body": "• Leading zeros: NOT significant\n• Captive zeros: significant\n• Trailing zeros after decimal: significant\n• Add/Subtract → match **decimal places**\n• Multiply/Divide → match **sig fig count**"
+      }
+    ],
+    "highlight": "JEE checklist: (1) Zero error correction (2) Correct error propagation formula (3) Correct sig figs in final answer. Get these right every time."
+  }
+]
