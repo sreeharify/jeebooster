@@ -106,45 +106,49 @@ function IntroSlide({ slide, onStart }) {
 }
 
 function ExplainerSlide({ slide, onNext }) {
-  const { label, color } = levelLabel(slide.band)
+  const { label, color } = levelLabel(slide.level || slide.band)
   return (
     <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full overflow-y-auto">
-      {slide.band && slide.band > 0 && (
+      {(slide.level || slide.band) > 0 && (
         <div className={`${color} text-white rounded-2xl px-3 py-1.5 text-xs font-bold self-start mb-3`}>{label}</div>
       )}
       <div className="flex items-start gap-2 mb-4">
         <BookOpen className="w-5 h-5 text-lime-600 shrink-0 mt-0.5" />
-        <h3 className="font-display text-xl text-green-800 leading-snug">{slide.title}</h3>
+        <h3 className="font-display text-2xl text-green-900 leading-snug">{slide.title}</h3>
       </div>
       {slide.sections?.map((sec, i) => (
-        <div key={i} className="mb-3">
-          {sec.heading && <div className="font-bold text-green-700 text-xs uppercase tracking-wide mb-1.5">{sec.heading}</div>}
-          <div className="bg-lime-50 border-2 border-lime-200 rounded-2xl p-3">
-            <p className="text-sm text-green-800 font-semibold whitespace-pre-line leading-relaxed">{sec.body}</p>
+        <div key={i} className="mb-4">
+          {sec.heading && (
+            <div className="font-bold text-green-700 text-sm uppercase tracking-wide mb-2 flex items-center gap-1">
+              <span className="w-1 h-4 bg-lime-400 rounded-full inline-block" />
+              {sec.heading}
+            </div>
+          )}
+          <div className="bg-white border-2 border-gray-100 rounded-2xl p-4 shadow-sm">
+            <p className="text-base text-gray-800 font-medium whitespace-pre-line leading-relaxed">{sec.body}</p>
           </div>
         </div>
       ))}
-      {/* Legacy flat .body */}
       {slide.body && !slide.sections && (
-        <div className="bg-lime-50 border-2 border-lime-200 rounded-2xl p-3 mb-3">
-          <p className="text-sm text-green-800 font-semibold whitespace-pre-line leading-relaxed">{slide.body}</p>
+        <div className="bg-white border-2 border-gray-100 rounded-2xl p-4 mb-4 shadow-sm">
+          <p className="text-base text-gray-800 font-medium whitespace-pre-line leading-relaxed">{slide.body}</p>
         </div>
       )}
       {slide.highlight && (
-        <div className="bg-yellow-50 border-2 border-yellow-300 rounded-2xl p-3 mb-3 flex items-start gap-2">
-          <Lightbulb className="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" />
-          <p className="text-sm font-bold text-yellow-800">{slide.highlight}</p>
+        <div className="bg-yellow-50 border-2 border-yellow-300 rounded-2xl p-4 mb-4 flex items-start gap-2">
+          <Lightbulb className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
+          <p className="text-base font-bold text-yellow-800">{slide.highlight}</p>
         </div>
       )}
       {slide.example && (
-        <div className="space-y-2 mb-3">
-          <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-3">
-            <div className="text-xs font-bold text-red-500 mb-1">❌ Band 5–6 (avoid)</div>
-            <p className="text-sm text-red-800 font-semibold italic">{slide.example.wrong}</p>
+        <div className="space-y-2 mb-4">
+          <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4">
+            <div className="text-xs font-bold text-red-500 mb-2">❌ Common Mistake</div>
+            <p className="text-base text-red-800 font-medium">{slide.example.wrong}</p>
           </div>
-          <div className="bg-lime-50 border-2 border-lime-300 rounded-2xl p-3">
-            <div className="text-xs font-bold text-lime-600 mb-1">✅ Band 8+ (aim for this)</div>
-            <p className="text-sm text-green-800 font-semibold italic">{slide.example.right}</p>
+          <div className="bg-green-50 border-2 border-green-300 rounded-2xl p-4">
+            <div className="text-xs font-bold text-green-600 mb-2">✅ Correct Approach</div>
+            <p className="text-base text-green-900 font-medium">{slide.example.right}</p>
           </div>
         </div>
       )}
@@ -158,25 +162,227 @@ function ExplainerSlide({ slide, onNext }) {
 function MiniExplainerSlide({ slide, onNext }) {
   return (
     <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full">
-      <div className="bg-green-100 text-green-700 rounded-2xl px-3 py-1.5 text-xs font-bold self-start mb-3 flex items-center gap-1">
-        <Lightbulb className="w-3.5 h-3.5" /> Quick Note
+      <div className="bg-green-100 text-green-700 rounded-2xl px-3 py-1.5 text-sm font-bold self-start mb-3 flex items-center gap-1">
+        <Lightbulb className="w-4 h-4" /> Quick Note
       </div>
-      <h3 className="font-display text-xl text-green-800 mb-3 leading-snug">{slide.title}</h3>
-      <div className="card bg-green-50 border-2 border-green-200 mb-3 flex-1">
-        <p className="text-sm text-green-800 font-semibold whitespace-pre-line leading-relaxed">{slide.body}</p>
+      <h3 className="font-display text-2xl text-green-900 mb-3 leading-snug">{slide.title}</h3>
+      <div className="bg-white border-2 border-gray-100 rounded-2xl p-4 mb-4 shadow-sm flex-1">
+        <p className="text-base text-gray-800 font-medium whitespace-pre-line leading-relaxed">{slide.body}</p>
       </div>
       {slide.quick && (
-        <div className="space-y-2 mb-3">
+        <div className="space-y-2 mb-4">
           {slide.quick.map((q, i) => (
-            <div key={i} className="flex items-center gap-2 bg-lime-50 border border-lime-200 rounded-2xl px-3 py-2">
-              <span className="text-lg shrink-0">{q.icon}</span>
-              <span className="text-sm font-bold text-green-800">{q.label}</span>
+            <div key={i} className="flex items-start gap-3 bg-lime-50 border border-lime-200 rounded-2xl px-4 py-3">
+              <span className="text-xl shrink-0 mt-0.5">{q.icon}</span>
+              <span className="text-base font-semibold text-green-900">{q.label}</span>
             </div>
           ))}
         </div>
       )}
       <button onClick={onNext} className="btn-primary w-full flex items-center justify-center gap-2">
         Continue <ChevronRight className="w-5 h-5" />
+      </button>
+    </div>
+  )
+}
+
+// ─── NEW SLIDE COMPONENTS ────────────────────────────────────────
+
+function VisualSlide({ slide, onNext }) {
+  return (
+    <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full overflow-y-auto">
+      <div className="bg-blue-100 text-blue-700 rounded-2xl px-3 py-1.5 text-sm font-bold self-start mb-3">📊 Visual</div>
+      <h3 className="font-display text-2xl text-green-900 mb-3 leading-snug">{slide.title}</h3>
+      <div className="bg-white border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm mb-4">
+        <div dangerouslySetInnerHTML={{ __html: slide.html }} />
+      </div>
+      {slide.caption && (
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl px-4 py-3 mb-4">
+          <p className="text-sm font-semibold text-blue-800 text-center">{slide.caption}</p>
+        </div>
+      )}
+      <button onClick={onNext} className="btn-primary w-full flex items-center justify-center gap-2 shrink-0">
+        Got it! <ChevronRight className="w-5 h-5" />
+      </button>
+    </div>
+  )
+}
+
+const FORMULA_COLORS = {
+  green:  { card: 'from-green-500 to-emerald-600',  badge: 'bg-green-100 text-green-800' },
+  blue:   { card: 'from-blue-500 to-indigo-600',    badge: 'bg-blue-100 text-blue-800' },
+  orange: { card: 'from-orange-500 to-amber-600',   badge: 'bg-orange-100 text-orange-800' },
+  purple: { card: 'from-purple-500 to-violet-600',  badge: 'bg-purple-100 text-purple-800' },
+  red:    { card: 'from-red-500 to-rose-600',       badge: 'bg-red-100 text-red-800' },
+}
+
+function FormulaCardSlide({ slide, onNext }) {
+  const [showDerivation, setShowDerivation] = useState(false)
+  const theme = FORMULA_COLORS[slide.color] || FORMULA_COLORS.green
+  const { label, color } = levelLabel(slide.level)
+  return (
+    <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full overflow-y-auto">
+      {slide.level && <div className={`${color} text-white rounded-2xl px-3 py-1.5 text-xs font-bold self-start mb-3`}>{label}</div>}
+      <h3 className="font-display text-2xl text-green-900 mb-4">{slide.title}</h3>
+      {/* Big formula card */}
+      <div className={`bg-gradient-to-br ${theme.card} rounded-3xl p-6 mb-5 flex items-center justify-center shadow-lg`}>
+        <span className="font-display text-4xl text-white tracking-wide text-center">{slide.formula}</span>
+      </div>
+      {/* Symbol breakdown */}
+      {slide.parts && (
+        <div className="space-y-2 mb-4">
+          {slide.parts.map((p, i) => (
+            <div key={i} className="flex items-center gap-3 bg-white border border-gray-100 rounded-2xl px-4 py-3 shadow-sm">
+              <span className={`font-display text-lg font-bold px-3 py-1 rounded-xl ${theme.badge}`}>{p.symbol}</span>
+              <span className="text-base text-gray-700 font-medium">{p.meaning}</span>
+            </div>
+          ))}
+        </div>
+      )}
+      {slide.note && (
+        <div className="bg-yellow-50 border-2 border-yellow-200 rounded-2xl px-4 py-3 mb-3 flex gap-2">
+          <span className="text-lg">⚠️</span>
+          <p className="text-sm font-semibold text-yellow-800">{slide.note}</p>
+        </div>
+      )}
+      {slide.derived_from && (
+        <>
+          <button onClick={() => setShowDerivation(s => !s)} className="text-sm font-bold text-lime-600 mb-2 text-left">
+            {showDerivation ? '▲ Hide' : '▼ Show'} derivation
+          </button>
+          {showDerivation && (
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl px-4 py-3 mb-3">
+              <p className="text-sm text-gray-700 font-medium whitespace-pre-line">{slide.derived_from}</p>
+            </div>
+          )}
+        </>
+      )}
+      <button onClick={onNext} className="btn-primary w-full flex items-center justify-center gap-2 shrink-0">
+        Got it! <ChevronRight className="w-5 h-5" />
+      </button>
+    </div>
+  )
+}
+
+function TapRevealSlide({ slide, onNext }) {
+  const [revealed, setRevealed] = useState([])
+  const [done, setDone] = useState(false)
+  function revealItem(i) {
+    if (revealed.includes(i)) return
+    const next = [...revealed, i]
+    setRevealed(next)
+    if (next.length === slide.items.length) setDone(true)
+  }
+  return (
+    <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full overflow-y-auto">
+      <div className="bg-teal-100 text-teal-700 rounded-2xl px-3 py-1.5 text-sm font-bold self-start mb-3">👆 Tap to Reveal</div>
+      <h3 className="font-display text-2xl text-green-900 mb-1">{slide.title}</h3>
+      <p className="text-sm text-green-500 font-semibold mb-4">{slide.instruction}</p>
+      <div className="space-y-3 flex-1">
+        {slide.items.map((item, i) => (
+          <button key={i} onClick={() => revealItem(i)}
+            className={`w-full rounded-2xl border-2 transition-all duration-300 text-left overflow-hidden ${
+              revealed.includes(i)
+                ? 'border-teal-300 bg-teal-50'
+                : 'border-gray-200 bg-white hover:border-teal-300 active:scale-98'
+            }`}>
+            <div className="flex items-center">
+              <div className="px-4 py-3 font-bold text-base text-gray-800 flex-1">{item.front}</div>
+              {revealed.includes(i)
+                ? <div className="px-4 py-3 border-l-2 border-teal-200 font-bold text-base text-teal-700 flex-1">{item.back}</div>
+                : <div className="px-4 py-3 border-l-2 border-dashed border-gray-200 text-gray-400 text-sm font-semibold flex-1">Tap →</div>
+              }
+            </div>
+          </button>
+        ))}
+      </div>
+      {done && (
+        <button onClick={onNext} className="btn-primary w-full flex items-center justify-center gap-2 mt-4 shrink-0">
+          Continue <ChevronRight className="w-5 h-5" />
+        </button>
+      )}
+      {!done && (
+        <p className="text-center text-gray-400 text-sm font-semibold mt-4">
+          {revealed.length}/{slide.items.length} revealed
+        </p>
+      )}
+    </div>
+  )
+}
+
+function WorkedExampleSlide({ slide, onNext }) {
+  const [stepIdx, setStepIdx] = useState(0)
+  const { label, color } = levelLabel(slide.level)
+  const steps = slide.steps || []
+  const allDone = stepIdx >= steps.length
+  return (
+    <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full overflow-y-auto">
+      <div className="flex items-center gap-2 mb-3">
+        {slide.level && <div className={`${color} text-white rounded-2xl px-3 py-1.5 text-xs font-bold`}>{label}</div>}
+        <div className="bg-orange-100 text-orange-700 rounded-2xl px-3 py-1.5 text-sm font-bold">🧮 Worked Example</div>
+      </div>
+      <h3 className="font-display text-2xl text-green-900 mb-3">{slide.title}</h3>
+      <div className="bg-orange-50 border-2 border-orange-200 rounded-2xl p-4 mb-4">
+        <div className="text-xs font-bold text-orange-600 mb-1">📋 Problem</div>
+        <p className="text-base font-semibold text-orange-900">{slide.problem}</p>
+      </div>
+      {/* Steps shown so far */}
+      <div className="space-y-3 flex-1">
+        {steps.slice(0, stepIdx).map((s, i) => (
+          <div key={i} className="bg-white border-2 border-gray-100 rounded-2xl p-4 shadow-sm">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-7 h-7 rounded-full bg-lime-400 text-white flex items-center justify-center text-sm font-bold shrink-0">{i + 1}</div>
+              <span className="font-bold text-green-800 text-base">{s.step}</span>
+            </div>
+            <p className="text-base text-gray-700 font-medium whitespace-pre-line pl-9">{s.detail}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-4 shrink-0">
+        {!allDone ? (
+          <button onClick={() => setStepIdx(i => i + 1)}
+            className="btn-primary w-full flex items-center justify-center gap-2">
+            {stepIdx === 0 ? 'Start Solution' : `Step ${stepIdx + 1} →`} <ChevronRight className="w-5 h-5" />
+          </button>
+        ) : (
+          <button onClick={onNext} className="btn-primary w-full flex items-center justify-center gap-2">
+            🎉 Got it! <ChevronRight className="w-5 h-5" />
+          </button>
+        )}
+        {stepIdx > 0 && !allDone && (
+          <p className="text-center text-xs text-gray-400 font-semibold mt-2">Step {stepIdx}/{steps.length}</p>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function CommonMistakeSlide({ slide, onNext }) {
+  const [expanded, setExpanded] = useState(null)
+  return (
+    <div className="flex-1 flex flex-col px-4 py-4 max-w-lg mx-auto w-full overflow-y-auto">
+      <div className="bg-red-100 text-red-700 rounded-2xl px-3 py-1.5 text-sm font-bold self-start mb-3">⚠️ Common Mistakes</div>
+      <h3 className="font-display text-2xl text-green-900 mb-4">{slide.title}</h3>
+      <div className="space-y-3 flex-1">
+        {(slide.mistakes || []).map((m, i) => (
+          <div key={i} className="bg-white border-2 border-red-100 rounded-2xl overflow-hidden shadow-sm">
+            <button onClick={() => setExpanded(expanded === i ? null : i)}
+              className="w-full text-left px-4 py-4 flex items-start gap-3">
+              <span className="text-xl shrink-0 mt-0.5">❌</span>
+              <span className="font-semibold text-base text-gray-800 flex-1">{m.mistake}</span>
+              <span className="text-gray-400 font-bold ml-2">{expanded === i ? '▲' : '▼'}</span>
+            </button>
+            {expanded === i && (
+              <div className="bg-green-50 border-t-2 border-green-100 px-4 py-4 flex gap-3">
+                <span className="text-xl shrink-0">✅</span>
+                <p className="text-base text-green-900 font-medium">{m.fix}</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+      <button onClick={onNext} className="btn-primary w-full flex items-center justify-center gap-2 mt-4 shrink-0">
+        Understood! <ChevronRight className="w-5 h-5" />
       </button>
     </div>
   )
@@ -648,7 +854,8 @@ export default function Lesson() {
   const QUESTION_KINDS = ['mcq', 'tfng_single', 'error_correction', 'fill_blank', 'reorder_sentence']
   const isQuestion  = QUESTION_KINDS.includes(slide?.kind)
   const isMatch     = slide?.kind === 'match_pairs'
-  const isAutoNext  = ['explainer', 'mini_explainer', 'flashcard', 'passage', 'intro'].includes(slide?.kind)
+  const isAutoNext  = ['explainer', 'mini_explainer', 'flashcard', 'passage', 'intro',
+                       'visual', 'formula_card', 'tap_reveal', 'worked_example', 'common_mistake'].includes(slide?.kind)
 
   function handleCheck() {
     let isOk = false
@@ -810,6 +1017,11 @@ export default function Lesson() {
         {slide?.kind === 'mini_explainer'   && <MiniExplainerSlide   slide={slide} onNext={advance} />}
         {slide?.kind === 'flashcard'        && <FlashcardSlide       slide={slide} onNext={advance} />}
         {slide?.kind === 'passage'          && <PassageSlide         slide={slide} onNext={advance} />}
+        {slide?.kind === 'visual'           && <VisualSlide          slide={slide} onNext={advance} />}
+        {slide?.kind === 'formula_card'     && <FormulaCardSlide     slide={slide} onNext={advance} />}
+        {slide?.kind === 'tap_reveal'       && <TapRevealSlide       slide={slide} onNext={advance} />}
+        {slide?.kind === 'worked_example'   && <WorkedExampleSlide   slide={slide} onNext={advance} />}
+        {slide?.kind === 'common_mistake'   && <CommonMistakeSlide   slide={slide} onNext={advance} />}
         {slide?.kind === 'mcq'              && <MCQSlide             slide={slide} checked={checked} selected={selected} setSelected={setSelected} />}
         {slide?.kind === 'fill_blank'       && <FillBlankSlide       slide={slide} checked={checked} answers={fillAnswers} setAnswers={setFillAnswers} />}
         {slide?.kind === 'match_pairs'      && <MatchPairsSlide      slide={slide} checked={matchChecked} setChecked={setMatchChecked} onWrong={() => setMatchHadWrong(true)} />}
