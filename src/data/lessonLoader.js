@@ -2,16 +2,25 @@ import jeeGeneric from './lessons/jee/generic-lesson.json'
 import rankRedirect from './lessons/jee/rank-redirect.json'
 import defaultFallback from './lessons/default/fallback.json'
 
+// ── Dedicated lesson content (add new imports here) ──
+import p11_c1_l1 from './lessons/jee/p11_c1_l1.json'
+
 const LESSON_SLIDES = {
   // Simulator Redirect
   'mz_c1_l2': rankRedirect,
+
+  // ── Physics Class 11 ──
+  'p11_c1_l1': p11_c1_l1,
+
+  // ── Add more lessons below as they are created ──
+  // 'p11_c1_l2': p11_c1_l2,
 }
 
 export function getSlides(lessonId) {
-  // If it's the mock simulator, return the redirect
-  if (lessonId === 'mz_c1_l2') return rankRedirect
+  // 1. Check for dedicated lesson content first
+  if (LESSON_SLIDES[lessonId]) return LESSON_SLIDES[lessonId]
 
-  // For all new JEE patterns, return jeeGeneric
+  // 2. For JEE lesson IDs without dedicated content, use generic placeholder
   if (
     lessonId.startsWith('p11_') || 
     lessonId.startsWith('c11_') || 
@@ -25,7 +34,8 @@ export function getSlides(lessonId) {
     return jeeGeneric
   }
 
-  return LESSON_SLIDES[lessonId] ?? defaultFallback
+  // 3. Fallback
+  return defaultFallback
 }
 
 export function hasContent(lessonId) {

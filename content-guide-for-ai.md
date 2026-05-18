@@ -1,7 +1,17 @@
-# IELTSdua — Content Guide for AI Expansion
+# JeeBoost — Content Guide for AI Chapter Generation
 
 This document tells an AI exactly where content is stored, how it is structured,
-and what to produce to expand lessons or mock tests.
+and what to produce to create new lesson chapters for the JEE Mains learning app.
+
+---
+
+## APP OVERVIEW
+
+JeeBoost is a **Duolingo-style gamified learning app** for JEE Mains preparation.
+Lessons are broken into bite-sized slides: short explainers, interactive questions,
+formula cards, and mini-challenges. The goal is to make JEE prep feel less like
+textbook grinding and more like a game where every slide teaches or tests one
+atomic concept.
 
 ---
 
@@ -9,85 +19,30 @@ and what to produce to expand lessons or mock tests.
 
 ### Lesson slides
 ```
-src/data/lessons/
-  vocab/
-    academic-words-1.json     → lesson l2_1  (Academic Word List Set 1)
-    academic-words-2.json     → lesson l2_2  (Academic Word List Set 2)
-    collocations.json         → lesson l2_3
-    synonyms-paraphrasing.json→ lesson l2_4
-    vocabulary-test.json      → lesson l2_5
-    writing-vocabulary.json   → lessons l7_5, l10_4
+src/data/lessons/jee/
+  <lesson-id>.json        → slide array for that lesson
+```
 
-  grammar/
-    complex-sentences.json    → lesson l11_1
-    relative-clauses.json     → lesson l11_2
-    passive-voice.json        → lesson l11_3
-    conditionals.json         → lesson l11_4
-    reported-speech.json      → lesson l11_5
-    inversion.json            → lesson l12_1
-    nominalization.json       → lesson l12_2
-    hedging.json              → lesson l12_3
-    discourse-markers.json    → lesson l12_4
-    grammar-mastery-test.json → lesson l12_5
+Each lesson ID comes from `src/data/courseData.js`.
+For example, lesson `p11_c1_l1` (SI Units & Fundamental Units) would be stored as:
+```
+src/data/lessons/jee/p11_c1_l1.json
+```
 
-  reading/
-    skim-scan.json            → lesson l5_1
-    tfng.json                 → lesson l5_2  (True/False/Not Given)
-    headings.json             → lesson l5_3
-    matching.json             → lessons l5_4, l6_4
-    summary-completion.json   → lessons l6_1, l6_2
-    short-answer.json         → lesson l6_3
-    reading-test.json         → lesson l6_5
-
-  writing/
-    graphs-charts.json        → lesson l7_1
-    process-diagrams.json     → lesson l7_2
-    maps-comparisons.json     → lessons l7_3, l7_4
-    opinion-essay.json        → lesson l8_1
-    discussion-essay.json     → lesson l8_2
-    problem-solution.json     → lesson l8_3
-    adv-disadv.json           → lesson l8_4
-    thesis-statements.json    → lesson l8_5
-    cohesion-coherence.json   → lesson l8_6
-    writing-test.json         → lesson l8_7
-
-  speaking/
-    part1-intro.json          → lesson l9_1
-    personal-topics.json      → lesson l9_2
-    extending-answers.json    → lesson l9_3
-    fluency-tips.json         → lesson l9_4
-    cue-card.json             → lesson l10_1
-    abstract-discussion.json  → lesson l10_2
-    expressing-opinions.json  → lesson l10_3
-    speaking-test.json        → lesson l10_5
-
-  listening/
-    everyday-conversations.json → lesson l3_1
-    form-completion.json        → lesson l3_2
-    map-diagram.json            → lesson l3_3
-    monologue.json              → lesson l3_4
-    academic-discussions.json   → lesson l4_1
-    note-taking.json            → lesson l4_3
-    prediction-strategies.json  → lesson l4_4
-    listening-test.json         → lesson l4_5
-
-  info/
-    test-format.json          → lesson l1_1
-    study-plan.json           → lesson l1_4
-
-  quiz/
-    band-score-system.json    → lesson l1_2
-    academic-vs-general.json  → lesson l1_3
-    general-quiz.json         → lesson l4_2
+### Curriculum structure
+```
+src/data/courseData.js
+  → COURSE_DATA array: Class 11 → Subjects → Chapters → Lessons
+                       Class 12 → Subjects → Chapters → Lessons
+                       Misc & Strategy → JEE Mastery chapters
 ```
 
 ### Mock test sets
 ```
 src/data/tests/
-  listening.json   ← array of 2 listening sets (10 questions each)
-  reading.json     ← array of 2 reading sets (13 questions each)
-  writing.json     ← array of 2 writing sets (Task 1 + Task 2)
-  speaking.json    ← array of 2 speaking sets (Part 1 + 2 + 3)
+  math.json        ← array of math mock sets
+  physics.json     ← array of physics mock sets
+  chemistry.json   ← array of chemistry mock sets
 ```
 
 ---
@@ -96,8 +51,39 @@ src/data/tests/
 
 Every lesson JSON file is an **array of slide objects**.
 Each slide has a `kind` field. The app renders a different component per kind.
+Each slide also has an optional `tag` field for filtering (see TAGGING below).
 
-### RULE: Every `meaning` in `match_pairs` must be unique within that slide.
+### TAGGING SYSTEM — `tag` field
+
+Every slide can have an optional `"tag"` field with one of two values:
+
+| Value        | Meaning                                                                 |
+|--------------|-------------------------------------------------------------------------|
+| `"note"`     | This slide teaches a concept, formula, or fact worth reviewing later.   |
+| `"question"` | This slide is a practice question the student must answer.              |
+
+**Rules:**
+- `tag` is optional. If omitted, the slide has no special tag.
+- Slides of kind `explainer`, `mini_explainer`, and `flashcard` should almost always be tagged `"note"`.
+- Slides of kind `mcq`, `fill_blank`, `match_pairs`, `reorder_sentence`, `error_correction` should almost always be tagged `"question"`.
+- The user will later filter `"note"` slides to auto-generate spaced-repetition flashcards.
+
+### DIFFICULTY LEVELS — `level` field
+
+Instead of IELTS band scores, we use a 4-tier difficulty system:
+
+| `level` | Label              | Emoji | Meaning                                                     |
+|---------|--------------------|-------|-------------------------------------------------------------|
+| `1`     | Level 1 — Foundation    | 🌱    | Basic NCERT concept, definition-level understanding          |
+| `2`     | Level 2 — Intermediate  | ⚡    | Apply formulas, single-step numericals                       |
+| `3`     | Level 3 — Advanced      | 🔥    | Multi-step problems, tricky conceptual questions             |
+| `4`     | Level 4 — Expert        | 🚀    | JEE Advanced level, competitive problem-solving              |
+
+**Rules:**
+- Every question slide (`mcq`, `fill_blank`, etc.) MUST have a `level` field (1–4).
+- Explainer/note slides CAN have a `level` to indicate the depth of the concept.
+- Lessons should start at Level 1–2 and gradually build to Level 3–4.
+- The `level` replaces the old `band` field. Do NOT use `band`.
 
 ---
 
@@ -107,35 +93,43 @@ Each slide has a `kind` field. The app renders a different component per kind.
 ```json
 {
   "kind": "explainer",
-  "band": 7,
-  "title": "The title shown at top",
+  "tag": "note",
+  "level": 1,
+  "title": "Newton's Second Law of Motion",
   "sections": [
     {
-      "heading": "Section heading (optional)",
-      "body": "Main text. Use \\n for newlines, \\n\\n for paragraph breaks."
+      "heading": "The Law",
+      "body": "The net force acting on an object is equal to the product of its mass and acceleration.\n\nF = ma\n\nThis is a vector equation — force and acceleration point in the same direction."
     },
     {
-      "heading": "Another section",
-      "body": "More content here."
+      "heading": "Key Points",
+      "body": "• F is the net (resultant) force, NOT any single force.\n• Mass (m) is a scalar — it does not have direction.\n• In SI units: 1 Newton = 1 kg·m/s²"
     }
   ],
-  "highlight": "Key takeaway shown in a yellow box. Optional.",
+  "highlight": "F = ma is the most important equation in mechanics. Always resolve forces into components before applying it.",
   "example": {
-    "wrong": "Band 5–6 example sentence shown in red",
-    "right": "Band 8+ example sentence shown in green"
+    "wrong": "A 5 kg block has force 10 N. Acceleration = 10/5 = 2. (Missing direction & units)",
+    "right": "A 5 kg block on a frictionless surface has a horizontal force of 10 N. By F = ma, a = 10/5 = 2 m/s² (horizontal, in the direction of the force)."
   }
 }
 ```
+**Fields:**
+- `sections[]` — array of `{ heading, body }`. Heading is optional.
+- `highlight` — Key takeaway shown in a yellow box. Optional.
+- `example` — Optional. `wrong` = common mistake, `right` = correct approach.
+- Use `\n` for line breaks, `\n\n` for paragraph breaks inside `body`.
 
-### 2. `mini_explainer` — Quick tip card
+### 2. `mini_explainer` — Quick tip / formula card
 ```json
 {
   "kind": "mini_explainer",
-  "title": "Short title",
-  "body": "Main explanation text. Use \\n for line breaks.",
+  "tag": "note",
+  "title": "Quick Formula: Projectile Range",
+  "body": "The horizontal range of a projectile launched at angle θ with speed u:\n\nR = u² sin(2θ) / g\n\nMaximum range occurs at θ = 45°.",
   "quick": [
-    { "label": "Bullet point text", "icon": "💡" },
-    { "label": "Another bullet", "icon": "⚠️" }
+    { "label": "R is maximum when sin(2θ) = 1, i.e., θ = 45°", "icon": "💡" },
+    { "label": "R is the same for θ and (90° − θ)", "icon": "🔄" },
+    { "label": "On the Moon, g is smaller → R is larger", "icon": "🌙" }
   ]
 }
 ```
@@ -144,390 +138,505 @@ Each slide has a `kind` field. The app renders a different component per kind.
 ```json
 {
   "kind": "mcq",
-  "band": 7,
-  "question": "The question text?",
+  "tag": "question",
+  "level": 2,
+  "question": "A body of mass 2 kg is acted upon by two forces: 3 N east and 4 N north. What is the magnitude of acceleration?",
   "options": [
-    "Option A text",
-    "Option B text",
-    "Option C text",
-    "Option D text"
+    "2.5 m/s²",
+    "3.5 m/s²",
+    "5 m/s²",
+    "7 m/s²"
   ],
-  "correct": "Option B text",
-  "explanation": "Detailed explanation shown after answering. Use \\n for line breaks.",
-  "hint": "Optional hint shown before the user checks their answer."
+  "correct": "2.5 m/s²",
+  "explanation": "Net force = √(3² + 4²) = √(9 + 16) = √25 = 5 N\nBy F = ma → a = F/m = 5/2 = 2.5 m/s²",
+  "hint": "Find the resultant of two perpendicular forces first."
 }
 ```
 **Rules:**
-- `correct` must exactly match one of the `options` strings
-- All 4 options must be distinct
-- `band` sets the difficulty badge: 6 = Foundation, 7 = Developing, 8 = Advanced, 9 = Expert
+- `correct` must exactly match one of the `options` strings.
+- All 4 options must be distinct.
+- `level` sets the difficulty badge.
+- `hint` is optional — shown before answering.
+- For numerical questions, include full working in `explanation`.
+- Use realistic JEE-style distractors (common calculation errors, sign mistakes, missing factors).
 
 ### 4. `fill_blank` — Fill in the blank (select from options)
 ```json
 {
   "kind": "fill_blank",
-  "band": 7,
-  "sentence": "The research _______ that urban farming can contribute significantly.",
+  "tag": "question",
+  "level": 2,
+  "sentence": "The dimensional formula of pressure is _______.",
   "blanks": [
     {
-      "correct": "demonstrated",
-      "distractors": ["said", "told", "asked"]
+      "correct": "[M L⁻¹ T⁻²]",
+      "distractors": ["[M L T⁻²]", "[M L⁻² T⁻²]", "[M L² T⁻²]"]
     }
   ],
-  "explanation": "Explanation of why the correct answer is right.",
-  "hint": "Optional hint text."
+  "explanation": "Pressure = Force / Area = [M L T⁻²] / [L²] = [M L⁻¹ T⁻²]",
+  "hint": "Pressure = Force per unit Area. Find dimensions of each."
 }
 ```
 **Rules:**
-- Use exactly `_______` (7 underscores) for each blank
-- `distractors` must have exactly 3 items
-- For multiple blanks, add more objects to the `blanks` array and more `_______` in the sentence
+- Use exactly `_______` (7 underscores) for each blank in the sentence.
+- `distractors` must have exactly 3 items.
+- For multiple blanks, add more objects to `blanks` array and more `_______` in the sentence.
+- Great for: formula completion, reaction products, dimensional analysis, unit conversions.
 
 ### 5. `match_pairs` — Match left column to right column
 ```json
 {
   "kind": "match_pairs",
-  "band": 7,
-  "instruction": "Match each word to its meaning:",
+  "tag": "question",
+  "level": 1,
+  "instruction": "Match each physical quantity to its SI unit:",
   "pairs": [
-    { "word": "mitigate",    "meaning": "reduce the severity of something" },
-    { "word": "exacerbate",  "meaning": "make a problem worse" },
-    { "word": "ubiquitous",  "meaning": "found or appearing everywhere" },
-    { "word": "proliferate", "meaning": "increase rapidly in number" }
+    { "word": "Force", "meaning": "Newton (N)" },
+    { "word": "Energy", "meaning": "Joule (J)" },
+    { "word": "Power", "meaning": "Watt (W)" },
+    { "word": "Pressure", "meaning": "Pascal (Pa)" }
   ],
-  "explanation": "Explanation shown after all pairs are matched correctly."
+  "explanation": "Force = kg·m/s² = N, Energy = kg·m²/s² = J, Power = J/s = W, Pressure = N/m² = Pa."
 }
 ```
 **CRITICAL RULE: Every `meaning` must be completely unique. No two pairs can share the same meaning text, even partially. Duplicate meanings break the matching logic.**
 
-- Recommended: 3–5 pairs per slide
-- Pairs are shuffled randomly each time
+- Recommended: 3–5 pairs per slide.
+- Pairs are shuffled randomly each time.
+- Great for: quantity ↔ unit, formula ↔ name, reaction ↔ product, element ↔ property.
 
-### 6. `reorder_sentence` — Drag words into correct order
+### 6. `reorder_sentence` — Drag items into correct order
 ```json
 {
   "kind": "reorder_sentence",
-  "band": 7,
-  "instruction": "Arrange the words to form a correct sentence:",
-  "words": ["The", "study", "was", "conducted", "under", "controlled", "conditions"],
-  "correct": "The study was conducted under controlled conditions.",
-  "explanation": "Why this word order is correct.",
-  "hint": "Optional hint."
+  "tag": "question",
+  "level": 2,
+  "instruction": "Arrange these electromagnetic waves in order of increasing frequency:",
+  "words": ["Microwaves", "Visible Light", "X-rays", "Radio Waves", "Infrared"],
+  "correct": "Radio Waves|Microwaves|Infrared|Visible Light|X-rays",
+  "isOrdering": true,
+  "explanation": "EM spectrum order (increasing frequency): Radio < Microwave < Infrared < Visible < UV < X-ray < Gamma.",
+  "hint": "Think about the electromagnetic spectrum from left to right."
 }
 ```
 **Rules:**
-- `correct` must be the words joined by single spaces with a period at the end
-- `words` should contain all and only the words in `correct`
-- Good for: passive voice, inversion, complex sentence structures
+- For **ordering tasks** (sequences, rankings): set `"isOrdering": true` and join items with `|` in `correct`.
+- For **sentence building** (rare in JEE context): omit `isOrdering` and join with spaces + period at end.
+- `words` should contain all and only the items in `correct`.
+- Great for: EM spectrum order, reaction mechanism steps, periodic trends, thermodynamic process sequences, increasing/decreasing property order.
 
-### 7. `tfng_single` — True / False / Not Given
-```json
-{
-  "kind": "tfng_single",
-  "band": 7,
-  "statement": "The statement the student must evaluate.",
-  "answer": "True",
-  "passage": "Optional: passage text shown above the statement. Include for reading questions.",
-  "explanation": "Why the answer is True/False/Not Given. Should reference specific passage text."
-}
-```
-**Rules:**
-- `answer` must be exactly: `"True"`, `"False"`, or `"Not Given"`
-- For standalone TFNG practice, include `passage`
-- For lessons that already showed a passage slide, `passage` can be omitted
-
-### 8. `error_correction` — Find the sentence with a mistake
+### 7. `error_correction` — Find the statement with a mistake
 ```json
 {
   "kind": "error_correction",
-  "band": 8,
-  "title": "Find the Error",
-  "instruction": "One sentence contains a grammatical or vocabulary error. Which one?",
+  "tag": "question",
+  "level": 3,
+  "title": "Spot the Error: Thermodynamics",
+  "instruction": "One of these statements is WRONG. Which one?",
   "sentences": [
     {
-      "text": "This sentence is correct.",
+      "text": "In an isothermal process, the temperature remains constant.",
       "correct": true
     },
     {
-      "text": "This sentence have an error in it.",
+      "text": "In an adiabatic process, the system exchanges no heat with its surroundings.",
+      "correct": true
+    },
+    {
+      "text": "In an isobaric process, the volume remains constant.",
       "correct": false,
-      "explanation": "Subject-verb agreement error: 'have' should be 'has' because 'sentence' is singular."
-    },
-    {
-      "text": "This sentence is also correct.",
-      "correct": true
+      "explanation": "This is wrong. In an isobaric process, PRESSURE remains constant, not volume. The process where volume remains constant is called isochoric (or isometric)."
     }
   ]
 }
 ```
 **Rules:**
-- Exactly ONE sentence must have `"correct": false`
-- The false sentence must have an `"explanation"` field
-- Recommended: 3–4 sentences total
+- Exactly ONE statement must have `"correct": false`.
+- The false statement must have an `"explanation"` field.
+- Recommended: 3–4 statements total.
+- Great for: common JEE misconceptions, tricky definitions, easily confused laws/theorems.
 
-### 9. `flashcard` — Vocabulary flip card
+### 8. `flashcard` — Formula / concept flip card
 ```json
 {
   "kind": "flashcard",
-  "band": 7,
-  "word": "enumerate",
-  "meaning": "to mention things one by one in a list",
-  "example": "The report enumerates five key recommendations.",
-  "partOfSpeech": "verb",
-  "wrong": "Don't confuse with: 'elaborate' (to explain in detail)",
+  "tag": "note",
+  "level": 2,
+  "word": "Escape Velocity",
+  "meaning": "The minimum velocity needed for an object to escape Earth's gravitational field: vₑ = √(2gR)",
+  "example": "For Earth: vₑ = √(2 × 9.8 × 6.4×10⁶) ≈ 11.2 km/s",
+  "partOfSpeech": "Physics · Gravitation",
+  "wrong": "Don't confuse with orbital velocity: vₒ = √(gR). Escape velocity = √2 × orbital velocity.",
   "collocations": [
-    "enumerate the factors",
-    "enumerate the problems",
-    "enumerate key points"
+    "vₑ = √(2GM/R)",
+    "vₑ = √(2gR)",
+    "vₑ = √2 × vₒ"
   ],
   "family": [
-    "enumeration (n) — 'a detailed enumeration of...'",
-    "enumerable (adj) — rare in academic writing"
+    "Orbital Velocity — vₒ = √(gR) = √(GM/R)",
+    "Binding Energy — E = -GMm/2R"
   ]
 }
 ```
+**Adaptation for JEE:**
+- `word` → the concept or formula name.
+- `meaning` → definition + key formula.
+- `example` → a quick numerical example applying the formula.
+- `partOfSpeech` → Subject · Chapter (e.g., "Chemistry · Equilibrium").
+- `wrong` → common confusion / mistake students make.
+- `collocations` → related formulas or alternate forms.
+- `family` → related concepts in the same topic.
 
-### 10. `passage` — Reading text (use before questions)
+### 9. `passage` — Long-form reading (use before questions)
 ```json
 {
   "kind": "passage",
-  "label": "📖 Read carefully — questions follow",
-  "text": "First paragraph of the passage.\n\nSecond paragraph separated by double newline.\n\nThird paragraph.",
-  "tip": "Tip shown below the passage. Optional."
+  "tag": "note",
+  "label": "📖 Read the following passage carefully — questions follow",
+  "text": "A block of mass 5 kg is placed on a rough inclined plane making an angle of 30° with the horizontal. The coefficient of kinetic friction between the block and the plane is 0.3.\n\nThe block is released from rest and slides down the incline. The forces acting on the block are: gravitational component along the plane (mg sin θ), normal force (mg cos θ), and frictional force (μₖ mg cos θ) opposing the motion.",
+  "tip": "Draw a free-body diagram before attempting the questions."
 }
 ```
-**Note:** Use `\n\n` between paragraphs — the app renders each as a separate paragraph with a letter label (A), (B), (C).
+**Rules:**
+- Use `\n\n` between paragraphs.
+- Use before a series of MCQ slides that reference this passage.
+- Great for: passage-based JEE problems, comprehension-type chemistry situations, multi-part physics scenarios.
 
 ---
 
 ## HOW MOCK TEST FILES ARE STRUCTURED
 
-### listening.json — Array of listening sets
+### math.json / physics.json / chemistry.json — Array of mock sets
 ```json
 [
   {
-    "setId": "L1",
-    "title": "Listening Test — Set A",
+    "id": "p1",
+    "title": "Physics Mock Test 1",
+    "questions": [
+      {
+        "id": "p1_1",
+        "question": "A particle moves in a circle of radius 2 m with constant speed 4 m/s. The centripetal acceleration is:",
+        "options": ["2 m/s²", "4 m/s²", "8 m/s²", "16 m/s²"],
+        "correct": "8 m/s²",
+        "explanation": "Centripetal acceleration = v²/r = 16/2 = 8 m/s²"
+      },
+      {
+        "id": "p1_2",
+        "question": "...",
+        "options": ["...", "...", "...", "..."],
+        "correct": "...",
+        "explanation": "..."
+      }
+    ]
+  }
+]
+```
+**Rules:**
+- Each set should have 25–30 questions (mimicking one subject section of JEE Main).
+- Question IDs must be unique across all sets: `p1_1..p1_30`, `p2_1..p2_30`, etc.
+- `correct` must exactly match one of the `options`.
+- Mix difficulty: ~40% Level 1–2, ~40% Level 3, ~20% Level 4.
+- Cover multiple chapters per set for variety.
+
+---
+
+## GAMIFICATION PHILOSOPHY (Duolingo-style)
+
+The lesson flow should feel like a **game**, not a textbook. Follow these principles:
+
+### 1. Short & Punchy
+- Each slide should teach or test ONE atomic concept only.
+- Explainer slides should be 2–4 short paragraphs max. No walls of text.
+- If a concept needs more explanation, split it across multiple slides.
+
+### 2. Teach → Practice → Challenge Loop
+Structure every lesson as a cycle of:
+```
+explainer → mcq → explainer → fill_blank → match_pairs → harder mcq → ...
+```
+- Never have more than 2 explainers in a row without a question.
+- After each explainer, immediately test the concept that was just taught.
+- Gradually increase difficulty within the same lesson.
+
+### 3. Variety is Key
+A good 15-slide lesson should use at least 4 different slide kinds:
+```
+explainer → mcq → mini_explainer → fill_blank → mcq → match_pairs →
+explainer → reorder → mcq → error_correction → flashcard → mcq → ...
+```
+
+### 4. Encouraging Explanations
+- Correct answer: celebrate! "🎉 Correct! Here's why..."
+- Wrong answer: never shame. Always explain the reasoning step-by-step.
+- Include common mistakes in explanations: "A common error is..."
+
+### 5. XP & Level Progression
+- Each lesson has an XP value (defined in `courseData.js`).
+- Students earn XP proportional to their score.
+- 60% minimum score required to unlock the next lesson.
+- This creates a "can't skip fundamentals" game loop.
+
+---
+
+## RECOMMENDED LESSON STRUCTURE (Template)
+
+A typical lesson with ~12–18 slides should follow this pattern:
+
+```
+Slide 01: explainer (tag:"note")   — Introduce the core concept
+Slide 02: mcq (tag:"question")     — Quick check: did they get the definition? (Level 1)
+Slide 03: explainer (tag:"note")   — Dive deeper: formula derivation or key property
+Slide 04: flashcard (tag:"note")   — Summarize the formula in a flip card
+Slide 05: fill_blank (tag:"question") — Apply the formula in a simple case (Level 2)
+Slide 06: mcq (tag:"question")     — Conceptual question testing understanding (Level 2)
+Slide 07: mini_explainer (tag:"note") — Quick trick or shortcut
+Slide 08: match_pairs (tag:"question") — Connect related concepts/formulas (Level 1)
+Slide 09: explainer (tag:"note")   — Advanced case or exception
+Slide 10: mcq (tag:"question")     — Multi-step numerical problem (Level 3)
+Slide 11: reorder (tag:"question") — Order steps of a process/derivation (Level 2)
+Slide 12: error_correction (tag:"question") — Spot the misconception (Level 3)
+Slide 13: mcq (tag:"question")     — JEE-level tricky question (Level 3)
+Slide 14: flashcard (tag:"note")   — Summary card of the full topic
+Slide 15: mcq (tag:"question")     — Final boss: hardest question (Level 4)
+```
+
+---
+
+## INSTRUCTIONS FOR AN AI GENERATING CHAPTER CONTENT
+
+### Step-by-step workflow:
+
+1. **Identify the lesson** from `courseData.js` — note the lesson ID, title, and which chapter it belongs to.
+2. **Check the syllabus** — refer to `syllabus.txt` or the chapter title to know exactly which NCERT topics to cover.
+3. **Create the JSON file** at `src/data/lessons/jee/<lesson_id>.json`.
+4. **Follow the Recommended Lesson Structure** above — aim for 12–18 slides per lesson.
+5. **Tag every slide** with `"tag": "note"` or `"tag": "question"` as appropriate.
+6. **Set difficulty levels** — start at Level 1, build to Level 3–4 by the end.
+7. **Use at least 4 different slide kinds** per lesson.
+
+### Quality standards:
+
+- **Explanations must be specific** — show full working for numerical problems. Include formulas, substitution, and final answer with units.
+- **Content must be JEE-specific** — use problems that could appear in JEE Main. Focus on conceptual clarity AND numerical problem-solving.
+- **Levels must be accurate:**
+  - Level 1 = NCERT definition / direct formula application
+  - Level 2 = Single-step numerical or conceptual
+  - Level 3 = Multi-step, combining two concepts, or tricky
+  - Level 4 = Advanced / JEE previous year level
+- **No duplicate questions** — each question must be unique across the whole app.
+- **Distractors must be realistic** — wrong options should be results of common mistakes (sign error, wrong formula, forgot a factor, wrong unit).
+- **match_pairs meanings must ALL be unique** — this is enforced by the app and will log errors if violated.
+- **Keep text concise** — this is mobile-first. No long paragraphs.
+
+### Subject-specific guidelines:
+
+#### Physics
+- Always state physical quantities with units.
+- Include free-body diagrams as text descriptions where relevant.
+- For mechanics problems, specify reference frame and sign convention.
+- For numerical answers, include the formula, substitution step, and final value.
+
+#### Chemistry
+- For reactions, write balanced equations.
+- For organic chemistry, name the reaction type and mechanism (SN1, SN2, E1, E2, etc.).
+- For periodic trends, always specify "increases/decreases across period/down group".
+- For thermodynamics/equilibrium problems, show the ICE table logic in explanations.
+
+#### Mathematics
+- For proofs/derivations, break into numbered steps.
+- For coordinate geometry, specify the diagram conceptually.
+- For calculus, show differentiation/integration steps clearly.
+- For permutation/combination, explain the counting logic.
+
+### Recommended slide counts per lesson type:
+
+| Lesson type | `type` in courseData | Recommended slides | Note/Question split |
+|-------------|---------------------|--------------------|--------------------|
+| Intro/Info  | `info`              | 10–14              | 60% notes / 40% questions |
+| Practice    | `quiz`              | 14–18              | 30% notes / 70% questions |
+
+---
+
+## EXAMPLE: Complete lesson for `p11_c4_l1` (Force, Inertia & Newton's Laws)
+
+```json
+[
+  {
+    "kind": "explainer",
+    "tag": "note",
+    "level": 1,
+    "title": "What is Force?",
     "sections": [
       {
-        "section": 1,
-        "label": "Section 1 — Everyday Conversation",
-        "context": "Listen to a conversation between...",
-        "transcript": "Full transcript text here. The app reads this aloud using Chrome TTS.",
-        "questions": [
-          {
-            "id": "L1_1",
-            "type": "mcq",
-            "question": "What is the question?",
-            "options": ["Option A", "Option B", "Option C", "Option D"],
-            "correct": "Option A",
-            "explanation": "Brief explanation."
-          }
-        ]
+        "heading": "Definition",
+        "body": "A force is a push or pull that can change the state of motion of an object. It is a vector quantity — it has both magnitude and direction."
       },
       {
-        "section": 2,
-        "label": "Section 2 — Monologue",
-        "context": "Listen to a campus orientation talk.",
-        "transcript": "Second section transcript...",
-        "questions": [ ]
+        "heading": "Effects of Force",
+        "body": "A force can:\n• Change the speed of an object\n• Change the direction of motion\n• Change the shape of an object"
       }
-    ]
-  }
-]
-```
-**Rules:**
-- Each set has 2 sections, each section has 5 questions (10 total per set)
-- Questions IDs must be unique across all sets: L1_1..L1_10, L2_1..L2_10
-- `correct` must exactly match one of the `options`
-- Transcripts should sound like natural speech — include contractions, hesitations, self-corrections
-
-### reading.json — Array of reading sets
-```json
-[
+    ],
+    "highlight": "Force is measured in Newtons (N). 1 N = 1 kg·m/s²"
+  },
   {
-    "setId": "R1",
-    "title": "Reading Test — Set A",
-    "passages": [
-      {
-        "title": "Passage 1: The Rise of Urban Farming",
-        "text": "Paragraph one text.\n\nParagraph two text.\n\nParagraph three text.",
-        "questions": [
-          {
-            "id": "R1_1",
-            "type": "tfng",
-            "statement": "Urban farming is widely regarded as a complete solution to food insecurity.",
-            "answer": "False",
-            "explanation": "The passage says 'partial solution' not 'complete solution'."
-          },
-          {
-            "id": "R1_2",
-            "type": "mcq",
-            "question": "What does the author identify as the primary challenge?",
-            "options": ["Cost", "Space", "Water supply", "Government regulations"],
-            "correct": "Cost",
-            "explanation": "Paragraph 2 states 'the prohibitive cost of setup remains the key barrier'."
-          },
-          {
-            "id": "R1_3",
-            "type": "heading",
-            "question": "Which heading best matches Paragraph 2?",
-            "options": [
-              "The financial barriers to urban agriculture",
-              "Environmental benefits of city farming",
-              "Government support for urban growers",
-              "Historical origins of urban farming"
-            ],
-            "correct": "The financial barriers to urban agriculture",
-            "explanation": "Paragraph 2 focuses entirely on cost barriers."
-          }
-        ]
-      }
-    ]
-  }
-]
-```
-**Rules:**
-- Each set has 2 passages, total ~13 questions across both
-- Question types: `"tfng"`, `"mcq"`, `"heading"`
-- TFNG uses `"answer"`: `"True"`, `"False"`, or `"Not Given"`
-- MCQ/heading use `"correct"` matching an option exactly
-- Question IDs: R1_1..R1_13, R2_1..R2_13
-
-### writing.json — Array of writing sets
-```json
-[
+    "kind": "mcq",
+    "tag": "question",
+    "level": 1,
+    "question": "Which of the following is NOT an effect of force?",
+    "options": [
+      "Change in speed",
+      "Change in direction",
+      "Change in mass",
+      "Change in shape"
+    ],
+    "correct": "Change in mass",
+    "explanation": "Force can change speed, direction, and shape of an object. Mass is an intrinsic property and cannot be changed by applying force (in classical mechanics)."
+  },
   {
-    "setId": "W1",
-    "title": "Writing Test — Set A",
-    "tasks": [
+    "kind": "explainer",
+    "tag": "note",
+    "level": 1,
+    "title": "Newton's First Law — Law of Inertia",
+    "sections": [
       {
-        "taskNum": 1,
-        "type": "Task 1 — Academic",
-        "prompt": "The bar chart below shows the percentage of households with internet access in five countries between 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
-        "data": {
-          "description": "Imagined data for practice:",
-          "points": [
-            "UK: rose from 73% to 96%",
-            "India: rose from 8% to 47%",
-            "Brazil: rose from 34% to 74%",
-            "Nigeria: rose from 4% to 31%",
-            "Japan: rose from 78% to 93%"
-          ]
-        },
-        "minWords": 150,
-        "bandGuide": [
-          { "band": 6, "desc": "Describes some features but misses key trends or overview" },
-          { "band": 7, "desc": "Covers main features with a clear overview and comparisons" },
-          { "band": 8, "desc": "Selects and highlights key features accurately with precise data" },
-          { "band": 9, "desc": "All key features covered, fully accurate, well-organised, sophisticated language" }
-        ],
-        "modelParagraph": "Overall, all five countries experienced a substantial increase in household internet access over the decade, with developed nations consistently maintaining higher connectivity rates than emerging economies."
+        "heading": "The Law",
+        "body": "An object at rest stays at rest, and an object in motion stays in uniform motion in a straight line, unless acted upon by a net external force."
       },
       {
-        "taskNum": 2,
-        "type": "Task 2 — Opinion Essay",
-        "prompt": "Some people believe that social media has had a largely negative impact on society. To what extent do you agree or disagree?",
-        "data": null,
-        "minWords": 250,
-        "bandGuide": [
-          { "band": 6, "desc": "Position is clear but development is limited; some irrelevant content" },
-          { "band": 7, "desc": "Clear position with developed main ideas; minor lapses in logic" },
-          { "band": 8, "desc": "Well-developed argument with clear position and relevant conclusions" },
-          { "band": 9, "desc": "Fully developed position, persuasive argument, precise conclusion" }
-        ],
-        "modelParagraph": "While social media undeniably enables unprecedented global connectivity, I firmly contend that its net effect has been detrimental, primarily due to its role in amplifying misinformation and fostering compulsive usage patterns that erode psychological wellbeing."
+        "heading": "Inertia",
+        "body": "Inertia is the tendency of a body to resist change in its state of motion. Mass is the measure of inertia — more mass means more inertia."
+      }
+    ],
+    "highlight": "No net force → no acceleration → velocity stays constant (including zero)."
+  },
+  {
+    "kind": "match_pairs",
+    "tag": "question",
+    "level": 1,
+    "instruction": "Match each Newton's Law to its description:",
+    "pairs": [
+      { "word": "1st Law", "meaning": "A body stays at rest or in uniform motion unless a net force acts" },
+      { "word": "2nd Law", "meaning": "Net force equals mass times acceleration (F = ma)" },
+      { "word": "3rd Law", "meaning": "Every action has an equal and opposite reaction" }
+    ],
+    "explanation": "These three laws form the foundation of classical mechanics. The first introduces inertia, the second quantifies force, and the third describes interaction between bodies."
+  },
+  {
+    "kind": "mini_explainer",
+    "tag": "note",
+    "title": "🧠 Quick Concept: Inertial Frames",
+    "body": "Newton's laws are valid only in inertial reference frames — frames that are not accelerating.\n\nA car moving at constant velocity on a straight road is an inertial frame.\nA car taking a sharp turn is NOT an inertial frame.",
+    "quick": [
+      { "label": "Earth is approximately inertial for most JEE problems", "icon": "🌍" },
+      { "label": "Pseudo forces appear in non-inertial frames", "icon": "⚠️" }
+    ]
+  },
+  {
+    "kind": "flashcard",
+    "tag": "note",
+    "level": 2,
+    "word": "F = ma",
+    "meaning": "Newton's Second Law: The net external force on a body equals the product of its mass and acceleration.",
+    "example": "A 3 kg block with net force 12 N → a = 12/3 = 4 m/s²",
+    "partOfSpeech": "Physics · Laws of Motion",
+    "wrong": "Don't use F = ma with a single force — always use the NET force (sum of all forces).",
+    "collocations": [
+      "F_net = ma",
+      "a = F/m",
+      "F = dp/dt (momentum form)"
+    ],
+    "family": [
+      "Impulse — J = FΔt = Δp",
+      "Momentum — p = mv"
+    ]
+  },
+  {
+    "kind": "mcq",
+    "tag": "question",
+    "level": 2,
+    "question": "A 5 kg block is pushed with a force of 20 N on a surface with friction coefficient μ = 0.2. What is the acceleration? (g = 10 m/s²)",
+    "options": [
+      "1 m/s²",
+      "2 m/s²",
+      "3 m/s²",
+      "4 m/s²"
+    ],
+    "correct": "2 m/s²",
+    "explanation": "Friction = μmg = 0.2 × 5 × 10 = 10 N\nNet force = 20 − 10 = 10 N\na = F_net/m = 10/5 = 2 m/s²",
+    "hint": "Don't forget to subtract friction from the applied force."
+  },
+  {
+    "kind": "fill_blank",
+    "tag": "question",
+    "level": 2,
+    "sentence": "According to Newton's Third Law, if body A exerts a force F on body B, then body B exerts a force of _______ on body A.",
+    "blanks": [
+      {
+        "correct": "−F (equal magnitude, opposite direction)",
+        "distractors": ["F (same direction)", "2F (double the force)", "F/2 (half the force)"]
+      }
+    ],
+    "explanation": "Newton's Third Law: Fᴬ→ᴮ = −Fᴮ→ᴬ. The forces are equal in magnitude but opposite in direction. They act on DIFFERENT bodies."
+  },
+  {
+    "kind": "error_correction",
+    "tag": "question",
+    "level": 3,
+    "title": "Spot the Misconception",
+    "instruction": "One of these statements about Newton's Laws is WRONG. Which one?",
+    "sentences": [
+      {
+        "text": "A book lying on a table has zero net force acting on it.",
+        "correct": true
+      },
+      {
+        "text": "Action and reaction forces act on the SAME body.",
+        "correct": false,
+        "explanation": "This is wrong! Action-reaction pairs always act on DIFFERENT bodies. The normal force on the book (by the table) and the weight of the book (by Earth) are NOT an action-reaction pair — they just happen to be equal and opposite."
+      },
+      {
+        "text": "A body can be in equilibrium even if multiple forces act on it.",
+        "correct": true
       }
     ]
-  }
-]
-```
-
-### speaking.json — Array of speaking sets
-```json
-[
+  },
   {
-    "setId": "S1",
-    "title": "Speaking Test — Set A",
-    "part1": {
-      "topic": "Daily Routines",
-      "questions": [
-        {
-          "q": "Do you have a set daily routine?",
-          "bandTip": "Use contrast: 'On weekdays I tend to... whereas at weekends I...' Show variety in your life."
-        },
-        {
-          "q": "What time of day do you feel most productive?",
-          "bandTip": "Give a specific time + reason + example. 'I find my concentration peaks around 10am because...'"
-        },
-        {
-          "q": "Has your daily routine changed much over the past few years?",
-          "bandTip": "Use 'used to' for past habits and present tense for current. Show time awareness."
-        }
-      ]
-    },
-    "part2": {
-      "topic": "Describe a skill you would like to learn",
-      "cuePoints": [
-        "What the skill is",
-        "Why you want to learn it",
-        "How you would learn it",
-        "How it would benefit your life"
-      ],
-      "modelOpening": "I'd like to talk about learning to play the piano — it's something I've always admired but never had the opportunity to pursue seriously until recently."
-    },
-    "part3": {
-      "theme": "Skills and Education",
-      "questions": [
-        {
-          "q": "Do you think schools today teach the right skills for modern life?",
-          "bandTip": "Acknowledge both sides: 'While core academic skills remain valuable, there's a compelling argument that digital literacy and critical thinking are underemphasised...'"
-        },
-        {
-          "q": "How has technology changed the way people learn new skills?",
-          "bandTip": "Structure: change → positive aspects → potential downsides → overall assessment."
-        },
-        {
-          "q": "Do you think people today have more or fewer opportunities to learn new skills than previous generations?",
-          "bandTip": "Challenge the premise if appropriate: 'I'd argue this depends entirely on which skills we're talking about...'"
-        }
-      ]
-    }
+    "kind": "mcq",
+    "tag": "question",
+    "level": 3,
+    "question": "Two blocks of masses 2 kg and 3 kg are connected by a light string and pulled by a force of 25 N on a frictionless surface. What is the tension in the string?",
+    "options": [
+      "5 N",
+      "10 N",
+      "15 N",
+      "20 N"
+    ],
+    "correct": "10 N",
+    "explanation": "Total mass = 2 + 3 = 5 kg\nAcceleration of system = 25/5 = 5 m/s²\nTension pulls the 2 kg block: T = 2 × 5 = 10 N\n(Or: T = 25 − 3×5 = 25 − 15 = 10 N from the 3 kg block's perspective)",
+    "hint": "First find the acceleration of the entire system, then isolate one block."
   }
 ]
 ```
 
 ---
 
-## INSTRUCTIONS FOR AN AI EXPANDING THIS CONTENT
+## ADDING A NEW LESSON — CHECKLIST
 
-### To expand a lesson file:
-1. Open the target JSON file (e.g. `src/data/lessons/grammar/conditionals.json`)
-2. Note the existing slide topics to avoid repeating them
-3. Add new slides to the end of the array following the schemas above
-4. Ensure band progression: start new slides at Band 6–7, build to Band 8–9
-5. Vary the `kind` — mix explainers, MCQs, fill-blanks, match-pairs, reorder sentences
+When generating a new lesson file, verify:
 
-### To add a new mock test set:
-1. Open the target test file (e.g. `src/data/tests/listening.json`)
-2. Copy the structure of an existing set
-3. Append a new set object to the array
-4. Assign a new `setId` (L3, R3, W3, S3 etc.)
-5. Use new question IDs (L3_1 through L3_10 for listening)
-
-### Quality standards:
-- **Explanations must be specific** — explain exactly WHY the correct answer is right AND why wrong answers are wrong
-- **Examples must be IELTS-specific** — use academic language, essay contexts, exam scenarios
-- **Band levels must be accurate** — Band 6 questions test basic knowledge; Band 9 tests sophisticated nuance
-- **No duplicate questions** — each question in a file must be unique across the whole app
-- **Passage text for TFNG** — write dense academic paragraphs ~150 words covering a clear topic
-- **match_pairs meanings must ALL be unique** — this is enforced by the app and will log errors if violated
-
-### Recommended additions per category:
-- **Grammar**: 3–5 more MCQs per topic testing different aspects of the same structure
-- **Vocabulary**: 2–3 more flashcard + MCQ pairs per word family
-- **Reading**: A second passage on a different topic in the TFNG/MCQ format
-- **Writing**: An additional MCQ comparing Band 6 vs Band 8 paragraphs
-- **Listening**: An entirely new set (L3) with a different context (job interview, academic lecture, phone booking)
-- **Mock tests**: A third set (L3, R3, W3, S3) for each section doubles practice variety
-
+- [ ] File is valid JSON (array of slide objects)
+- [ ] File is saved as `src/data/lessons/jee/<lesson_id>.json`
+- [ ] Every slide has a `kind` field
+- [ ] Every slide has a `tag` field (`"note"` or `"question"`)
+- [ ] Every question slide has a `level` field (1–4)
+- [ ] `mcq` → `correct` matches exactly one option, all 4 options are distinct
+- [ ] `fill_blank` → `_______` count matches `blanks` array length, each has 3 distractors
+- [ ] `match_pairs` → all meanings are unique
+- [ ] `reorder_sentence` → `correct` contains all items from `words`
+- [ ] `error_correction` → exactly one sentence has `"correct": false` with `explanation`
+- [ ] Lesson has 12–18 slides
+- [ ] At least 4 different slide kinds are used
+- [ ] Difficulty progresses from Level 1 → Level 3–4
+- [ ] No walls of text — keep it mobile-friendly
+- [ ] Explanations show full working for numericals
+- [ ] No duplicate questions across the app
